@@ -36,6 +36,15 @@ main {
         margin-bottom: 1rem;
       }
     }
+
+    .carousel {
+      .container {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
   }
 
   .map {

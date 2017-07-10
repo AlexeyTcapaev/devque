@@ -13,17 +13,19 @@ block content
         .carousel
             - var images = [1,2,3,4]
             each image in images
-                img(src=require("../../images/dishes/"+image+".jpg"))
-        .text
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-            .price 390Р
+                .container
+                    img(src=require("../../images/dishes/"+image+".jpg"))
+                    .text
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                        .price 390Р
 
     .interior.paragraph
         h2 Интерьер
         .carousel
             each image in images
-                img(src=require("../../images/interior/"+image+".jpg"))
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .container
+                    img(src=require("../../images/interior/"+image+".jpg"))
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
     .map
         script(type="text/javascript", charset="utf-8", async="", src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3362a1069d16c5dd64418345670bd1ae7551a1daebf2309e9cb69f42d5976885&amp;width=100%25&amp;height=418&amp;lang=ru_RU&amp;scroll=true")
