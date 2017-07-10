@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="index-style.css" rel="stylesheet">
-
-    <title>Bootstrap Starter Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Торговый дом "Меркурий"</title>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,24 +24,28 @@
             </div>
         </div>
         <div class="nav_buttons">
-            <a class="link_type1">О нас</a>
-            <a class="link_type1">Наши приемущества</a>
-            <a class="link_type2">Заказать обратный звонок!</a>
+            <a class="link_type1" id="a1" href="#about">О нас</a>
+            <a class="link_type1" id="a2" href="#pruf">Наши приемущества</a>
+            <a class="link_type2" id="a3" href="#call">Заказать обратный звонок!</a>
         </div>
     </nav>
     <img src="img-1.png" class="img_1">
     <div class="content1">
+        <a name="call" id="call"></a>
         <h2>
             МЫ ОБЕСПЕЧИМ ВАС НАИЛУЧШИМИ МАТЕРИАЛАМИ ПО ЛУЧШИМ ЦЕНАМ!<br>
             ХОТИТЕ УЗНАТЬ ПОДРОБНЕЕ?  СВЯЖИТЕСЬ С НАМИ!
         </h2>
         <div class="content_buttons">
+             
             <input class="tel_input" placeholder="Ваш телефон" type="tel">
             <input class="tel_submit" type="submit" value="Оставить заявку">
         </div>
-    </div>
+    </div>   
+   
     <img src="img-2.png" class="img_1">
     <h2>Торговый дом "Меркурий". Ваша цель ближе,чем вы думаете!</h2>
+    <a name="about" id="about"></a>
     <div class="content2">
         <div class="content2_1div">
             <div class="content2_2div">  
@@ -60,6 +64,7 @@
     </div>
     <img src="img-3.png" class="img_1">
     <div class="content3">
+         <a name="pruf" id="pruf"></a>
         <ul class="main_ul">
             <li>
                 <img src="img-st-1.svg">
@@ -118,6 +123,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="progress.js"></script>
+    <script src="scroll.js"></script>
     <script src="progressbar.js"></script>
     <script src="circle-progress.js"></script>
 </body>
