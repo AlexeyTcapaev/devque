@@ -231,6 +231,10 @@ h2
   height: auto;
   position: relative;
 }
+.circle p 
+{
+    font-size: 1.5vw;
+}
 .content2_1div
 {
     width: 50%;
@@ -243,10 +247,7 @@ h2
 }
 .content2_2div_div
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 }
 .content2_2div
 {
@@ -263,7 +264,6 @@ h2
 h4
 {
     margin-top: 2%;
-    margin-left: 15%;
     height: 2vh;
     text-align: center;
     font-size: 1.5vw;
