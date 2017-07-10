@@ -1,0 +1,16 @@
+mixin logo(white,mobile)
+    .logo(class=mobile?"mobile":"")
+        if white
+            .top
+                img(src=require("../../images/logo/white/logo-ilove.svg"))
+            .middle
+                img(src=require("../../images/logo/white/heart-shape.svg"))
+            .bottom
+                img(src=require("../../images/logo/white/logo-lapanorama.svg"))
+        else
+            .top
+                img(src=require("../../images/logo/logo-ilove.svg"))
+            .middle
+                img(src=require("../../images/logo/heart-shape.svg"))
+            .bottom
+                img(src=require("../../images/logo/logo-lapanorama.svg"))

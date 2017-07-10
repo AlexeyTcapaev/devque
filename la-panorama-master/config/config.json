@@ -1,0 +1,17 @@
+{
+  "buildFolder": "build",
+  "buildEn": "en",
+  "stylelintFile": ".stylelintrc",
+  "mainTitle": "Ресторан \"Я люблю...\"",
+  "titles":{
+    "index": "",
+    "tour": " | 3D тур",
+    "contacts": " | Контакты",
+    "actions": " | Акции",
+    "from_window": " | Из нашего окна",
+    "comments": " | Отзывы",
+    "menu": " | Меню",
+    "gallery": " | Галерея",
+    "news": " | Новости"
+  }
+}

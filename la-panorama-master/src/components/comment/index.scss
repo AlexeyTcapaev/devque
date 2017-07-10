@@ -1,0 +1,157 @@
+@import "../../styles/config";
+
+.comment {
+  padding: $comment_space;
+  padding-top: 1em;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: calc(30% - #{$comment_space});
+
+  .content {
+    position: relative;
+    border: 2px solid $comment_border_color;
+    border-radius: 5px;
+    color: black;
+
+    p {
+      margin: 1em;
+    }
+
+    &::before,
+    &::after {
+      top: 100%;
+      left: 3rem;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &::before {
+      border-top-color: gray;
+      border-width: 33px;
+      margin-left: -33px;
+    }
+
+    &::after {
+      border-top-color: #fff;
+      border-width: 30px;
+      margin-left: -30px;
+    }
+  }
+
+  .info {
+    width: 100%;
+    // TODO: out values dependence on comment element
+    margin-top: 15px;
+    color: gray;
+    font-family: "Comic Sans MS", sans-serif;
+
+    p {
+      display: flex;
+      flex-direction: row;
+
+      .name {
+        padding-left: 2rem;
+        flex: 1;
+      }
+
+      .date,
+      .time {
+        position: relative;
+        bottom: 30px;
+      }
+
+      .time {
+        padding-left: 1em;
+      }
+    }
+  }
+}
+
+.comment_input {
+  @extend .comment;
+
+  form {
+    .content {
+      width: 100%;
+
+      textarea {
+        width: calc(100% - 2em);
+        min-height: 5rem;
+        resize: none;
+        border: none;
+        padding: 1em;
+      }
+    }
+
+    .info {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        margin-top: 1em;
+        max-width: 10rem;
+      }
+
+      .date {
+        position: static;
+      }
+
+      p {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        .pre-date {
+          margin-right: 1em;
+        }
+      }
+    }
+
+    input[type="submit"] {
+      background-color: white;
+      border: grey solid;
+      color: grey;
+      padding: 0.4em;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      float: right;
+      border-radius: 15px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: grey;
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile_limit) {
+  .comment {
+    width: calc(45% - #{$comment_space });
+    padding-left: ($comment_space / 2);
+    padding-right: ($comment_space / 2);
+  }
+
+  .comment_input {
+    width: calc(45% - #{$comment_space });
+  }
+}
+
+@media screen and (max-width: (3 * $mobile_limit / 4)) {
+  .comment {
+    width: 100%;
+  }
+
+  .comment_input {
+    width: 100%;
+  }
+}

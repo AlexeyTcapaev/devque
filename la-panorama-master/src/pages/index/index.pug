@@ -1,0 +1,29 @@
+extends ../template
+
+block content
+    .rest-wrapper
+        video.rest( muted="" loop="" autoplay="")
+            source( src=require("../../video/logo_video.mp4"), type="video/mp4")
+    .about.paragraph
+        h2 О Ресторане
+        p Приветствуем на официальном сайте петербургского ресторана "Я люблю... La panorama"! Мы - самый высокий в центре города панорамный ресторан европейской кухни, расположенный на высоте 15 этажа в БЦ "Биржа" на Васильевском острове. К нам приезжают, чтобы насладиться потрясающим видом на исторический центр Петербурга, открывающимся из наших окон, и качественной вкусной едой по доступным ценам. Мы носим название "Я люблю", потому что атмосфера заведения наполнена романтикой - начиная от витых сердечек на тарелках, заканчивая волшебным видом на согретые солнечными лучами петербургские крыши. Мы рады и взрослым, и детям, парам на первом свидании и семьям, отмечающим годовщину совместной жизни. У нас играют свадьбы, делают предложения, отдыхают с друзьями и просто обедают. Ресторан "Я люблю" любит своих гостей и желает приятного полета на высоте 60 метров над землей!
+
+    .dishes.paragraph
+        h2 Блюда
+        .carousel
+            - var images = [1,2,3,4]
+            each image in images
+                img(src=require("../../images/dishes/"+image+".jpg"))
+        .text
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+            .price 390Р
+
+    .interior.paragraph
+        h2 Интерьер
+        .carousel
+            each image in images
+                img(src=require("../../images/interior/"+image+".jpg"))
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+    .map
+        script(type="text/javascript", charset="utf-8", async="", src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3362a1069d16c5dd64418345670bd1ae7551a1daebf2309e9cb69f42d5976885&amp;width=100%25&amp;height=418&amp;lang=ru_RU&amp;scroll=true")

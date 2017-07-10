@@ -1,0 +1,37 @@
+@import "../../styles/config";
+
+main {
+  .paragraph {
+    padding-bottom: 1rem;
+
+    .address {
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:visited {
+          color: black;
+        }
+
+        h4 {
+          font-size: 3rem;
+          text-align: center;
+        }
+      }
+    }
+
+    p {
+      font-weight: bold;
+
+      .right {
+        float: right;
+      }
+
+      margin-bottom: 3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

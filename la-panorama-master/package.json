@@ -1,0 +1,81 @@
+{
+  "name": "la-panorama",
+  "version": "0.1.1",
+  "description": "Offical site of \"la panorama\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack-devserver": "webpack-dev-server --env.production=false --progress --output-pathinfo --colors --inline ",
+    "build": "webpack --env.production=false --progress --colors",
+    "production": "webpack --env.production --progress --colors && webpack --env.production --env.lang=en --progress --colors ",
+    "dev": "npm run build && npm run webpack-devserver"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeoVS09/la-panorama.git"
+  },
+  "author": "Vladislav Goncharov <leovs010@gmail.com>",
+  "license": "GPL-3.0",
+  "licenses": [
+    {
+      "type": "GPL-3.0",
+      "url": "https://github.com/LeoVS09/la-panorama/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/LeoVS09/la-panorama/issues"
+  },
+  "homepage": "https://github.com/LeoVS09/la-panorama#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.26.1",
+    "eslint": "^4.0.0",
+    "eslint-config-standart": "^0.2.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.8.0",
+    "eslint-plugin-html": "^3.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-pug": "^1.1.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.0",
+    "html-webpack-plugin": "^2.28.0",
+    "image-webpack-loader": "^3.2.0",
+    "node-sass": "^4.5.3",
+    "node-thumbnail": "^0.11.0",
+    "postcss-loader": "^1.3.3",
+    "postcss-sass": "^0.1.0",
+    "postcss-scss": "^1.0.1",
+    "pug": "^2.0.0-beta11",
+    "pug-loader": "^2.3.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.13.1",
+    "stylefmt": "^6.0.0",
+    "stylefmt-loader": "^1.2.3",
+    "stylelint": "^7.11.1",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-scss": "^1.4.4",
+    "stylelint-webpack-plugin": "^0.7.0",
+    "uglify-js": "^3.0.20",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0",
+    "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "imagesloaded": "^4.1.3",
+    "jquery": "^3.2.1",
+    "material-photo-gallery": "^0.1.1",
+    "slick-carousel": "^1.6.0",
+    "sticky-js": "^1.2.0"
+  }
+}

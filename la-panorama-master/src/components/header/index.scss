@@ -1,0 +1,10 @@
+@import "../../styles/config";
+
+header {
+  margin-top: 0;
+  width: 100%;
+  background: url('../../images/header/new_nav_logo.jpg') center no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+}

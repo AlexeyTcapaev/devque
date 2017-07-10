@@ -1,0 +1,23 @@
+
+mixin comment(data)
+    .comment
+        .content
+            p= data.text
+        .info
+            p
+                span.name= data.name
+                span.date= data.date
+                span.time= data.time
+
+mixin comment_input()
+    .comment_input
+        h2 Оставить отзыв
+        form
+            .content
+                textarea(placeholder="Введите ваш отзыв...", name="text")
+            .info
+                input.name(type="text", placeholder="Ваше имя..", name="name")
+                p
+                    span.pre-date Дата посищения:
+                    input.date(type="date", name="date")
+            input(type="submit", value="Отправить")

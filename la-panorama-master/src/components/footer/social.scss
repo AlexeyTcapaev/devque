@@ -1,0 +1,46 @@
+@import "../../styles/config";
+$social_logo_margin: 0.5rem;
+
+@mixin social_logo($name) {
+  background: url("../../images/social/" + $name +".svg") no-repeat center;
+  background-size: cover;
+
+  &:hover {
+    background-image: url("../../images/social/" + $name + "onhover.svg");
+  }
+}
+
+.social {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 2rem 0;
+
+  a {
+    padding: 0 $social_logo_margin;
+  }
+
+  div {
+    height: $social_logo_size;
+    width: $social_logo_size;
+  }
+
+  @each $name in vk, youtube, facebook, instagram, recall {
+    .#{$name} {
+      @include social_logo($name);
+    }
+  }
+}
+
+@media screen and (max-width: ($social_logo_size * 6 + $social_logo_margin * 6)) {
+  .social {
+    a {
+      padding: 0 ($social_logo_margin / 2);
+    }
+
+    div {
+      height: (2 * $social_logo_size / 3);
+      width: (2 * $social_logo_size / 3);
+    }
+  }
+}
