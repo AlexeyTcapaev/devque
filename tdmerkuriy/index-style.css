@@ -241,10 +241,11 @@ h2
     flex-shrink: 0;
     margin-bottom: 4%;
 }
-.content2_2div div
+.content2_2div_div
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 .content2_2div
@@ -261,6 +262,8 @@ h2
 }
 h4
 {
+    margin-top: 2%;
+    margin-left: 15%;
     height: 2vh;
     text-align: center;
     font-size: 1.5vw;
