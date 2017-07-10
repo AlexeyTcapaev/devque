@@ -12,14 +12,15 @@ a
 .top_nav
 {
     -webkit-box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
     position: fixed;
     width: 100vw;
     height: 9vh;
     display: flex;
     flex-direction: row;
     background-color: white;
+    z-index: 100;
 }
 .logo_container
 {
@@ -36,7 +37,12 @@ box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
     height: 90%;
     margin-left: 5%;
 }
-.logo_container h1
+.name1
+{
+    text-align: center;
+    font-size:1.7vw; 
+}
+.name2
 {
     text-align: center;
     font-size:1.7vw; 
@@ -123,7 +129,6 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 }
 .content_buttons
 {
-    margin-top: 4%;
     margin-bottom: 2%;
     width: 50vw;
     display: flex;
@@ -131,7 +136,8 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 }
 .content_buttons input
 {
-    height: 5vh;
+    padding: 1%;
+    width: 15vw;
 }
 .tel_input::-webkit-input-placeholder
 { 
@@ -212,10 +218,12 @@ h2
 }
 .content2_1div
 {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    flex-grow: 0;
+    flex-shrink: 0;
     margin-bottom: 4%;
 }
 .content2_2div div
@@ -234,13 +242,13 @@ h2
 }
 .content2_p
 {
-    font-size: 1.4vw;
+    font-size: 1.8vw;
 }
 h4
 {
     height: 2vh;
     text-align: center;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
 }
 .content3
 {
@@ -258,7 +266,7 @@ h4
 }
 .main_ul li img
 {
-    height: 50vh;
+    height:30vh;
 }
 .main_ul li
 {
@@ -275,7 +283,14 @@ h5
 }
 .name
 {
+    font-size:3vw;
     color: white;
+}
+.name3
+{
+    font-size:3vw;
+    color: #01bff3;
+   
 }
 footer
 {
@@ -290,7 +305,21 @@ footer p
     padding-top: 2%;
     padding-bottom: 2%;
     width: 35%;
-    margin-left: 40%;
+    margin-left: 13%;
     color: white;
     font-size: 1vw;
+}
+.logo_container1
+{
+    width: 50vw;
+    height: 9vh;
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.logo_container1 img
+{
+    margin-left: 5%;
 }
