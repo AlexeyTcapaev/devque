@@ -230,7 +230,7 @@ h2
 }
 .circle 
 {
-  margin-left:2vw;
+    margin-left:4vw;
   width: 15vw;
   height: auto;
   position: relative;
@@ -238,6 +238,21 @@ h2
 .circle p 
 {
     font-size: 1.5vw;
+}
+.merc
+{
+    color: #01bff3;
+}
+.circle_label
+{
+    
+    margin-top: 2%;
+    height: 2vh;
+    text-align: center;
+    font-size: 1.8vw;
+    margin-left:4vw;
+   
+    text-align: center;
 }
 .content2_1div
 {
@@ -249,25 +264,29 @@ h2
     flex-shrink: 0;
     margin-bottom: 4%;
 }
+
+.content2_2div div
+{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .content2_2div
 {
     width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .content2_p
 {
-    font-size: 1.8vw;
+    font-size: 2vw;
+    font-weight: bold;
 }
-h4
-{
-    margin-top: 2%;
-    height: 2vh;
-    text-align: center;
-    font-size: 1.5vw;
-}
+
 .content3
 {
     margin-top: 5%;
@@ -291,6 +310,18 @@ h4
     display: flex;
     flex-direction: column;
     margin-bottom: 5%;
+}
+.soft_ul
+{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.soft_ul li
+{
+    width: 60%;
 }
 h5
 {
@@ -340,4 +371,5 @@ footer p
 .logo_container1 img
 {
     margin-left: 5%;
+    margin-right: 5%;
 }
