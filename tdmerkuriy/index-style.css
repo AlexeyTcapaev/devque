@@ -5,6 +5,9 @@
     transition: 0.2s linear;
     outline: none;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    -webkit-appearance: none;
 }
 a
 {
