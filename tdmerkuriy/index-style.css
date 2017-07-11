@@ -21,17 +21,16 @@ a
     box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
     position: fixed;
     width: 100vw;
-    height: 9vh;
+    height: 10%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: white;
     z-index: 100;
 }
 .logo_container
 {
-    width: 20vw;
-    height: 9vh;
-   
+    width: 25rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,28 +38,28 @@ a
 }
 .logo_container img
 {
-    height: 90%;
+    height: 9vh;
     margin-left: 5%;
+    margin-right: 5%;
 }
 .name1
 {
     text-align: center;
-    font-size:1.7vw; 
+    font-size:3vh; 
 }
 .name2
 {
     text-align: center;
-    text-align: center;
-    font-size:1.7vw; 
+    font-size:3vh; 
 }
 .link_type1
 {
      color:#01bff3;
-     font-size:1vw; 
-    width: 12vw;
+     font-size:1.2vw; 
+    width: 13vw;
     text-align: center;
     border: 1px solid #01bff3;
-    padding:1%;
+    padding:1vh;
     border-radius: 4px;
     transition: 0.2s;
 }
@@ -72,12 +71,12 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 }
 .link_type2
 {
-    font-size:0.8vw; 
-    width: 12vw;
+    font-size:1.2vw; 
+    width: 13vw;
     text-align: center;
     background-color:#01bff3;
     color: white;
-    padding:1%;
+   
     border-radius: 4px;
 }
 .link_type2:hover
@@ -89,7 +88,7 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 .logo_container div
 {
     width: 60%;
-    margin-left: 5%;
+    margin-left: 7%;
 }
 .name1
 {
@@ -102,15 +101,10 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 .nav_buttons
 {
     width: 80vw;
-    height: 9vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-}
-.nav_buttons a
-{
-    height: 2vh;
 }
 .img_1
 {
@@ -126,7 +120,8 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 }
 .content1
 {
-
+    padding-top: 5%;
+    padding-bottom: 5%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -135,14 +130,12 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 }
 .content1 h2
 {
-    margin-top: 2%;
     text-align: center;
     width: 80vw;
     font-size: 1.8vw;
 }
 .content_buttons
 {
-    margin-bottom: 2%;
     width: 50vw;
     display: flex;
     justify-content: space-around;
@@ -156,7 +149,7 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 { 
     color: #01bff3;
     text-align: center;
-    font-size: 1.3vw;
+    font-size: 1.4vw;
 }
 .anchor
 {
@@ -172,7 +165,6 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
   border: 1px solid #01bff3;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  font: normal 16px/normal "Times New Roman", Times, serif;
   color: #01bff3;
   -o-text-overflow: clip;
   text-overflow: clip;
@@ -181,11 +173,11 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     text-align: center;
-     font-size: 1.3vw;
+     font-size: 1.4vw;
 }
 .tel_submit
 {
-     font-size: 1.3vw;
+     font-size: 1.4vw;
     display: inline-block;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -196,7 +188,6 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
   border: none;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  font: normal 1.3vw/normal "Times New Roman", Times, serif;
   color: rgba(255,255,255,0.9);
   -o-text-overflow: clip;
   text-overflow: clip;
@@ -214,12 +205,12 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 }
 .content2
 {
-    padding-top: 1%;
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content:space-around;
     flex-direction: row;
+     margin-bottom: 4%;
 }
 h2
 {
@@ -251,7 +242,6 @@ h2
     text-align: center;
     font-size: 1.8vw;
     margin-left:4vw;
-   
     text-align: center;
 }
 .content2_1div
@@ -264,7 +254,6 @@ h2
     flex-shrink: 0;
     margin-bottom: 4%;
 }
-
 .content2_2div div
 {
     
@@ -286,7 +275,6 @@ h2
     font-size: 2vw;
     font-weight: bold;
 }
-
 .content3
 {
     margin-top: 5%;
@@ -294,7 +282,6 @@ h2
 }
 .main_ul
 {
-    list-style-type: none;
     width: 100%;
     display: flex;
     align-items: center;
@@ -326,18 +313,18 @@ h2
 h5
 {
     margin-top: 5%;
-    font-size: 1.5vw;
+    font-size: 3vh;
     text-align: center;
     margin-bottom:5%;
 }
 .name
 {
-    font-size:3vw;
+    font-size:5vh;
     color: white;
 }
 .name3
 {
-    font-size:3vw;
+    font-size:7vh;
     color: #01bff3;
    
 }
@@ -360,9 +347,9 @@ footer p
 }
 .logo_container1
 {
+     text-align: center;
     width: 50vw;
-    height: 9vh;
-   
+    height: 15vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -370,6 +357,11 @@ footer p
 }
 .logo_container1 img
 {
+    height: 100%;
     margin-left: 5%;
     margin-right: 5%;
+}
+@media screen and (max-width: 1366px) 
+{
+    
 }

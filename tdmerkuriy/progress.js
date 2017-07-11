@@ -59,26 +59,25 @@ var bar1 = new ProgressBar.Circle(circle1, {
   step: function(state, circle) {
     circle.path.setAttribute('stroke', state.color);
     circle.path.setAttribute('stroke-width', state.width);
-
-    var value = Math.round(circle.value() * 100);
+    var value = Math.floor(circle.value() * 100);
+     
     if (value === 0) {
       circle.setText('');
-    } else {
+    } else 
+    {
       circle.setText(value+"%");
     }
+       
 
   }
 });
             bar1.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
            bar1.text.style.fontSize = '3vw';
-           bar1.animate(0.5);  // Number from 0.0 to 1.0
+           bar1.animate(0.40);  // Number from 0.0 to 1.0
            bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
            bar.text.style.fontSize = '3vw';
            bar.animate(1);  
            jqBarStatus = false;
-           console.log("b-"+bar.value());
-             console.log("b1-"+bar1r.value());
-             // Number from 0.0 to 1.0
         }
     });
 
