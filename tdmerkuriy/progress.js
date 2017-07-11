@@ -5,7 +5,17 @@ $(document).ready(function () {
 // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
 
-var bar = new ProgressBar.Circle(circle2, {
+
+    
+   var jqBar = $('#about');
+    var jqBarStatus = true;
+    $(window).scroll(function() {
+         var scrollEvent = ($(window).scrollTop() > (jqBar.position().top - $(window).height()));
+        
+        
+        if (scrollEvent && jqBarStatus) 
+        { 
+            var bar = new ProgressBar.Circle(circle2, {
   color: '#3c4761',
   // This has to be the same size as the maximum width to
   // prevent clipping
@@ -59,22 +69,15 @@ var bar1 = new ProgressBar.Circle(circle1, {
 
   }
 });
-   var jqBar = $('#about');
-    var jqBarStatus = true;
-    $(window).scroll(function() {
-         var scrollEvent = ($(window).scrollTop() > (jqBar.position().top - $(window).height()));
-        
-        
-        if (scrollEvent && jqBarStatus) 
-        { 
             bar1.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
            bar1.text.style.fontSize = '3vw';
-           bar1.animate(0.50);  // Number from 0.0 to 1.0
+           bar1.animate(0.5);  // Number from 0.0 to 1.0
            bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
            bar.text.style.fontSize = '3vw';
-           bar.animate(1.0);  
+           bar.animate(1);  
            jqBarStatus = false;
-           
+           console.log("b-"+bar.value());
+             console.log("b1-"+bar1r.value());
              // Number from 0.0 to 1.0
         }
     });

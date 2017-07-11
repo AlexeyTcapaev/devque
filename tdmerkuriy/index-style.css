@@ -50,6 +50,7 @@ a
 .name2
 {
     text-align: center;
+    text-align: center;
     font-size:1.7vw; 
 }
 .link_type1
@@ -58,7 +59,7 @@ a
      font-size:1vw; 
     width: 12vw;
     text-align: center;
-    border: 2px solid #01bff3;
+    border: 1px solid #01bff3;
     padding:1%;
     border-radius: 4px;
     transition: 0.2s;
@@ -168,7 +169,7 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  border: 3px solid #01bff3;
+  border: 1px solid #01bff3;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   font: normal 16px/normal "Times New Roman", Times, serif;
@@ -247,10 +248,6 @@ h2
     flex-grow: 0;
     flex-shrink: 0;
     margin-bottom: 4%;
-}
-.content2_2div_div
-{
-    
 }
 .content2_2div
 {
