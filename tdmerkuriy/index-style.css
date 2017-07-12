@@ -590,6 +590,7 @@ footer p
         height: 3rem;
         background-image: url(menu.svg);
         background-repeat: no-repeat;
+        transition: 0.2s linear;
     }
     .nav_buttons_mobile a
     {

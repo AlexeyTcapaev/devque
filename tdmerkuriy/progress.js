@@ -88,6 +88,7 @@ var bar1 = new ProgressBar.Circle(circle1, {
          if(cc%2!=0)
             {
                 $('#drop_menu').fadeIn();
+                document.getElementById('drop_menu').style.display="flex";
                 
             }
         else  $('#drop_menu').fadeOut();
