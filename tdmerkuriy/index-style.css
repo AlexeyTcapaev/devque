@@ -14,6 +14,11 @@ a
     text-decoration: none;
     transition: 0.2s linear;
 }
+.soft_ul li p
+    {
+       width: 100%;
+        text-align: justify;
+    }
 .top_nav
 {
     -webkit-box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
@@ -30,7 +35,7 @@ a
 }
 .logo_container
 {
-    width: 25rem;
+    width: 32rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,6 +44,7 @@ a
 .logo_container img
 {
     height: 9vh;
+    width: 5vw;
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -213,7 +219,6 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 }
 h2
 {
-    text-align: justify;
     text-align: center;
     margin-top: 4%;
     font-size: 2vw;
@@ -222,8 +227,8 @@ h2
 .circle 
 {
     margin-left:4vw;
-  width: 15vw;
-  height: auto;
+  width: 13vw;
+  height: 24vh;
   position: relative;
 }
 .circle p 
@@ -290,11 +295,12 @@ h2
 }
 .main_ul li img
 {
-    height:25vh;
+    width: 10vw;
 }
 .main_ul li
 {
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-bottom: 5%;
 }
@@ -471,7 +477,7 @@ footer p
     .soft_ul li 
     {
         text-align: justify;
-    }
+    } 
     .content2
     {
         align-items: center;
@@ -528,6 +534,7 @@ footer p
     }
     .content1 h2
     {
+        text-align: justify;
         font-size: 3vh;
     }
     .img_1
