@@ -421,6 +421,10 @@ footer p
 }
 @media screen and (max-width: 720px) 
 {
+    #i1
+    {
+        margin-top: 60px;
+    }
     .content1 
     {
         padding-bottom: 5%;
