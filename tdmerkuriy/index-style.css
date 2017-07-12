@@ -131,7 +131,6 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 .content1 h2
 {
     text-align: center;
-    width: 80vw;
     font-size: 1.8vw;
 }
 .content_buttons
@@ -422,6 +421,71 @@ footer p
 }
 @media screen and (max-width: 720px) 
 {
+    .soft_ul li 
+    {
+        text-align: justify;
+    }
+    .content2
+    {
+        align-items: center;
+    }
+    .content2_p 
+    {
+        text-align: justify;
+        margin-top: 5%;
+        width: 80%;
+        font-size: 4vw;
+    }
+    .circle_label
+    {
+        margin-left: 0;
+        font-size: 3.8vw;
+    }
+    .circle
+    {
+        margin: 0;
+        width: 30vw;
+    }
+    .content2_2div 
+    {
+        width: 100%;
+    }
+    h2
+    {
+            font-size: 7vw;
+    }
+    .tel_input
+    {
+        font-size: 3vw;
+    }
+    .tel_submit 
+    {
+        font-size: 3vw;
+    }
+    .content_buttons input
+    {
+            width: 25vw;
+                padding: 3%;
+    }
+    .tel_input::-webkit-input-placeholder
+    { 
+        color: #01bff3;
+        text-align: center;
+        font-size: 3vw;
+       
+    }
+    .content_buttons
+    {
+        width: 100%;
+    }
+    .content1 h2
+    {
+        font-size: 3vh;
+    }
+    .img_1
+    {
+        margin-top: 60px;
+    }
     .top_nav
     {
         display: none;
