@@ -213,6 +213,7 @@ box-shadow: 0px 0px 28px 0px rgba(1,191,243,1);
 }
 h2
 {
+    text-align: justify;
     text-align: center;
     margin-top: 4%;
     font-size: 2vw;
@@ -582,7 +583,7 @@ footer p
         background-color: white;
         position: absolute;
         display: none;
-        flex-direction: column;      
+        flex-direction: column; 
     }
     .mob_icon
     {
@@ -597,7 +598,7 @@ footer p
        
         padding-top: 4%;
         padding-bottom: 2%;
-        text-align: center;
+        text-align: left;
         white-space: nowrap;
         color: #01bff3;
     }
