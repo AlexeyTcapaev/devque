@@ -4,9 +4,6 @@ $(document).ready(function () {
 // progressbar.js@1.0.0 version is used
 // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
-
-
-    
    var jqBar = $('#about');
     var jqBarStatus = true;
     $(window).scroll(function() {
@@ -80,5 +77,23 @@ var bar1 = new ProgressBar.Circle(circle1, {
            jqBarStatus = false;
         }
     });
+    
+});
+    var grad = 90;
+    var cc = 0;
+    $('.mob_icon').click(function () {
+        $(this).css({transform: 'rotate(' + grad + 'deg)'});
+        grad += 90;
+        cc++;
+        if (cc % 2 != 0) {
+            $('.nav_buttons_mobile').fadeIn();
+            document.getElementById('drop_menu').style.display="flex";
+
+        }
+        else  
+            {
+                $('.nav_buttons_mobile').fadeOut();
+                 document.getElementById('drop_menu').style.display="none";
+            }
 
 });
