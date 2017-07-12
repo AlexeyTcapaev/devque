@@ -302,7 +302,7 @@ h2
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 5%;
+    margin-bottom: 2rem;
 }
 .soft_ul
 {
@@ -310,6 +310,7 @@ h2
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
     
 }
 .soft_ul li
@@ -531,6 +532,7 @@ footer p
     .content_buttons
     {
         width: 100%;
+        margin-top: 1rem;
     }
     .content1 h2
     {
