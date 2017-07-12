@@ -2,7 +2,6 @@
 {
     margin: 0;
     padding: 0;
-    transition: 0.2s linear;
     outline: none;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
@@ -385,8 +384,45 @@ footer p
         
     }
 }
+@media all and (orientation:landscape) and (max-width: 720px) 
+{
+    .name3 {
+    font-size: 9vh;
+    }
+    .logo_container1 img {
+     height: auto;
+    }
+    footer p {
+    font-size: 2vw;
+    }
+    .name1_mobile {
+        font-size: 3.5vh;
+    }
+    .name2_mobile {
+    font-size: 4.5vh;
+          text-align: center;
+        color: #01bff3;
+    }
+    .main_ul li img {
+    height: 40vh;
+    }
+    h5 {
+    font-size: 7vh;
+    }
+}
 @media all and (orientation:portrait) and (max-width: 720px) 
 { 
+    .name1_mobile
+    {
+        font-size: 1.5vh;
+        text-align: center;
+    }
+     .name2_mobile
+    {
+         font-size: 1.5vh;
+        text-align: center;
+        color: #01bff3;
+    }
     footer
     {
         flex-direction: column;
@@ -530,17 +566,7 @@ footer p
         height: 80%;
         width: 4rem;
     }
-    .name1_mobile
-    {
-        font-size: 1.5vh;
-        text-align: center;
-    }
-     .name2_mobile
-    {
-         font-size: 1.5vh;
-        text-align: center;
-        color: #01bff3;
-    }
+    
     .logo_container_mobile img
     {
         height: 80%;
@@ -555,8 +581,7 @@ footer p
         background-color: white;
         position: absolute;
         display: none;
-        flex-direction: column;
-        
+        flex-direction: column;      
     }
     .mob_icon
     {
