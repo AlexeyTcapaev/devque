@@ -289,7 +289,7 @@ h2
 }
 .main_ul li img
 {
-    height:30vh;
+    height:25vh;
 }
 .main_ul li
 {
@@ -421,6 +421,11 @@ footer p
 }
 @media screen and (max-width: 720px) 
 {
+    .content1 
+    {
+        padding-bottom: 5%;
+        padding-top: 0;
+    }
     .soft_ul li 
     {
         text-align: justify;
@@ -432,7 +437,7 @@ footer p
     .content2_p 
     {
         text-align: justify;
-        margin-top: 5%;
+        margin-top: 10%;
         width: 80%;
         font-size: 4vw;
     }
@@ -453,6 +458,7 @@ footer p
     h2
     {
             font-size: 7vw;
+        margin-bottom: 10%;
     }
     .tel_input
     {
@@ -484,7 +490,7 @@ footer p
     }
     .img_1
     {
-        margin-top: 60px;
+      
     }
     .top_nav
     {
