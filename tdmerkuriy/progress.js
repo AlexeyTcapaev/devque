@@ -93,27 +93,29 @@ var bar1 = new ProgressBar.Circle(circle1, {
         else  $('#drop_menu').fadeOut();
 
 });
- $('.tel_submit').click(function () 
-{
-    
-     if($('.tel_input').val().length!=10)
-         {
-            $('#mb_text').text("Введен некорректный номер! Пожалуйста,проверьте правильность ввода номера.");
+
             var image = document.getElementById('mb_img');
             var downloadingImage = new Image();
             downloadingImage.onload = function()
             {
             image.src = this.src; 
             };
-             downloadingImage.src = "attention.svg";
-             
-                //var img_attention= new Image();
-              //  img_attention.src="attention.svg";
-               // $('#mb_img').attr("src", img_attention);
+ $('.tel_submit').click(function () 
+{
+         if($('.tel_input').val().length!==17)
+             {
+                downloadingImage.src = "attention.svg";
+                 $('#mb_text').text("Введен некорректный номер, пожалуйста проверьте правильность ввода!");
+             }
+         else
+             {
+                 downloadingImage.src = "check.svg";
+                 $('#mb_text').text("Спасибо за обращение! Ваша заявка будет обратотана и мы обязательно свяжемся с вами!");
+             }
+     
             
           
-         }
-     
+            
     
          $('.tel_input').val("");
      
