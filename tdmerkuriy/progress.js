@@ -96,7 +96,7 @@ var bar1 = new ProgressBar.Circle(circle1, {
  $('.tel_submit').click(function () 
 {
     
-     if($('.tel_input').val().length!=17)
+     if($('.tel_input').val().length!=10)
          {
             $('#mb_text').text("Введен некорректный номер! Пожалуйста,проверьте правильность ввода номера.");
             var image = document.getElementById('mb_img');
