@@ -95,9 +95,31 @@ var bar1 = new ProgressBar.Circle(circle1, {
 });
  $('.tel_submit').click(function () 
 {
-     $('.tel_input').val("");
+    
+     if($('.tel_input').val().length!=17)
+         {
+            $('#mb_text').text("Введен некорректный номер! Пожалуйста,проверьте правильность ввода номера.");
+            var image = document.getElementById('mb_img');
+            var downloadingImage = new Image();
+            downloadingImage.onload = function()
+            {
+            image.src = this.src; 
+            };
+             downloadingImage.src = "attention.svg";
+             
+                //var img_attention= new Image();
+              //  img_attention.src="attention.svg";
+               // $('#mb_img').attr("src", img_attention);
+            
+          
+         }
+     
+    
+         $('.tel_input').val("");
+     
      $('#ol').fadeIn();
      document.getElementById('ol').style.display="flex";
      setTimeout("$('#ol').fadeOut()", 2500);
+       
      
 });
