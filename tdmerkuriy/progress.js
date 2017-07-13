@@ -3,7 +3,6 @@ $(document).ready(function () {
 // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 // progressbar.js@1.0.0 version is used
 // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
-   
    var jqBar = $('#about');
     var jqBarStatus = true;
     $(window).scroll(function() {
@@ -93,4 +92,11 @@ var bar1 = new ProgressBar.Circle(circle1, {
             }
         else  $('#drop_menu').fadeOut();
 
+});
+ $('.tel_submit').click(function () 
+{
+     $('#ol').fadeIn();
+     document.getElementById('ol').style.display="flex";
+     setTimeout("$('#ol').fadeOut()", 2500);
+     
 });

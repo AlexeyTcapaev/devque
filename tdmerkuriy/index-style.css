@@ -8,6 +8,39 @@
     list-style-type: none;
     -webkit-appearance: none;
 }
+.overlay
+{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10001;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modalbox
+{
+    width: 40%;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 4px;
+}
+.modalbox img
+{
+    width: 50%;
+}
+.modalbox p
+{
+    text-align: center;
+    padding: 2%;
+    font-size: 2rem;
+}
 a
 {
     cursor: pointer;
@@ -395,6 +428,18 @@ footer p
 }
 @media all and (orientation:landscape) and (max-width: 720px) 
 {
+    .modalbox img 
+    {
+    width: 20%;
+    }
+    .modalbox
+    {
+    width: 80%;
+    }
+    .modalbox p
+    {
+        font-size: 1rem;
+    }
     .name3 {
     font-size: 9vh;
     }
@@ -421,6 +466,14 @@ footer p
 }
 @media all and (orientation:portrait) and (max-width: 720px) 
 { 
+    .modalbox
+    {
+    width: 80%;
+    }
+    .modalbox p
+    {
+        font-size: 1rem;
+    }
     .name1_mobile
     {
         font-size: 1.5vh;
@@ -466,6 +519,10 @@ footer p
 }
 @media screen and (max-width: 720px) 
 {
+    .main_ul li img
+    {
+        width: 30%;
+    }
     #i1
     {
         margin-top: 60px;
@@ -504,8 +561,15 @@ footer p
     {
         width: 100%;
     }
+    .content1 h2
+    {
+        max-width: 80%;
+            font-size: 7vw;
+        margin-bottom: 10%;
+    }
     h2
     {
+       
             font-size: 7vw;
         margin-bottom: 10%;
     }
