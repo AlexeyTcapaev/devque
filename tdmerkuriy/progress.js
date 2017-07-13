@@ -95,6 +95,7 @@ var bar1 = new ProgressBar.Circle(circle1, {
 });
  $('.tel_submit').click(function () 
 {
+     $('.tel_input').val("");
      $('#ol').fadeIn();
      document.getElementById('ol').style.display="flex";
      setTimeout("$('#ol').fadeOut()", 2500);
