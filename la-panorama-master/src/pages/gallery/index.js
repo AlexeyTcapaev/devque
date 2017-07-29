@@ -11,7 +11,7 @@ $('.observe a').each(function (index) {
 function checkStatus () {
   let current = window.location.href
   let hash = current.indexOf('#')
-  if (hash === -1) mainView()
+  if (hash === -1 || hash === current.length - 1) mainView()
   else {
     let name = current.slice(hash)
     let index = albums.indexOf(name)
@@ -21,6 +21,7 @@ function checkStatus () {
 let show = 'displaying'
 function mainView () {
   if ($('.observe').hasClass(show)) return
+  $('.gallery > .home-link').removeClass(show)
   $('.gallery > div').removeClass(show)
   $('.observe').addClass(show)
 }
@@ -31,6 +32,7 @@ function view (index) {
   $('.observe').removeClass(show)
   $('.gallery > div').removeClass(show)
   album.addClass(show)
+  $('.gallery > .home-link').addClass(show)
 }
 
 window.addEventListener('hashchange', function () {

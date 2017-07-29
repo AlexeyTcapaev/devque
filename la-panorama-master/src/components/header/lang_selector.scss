@@ -2,7 +2,7 @@
 
 .lang-wrapper {
   position: absolute;
-  top: 5rem;
+  top: 2rem;
   right: 2rem;
 
   .custom-select.lang {
@@ -103,5 +103,11 @@
         transform: rotate(-135deg);
       }
     }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .lang-wrapper {
+    top: 5rem;
   }
 }

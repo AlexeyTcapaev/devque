@@ -38,9 +38,12 @@ block content
     .observe
         each album in albums
             a(href='#' + album.name)
-                img(src=album.cover)
+                .image-wrapper
+                    img(src=album.cover)
                 h3= album.header
     .gallery
+        a(href='#').home-link
+            p ← Назад
         +album(images)
         +album(images)
         +album(images)

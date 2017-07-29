@@ -13,3 +13,4 @@ $('.carousel').slick({
   arrows: false
 })
 
+if (window.innerWidth < 700) { $('video').remove() }

@@ -12,3 +12,14 @@ main {
     }
   }
 }
+
+@media screen and (max-width: $mobile_limit) {
+  main {
+    .paragraph {
+      .view {
+        margin-top: 2rem;
+        height: 30rem;
+      }
+    }
+  }
+}

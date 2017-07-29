@@ -126,7 +126,6 @@ nav {
   }
 
   .navigation-menu {
-    flex-direction: column;
     background-color: white;
     display: none;
     position: fixed;
@@ -153,7 +152,11 @@ nav {
     }
 
     &.opened {
-      display: flex;
+      display: block;
+
+      & > a:first-child {
+        margin-top: 3.5rem;
+      }
 
       .close-button {
         display: block;
