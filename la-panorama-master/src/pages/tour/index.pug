@@ -5,4 +5,20 @@ block content
         h2 Ждём вас!
         p У нас играют свадьбы, делают предложения, отдыхают с друзьями и просто обедают. Ресторан "Я люблю" любит своих гостей и желает приятного полета на высоте 60 метров над землей!
         .view
-            iframe(src=" https://www.google.com/maps/embed?pb=!1m0!3m2!1sru!2s!4v1486814900170!6m8!1m7!1seatDyfG5GyUAAAQvxb22yQ!2m2!1d59.93322080880463!2d30.25653132317063!3f84.08861836622177!4f0.2723636948750823!5f0.40020166444797894", width="100%", height="100%", frameborder="0", style="border:0", allowfullscreen="")
+            #street
+        script.
+            /* eslint-disable */
+            function initialize () {
+                var location = {lat: 59.933196, lng: 30.2565042};
+                var panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('street'), {
+                        position: location,
+                        pov: {
+                            heading: 34,
+                            pitch: 0
+                        }
+                    });
+            }
+            /* eslint-enable */
+
+        script(async="", defer="", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzsJgUEKUW7xIav1W7GPLWdXr_CwTI-Wk&callback=initialize")

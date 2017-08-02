@@ -1,6 +1,6 @@
 {
   "name": "la-panorama",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Offical site of \"la panorama\"",
   "main": "index.js",
   "scripts": {

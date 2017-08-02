@@ -9,6 +9,11 @@ main {
     .view {
       width: 100%;
       height: 40rem;
+
+      #street {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

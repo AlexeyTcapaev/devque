@@ -36,6 +36,6 @@ function view (index) {
 }
 
 window.addEventListener('hashchange', function () {
-  checkStatus()
+  location.reload()
 })
 checkStatus()
