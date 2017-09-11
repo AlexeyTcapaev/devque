@@ -7,6 +7,23 @@ nav
 {
     background-color:#3d3d3d;
 }
+.navbar-toggler-icon
+{
+    cursor: pointer;
+}
+.navbar-nav mr-auto
+{
+    line-height: 2.5!important;
+}
+.nav-link
+{
+     padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+.parallax img
+{
+    width: 100%;
+}
 .navbar-nav
 {
     margin-right: 0!important; 
@@ -19,15 +36,27 @@ nav
 {
    justify-content: flex-end;
 }
-.container
+.container1
 {
+     width: 100%;
     padding-left: 0!important;
     padding-right: 0!important;
     max-width: none!important;
-    background-image: url(img/fon.jpg);
-    background-position: center;
 }
 body 
 {
     padding-top: 3.5rem!important;
+    line-height: 2.5!important;
+}
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+h1
+{
+    color: black;
+    padding-bottom: 1%;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
 }
