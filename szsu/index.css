@@ -20,8 +20,9 @@
 }
 .carousel-item img
 {
-    width: 300px;
-    height: 250px;
+  width: 300px;
+    height: 200px;
+   
 }
 .pref
 {
@@ -30,6 +31,14 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+.page-footer
+{
+        background-color: #5e646b!important;
+}
+.footer-copyright
+{
+    background-color: #343a40!important;
 }
 .container
 {

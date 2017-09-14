@@ -6,7 +6,9 @@ $( document ).ready(function()
     });
     
     $(document).ready(function(){
-      $('.carousel').carousel();
+      $('.carousel').carousel({
+          duration:0
+      });
     });
         
     // progressbar.js@1.0.0 version is used
