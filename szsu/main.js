@@ -1,5 +1,6 @@
 $( document ).ready(function() 
 {
+     var plus = $(window).innerHeight() / -100 * 25;
     $(document).ready(function()
     {
       $('.parallax').parallax();
@@ -13,7 +14,7 @@ $( document ).ready(function()
         
    $("#1_1").click(function() {
       $("html, body").animate({
-         scrollTop: $($(this).attr("href")).offset().top + "px"
+         scrollTop: $($(this).attr("href")).offset().top + plus
       }, {
          duration: 500,
          easing: "swing",
@@ -22,7 +23,7 @@ $( document ).ready(function()
    }); 
     $("#2_2").click(function() {
       $("html, body").animate({
-         scrollTop: $($(this).attr("href")).offset().top + "px"
+         scrollTop: $($(this).attr("href")).offset().top + plus
       }, {
          duration: 500,
          easing: "swing",
@@ -31,7 +32,7 @@ $( document ).ready(function()
    }); 
     $("#3_3").click(function() {
       $("html, body").animate({
-         scrollTop: $($(this).attr("href")).offset().top + "px"
+         scrollTop: $($(this).attr("href")).offset().top + plus
       }, {
          duration: 500,
          easing: "swing",
@@ -40,7 +41,7 @@ $( document ).ready(function()
    }); 
     $("#4_4").click(function() {
       $("html, body").animate({
-         scrollTop: $($(this).attr("href")).offset().top + "px"
+         scrollTop: $($(this).attr("href")).offset().top + plus
       }, {
          duration: 500,
          easing: "swing",
@@ -50,7 +51,7 @@ $( document ).ready(function()
           
    $("#1_11").click(function() {
       $("html, body").animate({
-         scrollTop: $($(this).attr("href")).offset().top + "px"
+         scrollTop: $($(this).attr("href")).offset().top + plus
       }, {
          duration: 500,
          easing: "swing",
@@ -59,7 +60,7 @@ $( document ).ready(function()
    }); 
     $("#2_22").click(function() {
       $("html, body").animate({
-         scrollTop: $($(this).attr("href")).offset().top + "px"
+         scrollTop: $($(this).attr("href")).offset().top + plus
       }, {
          duration: 500,
          easing: "swing",
@@ -68,7 +69,7 @@ $( document ).ready(function()
    }); 
     $("#3_33").click(function() {
       $("html, body").animate({
-         scrollTop: $($(this).attr("href")).offset().top + "px"
+         scrollTop: $($(this).attr("href")).offset().top + plus
       }, {
          duration: 500,
          easing: "swing",
@@ -77,7 +78,7 @@ $( document ).ready(function()
    }); 
     $("#4_44").click(function() {
       $("html, body").animate({
-         scrollTop: $($(this).attr("href")).offset().top + "px"
+         scrollTop: $($(this).attr("href")).offset().top + plus
       }, {
          duration: 500,
          easing: "swing",
