@@ -11,9 +11,80 @@ $( document ).ready(function()
       });
     });
         
-    // progressbar.js@1.0.0 version is used
-// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
-
+   $("#1_1").click(function() {
+      $("html, body").animate({
+         scrollTop: $($(this).attr("href")).offset().top + "px"
+      }, {
+         duration: 500,
+         easing: "swing",
+      });
+      return false;
+   }); 
+    $("#2_2").click(function() {
+      $("html, body").animate({
+         scrollTop: $($(this).attr("href")).offset().top + "px"
+      }, {
+         duration: 500,
+         easing: "swing",
+      });
+      return false;
+   }); 
+    $("#3_3").click(function() {
+      $("html, body").animate({
+         scrollTop: $($(this).attr("href")).offset().top + "px"
+      }, {
+         duration: 500,
+         easing: "swing",
+      });
+      return false;
+   }); 
+    $("#4_4").click(function() {
+      $("html, body").animate({
+         scrollTop: $($(this).attr("href")).offset().top + "px"
+      }, {
+         duration: 500,
+         easing: "swing",
+      });
+      return false;
+   }); 
+          
+   $("#1_11").click(function() {
+      $("html, body").animate({
+         scrollTop: $($(this).attr("href")).offset().top + "px"
+      }, {
+         duration: 500,
+         easing: "swing",
+      });
+      return false;
+   }); 
+    $("#2_22").click(function() {
+      $("html, body").animate({
+         scrollTop: $($(this).attr("href")).offset().top + "px"
+      }, {
+         duration: 500,
+         easing: "swing",
+      });
+      return false;
+   }); 
+    $("#3_33").click(function() {
+      $("html, body").animate({
+         scrollTop: $($(this).attr("href")).offset().top + "px"
+      }, {
+         duration: 500,
+         easing: "swing",
+      });
+      return false;
+   }); 
+    $("#4_44").click(function() {
+      $("html, body").animate({
+         scrollTop: $($(this).attr("href")).offset().top + "px"
+      }, {
+         duration: 500,
+         easing: "swing",
+      });
+      return false;
+   }); 
+    
 var bar = new ProgressBar.Circle(container, {
   color: '#3c4761',
   // This has to be the same size as the maximum width to
