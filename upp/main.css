@@ -1,0 +1,33 @@
+.logo
+{
+    padding: 0.1%;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+a{
+    color:black!important;
+}
+.webGL-container
+{
+    width: 1903px;
+    height: 842px;
+}
+.content
+{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 730px;
+}
+.collapsible
+{
+    width: 50%;
+    margin: none!important;
+}
+#c1
+{
+    height: 600px!important;
+    margin-top: 0!important;
+}
