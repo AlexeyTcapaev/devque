@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+  
+}
+.hide-on-med-and-down
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.hide-on-med-and-down li
+{
+    flex:1;
+}
+.hide-on-med-and-down li a
+{
+    text-align: center;
+}
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+    width: 100%;
+    background: url(/header/head.jpg) 50% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.tel 
+{
+}
+.logo{
+    width: 35%;
+    padding: 5%;
+}
+.tel a
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.tel a img{
+    width: 2.5rem;
+}
+.tel a span
+{
+    color:black;
+    font-size: 2em;
+}
+.header-logo
+{
+    max-width: 100%;
+}

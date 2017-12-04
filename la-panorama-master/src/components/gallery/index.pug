@@ -1,8 +1,0 @@
-
-mixin album(images)
-    .album
-        .m-p-g
-            .m-p-g__thumbs(data-google-image-layout="", data-max-height="300")
-                each image in images
-                    img(src=image.thumb, data-full=image.source).m-p-g__thumbs-img
-            .m-p-g__fullscreen

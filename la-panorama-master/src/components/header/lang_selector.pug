@@ -1,9 +1,0 @@
-
-mixin lang(list)
-    .lang-wrapper
-        .custom-select.lang
-            span.placeholder Chose language
-            ul
-                each link, name in list
-                    li.custom-option
-                        a(href="#", data-link=link)= name
