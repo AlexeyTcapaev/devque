@@ -26,6 +26,28 @@
     color: white;
     font-size: 2em;
 }
+.footer-copyright
+{
+    width: 100%;
+   
+    background-image: url(/index/dishes/overlay.png); /* Путь к фоновому рисунку */
+}
+.footer-copyright a{
+    color: black;
+}
+.timetable
+{
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(/index/dishes/overlay.png); /* Путь к фоновому рисунку */
+    
+}
 .page-footer .container .logo a img{
     width: 3rem;
 }

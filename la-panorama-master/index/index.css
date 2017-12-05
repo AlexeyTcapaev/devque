@@ -26,3 +26,22 @@ video {
     text-align: justify;
     font-size: 1.5em!important;
 }
+.dishes h2{
+    text-align: center;
+}
+.dishes
+{
+    padding-bottom:5%;
+}
+.more
+{
+    margin-top: -30%;
+    position: relative;
+    background-image: url(/index/dishes/overlay.png); /* Путь к фоновому рисунку */
+    background-position: left bottom; /* Положение фона */
+    background-repeat: repeat-x; /* Повторяем фон по горизонтали */
+}
+.map
+{
+    margin-bottom: 5%;
+}

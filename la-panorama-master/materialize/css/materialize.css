@@ -8730,13 +8730,15 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 }
 
 .carousel.carousel-slider .carousel-item h2 {
-  font-size: 24px;
+  font-size: 35px;
   font-weight: 500;
   line-height: 32px;
+
+  color: black;
 }
 
 .carousel.carousel-slider .carousel-item p {
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .carousel .carousel-item {
