@@ -3,7 +3,7 @@
     margin: 0;
 }
 nav{
-  
+  z-index: 100!important;
 }
 .hide-on-med-and-down
 {
@@ -31,8 +31,18 @@ header
     background-size: cover;
     position: relative;
 }
-.tel 
+.page-footer .container .logo a
 {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 2em;
+}
+.page-footer .container .logo a img{
+    width: 3rem;
 }
 .logo{
     width: 35%;
