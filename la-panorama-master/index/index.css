@@ -37,7 +37,7 @@ video {
 {
     margin-top: -30%;
     position: relative;
-    background-image: url(/index/dishes/overlay.png); /* Путь к фоновому рисунку */
+    background-image: url(./index/dishes/overlay.png); /* Путь к фоновому рисунку */
     background-position: left bottom; /* Положение фона */
     background-repeat: repeat-x; /* Повторяем фон по горизонтали */
 }

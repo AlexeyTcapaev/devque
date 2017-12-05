@@ -27,7 +27,7 @@ header
     flex-direction: column;
     margin-top: 0;
     width: 100%;
-    background: url(/header/head.jpg) 50% no-repeat;
+    background: url(./header/head.jpg) 50% no-repeat;
     background-size: cover;
     position: relative;
 }

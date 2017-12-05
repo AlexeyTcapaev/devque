@@ -6,7 +6,7 @@
     flex-direction: column;
     margin-top: 0;
     width: 100%;
-    background: url(/footer/footerimg.jpg) 50% no-repeat;
+    background: url(./footer/footerimg.jpg) 50% no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -30,7 +30,7 @@
 {
     width: 100%;
    
-    background-image: url(/index/dishes/overlay.png); /* Путь к фоновому рисунку */
+    background-image: url(./index/dishes/overlay.png); /* Путь к фоновому рисунку */
 }
 .footer-copyright a{
     color: black;
@@ -45,51 +45,51 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url(/index/dishes/overlay.png); /* Путь к фоновому рисунку */
+    background-image: url(./index/dishes/overlay.png); /* Путь к фоновому рисунку */
     
 }
 .page-footer .container .logo a img{
     width: 3rem;
 }
 .social .vk {
-    background: url(/footer/social/vk.svg) no-repeat 50%;
+    background: url(./footer/social/vk.svg) no-repeat 50%;
     background-size: cover;
 }
 .social .youtube {
-    background: url(/footer/social/youtube.svg) no-repeat 50%;
+    background: url(./footer/social/youtube.svg) no-repeat 50%;
     background-size: cover;
 }
 .social .instagram {
-    background: url(/footer/social/instagram.svg) no-repeat 50%;
+    background: url(./footer/social/instagram.svg) no-repeat 50%;
     background-size: cover;
 }
 .social .facebook {
-    background: url(/footer/social/facebook.svg) no-repeat 50%;
+    background: url(./footer/social/facebook.svg) no-repeat 50%;
     background-size: cover;
 }
 .social .recall {
-    background: url(/footer/social/recall.svg) no-repeat 50%;
+    background: url(./footer/social/recall.svg) no-repeat 50%;
     background-size: cover;
 }
 
 .social .vk:hover {
-    background: url(/footer/social/vkonhover.svg) no-repeat 50%;
+    background: url(./footer/social/vkonhover.svg) no-repeat 50%;
     background-size: cover;
 }
 .social .youtube:hover {
-    background: url(/footer/social/youtubeonhover.svg) no-repeat 50%;
+    background: url(./footer/social/youtubeonhover.svg) no-repeat 50%;
     background-size: cover;
 }
 .social .instagram:hover {
-    background: url(/footer/social/instagramonhover.svg) no-repeat 50%;
+    background: url(./footer/social/instagramonhover.svg) no-repeat 50%;
     background-size: cover;
 }
 .social .facebook:hover {
-    background: url(/footer/social/facebookonhover.svg) no-repeat 50%;
+    background: url(./footer/social/facebookonhover.svg) no-repeat 50%;
     background-size: cover;
 }
 .social .recall:hover {
-    background: url(/footer/social/recallonhover.svg) no-repeat 50%;
+    background: url(./footer/social/recallonhover.svg) no-repeat 50%;
     background-size: cover;
 }
 .social div {
