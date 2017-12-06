@@ -3,6 +3,7 @@ main .rest-wrapper {
     width: 100%;
     overflow: hidden;
 }
+
 video {
     z-index: -1;
     height: 100%;
@@ -12,36 +13,42 @@ video {
     bottom: 0;
     background-size: cover;
     overflow: hidden;
-    
 }
-.about
-{
+
+.about {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.about p{
+
+.about p {
     width: 60%;
-    padding-bottom:5%;
+    padding-bottom: 5%;
     text-align: justify;
     font-size: 1.5em!important;
 }
-.dishes h2{
+
+.dishes h2 {
     text-align: center;
 }
-.dishes
-{
-    padding-bottom:5%;
+
+.dishes {
+    padding-bottom: 5%;
 }
-.more
-{
-    margin-top: -30%;
+
+.more-wrapper {
     position: relative;
-    background-image: url(../index/dishes/overlay.png); /* Путь к фоновому рисунку */
-    background-position: left bottom; /* Положение фона */
-    background-repeat: repeat-x; /* Повторяем фон по горизонтали */
 }
-.map
-{
+
+.more {
+    position: absolute;
+    background-image: url(../index/dishes/overlay.png);
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.map {
     margin-bottom: 5%;
 }
