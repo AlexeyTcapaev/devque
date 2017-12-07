@@ -13,6 +13,10 @@
     flex-direction: column;
 }
 
+.menu-section img {
+    max-width: 100vw;
+}
+
 .tabs {
     display: flex;
     flex-direction: row;
