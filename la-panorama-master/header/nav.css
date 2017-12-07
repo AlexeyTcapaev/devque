@@ -3,6 +3,22 @@
     src: local("Poiret One"), local("Poiret One"), url(../fonts/PoiretOne-Regular.ttf) format("truetype")
 }
 
+.material-icons {
+    font-family: 'Material Icons'!important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -22,6 +38,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
 }
 
 .hide-on-med-and-down li {
@@ -71,8 +88,28 @@ header {
 }
 
 .tel a {
-    display: flex;
+    display: inline-block;
     flex-direction: row;
+    align-items: center;
+    
+}
+
+.mobile-phone {
+    display: none;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    width: 12rem;
+}
+
+.nav-wrapper a img {
+    height: 70%;
+}
+
+.nav-wrapper {
+    display: flex!important;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -97,19 +134,20 @@ nav ul li a {
     flex: 2!important;
     max-width: 19%!important;
 }
-.close
-{
+
+.close {
     justify-content: flex-end!important;
 }
-.close a{
+
+.close a {
     position: absolute!important;
 }
-.sidenav li>a>i
-{
-    color:black!important;
+
+.sidenav li>a>i {
+    color: black!important;
 }
-.sidenav
-{
+
+.sidenav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
