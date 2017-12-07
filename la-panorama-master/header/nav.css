@@ -87,6 +87,24 @@ header {
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 300px) {
+    .tel a span {
+        font-size: 1.5em!important;
+    }
+    .logo {
+        height: 17rem;
+        margin: 1rem auto;
+        padding: 0;
+        width: 16rem;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    .about p{
+        font-size: 1.2em!important;
+    }
+}
+
 .tel a {
     display: flex;
     flex-direction: row;
@@ -96,8 +114,13 @@ header {
 .mobile-phone {
     display: none;
     height: 100%;
+    width: 80%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+.mobile-phone span {
+    margin-left: 10px;
 }
 
 .nav-wrapper a img {
@@ -109,6 +132,10 @@ header {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+}
+
+.tel a span {
+    margin-left: 10px;
 }
 
 .tel a img {
@@ -151,6 +178,7 @@ nav ul li a {
 
 .close a {
     position: absolute!important;
+    padding: 0!important;
 }
 
 .sidenav li>a>i {
