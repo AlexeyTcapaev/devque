@@ -6,6 +6,13 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+@media only screen and (max-width: 1134px) {
+    .large
+    {
+        flex: 2!important;
+    }
+}
+
 .news-h
 {
     width: 100%;
@@ -41,7 +48,7 @@ header {
 
 nav {
     position: relative;
-    max-width: 45%;
+    max-width: 50%;
     margin-right: 15px;
     background-color: rgba(0, 209, 255, 0.7);
 }
