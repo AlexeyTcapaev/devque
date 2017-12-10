@@ -1,0 +1,138 @@
+header {
+    background: url(../header/header.jpg) 50% no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.news-h
+{
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+    align-items: flex-end;
+}
+.t1{
+    text-align: right;
+    font-weight: 100;
+    margin: 0;
+}
+.t2
+{
+    text-align: right;
+    margin: 0;
+}
+.t3
+{
+    margin: 0;
+    font-weight: 100;
+}
+.logo-nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+nav {
+    position: relative;
+    max-width: 45%;
+    margin-right: 15px;
+    background-color: rgba(0, 209, 255, 0.7);
+}
+.h
+{
+    width: 50vw;
+    color: white;
+    margin-right: 15px;
+}
+.news ul li
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.news ul
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.news ul li p{
+    font-weight: bolder;
+}
+.news ul li span
+{
+    margin-left: 5%;
+    color: white;
+}
+.news{
+    background-color: rgba(0, 209, 255, 0.7);
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 20vw;
+    padding: 2%;
+}
+.news p{
+    color: white;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.h h3
+{
+    font-weight: bolder;
+}
+.nav-wrapper::before {
+    content: '';
+    left: -64px;
+    position: absolute;
+    /* Абсолютное позиционирование */
+    /* Положение треугольника */
+    border: 32px solid transparent;
+    border-right: 32px solid rgba(0, 209, 255, 0.7);
+    border-bottom: 32px solid rgba(0, 209, 255, 0.7);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 15px;
+}
+
+a {
+    color: white;
+}
+
+.tel {
+    font-size: 25px;
+}
+
+.hide-on-med-and-down {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.hide-on-med-and-down li {
+    flex: 1;
+}
+
+.hide-on-med-and-down li a {
+    text-align: center;
+}

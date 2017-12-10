@@ -1,0 +1,77 @@
+h2 {
+    text-align: center;
+}
+
+.materialboxed.active {
+    margin: auto;
+    position: absolute;
+    top: -33.3%!important;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.alboum-list li {
+    padding: 5px!important;
+}
+.materialboxed
+{
+    width: 30vw;
+}
+.material-placeholder {
+    position: static!important;
+}
+
+.gallery-alboum-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alboum-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.image-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+a span {
+    color: white;
+}
+
+.modal {
+    overflow-y: scroll;
+    height: 75%!important;
+    max-height: 75%!important;
+}
+
+.image-list-wrapper {
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-title {
+    color: black!important;
+}
+
+a {
+    color: black!important;
+}
+
+.card {
+    max-width: 400px;
+}

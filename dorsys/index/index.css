@@ -1,0 +1,62 @@
+.categories-list{
+    background-color: rgba(0, 209, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.collapsible{
+    border: none;
+    background-color: rgba(0, 209, 255, 1);
+    margin-top: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+}
+.about
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.about h5
+{
+    width: 70%;
+    text-align: justify;
+}
+.categories
+{
+    background-color: rgba(0, 209, 255, 1);
+}
+.collapsible-body
+{
+    background-color: white;
+    color: rgba(0, 209, 255, 1);
+    z-index: 100!important;
+}
+.collapsible-header img{
+    margin-right: 10px;
+}
+.collapsible-header
+{
+    background-color: rgba(0, 209, 255, 1);
+    padding: 0.5rem;
+    border-bottom: none;
+}
+.collapsible > li
+{
+    border: none;
+    position: relative;
+    background-color: rgba(0, 209, 255, 1);
+    box-shadow: none!important;
+}
+.collapsible-body
+{
+    position: absolute;
+}
+.collapsible-header p{
+    color: white;
+}

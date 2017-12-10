@@ -104,7 +104,24 @@ header {
         font-size: 1.2em!important;
     }
 }
-
+a.nav-logo::parent
+{
+    display: none!important;
+}
+.nav-logo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+a.nav-logo img
+{
+    height: 30%!important;
+    width: 87px;
+}
 .tel a {
     display: flex;
     flex-direction: row;
@@ -121,6 +138,7 @@ header {
 
 .mobile-phone span {
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 .nav-wrapper a img {

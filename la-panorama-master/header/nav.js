@@ -8,12 +8,16 @@ function check() {
   }
 }
 $(document).ready(function () {
+  jQuery('.nav-logo').parent().css("display","none");
   check();
   $(window).resize(check);
   $('.sidenav').sidenav();
   $("nav").sticky({
     topSpacing: 0
   });
+  jQuery('nav').on('sticky-start', function() {  jQuery('.nav-logo').parent().css("display","flex"); });
+  jQuery('nav').on('sticky-end', function() { jQuery('.nav-logo').parent().css("display","none"); });
+
   jQuery(".close").click(function () {
     $('.sidenav').sidenav('close');
   });

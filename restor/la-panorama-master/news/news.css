@@ -1,0 +1,27 @@
+h2 {
+    text-align: center;
+}
+
+.card {
+    max-width: 400px;
+    max-height: 200px;
+}
+
+.card-image {
+    display: flex;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.news-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

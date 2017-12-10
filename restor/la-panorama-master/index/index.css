@@ -1,0 +1,103 @@
+
+video {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 992px) {
+    .rest-wrapper {
+        height: 250px;
+        display: flex;
+    }
+    .rest {
+        display: none;
+    }
+    .footer-desc {
+        flex-direction: column!important;
+    }
+    .footer-desc h4 {
+        font-size: 2em;
+    }
+    .logo {
+        margin: 0!important;
+    }
+    .about p {
+        width: 90%!important;
+    }
+}
+@media only screen and (max-width: 800px) {
+    main .rest-wrapper {
+        height: 30vh!important;
+    }
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .rest-wrapper {
+        display: none;
+    }
+}
+@media only screen and (max-width: 800px)
+{
+main .rest-wrapper {
+    height: 15vh!important;
+}
+}
+main .rest-wrapper {
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: auto!important;
+}
+
+.footer-copyright h4 {
+    color: black!important;
+    text-align: center!important;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about p {
+    width: 60%;
+    padding-bottom: 5%;
+    text-align: justify;
+    font-size: 1.5em!important;
+}
+
+.dishes h2 {
+    text-align: center;
+}
+
+.dishes {
+    padding-bottom: 5%;
+}
+
+.more-wrapper {
+    position: relative;
+}
+
+.more {
+    position: absolute;
+    background-image: url(../index/dishes/overlay.png);
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.map {
+    margin-bottom: 5%;
+}

@@ -1,0 +1,163 @@
+.page-footer {
+    padding-top: 0!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.footer-copyright h4 {
+    color: black!important;
+    text-align: center!important;
+}
+
+@media only screen and (max-width: 300px) {
+    .page-footer .container a {
+        font-size: 1.5em!important;
+    }
+    .footer-desc h4 {
+        font-size: 1.4em!important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .page-footer .footer-copyright {
+        flex-direction: column;
+    }
+}
+
+.footer-desc {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: url(../footer/footerimg.jpg) 50% no-repeat;
+    width: 100%;
+    background-size: cover;
+}
+
+a.footer-tel span {
+    margin-left: 10px;
+}
+
+.page-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-footer .container a {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+}
+
+.footer-tel {
+    min-width: 20vw;
+    justify-content: space-around!important;
+}
+
+.footer-copyright {
+    background-color: white!important;
+}
+
+.footer-copyright a {
+    color: black;
+}
+
+.timetable {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../index/dishes/overlay.png);
+    /* Путь к фоновому рисунку */
+}
+
+.page-footer .container a img {
+    width: 3rem;
+}
+
+.social .vk {
+    background: url(../footer/social/vk.svg) no-repeat 50%;
+    background-size: cover;
+}
+
+.social .youtube {
+    background: url(../footer/social/youtube.svg) no-repeat 50%;
+    background-size: cover;
+}
+
+.social .instagram {
+    background: url(../footer/social/instagram.svg) no-repeat 50%;
+    background-size: cover;
+}
+
+.social .facebook {
+    background: url(../footer/social/facebook.svg) no-repeat 50%;
+    background-size: cover;
+}
+
+.social .recall {
+    background: url(../footer/social/recall.svg) no-repeat 50%;
+    background-size: cover;
+}
+
+.social .vk:hover {
+    background: url(../footer/social/vkonhover.svg) no-repeat 50%;
+    background-size: cover;
+}
+
+.social .youtube:hover {
+    background: url(../footer/social/youtubeonhover.svg) no-repeat 50%;
+    background-size: cover;
+}
+
+.social .instagram:hover {
+    background: url(../footer/social/instagramonhover.svg) no-repeat 50%;
+    background-size: cover;
+}
+
+.social .facebook:hover {
+    background: url(../footer/social/facebookonhover.svg) no-repeat 50%;
+    background-size: cover;
+}
+
+.social .recall:hover {
+    background: url(../footer/social/recallonhover.svg) no-repeat 50%;
+    background-size: cover;
+}
+
+.social div {
+    height: 4rem;
+    width: 4rem;
+}
+
+.social {
+    min-width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.social a {
+    margin-left: 1%;
+    margin-right: 1%;
+}

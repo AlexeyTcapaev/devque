@@ -10,15 +10,7 @@ video {
     overflow: hidden;
 }
 
-.rest-wrapper img {
-    display: none;
-}
-
 @media only screen and (max-width: 992px) {
-    .rest-wrapper img {
-        display: flex;
-        width: 100%
-    }
     .rest-wrapper {
         height: 250px;
         display: flex;
