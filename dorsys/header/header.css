@@ -6,15 +6,14 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 @media only screen and (max-width: 1134px) {
-    .large
-    {
+    .large {
         flex: 2!important;
     }
 }
 
-.news-h
-{
+.news-h {
     width: 100%;
     margin-top: 3%;
     display: flex;
@@ -23,21 +22,27 @@ header {
     margin-bottom: 5vh;
     align-items: flex-end;
 }
-.t1{
+
+.t1 {
     text-align: right;
     font-weight: 100;
     margin: 0;
 }
-.t2
-{
+
+.t2 {
     text-align: right;
     margin: 0;
 }
-.t3
-{
+
+.t3 {
     margin-right: 7vw!important;
     margin: 0;
     font-weight: 100;
+}
+.sticky-wrapper
+{
+    width: 50%;
+    z-index: 1000;
 }
 .logo-nav-wrapper {
     display: flex;
@@ -49,49 +54,52 @@ header {
 
 nav {
     position: relative;
-    max-width: 50%;
     margin-right: 15px;
-    background-color: rgba(0, 209, 255, 0.7);
+    background-color: rgba(0, 209, 255, 0.8);
+    box-shadow: none;
 }
-.h
-{
+
+.h {
     color: white;
     margin-right: 15px;
 }
-.news ul li
-{
+
+.news ul li {
     display: flex;
     flex-direction: column;
     padding-top: 3%;
     padding-bottom: 3%;
 }
-.news ul
-{
+
+.news ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }
-.news ul li p{
+
+.news ul li p {
     font-weight: bolder;
 }
-.news ul li span
-{
+
+.news ul li span {
     margin-left: 5%;
     color: white;
 }
-.news{
-    background-color: rgba(0, 209, 255, 0.7);
+
+.news {
+    background-color: rgba(0, 209, 255, 0.8);
     margin-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    width: 20vw;
     padding: 2%;
+    width: 281px;
 }
-.news p{
+
+.news p {
     color: white;
     text-align: left;
     width: 100%;
@@ -99,19 +107,8 @@ nav {
     margin: 0;
 }
 
-.h h3
-{
+.h h3 {
     font-weight: bolder;
-}
-.nav-wrapper::before {
-    content: '';
-    left: -64px;
-    position: absolute;
-    /* Абсолютное позиционирование */
-    /* Положение треугольника */
-    border: 32px solid transparent;
-    border-right: 32px solid rgba(0, 209, 255, 0.7);
-    border-bottom: 32px solid rgba(0, 209, 255, 0.7);
 }
 
 .logo-container {
@@ -142,4 +139,8 @@ a {
 
 .hide-on-med-and-down li a {
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+   
 }

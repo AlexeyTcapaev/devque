@@ -1,0 +1,21 @@
+.content-wrapper{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 80%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.collapsible.popout > li{
+    width: 100%;
+
+}
+ul.collapsible{
+    max-width: 50%;
+}
+h1{
+    color:   rgba(0, 209, 255, 1);
+}

@@ -1,10 +1,11 @@
-.categories-list{
+.categories-list {
     background-color: rgba(0, 209, 255, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.collapsible{
+
+.collapsible {
     border: none;
     background-color: rgba(0, 209, 255, 1);
     margin-top: 0;
@@ -13,50 +14,121 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
+    transition: 0.2s linear;
+    
 }
-.about
-{
+
+.about {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-.about h5
-{
+
+.about h6 {
     width: 70%;
     text-align: justify;
 }
-.categories
-{
+
+.about h5 {
+    width: 70%;
+    text-align: justify;
+}
+
+.categories {
     background-color: rgba(0, 209, 255, 1);
 }
-.collapsible-body
-{
+
+.collapsible-body {
     background-color: white;
     color: rgba(0, 209, 255, 1);
     z-index: 100!important;
 }
-.collapsible-header img{
+
+.collapsible-header img {
     margin-right: 10px;
+   
 }
-.collapsible-header
-{
+
+.collapsible-header {
     background-color: rgba(0, 209, 255, 1);
     padding: 0.5rem;
     border-bottom: none;
+    box-sizing: border-box;
 }
-.collapsible > li
-{
+
+.collapsible>li {
     border: none;
     position: relative;
     background-color: rgba(0, 209, 255, 1);
     box-shadow: none!important;
 }
-.collapsible-body
-{
+
+.collapsible-body {
     position: absolute;
 }
-.collapsible-header p{
+
+.collapsible-header p {
     color: white;
+}
+
+.reputation-wrapper {
+    width: 70%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.block-left {
+    display: flex;
+    flex-direction: column;
+    max-width: 30vw;
+}
+
+span.big {
+    font-size: 76px;
+    font-weight: bold;
+    color: #00a1e4;
+}
+
+span.medium {
+    font-size: 37px;
+    color: #00a1e4;
+}
+.block-left p{
+    max-width: 35%;
+    color: #00a1e4;
+}
+.block-right
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.block-right img
+{
+    margin-right: 5%;
+    height: 86%;
+}
+.text-container
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 22vw;
+    align-items: center;
+    justify-content: center;
+}
+.block-right h6{
+    font-weight: bolder;
+    color: #00a1e4;
+    width: 77%;
+    text-align: justify;
+}
+.block-right p{
+    text-align: justify;
 }
