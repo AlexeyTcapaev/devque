@@ -17,10 +17,11 @@ footer div.row {
 }
 footer .container{
         max-width: 1280px;
-        width: 90%!important;
+        width: 100%!important;
 }
 .footer-text{
     width: 25%;
+    margin-right: 10%;
 }
 .footer-text h6 a{
     display: flex;
