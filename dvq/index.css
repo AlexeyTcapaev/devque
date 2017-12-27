@@ -1,0 +1,19 @@
+.portfolio-list {
+    height: 100%;
+}
+
+.portfolio-wrapper {
+    width: 90%;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.more-portfolio {
+    background-color: #262626;
+}
+
+.more-portfolio a {
+    color: white;
+}
