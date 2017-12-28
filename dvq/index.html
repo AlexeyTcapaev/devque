@@ -6,7 +6,7 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="index.css" media="screen,projection" />
 
     <!--Let browser know website is optimized for mobile-->
@@ -14,35 +14,101 @@
 </head>
 
 <body>
+    <div class="overlay"></div>
     <header>
         <div class="portfolio-wrapper">
             <ul class="portfolio-list">
                 <li>
-                    <a href="#"><img src="images/portfolio/1.jpg"></a>
+                    <a href="#">
+                        <img src="images/portfolio/1.jpg">
+                    </a>
                 </li>
                 <li>
-                    <a><img></a>
+                    <a>
+                        <img src="images/portfolio/2.jpg">
+                    </a>
                 </li>
                 <li>
-                    <a><img></a>
+                    <a>
+                        <img src="images/portfolio/3.jpg">
+                    </a>
                 </li>
                 <li>
-                    <a><img></a>
+                    <a>
+                        <img src="images/portfolio/4.jpg">
+                    </a>
                 </li>
                 <li>
-                    <a><img></a>
+                    <a>
+                        <img src="images/portfolio/5.jpg">
+                    </a>
                 </li>
                 <li>
-                    <a><img></a>
+                    <a>
+                        <img src="images/portfolio/6.jpg">
+                    </a>
                 </li>
             </ul>
             <div class="more-portfolio">
-                <a href="#">Смотреть больше <b> наших работ</b></a>
+                <a href="#">Смотреть больше
+                    <b> наших работ</b>
+                </a>
+            </div>
+        </div>
+        <div class="logo-social-wrapper">
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="social">
+                <a href="tel:+79117206281">
+                    <b>+7-911-720-62-81</b>
+                </a>
+                <a>
+                    <i class="material-icons">phone</i>Обратный звонок</a>
+                <a class="vk"></a>
             </div>
         </div>
     </header>
     <nav>
-
+        <div class="nav-wrapper">
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="sass.html">Наши работы</a>
+                </li>
+                <li>
+                    <a href="badges.html">Продвижение</a>
+                </li>
+                <li>
+                    <a href="collapsible.html">Web-приложения</a>
+                </li>
+                <li>
+                    <a href="mobile.html">Цены</a>
+                </li>
+                <li>
+                    <a href="mobile.html">О компании</a>
+                </li>
+            </ul>
+            <ul class="sidenav" id="mobile-demo">
+                <li>
+                    <a href="sass.html">Наши работы</a>
+                </li>
+                <li>
+                    <a href="badges.html">Продвижение</a>
+                </li>
+                <li>
+                    <a href="collapsible.html">Web-приложения</a>
+                </li>
+                <li>
+                    <a href="mobile.html">Цены</a>
+                </li>
+                <li>
+                    <a href="mobile.html">О компании</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <main>
 
@@ -51,7 +117,8 @@
 
     </footer>
     <!--JavaScript at end of body for optimized loading-->
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
     <script type="text/javascript" src="vue.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
