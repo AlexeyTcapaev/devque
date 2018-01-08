@@ -1,21 +1,40 @@
-.content-wrapper{
+@media only screen and (max-width: 414px) {
+    h1{
+        font-size: 2.5rem!important;
+    }
+    .collapsible.popout{
+        max-width: 100%!important;
+    }
+}
+@media only screen and (max-width: 920px) {
+    .content-wrapper {
+        align-items: center!important;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.content-wrapper {
     display: flex;
     align-items: baseline;
     justify-content: space-around;
     width: 80%;
 }
-main{
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.collapsible.popout > li{
-    width: 100%;
 
+.collapsible.popout>li {
+    width: 100%;
 }
-ul.collapsible{
+
+ul.collapsible {
     max-width: 50%;
 }
-h1{
-    color:   rgba(0, 209, 255, 1);
+
+h1 {
+    color: rgba(0, 209, 255, 1);
 }

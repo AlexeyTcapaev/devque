@@ -1,3 +1,28 @@
+@media only screen and (max-width: 414px) {
+  
+    .reputation-wrapper{
+        width: 100%!important;
+        flex-direction: column!important;
+    }
+    .block-left {
+        flex-direction: column!important;
+        align-items: center!important;
+        max-width: 100%!important;
+    }
+    .block-right {  
+        flex-direction: column!important;
+    }
+    .block-right img{
+        margin-right: 0!important;
+    }
+    .text-container{
+        max-width: 80vw!important;
+    }
+    .collapsible{
+        justify-content: center!important;
+    }
+    
+}
 .categories-list {
     background-color: rgba(0, 209, 255, 1);
     display: flex;
@@ -16,8 +41,8 @@
     justify-content: space-between;
     width: 70%;
     transition: 0.2s linear;
-    
 }
+
 
 .about {
     display: flex;
@@ -48,7 +73,6 @@
 
 .collapsible-header img {
     margin-right: 10px;
-   
 }
 
 .collapsible-header {
@@ -98,37 +122,39 @@ span.medium {
     font-size: 37px;
     color: #00a1e4;
 }
-.block-left p{
+
+.block-left p {
     max-width: 35%;
     color: #00a1e4;
 }
-.block-right
-{
+
+.block-right {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
 
-}
-.block-right img
-{
+.block-right img {
     margin-right: 5%;
-    height: 86%;
+   
 }
-.text-container
-{
+
+.text-container {
     display: flex;
     flex-direction: column;
     max-width: 22vw;
     align-items: center;
     justify-content: center;
 }
-.block-right h6{
+
+.block-right h6 {
     font-weight: bolder;
     color: #00a1e4;
-    width: 77%;
+    width: 100%;
     text-align: justify;
 }
-.block-right p{
+
+.block-right p {
     text-align: justify;
 }

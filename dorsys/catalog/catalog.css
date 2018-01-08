@@ -1,15 +1,41 @@
+@media only screen and (max-width: 917px) {
+    .tabs-vertical .tab a{
+        font-size: 0!important;
+    }
+    .tabs-vertical .tabs{
+        max-width: 62px!important;
+        min-width: 62px!important;
+        margin-left: 0px!important;
+    }
+    .active h1{
+        font-size: 2.2rem!important;
+    }
+    .card{
+        max-width: 100%;
+    }
+    .card-list{
+        align-items: center;
+    }
+    .card-list li{
+        max-width: 90%;
+    }
+}
 .tabs-vertical .tabs {
-    margin-left: 15px!important;
+    margin-left: 15px;
     background-color: rgba(0, 209, 255, 1)!important;
-    width: 281px;
+    max-width: 281px;
     height: auto;
     -ms-flex-direction: column;
     -webkit-flex-direction: column;
     flex-direction: column;
+    flex: 2;
+}
+.tabs-vertical .tab{
+    max-height: 48px;
 }
 .tab-content h1{
     vertical-align: middle;
-    margin: 0;
+    margin: 0 5px 0 5px;
     text-align: center;
 }
 .tab a{
@@ -44,7 +70,7 @@
     text-overflow: ellipsis;
 }
 .tb-container{
-    width: 77vw;
+    flex:1;
 }
 .tabs-vertical .tab .active {
     -moz-transition: border-color .5s ease;

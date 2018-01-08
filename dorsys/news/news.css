@@ -1,3 +1,29 @@
+@media only screen and (max-width: 414px) {
+    h1{
+        font-size: 2.5rem!important;
+    }
+    .collapsible.popout{
+        max-width: 100%!important;
+    }
+}
+@media only screen and (max-width: 920px) {
+    .content-wrapper {
+        align-items: center!important;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-list li{
+        width: 90%!important;
+    }
+    .card{
+        width: auto!important;
+    }
+    .card-list{
+        justify-content: center!important;
+        margin-right: 0!important;
+    }
+}
+
 h1{
     color:   rgba(0, 209, 255, 1);
     display: inline-table;

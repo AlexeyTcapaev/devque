@@ -1,3 +1,60 @@
+@media only screen and (max-width: 414px) {
+    .logo-nav-wrapper{
+        flex-direction: column-reverse;
+    }
+    .logo-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 5px 0 5px;
+    }
+    .tel {
+        font-size: 19px!important;
+    }
+    .news{
+        margin: 0!important;
+        width: auto!important;
+    }
+    .t1,.t3{
+        font-size: 1.28rem!important;
+        margin-right: 0!important;
+    }
+    .t2{
+        font-size: 1.92rem!important;
+    }
+    .reputation-wrapper{
+        width: 100%!important;
+        flex-direction: column!important;
+    }
+    .block-left {
+        flex-direction: column!important;
+        align-items: center!important;
+        max-width: 100%!important;
+    }
+    
+}
+@media only screen and (max-width: 810px) {
+    .news-h {
+        flex-direction: column!important;
+        align-items: initial!important;
+    }
+    .h {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.logo-container{
+    max-width: 68%;
+}
 header {
     background: url(../header/header.jpg) 50% no-repeat;
     background-size: cover;
@@ -6,13 +63,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
-@media only screen and (max-width: 1134px) {
-    .large {
-        flex: 2!important;
-    }
+.logo-container a img{
+    max-width: 100%;
 }
-
 .news-h {
     width: 100%;
     margin-top: 3%;
@@ -35,15 +88,14 @@ header {
 }
 
 .t3 {
-    margin-right: 7vw!important;
     margin: 0;
     font-weight: 100;
 }
-.sticky-wrapper
-{
-    width: 50%;
+
+.sticky-wrapper {
     z-index: 1000;
 }
+
 .logo-nav-wrapper {
     display: flex;
     flex-direction: row;
@@ -54,7 +106,6 @@ header {
 
 nav {
     position: relative;
-    margin-right: 15px;
     background-color: rgba(0, 209, 255, 0.8);
     box-shadow: none;
 }
@@ -133,14 +184,8 @@ a {
     justify-content: space-around;
 }
 
-.hide-on-med-and-down li {
-    flex: 1;
-}
-
 .hide-on-med-and-down li a {
     text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-   
-}
+@media only screen and (max-width: 600px) {}

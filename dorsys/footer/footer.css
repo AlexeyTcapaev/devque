@@ -1,3 +1,11 @@
+
+
+@media only screen and (max-width: 414px) {
+    footer div.row ul{
+        height: auto!important;
+    }
+    
+}
 footer{
     background-color:  rgba(0, 209, 255, 1)!important;
 }
@@ -7,7 +15,7 @@ footer div.row ul{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
+   align-items: center;
 }
 footer div.row {
     display: flex;
@@ -18,6 +26,7 @@ footer div.row {
 footer .container{
         max-width: 1280px;
         width: 100%!important;
+        padding: 0 5px 0 5px;
 }
 .footer-text{
     width: 25%;
@@ -38,4 +47,21 @@ footer .container{
 .footer-text h6 a i{
     margin-right: 5px;
  
+}
+@media only screen and (max-width: 1020px) {
+    footer div.row ul{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 992px) {
+    footer div.row{
+        flex-direction: column;
+        align-items: center;
+    }
+    div.footer-text{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin:0;
+    }
 }
