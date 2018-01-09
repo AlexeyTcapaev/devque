@@ -1,0 +1,35 @@
+.portfolio-carousel{
+    overflow: hidden;
+    flex:1;
+}
+.completed-work{
+    display: flex;
+}
+.full-completed-link{
+    background-color: #262626;
+    color:white;
+    display: flex;
+    align-items: center;
+    padding: 0 2% 0 2%;
+}
+body{
+    background-image: url('../images/index-main.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+}
+nav ul a {
+    color: black;
+}
+nav .brand-logo{
+    color: black;
+}
+i{
+    color: #262626;
+}
+.nav-wrapper ul li a{
+    font-weight: 700;
+}
