@@ -1,0 +1,229 @@
+html {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.hide-on-med-and-down li a {
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    color: #262626;
+    transition: 0.5s color ease;
+    text-decoration: none;
+}
+
+.hide-on-med-and-down li a:before,
+.hide-on-med-and-down li a:after {
+    content: "";
+    transition: 0.5s all ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 5px;
+    height: 0.35rem;
+    width: 0;
+    background: #262626;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.hide-on-med-and-down li a:hover:before,
+.hide-on-med-and-down li a:hover:after {
+    width: 100%;
+}
+
+.hide-on-med-and-down li a:before {
+    top: 0.5em;
+}
+
+.hide-on-med-and-down li a:after {
+    bottom: 0.5em;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: #262626;
+
+}
+
+.logo img {
+    margin-left: 10px;
+    height: 80%;
+    margin-right: 20px;
+}
+
+.logo-name {
+    color: #262626;
+}
+
+nav .nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+}
+
+a.tel i {
+    margin-right: 5px;
+    color: #262626!important;
+}
+
+.logo span {
+    font-weight: 400;
+}
+
+a.tel {
+    display: flex;
+    flex-direction: row;
+    color: #262626!important;
+}
+
+.social {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vk {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 0px;
+    background-image: url('../images/vk.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+ul.grid li img {
+   
+    height: 100%;
+}
+figure {
+    margin: 0!important;
+    padding: 0!important;
+}
+.aside{
+    height: calc(100vh - 64px);
+    flex:0;
+}
+.aside h1{
+   text-align: center;
+   font-weight: bolder;
+   text-transform: uppercase;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 500;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
+.content-wrapper{
+    display: flex;
+    float: left;
+    flex:2;
+}
+.content-wrapper div.active
+{
+    width: 20vw!important;
+    overflow: auto;
+    padding: 10%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+}
+.indicator {
+    display: none!important;
+}
+
+.tabs-vertical .tabs {
+    height: auto;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.tabs-vertical .tab {
+    width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+   
+    flex-grow: 1;
+    display: block;
+    float: left;
+    text-align: left;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+}
+
+.tabs-vertical .tab .active {
+    
+    color: #fff!important;
+    background-color: #262626!important;
+    -webkit-transition: color 0.28s ease;
+    -moz-transition: color 0.28s ease;
+    -o-transition: color 0.28s ease;
+    -ms-transition: color 0.28s ease;
+    transition: color 0.28s ease;
+}
+.tabs-vertical .tab a i {
+    margin-right: 10px;
+}
+.tabs-vertical .tab a {
+    color: #262626!important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-weight: bolder;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-transition: color 0.28s ease;
+    -moz-transition: color 0.28s ease;
+    -o-transition: color 0.28s ease;
+    -ms-transition: color 0.28s ease;
+    transition: color 0.28s ease;
+}
+
+.tabs-vertical .tab a:hover {
+    color: #8591d5;
+}
+
+.tabs-vertical .tab.disabled a {
+    color: #8591d5;
+    cursor: default;
+}
+
+.tabs-vertical .indicator {
+    display: none;
+}

@@ -64,11 +64,11 @@
 
 .grid figure h2 {
 	word-spacing: -0.15em;
-	font-weight: 300;
+	font-weight: 100;
 }
 
 .grid figure h2 span {
-	font-weight: 800;
+	font-weight: bolder;
 }
 
 .grid figure h2,

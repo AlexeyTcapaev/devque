@@ -6,7 +6,9 @@ $( document ).ready(function() {
         autoplay: true,
         autoplaySpeed: 2500,
         variableWidth: true,
-        focusOnSelect: true,
+        focusOnSelect: false,
       });
        $('.sidenav').sidenav();
+       $('.modal').modal();
+       $('.chips').chips();
 });

@@ -1,59 +1,79 @@
-.portfolio-carousel {
-    overflow: hidden;
-    flex: 1;
+html,
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
-.completed-work {
-    display: flex;
-}
-
-.full-completed-link {
-    background-color: #262626;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 0 2% 0 2%;
-}
-
-figure {
-    margin: 0!important;
-    padding: 0!important;
-}
 body {
     background-image: url('../images/index-main.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-nav {
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
+header {
+    height: 217px;
+}
+
+main {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: calc(100vh - 217px);
 }
 
-nav .nav-wrapper {
-    width: 50vw;
-    min-width: 970px;
+.main-content {
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-nav .nav-wrapper .sidenav {
-    width: 60%;
-    max-width: 300px;
-    min-width: 193px;
+nav {
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 nav ul a {
     color: #262626;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-nav .brand-logo {
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 84px;
     color: #262626;
 }
 
-i {
-    color: #262626;
+#menu {
+    background-color: #262626;
+}
+
+.vk {
+    font-size: 0px;
+    background-image: url('../images/vk.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 48px;
+    width: 48px;
+}
+
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .hide-on-med-and-down li a {
@@ -94,93 +114,26 @@ i {
     bottom: -0.05em;
 }
 
-.nav-and-social-wrapper {
+.portfolio-carousel {
+    overflow: hidden;
+    flex: 1;
+}
+
+.completed-work {
     display: flex;
-    flex-direction: column;
 }
 
-@media only screen and (max-width: 320px) {
-    main div.logo h1 {
-        font-size: 2rem;
-    }
-}
-
-@media only screen and (max-width: 605px) {
-    main h1 {
-        font-size: 2.4rem;
-    }
-}
-
-@media only screen and (max-width: 414px) {
-    div.bottom-block {
-        width: 90vw!important;
-    }
-    main h4 {
-        width: 90vw!important;
-    }
-    .full-completed-link {
-        width: 30vw;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 372px) {
-    .tel {
-        font-size: 0;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .call {
-        font-size: 0;
-    }
-    .call i {
-        font-size: 34px;
-    }
-    .vk {
-        height: 34px!important;
-        width: 34px!important;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .nav-and-social-wrapper {
-        flex-direction: row-reverse;
-    }
-    nav .nav-wrapper {
-        width: 64px;
-        min-width: auto;
-    }
-    nav {
-        max-width: 64px;
-        flex: 1;
-    }
-    div.social {
-        flex: 2;
-    }
-    .logo h1 {
-        display: flex;
-        flex-direction: column;
-    }
-    .logo {
-        flex-direction: column;
-    }
-    .bottom-block {
-        width: 55vw!important;
-    }
-}
-
-.hide-on-med-and-down {
+.full-completed-link {
+    background-color: #262626;
+    color: white;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    padding: 0 2% 0 2%;
 }
 
-.vk {
-    background-image: url('../images/vk.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 48px;
-    width: 48px;
+figure {
+    margin: 0!important;
+    padding: 0!important;
 }
 
 div.social {
@@ -195,79 +148,69 @@ div.social a {
     display: flex;
     align-items: center;
     margin: 0 15px 0 15px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 div.social a i {
     margin-right: 5px;
 }
-
-main h1 {
-    text-align: center;
-    margin: 0;
-    font-weight: 200;
+div.social a{
+  position: relative;
 }
-
-main h1 b {
-    font-weight: 700;
+div.social a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: black;
+  height: 1px;
 }
-
-.logo {
-    margin-top: 5%;
-    margin-bottom: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 5px solid rgba(0, 0, 0, 0);
+div.social a a:hover:after {
+  width: 100%;
 }
-
-.logo img {
-    margin-left: 15px;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2%;
-}
-
-main h4 {
-    width: 51%;
-    text-align: justify;
-    font-weight: 300;
-}
-
-h2 {
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bolder;
-    font-size: 4.56rem;
-    text-shadow: 0px 0px 18px #99c7d0;
-}
-
-.bottom-block {
-    width: 28vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.bottom-block p {
-    color: white;
-    text-align: justify;
-    font-size: 1.35rem;
-}
-
-.bottom-block a {
+.buy{
+    margin-top: 15vh;
     text-transform: uppercase;
     text-align: center;
     background-color: #fff142;
     color: #262626;
     font-weight: 500;
 }
-
-.bottom-block a:hover {
+.buy:hover{
     background-color: #fdf160;
+}
+.buy:focus{
+    background-color: #fdf160;
+}
+.modal .modal-footer{
+    background-color: #262626;
+}
+.modal{
+    background-color: #262626;
+}
+.modal-content *{
+    color: #fafafa;
+}
+.chips .input{
+    color: #fafafa;
+}
+.chip{
+    color: rgba(0, 0, 0, 0.6)!important;
+}
+.chip .close{
+    color: rgba(0, 0, 0, 0.6)!important;
+}
+.nav-and-social-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidenav-trigger{
+    visibility: hidden;
+    margin-left: 5px;
+    color:#262626;
 }
