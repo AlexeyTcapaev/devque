@@ -3,7 +3,9 @@ html {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
-
+a,p{
+    white-space: nowrap;
+}
 nav ul a:hover {
     background-color: rgba(0, 0, 0, 0);
 }
@@ -19,16 +21,25 @@ nav ul a:hover {
     transition: 0.5s color ease;
     text-decoration: none;
 }
+.content-wrapper div.tab-content{
+    display: none;
+}
+.content-wrapper div.active
+{
+    overflow: auto;
+    padding: 10%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+}
 
-.hide-on-med-and-down li a:before,
 .hide-on-med-and-down li a:after {
     content: "";
     transition: 0.5s all ease;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
-    height: 5px;
-    height: 0.35rem;
+    height: 1px;
+    height: 0.15rem;
     width: 0;
     background: #262626;
     left: 50%;
@@ -36,14 +47,11 @@ nav ul a:hover {
     transform: translateX(-50%);
 }
 
-.hide-on-med-and-down li a:hover:before,
+
 .hide-on-med-and-down li a:hover:after {
     width: 100%;
 }
 
-.hide-on-med-and-down li a:before {
-    top: 0.5em;
-}
 
 .hide-on-med-and-down li a:after {
     bottom: 0.5em;
@@ -148,14 +156,6 @@ main{
     display: flex;
     float: left;
     flex:2;
-}
-.content-wrapper div.active
-{
-    width: 20vw!important;
-    overflow: auto;
-    padding: 10%;
-    width: 100%;
-    background-color: rgba(255,255,255,0.8);
 }
 .indicator {
     display: none!important;
