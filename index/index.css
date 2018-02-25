@@ -1,35 +1,213 @@
-.portfolio-carousel{
-    overflow: hidden;
-    flex:1;
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh;
 }
-.completed-work{
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+    height: 217px;
+}
+.bg_img{
+    display: none;
+}
+canvas{
+    position: absolute;
+    z-index:-1 ;
+}
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.main-content {
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+nav ul a {
+    color: #262626;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 84px;
+    color: #262626;
+}
+
+#menu {
+    background-color: #262626;
+}
+
+.vk {
+    font-size: 0px;
+    background-image: url('../images/vk.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 48px;
+    width: 48px;
+}
+
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.hide-on-med-and-down li a {
+    font-weight: 700;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    transition: 0.5s color ease;
+    text-decoration: none;
+}
+
+.hide-on-med-and-down li a:after {
+    content: "";
+    transition: 0.5s all ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 1px;
+    height: 0.15rem;
+    width: 0;
+    background: #262626;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.hide-on-med-and-down li a:hover:after {
+    width: 100%;
+}
+
+.hide-on-med-and-down li a:after {
+    bottom: -0.05em;
+}
+
+.portfolio-carousel {
+    overflow: hidden;
+    flex: 1;
+}
+
+.completed-work {
     display: flex;
 }
-.full-completed-link{
+
+.full-completed-link {
     background-color: #262626;
-    color:white;
+    color: white;
     display: flex;
     align-items: center;
     padding: 0 2% 0 2%;
 }
-body{
-    background-image: url('../images/index-main.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+
+figure {
+    margin: 0!important;
+    padding: 0!important;
 }
-nav{
-    background-color: rgba(0,0,0,0);
-    box-shadow: none;
+
+div.social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1%;
 }
-nav ul a {
-    color: black;
-}
-nav .brand-logo{
-    color: black;
-}
-i{
+
+div.social a {
     color: #262626;
+    display: flex;
+    align-items: center;
+    margin: 0 15px 0 15px;
+    font-weight: bold;
 }
-.nav-wrapper ul li a{
-    font-weight: 700;
+
+div.social a i {
+    margin-right: 5px;
+}
+div.social a{
+  position: relative;
+}
+div.social a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: black;
+  height: 1px;
+}
+div.social a a:hover:after {
+  width: 100%;
+}
+.buy{
+    margin-top: 15vh;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #fff142;
+    color: #262626;
+    font-weight: 500;
+}
+.buy:hover{
+    background-color: #fdf160;
+}
+.buy:focus{
+    background-color: #fdf160;
+}
+.modal .modal-footer{
+    background-color: #262626;
+}
+.modal{
+    background-color: #262626;
+}
+.modal-content *{
+    color: #fafafa;
+}
+.chips .input{
+    color: #fafafa;
+}
+.chip{
+    color: rgba(0, 0, 0, 0.6)!important;
+}
+.chip .close{
+    color: rgba(0, 0, 0, 0.6)!important;
+}
+.nav-and-social-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidenav-trigger{
+    visibility: hidden;
+    margin-left: 5px;
+    color:#262626;
 }
