@@ -106,6 +106,7 @@ nav {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
     z-index: 3;
+    transition: 0.2s linear;
     position: fixed;
 }
 
