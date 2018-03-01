@@ -229,13 +229,13 @@ footer h5{
     justify-content: space-around;
 }
 
-@media only screen and (min-width: 992px)
+@media only screen and (max-width: 992px)
 {
     .footer-card{
         flex-direction: column;
     }
 }
-@media only screen and (min-width: 414px)
+@media only screen and (max-width: 414px)
 {
     .footer-card{
         flex-direction: column;
