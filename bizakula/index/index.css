@@ -243,6 +243,14 @@
         color: black!important
     }
 
+    #mobile-demo {
+        z-index: 9999;
+    }
+
+    #mobile-demo li>a {
+        color: rgb(39, 57, 159)!important;
+    }
+
     @media only screen and (max-width: 992px) {
         .footer-card {
             flex-direction: column;
@@ -295,8 +303,7 @@
         .block {
             height: 115vh;
         }
-        .cont-block {
-        }
+        .cont-block {}
     }
 
     @media only screen and (max-width: 414px) {
