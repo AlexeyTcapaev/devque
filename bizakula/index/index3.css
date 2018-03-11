@@ -1,3 +1,35 @@
+#section0 {
+    background-image: url(1.png);
+}
+
+#section1 {
+    background-image: url(2.png);
+}
+
+#section2 {
+    background-image: url(3.png);
+}
+
+#section3 {
+    background-image: url(4.png);
+}
+
+#section4 {
+    background-image: url(5.png);
+}
+
+#section5 {
+    background-color: #fff;
+}
+
+.section {
+    padding: 0 !important;
+    background-size: cover;
+}
+nav{
+    position: fixed;
+    z-index: 999;
+}
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 #section1 .fp-bg{
@@ -182,6 +214,7 @@ nav .nav-wrapper {
   }
   .top {
     flex-direction: column !important;
+    align-items: flex-start!important;
   }
   .footer-card {
     flex-direction: column;
@@ -243,7 +276,7 @@ footer h5 {
 }
 
 .section p {
-  color: black !important
+  color: black 
 }
 
 #mobile-demo {
@@ -294,7 +327,9 @@ nav {
 .brand h1 span {
   color: red;
 }
-
+.white-text *{
+    color: #fff!important;
+}
 .right {
   justify-content: flex-end;
 }
@@ -318,116 +353,6 @@ p {
   font-weight: bold;
 }
 
-.background {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  overflow: hidden;
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  height: 130vh;
-  position: fixed;
-  width: 100%;
-  -webkit-transform: translateY(30vh);
-  transform: translateY(30vh);
-  -webkit-transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
-  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
-}
-
-.background:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.background:first-child .content-wrapper {
-  -webkit-transform: translateY(15vh);
-  transform: translateY(15vh);
-}
-
-.background:first-child {
-  background-image: url('1.png');
-  -webkit-transform: translateY(-15vh);
-  transform: translateY(-15vh);
-}
-
-.background:nth-child(2) {
-  background-image: url('2.png');
-}
-
-.background:nth-child(3) {
-  background-image: url('3.png');
-}
-
-.background:nth-child(4) {
-  background-image: url('4.png');
-}
-
-.background:nth-child(5) {
-  background-image: url('5.png');
-}
-
-.background:nth-child(6) {
-  background-color: #fff;
-}
-
-/* Set stacking context of slides */
-
-.background:nth-child(1) {
-  z-index: 6;
-}
-
-.background:nth-child(2) {
-  z-index: 5;
-}
-
-.background:nth-child(3) {
-  z-index: 4;
-}
-
-.background:nth-child(4) {
-  z-index: 3;
-}
-
-.background:nth-child(5) {
-  z-index: 2;
-}
-
-.background:nth-child(6) {
-  z-index: 1;
-}
-
-.content-wrapper {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  color: #fff;
-  font-family: Montserrat;
-  text-transform: uppercase;
-  -webkit-transform: translateY(40vh);
-  transform: translateY(40vh);
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
-  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
-}
 
 .content-title {
   font-size: 12vh;
