@@ -30,6 +30,9 @@ nav{
     position: fixed;
     z-index: 999;
 }
+.fp-tableCell{
+display: flex!important;
+}
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 #section1 .fp-bg{
