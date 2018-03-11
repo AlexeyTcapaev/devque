@@ -328,7 +328,7 @@ nav {
 }
 
 .brand h1 span {
-  color: red;
+  color: red!important;
 }
 .white-text *{
     color: #fff!important;
