@@ -8,7 +8,7 @@
 .nav li a {
     color: #ffffff;
     text-align: center;
-    margin: 0 0 0 15%;
+    padding: 0 0 0 15%;
     font-size: 1.5rem;
     font-weight: bold;
     transition: 0.2s linear;
@@ -179,4 +179,7 @@ li.category div h2 {
     -o-transition: .2s linear;
     -moz-transition: .2s linear;
     transition: .2s linear;
+}
+.active{
+    border-left: 3px solid #1eaac1;
 }
