@@ -49,16 +49,19 @@ aside.navigation {
 }
 
 .logo h1 {
+    margin: 0;
     font-size: 2rem !important;
     font-weight: bold;
 }
 
 .logo h2 {
+    margin: 0;
     font-size: 1.1rem !important;
     font-weight: bold;
 }
 
 .logo {
+padding: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
