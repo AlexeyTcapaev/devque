@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "UniSansHeavyCAPS";
+    src: url("../fonts/UniSansHeavyCAPS.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.nav li a {
+    color: #ffffff;
+    text-align: center;
+    margin: 0 0 0 15%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.2s linear;
+}
+
+.nav li a:hover {
+    color: rgba(255, 255, 255, 0.6)
+}
+
+.nav li {
+    padding: 10%;
+}
+
+.nav {
+    background-color: #06182e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    background-color: #ffffff;
+}
+
+footer * {
+    color: #06182e;
+}
+
+.wrapper {
+    display: flex;
+    height: 100%;
+}
+
+aside.navigation {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+}
+
+.logo h1 {
+    font-size: 2rem !important;
+    font-weight: bold;
+}
+
+.logo h2 {
+    font-size: 1.1rem !important;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.nav {
+    height: 60%;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+footer a {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.full-height {
+    height: 100% !important;
+}
+
+.category-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.main-content {
+    margin: 0 0 0 300px;
+    width: calc(100% - 300px);
+}
+
+li.category {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    height: 50%;
+}
+
+li.category img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+}
+
+li.category:hover .overlay {
+    opacity: 1;
+    background-color: rgba(30, 170, 193, 0.8);
+}
+
+li.category div {
+    color: #06182e
+}
+
+li.category div h2 {
+    font-size: 48px;
+    font-family: "UniSansHeavyCAPS";
+    text-shadow: 0px 7px 8.7px rgba(8, 8, 49, 0.2);
+    background: linear-gradient(to bottom, #ffffff 35%, #c0c1cf 100%);
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    color: transparent;
+   
+   
+}
+
+.sub-category {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 60vh;
+}
+
+.sub-category li {
+    padding: 5% 0 0 0;
+}
+
+.sub-category li a {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.overlay {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    background-color: rgba(27, 28, 38, 1);
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
+    -moz-transition: .2s linear;
+    transition: .2s linear;
+}
