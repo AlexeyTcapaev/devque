@@ -13,15 +13,46 @@
 </head>
 
 <body>
+    <nav>
+        <div class="nav-wrapper">             
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="feedback">
+                <h5>Оставить заявку</h5>
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <i class="material-icons prefix">mail</i>
+                    <label for="email">Ваш E-mail</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">phone</i>
+                    <input id="icon_telephone" type="tel" class="validate">
+                    <label for="icon_telephone">Ваш телефон</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Ваш текст</label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Подтвердить</a>
+        </div>
+    </div>
     <div class="wrapper">
-        <aside class="navigation">
+        <aside class="navigation" id="mobile-demo">
             <div class="logo">
                 <h1>ЗАВОД</h1>
                 <h2>промметаллоконструкций</h2>
             </div>
             <ul class="nav">
                 <li>
-                    <a href="#" class="active">Главная</a>
+                    <a href="#" class="current_page_item">Главная</a>
                 </li>
                 <li>
                     <a href="#">О компании</a>
@@ -32,6 +63,8 @@
             </ul>
             <footer>
                 <a href="tel:88123261866">8 (812) 326-18-66</a>
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Оставить заявку</a>
+
             </footer>
         </aside>
         <main class="main-content">
