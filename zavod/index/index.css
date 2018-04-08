@@ -54,7 +54,6 @@ footer a.btn {
     background-color: #06182e;
     width: 100%;
     font-size: 1.5rem;
-    padding: 5%;
     height: inherit !important;
 }
 
@@ -75,7 +74,9 @@ aside.navigation {
     width: 400px;
     position: fixed;
 }
-
+ul.nav{
+    min-height: 40%;
+}
 .logo h1 {
     margin: 0;
     font-size: 2rem !important;
