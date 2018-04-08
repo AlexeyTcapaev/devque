@@ -68,6 +68,9 @@ footer a.btn:hover {
 }
 
 aside.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     height: 100%;
     width: 400px;
     position: fixed;
@@ -91,10 +94,6 @@ aside.navigation {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-ul.nav {
-    height: 60%;
 }
 
 footer a {
@@ -268,7 +267,17 @@ li.category div h2 {
 }
 
 @media only screen and (max-width:768px) {
+    .modal {
+        width: 100%!important;
+        max-height: 80%!important;
+    }
+    .nav li {
+        padding: 5%!important;
+    }
     aside.navigation {
+        display: flex;
+    flex-direction: column;
+    justify-content: space-around;
         position: fixed;
         width: 300px;
         left: 0;
