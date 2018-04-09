@@ -1,0 +1,339 @@
+* {
+    outline: none !important;
+}
+
+header {
+    z-index: 10;
+}
+
+.hide-on-med-and-down li a {
+    display: flex;
+    color: black;
+    transition: 0.2s linear;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav {
+    box-shadow: none !important;
+    background-color: #ffffff;
+}
+
+.hide-on-med-and-down li a:hover {
+    color: white;
+    background-color: black;
+}
+
+#bouquets li a:hover {
+    color: white;
+    background-color: #ffaf60 !important;
+}
+
+.hide-on-med-and-down {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.phone span {
+    font-size: 1rem;
+    color: #ababab;
+}
+
+.dropdown-content {
+    top: 64px !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+.head {
+    padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.logo {
+    color: black;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+#search {
+    border: 1px solid #ffaf60 !important;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+.search-bar form {
+    margin: 3px;
+}
+
+.search-bar form .input-field {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar form .input-field a.btn-flat {
+    background-color: #ffaf60;
+    color: white;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 47px;
+    min-height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar form .input-field a.btn-flat i {
+    color: white;
+}
+
+.magazine-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.magazine-buttons a.btn-flat {
+    color: #ffaf60;
+    border-radius: 0;
+    border: 1px solid #ffaf60;
+    padding: 0;
+    margin: 0 10px 0 10px;
+    width: 47px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s linear;
+}
+
+.magazine-buttons a.btn-flat:hover {
+    background-color: #ffaf60;
+    color: white;
+}
+
+.magazine-buttons a.cart {
+    position: relative;
+    overflow: visible !important;
+}
+
+.magazine-buttons a.cart span {
+    position: absolute;
+    right: -10px;
+    color: white;
+    top: -10px;
+    width: 20px;
+    display: flex;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ffaf60;
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar span {
+    font-size: 1rem;
+    color: #ababab;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.spef {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
+}
+
+.card .card-image img {
+    width: inherit !important;
+}
+
+.spef li .card {
+    box-shadow: none !important;
+}
+
+.spef li .card .card-title {
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.6)
+}
+
+.spef li {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.search-bar span i {
+    color: #ffaf60;
+}
+
+.car-wrapper {
+    position: relative;
+}
+
+.carousel {
+    margin-bottom: 10%;
+    overflow: visible;
+}
+
+footer {
+    background-image: url("../img/footer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.car-wrapper {
+    overflow-x: hidden;
+}
+
+.sales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sales h2::before,
+.sales h2::after {
+    display: block;
+    content: ' ';
+    background-image: url('../img/tulip.svg');
+    margin: 0 15px;
+    background-size: 3rem 3rem;
+    color: #ffaf60;
+    height: 3rem;
+    width: 3rem;
+}
+
+.sales h2 {
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.carousel-item .overlay {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.carousel-item .container {
+    height: 100%;
+    position: relative;
+}
+
+.carousel-item .container h2 {
+    color: white;
+    text-align: left;
+    font-size: 3rem !important;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.carousel-item .container span {
+    color: white;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.car-cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+}
+
+.prices {
+    margin: 20px 0 20px 0;
+}
+
+.prices span {
+    margin: 15px;
+}
+
+.prices .old-price {
+    color: #ababab !important;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    font-weight: bold;
+    font-size: 1.9rem !important;
+}
+
+.prices .new-price {
+    color: #ffaf60 !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.8rem !important;
+}
+
+.buy {
+    background-color: #ffaf60;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.buy:hover,
+.buy:hover active {
+    background-color: rgba(255, 173, 96, 0.6);
+}
+
+.item-img {
+    position: absolute;
+    bottom: -20%;
+    right: 0%;
+    z-index: 999;
+}
+footer .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .container h2::before,
+footer .container h2::after {
+    display: block;
+    content: ' ';
+    background-image: url('../img/tulip.svg');
+    margin: 0 15px;
+    background-size: 3rem 3rem;
+    color: #ffaf60;
+    height: 3rem;
+    width: 3rem;
+}
+
+footer .container h2 {
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+}
