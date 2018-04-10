@@ -16,11 +16,7 @@ $(document).ready(function() {
     }
   });
   $(".sidenav").sidenav();
-  $(".dropdown-trigger").click(function() {
-    $(".dropdown-trigger")
-      .find("i")
-      .rotate({ endDeg: 180, duration: 0.2, persist: true });
-  });
+  $(".carousel").carousel();
 });
 
 $.fn.rotate = function(options) {
