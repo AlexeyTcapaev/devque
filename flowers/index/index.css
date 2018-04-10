@@ -157,9 +157,10 @@ nav {
 
 .spef {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 25px;
     width: 100%;
+    justify-items: center;
 }
 
 .sales-list {
@@ -167,6 +168,7 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     grid-gap: 45px;
     width: 100%;
+    justify-items: center;
 }
 
 .custom-card {
