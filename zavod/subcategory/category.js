@@ -14,10 +14,14 @@ $(document).ready(function() {
     el: "#app",
     data: {
       ToCheck: [],
-      str: ""
+      str: "",
+      rem: "",
+      ToCard: {},
+      check: false
     },
     watch: {
       ToCheck: function() {
+        sessionStorage["mass"] = JSON.stringify(this.ToCheck);
         if (this.ToCheck.length < 2) {
           $(".show")
             .removeClass("disabled")
@@ -34,46 +38,56 @@ $(document).ready(function() {
       }
     },
     methods: {
-      AddForCheck: function(event) {
+      Bind: function(event) {
+        if (
+          $(event.target)
+            .closest(".card")
+            .hasClass("tocheck")
+        ) {
+          this.check = true;
+        } else this.check = false;
         var Obj = new Object();
-        Obj.info = $(event.target)
+        Obj = $(event.target).closest(".card");
+        this.rem = Obj;
+        this.ToCard = {};
+        this.ToCard.info = $(Obj)
           .closest(".card")
-          .find(".card-content .info")
+          .find(".card-content p.noshow")
           .text();
-        Obj.name = $(event.target)
+        this.ToCard.name = $(Obj)
           .closest(".card")
           .find(".card-content h5")
           .text();
-        $(event.target)
+        console.log(this.ToCard);
+        var proper = {};
+        var fff = new Array();
+        $(Obj)
           .closest(".card")
           .find(".card-content ul li")
           .each(function(i, elem) {
-            Obj[
+            proper[
               $(elem)
                 .children("p")
                 .text()
             ] = $(elem)
               .children("span")
               .text();
+            if (fff.indexOf(proper) === -1) fff.push(proper);
           });
-
-        if (
-          !$(event.target)
-            .closest(".card")
-            .hasClass("tocheck")
-        ) {
+        this.ToCard.properties = fff;
+      },
+      AddForCheck: function(event) {
+        if (this.check === false) this.check = true;
+        else this.check = false;
+        if (!$(this.rem).hasClass("tocheck")) {
           if (this.ToCheck.length < 2) {
-            $(event.target)
-              .closest(".card")
-              .addClass("tocheck");
-            this.ToCheck.push(Obj);
+            $(this.rem).addClass("tocheck");
+            this.ToCheck.push(this.ToCard);
           }
         } else {
-          $(event.target)
-            .closest(".card")
-            .removeClass("tocheck");
+          $(this.rem).removeClass("tocheck");
 
-          this.ToCheck.pop(Obj);
+          this.ToCheck.pop(this.ToCard);
         }
       },
       toShow: function() {
@@ -83,6 +97,22 @@ $(document).ready(function() {
       }
     },
     mounted: function() {
+      if (sessionStorage["mass"])
+        for (let i = 0; i < JSON.parse(sessionStorage["mass"]).length; i++) {
+          for (let j = 0; j < $(".category-list").children().length; j++) {
+            var b = $(".category-list").children()[j];
+            if (
+              $(b)
+                .find(".card .card-content h5")
+                .text() === JSON.parse(sessionStorage["mass"])[i].name
+            ) {
+              $(b)
+                .find(".card")
+                .addClass("tocheck");
+            }
+          }
+          Vue.set(this.ToCheck, i, JSON.parse(sessionStorage["mass"])[i]);
+        }
       $(".modal").modal();
     }
   });

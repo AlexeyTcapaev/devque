@@ -69,10 +69,50 @@
             </footer>
         </aside>
         <main class="main-content" id="app">
+            <div id="modal3" class="card modal">
+                <div class="card-image">
+                    <img src="img/2.png">
+                    <div>
+                        <p>{{ToCard.info}}</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <ul v-if="Object.keys(ToCard).length !== 0">
+                        <li v-for="(prop,key) in ToCard.properties[0]">
+                            <p>{{key}}</p>
+                            <span>{{prop}}</span>
+                        </li>
+                    </ul>
+                    <h5>{{ToCard.name}}</h5>
+                </div>
+                <div class="card-action border-non center">
+                    <a v-if="check === false" class="btn" @click="AddForCheck($event)">Добавить в cравнение</a>
+                    <a v-if="check === true" class="btn" @click="AddForCheck($event)">Убрать из сравнения</a>
+                </div>
+            </div>
+
+
+
+
             <div id="modal2" class="modal">
                 <div class="modal-content">
-                    <h4>Сравнение товара</h4>
-                    <p>{{str}}</p>
+                    <h4>Сравнение товаров</h4>              
+                    <div v-if="Object.keys(ToCheck).length === 2" class="astable">
+                        <ul class="collection with-header">
+                            <li class="collection-header">
+                                <h4>{{ToCheck[0].name}}</h4>
+                            </li>
+                            <li class="collection-item" v-for="(prop,key) in ToCheck[0].properties[0]">{{key}} - {{prop}}</li>
+                           
+                        </ul>
+                        <ul class="collection with-header">
+                            <li class="collection-header">
+                                    <h4>{{ToCheck[1].name}}</h4>
+                            </li>
+                            <li class="collection-item" v-for="(prop,key) in ToCheck[1].properties[0]">{{key}} - {{prop}}</li>
+                           
+                        </ul>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Закрыть</a>
@@ -85,87 +125,65 @@
             </div>
             <div class="buttons">
                 <h5>Выберете 2 товара для сравнения</h5>
-            <a class="waves-effect waves-light btn show disabled" @click="toShow()">
-                <i class="material-icons left">insert_chart</i>Сравнить {{ToCheck.length}}</a>
+                <a class="waves-effect waves-light btn show disabled" @click="toShow()">
+                    <i class="material-icons left">insert_chart</i>Сравнить {{ToCheck.length}}</a>
             </div>
             <ul class="category-list">
                 <li>
-                    <div class="card" @click="AddForCheck($event)">
-                        <div class="card-image">
-                            <img src="img/2.png">
+                    <a class="modal-trigger" href="#modal3" @click="Bind($event)">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/2.png">
+                            </div>
+                            <div class="card-content">
+                                <p class="noshow">I am a very simple card. I am good at containing small bits of information. I am convenient
+                                    because I require little markup to use effectively.</p>
+                                <ul>
+                                    <li>
+                                        <p>Высота:</p>
+                                        <span>100</span>
+                                    </li>
+                                    <li>
+                                        <p>Ширина:</p>
+                                        <span>200</span>
+                                    </li>
+                                    <li>
+                                        <p>Вес:</p>
+                                        <span>300</span>
+                                    </li>
+                                </ul>
+                                <h5>Автопавильон</h5>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <p class="info">I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                I require little markup to use effectively.</p>
-                            <ul>
-                                <li>
-                                    <p>Высота:</p>
-                                    <span>100</span>
-                                </li>
-                                <li>
-                                    <p>Ширина:</p>
-                                    <span>200</span>
-                                </li>
-                                <li>
-                                    <p>Вес:</p>
-                                    <span>300</span>
-                                </li>
-                            </ul>
-                            <h5>Автопавильоны</h5>
-                        </div>
-                    </div>
+                    </a>
                 </li>
                 <li>
-                    <div class="card" @click="AddForCheck($event)">
-                        <div class="card-image">
-                            <img src="img/2.png">
+                    <a class="modal-trigger" href="#modal3" @click="Bind($event)">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="img/2.png">
+                            </div>
+                            <div class="card-content">
+                                <p class="noshow">I am a very simple card. I am good at containing small bits of information. I am convenient
+                                    because I require little markup to use effectively.</p>
+                                <ul>
+                                    <li>
+                                        <p>Высота:</p>
+                                        <span>100</span>
+                                    </li>
+                                    <li>
+                                        <p>Ширина:</p>
+                                        <span>200</span>
+                                    </li>
+                                    <li>
+                                        <p>Вес:</p>
+                                        <span>300</span>
+                                    </li>
+                                </ul>
+                                <h5>Знаки</h5>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <p class="info">I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                I require little markup to use effectively.</p>
-                            <ul>
-                                <li>
-                                    <p>Высота:</p>
-                                    <span>100</span>
-                                </li>
-                                <li>
-                                    <p>Ширина:</p>
-                                    <span>200</span>
-                                </li>
-                                <li>
-                                    <p>Вес:</p>
-                                    <span>300</span>
-                                </li>
-                            </ul>
-                            <h5>Знак</h5>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="card" @click="AddForCheck($event)">
-                        <div class="card-image">
-                            <img src="img/2.png">
-                        </div>
-                        <div class="card-content">
-                            <p class="info">I am a very simple card. I am good at containing small bits of information. I am convenient because
-                                I require little markup to use effectively.</p>
-                            <ul>
-                                <li>
-                                    <p>Высота:</p>
-                                    <span>100</span>
-                                </li>
-                                <li>
-                                    <p>Ширина:</p>
-                                    <span>200</span>
-                                </li>
-                                <li>
-                                    <p>Вес:</p>
-                                    <span>300</span>
-                                </li>
-                            </ul>
-                            <h5>Фонарь</h5>
-                        </div>
-                    </div>
+                    </a>
                 </li>
             </ul>
         </main>
