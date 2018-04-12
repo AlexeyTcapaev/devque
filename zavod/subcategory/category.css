@@ -52,6 +52,7 @@
 }
 
 a.show {
+    min-width: 160px!important;
     margin: 20px;
     background-color: #05172f;
 }
