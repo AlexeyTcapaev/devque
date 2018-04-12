@@ -236,6 +236,7 @@ nav {
 #modal3 {
     max-width: inherit !important;
     max-height: inherit !important;
+    transition: none!important;
 }
 
 #modal3 .card-image img {
