@@ -96,22 +96,30 @@
 
             <div id="modal2" class="modal">
                 <div class="modal-content">
-                    <h4>Сравнение товаров</h4>              
+                    <h4>Сравнение товаров</h4>
                     <div v-if="Object.keys(ToCheck).length === 2" class="astable">
-                        <ul class="collection with-header">
-                            <li class="collection-header">
-                                <h4>{{ToCheck[0].name}}</h4>
-                            </li>
-                            <li class="collection-item" v-for="(prop,key) in ToCheck[0].properties[0]">{{key}} - {{prop}}</li>
-                           
-                        </ul>
-                        <ul class="collection with-header">
-                            <li class="collection-header">
-                                    <h4>{{ToCheck[1].name}}</h4>
-                            </li>
-                            <li class="collection-item" v-for="(prop,key) in ToCheck[1].properties[0]">{{key}} - {{prop}}</li>
-                           
-                        </ul>
+                        <div class="card">
+                            <div class="card-image">
+                                <img :src="ToCheck[0].img">
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li v-for="(prop,key) in ToCheck[0].properties[0]">{{key}} - {{prop}}</li>
+                                </ul>
+                                <h5> {{ToCheck[0].name}}</h5>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image">
+                                <img :src="ToCheck[1].img">
+                            </div>
+                            <div class="card-content">
+                                <ul>
+                                    <li v-for="(prop,key) in ToCheck[1].properties[0]">{{key}} - {{prop}}</li>
+                                </ul>
+                                <h5> {{ToCheck[1].name}}</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -133,7 +141,7 @@
                     <a class="modal-trigger" href="#modal3" @click="Bind($event)">
                         <div class="card">
                             <div class="card-image">
-                                <img src="img/2.png">
+                                <img src="img/12.7.png">
                             </div>
                             <div class="card-content">
                                 <p class="noshow">I am a very simple card. I am good at containing small bits of information. I am convenient

@@ -77,10 +77,9 @@ a.show:active {
 }
 
 .astable {
-    display: grid;
-    grid-template-columns: repeat;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -298,9 +297,11 @@ nav {
     .category-container {
         grid-template-columns: repeat(auto-fit, minmax(60vw, 1fr));
     }
-    .buttons {
-        margin-top: 100px;
+    .category-list {
+      
+        margin:0;
     }
+    
     .breadcrumbs {
         position: fixed;
         margin: 56px 0 0 0;
@@ -362,7 +363,8 @@ nav {
         padding: 5% !important;
     }
     .buttons {
-        margin-top: 100px;
+        margin-top: 140px;
+        flex-direction: column;
     }
     .breadcrumbs {
         position: fixed;

@@ -1,4 +1,22 @@
 $(document).ready(function() {
+  if (document.documentElement.clientWidth < 768) {
+    $(".buttons").css(
+      "margin-top",
+      $(".nav-wrapper").height() + $(".breadcrumbs").height() + 10
+    );
+  }
+  window.addEventListener(
+    "onchange",
+    function() {
+      if (document.documentElement.clientWidth < 768) {
+        $(".buttons").css(
+          "margin-top",
+          $(".nav-wrapper").height() + $(".breadcrumbs").height() + 10
+        );
+      }
+    },
+    true
+  );
   if (document.documentElement.clientWidth <= 768) $("aside").sidenav();
   let fullheights = document.querySelectorAll(".full-height");
   let a = 1;
@@ -50,6 +68,7 @@ $(document).ready(function() {
         Obj = $(event.target).closest(".card");
         this.rem = Obj;
         this.ToCard = {};
+        this.ToCard.img = $(Obj).closest(".card").find(".card-image img").attr("src")
         this.ToCard.info = $(Obj)
           .closest(".card")
           .find(".card-content p.noshow")
@@ -58,7 +77,6 @@ $(document).ready(function() {
           .closest(".card")
           .find(".card-content h5")
           .text();
-        console.log(this.ToCard);
         var proper = {};
         var fff = new Array();
         $(Obj)
@@ -86,8 +104,10 @@ $(document).ready(function() {
           }
         } else {
           $(this.rem).removeClass("tocheck");
-
-          this.ToCheck.pop(this.ToCard);
+          for (var i = 0; i < this.ToCheck.length; i++) {
+            if (this.ToCheck[i].name === this.ToCard.name)
+              this.ToCheck.splice(i, 1);
+          }
         }
       },
       toShow: function() {
