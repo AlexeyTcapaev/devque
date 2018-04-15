@@ -16,7 +16,7 @@ $(document).ready(function() {
       fullWidth: true,
       indicators: false,
       autoplay: true
-    })
+    });
   });
   var timerId = setInterval(function() {
     jQuery(".carousel.carousel-slider").carousel("next");

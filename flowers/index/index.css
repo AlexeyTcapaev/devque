@@ -75,6 +75,8 @@ nav {
     border: 1px solid #ffaf60 !important;
     margin: 0;
     padding: 0 0 0 10px;
+    height: 47px;
+    box-sizing: border-box;
 }
 
 .search-bar form {
@@ -177,6 +179,10 @@ main {
     color: white;
 }
 
+.sidenav li>a:hover i {
+    color: white;
+}
+
 #bouquets-aside li>a:hover {
     background-color: #ffaf60;
 }
@@ -196,7 +202,9 @@ main {
     display: flex;
     align-items: center;
 }
-
+input{
+    -webkit-appearance: none;
+}
 .spef {
     display: flex;
     width: 100%;
@@ -212,7 +220,7 @@ main {
 
 .sales-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 45px;
     width: 100%;
     justify-items: center;
