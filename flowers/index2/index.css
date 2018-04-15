@@ -62,7 +62,6 @@ nav {
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .logo {
@@ -133,15 +132,6 @@ nav {
     overflow: visible !important;
 }
 
-@media only screen and (max-width: 1569px) {
-    .hide-on-med-and-down {
-        display: none !important;
-    }
-    nav a.sidenav-trigger {
-        display: block !important;
-    }
-}
-
 .magazine-buttons a.cart span {
     position: absolute;
     right: -10px;
@@ -152,41 +142,9 @@ nav {
     height: 20px;
     border-radius: 10px;
     background-color: #ffaf60;
+    z-index: 99999;
     align-items: center;
     justify-content: center;
-}
-
-#bouquets-aside {
-    position: static !important;
-}
-
-#bouquets-aside li>a {
-    padding: 0 32px 0 52px;
-}
-
-nav a {
-    color: black;
-}
-
-main {
-    overflow-x: hidden;
-}
-
-.sidenav li>a:hover {
-    background-color: black;
-    color: white;
-}
-
-#bouquets-aside li>a:hover {
-    background-color: #ffaf60;
-}
-
-.carousel.carousel-slider .carousel-item {
-    min-height: 150px;
-}
-
-.sidenav-trigger {
-    margin: 0 !important;
 }
 
 .search-bar span {
@@ -198,16 +156,11 @@ main {
 }
 
 .spef {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
     width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.spef li {
-    width: 30%;
-    padding: 20px;
-    min-width: 350px;
+    justify-items: center;
 }
 
 .sales-list {
@@ -229,11 +182,9 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
-.carousel .carousel-item {
-    text-align: center;
+.carousel .carousel-item{
+  text-align: center;
 }
-
 .card .card-title {
     font-size: 1.5rem;
 }
@@ -308,14 +259,10 @@ main {
 
 .topay {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    grid-template-columns: repeat(2, minmax(370px, 1fr));
+    grid-gap: 45px;
     justify-items: center;
     width: 100%;
-}
-
-.sidenav {
-    text-transform: uppercase;
-    color: black;
 }
 
 .cards::before {
@@ -361,11 +308,9 @@ main {
     flex-direction: row;
     align-items: center;
 }
-
-.social li {
-    margin: 0 25px 0 0;
+.social li{
+  margin: 0 25px 0 0;
 }
-
 .call a {
     color: white;
 }
@@ -377,13 +322,11 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-.block {
-    display: flex;
-    flex-direction: column;
-    width: 330px;
+.block{
+  display: flex;
+  flex-direction: column;
+  width: 330px;
 }
-
 .block h3 {
     font-size: 2rem;
     text-transform: uppercase;
@@ -517,15 +460,6 @@ footer {
 .carousel-item .container {
     height: 100%;
     position: relative;
-    z-index: 20 !important;
-}
-
-.carousel.carousel-slider .carousel-item {
-    z-index: 20 !important;
-}
-
-.carousel .indicators {
-    z-index: 5;
 }
 
 .carousel-item .container h2 {
@@ -595,18 +529,16 @@ footer {
     z-index: 999;
     width: 30%;
 }
-
-.spef li h4 {
-    border: 6px solid #ffaf60;
-    border-radius: 100px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 20px;
+.spef li h4{
+  border: 6px solid #ffaf60;
+  border-radius: 100px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px;
 }
-
 footer .container {
     display: flex;
     flex-direction: column;
@@ -633,7 +565,6 @@ footer .container h2 {
     align-items: center;
     text-transform: uppercase;
 }
-
-.spef h4 {
-    text-align: center;
+.spef h4{
+  text-align: center;
 }
