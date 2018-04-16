@@ -209,7 +209,7 @@ main {
 }
 
 input {
-    -webkit-appearance: none;
+    -webkit-appearance: none!important;
 }
 
 .spef {
