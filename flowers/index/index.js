@@ -1,7 +1,12 @@
 $(document).ready(function() {
   $(".bouquets").click(function() {
-    if ($("#bouquets").hasClass("grid")) $("#bouquets").removeClass("grid");
-    else $("#bouquets").addClass("grid");
+ 
+    if ($("#bouquets").is(":visible")) {
+      console.log(1)
+    } else {
+      console.log(2)
+      $("#bouquets").addClass("grid");
+    }
   });
   $(".modal").modal();
   $(".carousel.carousel-slider").carousel({
@@ -10,7 +15,12 @@ $(document).ready(function() {
     autoplay: true
   });
 
-  $(".dropdown-trigger").dropdown();
+  $(".dropdown-trigger").dropdown({
+    belowOrigin: true,
+    onCloseEnd:function(){
+      $("#bouquets").removeClass("grid")
+    }
+  });
   $(".sidenav").sidenav();
   $(".sales .carousel").carousel();
 });
