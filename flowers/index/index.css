@@ -19,6 +19,20 @@ nav {
     background-color: #ffffff;
 }
 
+.grid {
+    display: grid !important;
+}
+
+#bouquets {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto !important;
+    width: auto !important;
+}
+
+#bouquets li {
+    width: auto !important;
+}
+
 .hide-on-med-and-down li a:hover {
     color: white;
     background-color: black;
@@ -135,15 +149,6 @@ nav {
     overflow: visible !important;
 }
 
-@media only screen and (max-width: 1569px) {
-    .hide-on-med-and-down {
-        display: none !important;
-    }
-    nav a.sidenav-trigger {
-        display: block !important;
-    }
-}
-
 .magazine-buttons a.cart span {
     position: absolute;
     right: -10px;
@@ -202,9 +207,11 @@ main {
     display: flex;
     align-items: center;
 }
-input{
+
+input {
     -webkit-appearance: none;
 }
+
 .spef {
     display: flex;
     width: 100%;
@@ -573,14 +580,14 @@ footer {
     text-transform: uppercase;
     text-decoration: line-through;
     font-weight: bold;
-    font-size: 1.9rem !important;
+    font-size: 1.9rem;
 }
 
 .prices .new-price {
     color: #ffaf60 !important;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 2.8rem !important;
+    font-size: 2.8rem;
 }
 
 .buy {
@@ -644,4 +651,104 @@ footer .container h2 {
 
 .spef h4 {
     text-align: center;
+}
+
+@media only screen and (max-width: 870px) {
+    .car-cont span {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .prices .new-price {
+        font-size: 2rem !important;
+    }
+    .prices .old-price {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media only screen and (max-width: 1569px) {
+    .hide-on-med-and-down {
+        display: none !important;
+    }
+    nav a.sidenav-trigger {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .hight-link {
+        font-size: 1rem;
+    }
+    .block h3 {
+        font-size: 1.5rem;
+        margin-left: 3rem;
+    }
+    .topay {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h2::before,
+    h2::after {
+        margin: 0px 10px !important;
+    }
+    .btn-large {
+        height: 36px;
+        line-height: 36px;
+    }
+    .carousel-item .container h2 {
+        font-size: 1.5rem !important;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .topay {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    }
+    .magazine-buttons {
+        margin: 10px 0 10px 0;
+    }
+    .custom-card {
+        max-width: 330px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .topay {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .magazine-buttons {
+        margin: 10px 0 10px 0;
+    }
+    .custom-card {
+        max-width: 280px;
+    }
+    .block {
+      
+        width: 280px;
+    }
+    .btn{
+        font-size: 10px;
+    }
+    .hight-link {
+        font-size: 0.9rem;
+    }
+    h2::before, h2::after {
+        margin: 5px !important;
+    }
+    h2 {
+        font-size: 0.9rem;
+    }
+    .sales-list {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
 }

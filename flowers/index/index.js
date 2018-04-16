@@ -1,4 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  $(".bouquets").click(function () {
+    if ($("#bouquets").hasClass("grid"))
+      $("#bouquets").removeClass("grid")
+    else
+      $("#bouquets").addClass("grid")
+  });
   window.addEventListener(
     "onchange",
     $(".carousel.carousel-slider").carousel({
@@ -8,7 +14,7 @@ $(document).ready(function() {
     }),
     true
   );
-  window.addEventListener("resize", function() {
+  window.addEventListener("resize", function () {
     jQuery(".sales .carousel").carousel("destroy");
     jQuery(".carousel.carousel-slider").carousel("destroy");
     jQuery(".carousel").carousel({});
@@ -18,11 +24,10 @@ $(document).ready(function() {
       autoplay: true
     });
   });
-  var timerId = setInterval(function() {
-    jQuery(".carousel.carousel-slider").carousel("next");
-  }, 4500);
   $(".dropdown-trigger").dropdown({
-    onOpenStart: function() {
+    belowOrigin: true,
+    onOpenStart: function () {
+
       $(".dropdown-trigger")
         .find("i")
         .rotate({
@@ -31,7 +36,7 @@ $(document).ready(function() {
           persist: true
         });
     },
-    onCloseEnd: function() {
+    onCloseEnd: function () {
       $(".dropdown-trigger")
         .find("i")
         .rotate({
@@ -45,14 +50,13 @@ $(document).ready(function() {
   $(".sales .carousel").carousel();
 });
 
-$.fn.rotate = function(options) {
+$.fn.rotate = function (options) {
   var $this = $(this),
     prefixes,
     opts,
     wait4css = 0;
   prefixes = ["-Webkit-", "-Moz-", "-O-", "-ms-", ""];
-  opts = $.extend(
-    {
+  opts = $.extend({
       startDeg: false,
       endDeg: 360,
       duration: 1,
@@ -67,7 +71,7 @@ $.fn.rotate = function(options) {
   function supports(prop) {
     var can = false,
       style = document.createElement("div").style;
-    $.each(prefixes, function(i, prefix) {
+    $.each(prefixes, function (i, prefix) {
       if (style[prefix.replace(/\-/g, "") + prop] === "") {
         can = true;
       }
@@ -80,7 +84,7 @@ $.fn.rotate = function(options) {
     if (!supports.transform) {
       return css;
     }
-    $.each(prefixes, function(i, prefix) {
+    $.each(prefixes, function (i, prefix) {
       css[prefix.toLowerCase() + prop] = value || "";
     });
     return css;
@@ -118,15 +122,15 @@ $.fn.rotate = function(options) {
     if (/Firefox/.test(navigator.userAgent)) {
       wait4css =
         (!options || !options.animate) &&
-        (opts.startDeg === false || opts.startDeg >= 0)
-          ? 0
-          : 25;
+        (opts.startDeg === false || opts.startDeg >= 0) ?
+        0 :
+        25;
     }
-    $this.queue(function(next) {
+    $this.queue(function (next) {
       if (opts.startDeg !== false) {
         $this.css(prefixed("transform", "rotate(" + opts.startDeg + "deg)"));
       }
-      setTimeout(function() {
+      setTimeout(function () {
         $this
           .css(
             prefixed("transition", "all " + opts.duration + "s " + opts.easing)
@@ -135,7 +139,7 @@ $.fn.rotate = function(options) {
           .css(opts.animate);
       }, wait4css);
 
-      setTimeout(function() {
+      setTimeout(function () {
         $this.css(prefixed("transition"));
         if (!opts.persist) {
           $this.css(prefixed("transform"));
@@ -153,7 +157,7 @@ $.fn.rotate = function(options) {
     $this.animate(opts.animate, {
       duration: opts.duration * 1000,
       easing: $.easing[opts.easing] ? opts.easing : "",
-      step: function(perc, fx) {
+      step: function (perc, fx) {
         var deg;
         if (fx.prop === "perc") {
           deg = opts.startDeg + (opts.endDeg - opts.startDeg) * perc / 100;
@@ -162,7 +166,7 @@ $.fn.rotate = function(options) {
             .css("filter", generateFilter(deg));
         }
       },
-      complete: function() {
+      complete: function () {
         if (opts.persist) {
           while (opts.endDeg >= 360) {
             opts.endDeg -= 360;
