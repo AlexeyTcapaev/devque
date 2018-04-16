@@ -16,7 +16,7 @@ $(document).ready(function() {
   });
 
   $(".dropdown-trigger").dropdown({
-    belowOrigin: true,
+
     onCloseEnd:function(){
       $("#bouquets").removeClass("grid")
     }
