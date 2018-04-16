@@ -11,25 +11,7 @@ $(document).ready(function() {
   });
 
   $(".dropdown-trigger").dropdown({
-    belowOrigin: true,
-    onOpenStart: function() {
-      $(".dropdown-trigger")
-        .find("i")
-        .rotate({
-          endDeg: 180,
-          duration: 0.2,
-          persist: true
-        });
-    },
-    onCloseEnd: function() {
-      $(".dropdown-trigger")
-        .find("i")
-        .rotate({
-          endDeg: 360,
-          duration: 0.2,
-          persist: true
-        });
-    }
+
   });
   $(".sidenav").sidenav();
   $(".sales .carousel").carousel();
