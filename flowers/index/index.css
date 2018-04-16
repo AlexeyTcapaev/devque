@@ -33,14 +33,65 @@ nav {
 #bouquets li {
     width: auto !important;
 }
+.properties{
+    display: flex;
+    flex-direction: column;  
+}
+.properties p{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 0 0;
+}
+.thumb{
+    background-color:#ffaf60!important; 
+}
+#modal1{
+    height: 27vw;
+    min-height: 530px;
+}
+input[type=range]+.thumb .value {
+    color: #ffffff!important;
+}
+.properties .row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+.properties .row .input-field{
+    margin: 0;
+    padding: 0;
+}
+.modal-wrapper {
+    display: flex;
+    height: 100%;
+}
+
+.modal-img {
+    overflow: hidden;
+    max-width: 50%;
+}
+
+.modal-img img {
+    height: 100%;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
 
 .hide-on-med-and-down li a:hover {
     color: white;
     background-color: black;
 }
+
 .sidenav li {
     position: relative;
 }
+
 #bouquets li a:hover {
     color: white;
     background-color: #ffaf60 !important;
