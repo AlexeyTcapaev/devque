@@ -1,41 +1,22 @@
 $(document).ready(function() {
-  $(".bouquets").click(function() {
  
-    if ($("#bouquets").is(":visible")) {
-      $('.dropdown-trigger').dropdown('close');
-      console.log(1)
-    } else {
-      console.log(2)
-      $('.dropdown-trigger').dropdown('open');
-      $("#bouquets").addClass("grid");
-    }
+  var rot = 180;
+  $(".dropdown-trigger").click(function() {
+    if (rot === 180) {
+      rot = 0;
+    } else rot = 180;
+    $(".bouquets i").css("-webkit-transform", "rotate(" + rot + "deg)");
   });
-
-
-  $(".aside-drop").click(function() {
- 
-    if ($("#bouquets-aside").is(":visible")) {
-      $('.dropdown-trigger').dropdown('close');
-      console.log(1)
-    } else {
-      console.log(2)
-      $('.dropdown-trigger').dropdown('open');
-      $("#bouquets-aside").addClass("grid");
-    }
-  });
-
   $(".modal").modal();
   $(".carousel.carousel-slider").carousel({
     fullWidth: true,
-    indicators: false,
-    autoplay: true
+    indicators: true
   });
   $(".dropdown-trigger").dropdown({
-  
-    onCloseEnd:function(){
-      $("#bouquets").removeClass("grid")
-    }
+    belowOrigin: true
   });
-  $(".sidenav").sidenav();
-  $(".sales .carousel").carousel();
+  $(".button-collapse").sideNav();
+  $(".sales .carousel").carousel({
+    numVisible: 3
+  });
 });
