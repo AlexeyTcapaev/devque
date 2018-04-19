@@ -12,6 +12,13 @@ header {
     transition: 0.2s linear;
     font-weight: bold;
     text-transform: uppercase;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.hide-on-med-and-down li {
+    flex: 1;
 }
 
 nav {
