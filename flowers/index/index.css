@@ -1031,7 +1031,7 @@ footer .container h2 {
     .properties p {
         display: flex;
         flex-direction: column;
-        margin: 0px 10px 0 0;
+        margin: 0px 2px 0 0;
     }
     .modal {
         top: 0 !important;
