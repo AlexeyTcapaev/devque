@@ -971,6 +971,18 @@ footer .container h2 {
     h2 {
         font-size: 2rem;
     }
+    .spef li h4 {
+        justify-content: center;
+        width: 100%;
+        font-size: 1.28rem;
+    }
+    .card-magazine-button {
+        align-items: center;
+    }
+    .card-magazine-buttons a.btn-flat {
+        width: 70%;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -985,6 +997,7 @@ footer .container h2 {
 @media only screen and (max-width: 1110px) {
     .card-magazine-buttons {
         flex-direction: column;
+        align-items: center;
     }
     .card-magazine-buttons a {
         margin: 10px 0;
@@ -1022,6 +1035,7 @@ footer .container h2 {
     }
     .card-magazine-buttons {
         flex-direction: column;
+        align-items: center;
     }
     .card-magazine-buttons a {
         margin: 10px 0;
@@ -1069,6 +1083,7 @@ footer .container h2 {
     }
     .card-magazine-buttons {
         flex-direction: column;
+        align-items: center;
     }
     .card-magazine-buttons a {
         margin: 10px 0;
@@ -1144,7 +1159,7 @@ footer .container h2 {
 }
 
 @media only screen and (max-width: 360px) {
-  .topay {
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  }
+    .topay {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
 }
