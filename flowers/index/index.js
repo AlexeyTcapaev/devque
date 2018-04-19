@@ -1,5 +1,5 @@
 $(document).ready(function() {
- 
+  $('.modal').modal();
   var rot = 180;
   $(".dropdown-trigger").click(function() {
     if (rot === 180) {

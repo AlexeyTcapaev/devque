@@ -15,6 +15,7 @@
 
 <body>
     <div id="modal1" class="modal">
+            <i class="medium material-icons modal-action modal-close">close</i>
         <div class="modal-wrapper">
             <div class="modal-img">
                 <img src="img/10.png">
@@ -30,24 +31,57 @@
                     </div>
                     <div class="row">
                         <p>Кол-во цветов для заказа</p>
-                        <form action="#">
-                            <p class="range-field">
-                                <input type="range" id="test5" min="13" max="100" value="13" />
+                        <div class="input-field col s2">
+                            <input id="last_name" type="number" class="validate" value="13" min="13">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>Выберите длину</p>
+                        <form action="#" class="flower-height">
+                            <p>
+                                <input name="group1" type="radio" id="1" />
+                                <label for="1">40 см</label>
+                            </p>
+                            <p>
+                                <input name="group1" type="radio" id="2" />
+                                <label for="2">50 см</label>
+                            </p>
+                            <p>
+                                <input name="group1" type="radio" id="3" />
+                                <label for="3">60 см</label>
+                            </p>
+                            <p>
+                                <input name="group1" type="radio" id="4" />
+                                <label for="4">70 см</label>
+                            </p>
+                            <p>
+                                <input name="group1" type="radio" id="5" />
+                                <label for="5">80 см</label>
                             </p>
                         </form>
                     </div>
                     <div class="row">
-                        <p>Выберите длину</p>
-                        <p>
-                            <label>
-                                <input type="checkbox" />
-                                <span>Red</span>
-                            </label>
-                        </p>
+                        <p>Упаковка</p>
+                        <form action="#" class="flower-preset">
+                            <p>
+                                <input name="group2" type="radio" id="11" />
+                                <label for="11">Упаковка и лента на усмотрение флориста<span>от 150 руб.</span></label>
+                            </p>
+                            <p>
+                                <input name="group2" type="radio" id="22" />
+                                <label for="22">Подобрать самостоятельно<span>от 50 руб.</span></label>
+                            </p>
+                        </form>
                     </div>
+                    <div class="row">
+                            <p>Итоговая цена:                                  
+                                <span> С упаковкой, лентой и дополнениями</span>
+                            </p>
+                            <h6>3100 руб.</h6>
+                        </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green buy btn-flat">Заказать</a>
                 </div>
             </div>
         </div>
@@ -225,7 +259,7 @@
     </header>
     <main>
         <div class="carousel carousel-slider center head-carousel">
-            <div class="carousel-item red white-text" href="#one!">
+            <div class="carousel-item  white-text" href="#one!">
                 <div class="container">
                     <div class="car-cont">
                         <h2>Розы 32 шт.</h2>
@@ -236,22 +270,22 @@
                         </div>
                         <a class="btn-large waves-effect buy">Купить</a>
                     </div>
-                    
-                        <img class="iimg" src="img/4.png">
+
+                    <img class="iimg" src="img/4.png">
 
                 </div>
                 <img class="overlay" src="img/3.png">
             </div>
 
-            <div class="carousel-item amber white-text" href="#two!">
+            <div class="carousel-item  white-text" href="#two!">
                 <h2>Second Panel</h2>
                 <img class="overlay" src="img/3.png">
             </div>
-            <div class="carousel-item green white-text" href="#three!">
+            <div class="carousel-item  white-text" href="#three!">
                 <h2>Third Panel</h2>
                 <img class="overlay" src="img/3.png">
             </div>
-            <div class="carousel-item blue white-text" href="#four!">
+            <div class="carousel-item  white-text" href="#four!">
                 <h2>Fourth Panel</h2>
                 <img class="overlay" src="img/3.png">
             </div>
@@ -304,7 +338,7 @@
                             </div>
                             <div class="card-magazine-buttons">
                                 <a class="waves-effect  buy btn-flat">В корзину</a>
-                                <a class="waves-effect  buy btn-flat">Купить в 1 клик</a>
+                                <a class="waves-effect  buy btn-flat modal-trigger" href="#modal1">Купить в 1 клик</a>
                             </div>
                         </div>
                     </div>
