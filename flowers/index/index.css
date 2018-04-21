@@ -696,12 +696,13 @@ footer {
 .sales h2::after {
     display: block;
     content: " ";
-    background-image: url("../img/tulip.svg");
-    margin: 0 15px;
-    background-size: 3rem 3rem;
+    background-image: url(../img/tulip.svg);
+    background-size: 45px 45px;
     color: #ffaf60;
-    height: 3rem;
-    width: 3rem;
+    margin: 0 15px;
+    height: 45px;
+    min-width: 45px;
+    width: 45px;
 }
 
 .sales h2 {
@@ -1011,8 +1012,26 @@ footer .container h2 {
     .prices .new-price {
         font-size: 2rem !important;
     }
+    .card-magazine-buttons a.btn-flat {
+        width: 70%;
+        text-align: center;
+    }
     .prices .old-price {
         font-size: 1.5rem !important;
+    }
+    .carousel .indicators {
+        display: none;
+    }
+    .spef li {
+        width: 14%;
+        padding: 8px;
+        min-width: 217px;
+    }
+    .topay {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(358px, 1fr));
+        justify-items: center;
+        width: 100%;
     }
 }
 
