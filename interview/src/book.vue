@@ -10,25 +10,23 @@
             </ul>
         </div>
         <div class="card-action">
-            <a href="#!" class="waves-effect waves-light btn gradient-45deg-red-pink"><i class="material-icons">close</i></a>
-            <a href="#!" class="waves-effect waves-light btn gradient-45deg-red-pink"><i class="material-icons">edit</i></a>
+            <a href="#!" class="waves-effect waves-light btn gradient-45deg-red-pink" @click="DeleteBook(elem)"><i class="material-icons">close</i></a>
+            <router-link :to="'/book/'+index" tag="a" class="waves-effect waves-light btn gradient-45deg-red-pink"><i class="material-icons">edit</i></router-link>
         </div>
     </div>
 </li>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapGetters } from "vuex";
+import { mapActions } from "vuex";
 export default {
-  props: ["elem"],
+  props: ["elem", "index"],
   data() {
     return {};
   },
-  mounted() {},
-  computed: {
-    book() {
-      return this.$store.state.library[this];
-    }
+  methods: {
+    ...mapActions(["DeleteBook"])
   }
 };
 </script>

@@ -1,27 +1,18 @@
 <template>
-<ul class="container">
-  <search></search>
-  <li class="list"><ul><book :elem="book" :key="book.id" v-for="book in library"></book></ul></li>
-</ul>
+<div class="container">
+  <router-view></router-view>
+</div>
 </template>
 
 <script>
-import { mapState } from "vuex";
-import book from "./book.vue";
-import search from "./search.vue";
+import { mapGetters } from "vuex";
+import booklist from "./book.vue";
 export default {
   components: {
-    book,
-    search
+    booklist
   },
   data() {
     return {};
-  },
-  mounted() {},
-  computed: {
-    library() {
-      return this.$store.state.library;
-    }
   }
 };
 </script>
