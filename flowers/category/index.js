@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.modal').modal();
+  $(".modal").modal();
   $(".carousel.carousel-slider").carousel({
     fullWidth: true,
     indicators: true

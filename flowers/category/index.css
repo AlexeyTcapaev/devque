@@ -676,13 +676,6 @@ footer {
     max-width: 100% !important;
 }
 
-a.dropdown-trigger.active i {
-    -webkit-transform: rotate(180deg);
-}
-a.dropdown-trigger i {
-    -webkit-transform: rotate(0deg);
-}
-
 .specifick-container {
     display: flex;
     align-items: center;
