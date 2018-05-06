@@ -258,7 +258,9 @@ input[type="range"]+.thumb .value {
     font-size: 4rem;
     font-weight: bold;
 }
-
+.side-nav li>a>i{
+    transition: 0.2s linear;
+}
 #search {
     box-shadow: none;
     border: 1px solid #ffaf60 !important;

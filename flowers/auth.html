@@ -7,7 +7,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link type="text/css" rel="stylesheet" href="category/index.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="auth/index.css" media="screen,projection" />
     <meta charset="utf-8">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -99,7 +99,7 @@
             <div class="search-bar">
                 <form>
                     <div class="input-field">
-                        <input id="search" type="search" required>
+                        <input id="search" type="search" required class="my-input">
                         <a class="waves-effect waves-light btn-flat">
                             <i class="material-icons">search</i>
                         </a>
@@ -270,63 +270,32 @@
             </div>
         </div>
         <div class="container">
-            <h2>Акции</h2>
-            <ul class="sales-list">
-                <li>
-                    <div class="custom-card">
-                        <div class="img">
-                            <img src="img/10.png">
-                        </div>
-                        <div class="con">
-                            <h6>Букет из 25 кенийских роз 40 см</h6>
-                            <div class="card-prices">
-
-                                <span class="new">5000</span>
-                            </div>
-                            <div class="card-magazine-buttons">
-                                <a class="waves-effect  buy btn-flat">В корзину</a>
-                                <a class="waves-effect  buy btn-flat">Купить в 1 клик</a>
-
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="custom-card">
-                        <div class="img">
-                            <img src="img/10.png">
-                        </div>
-                        <div class="con">
-                            <h6>Букет из 25 кенийских роз 40 см</h6>
-                            <div class="card-prices">
-                                <span class="new">5000</span>
-                            </div>
-                            <div class="card-magazine-buttons">
-                                <a class="waves-effect  buy btn-flat">В корзину</a>
-                                <a class="waves-effect  buy btn-flat modal-trigger" href="#modal1">Купить в 1 клик</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="custom-card">
-                        <div class="img">
-                            <img src="img/10.png">
-                        </div>
-                        <div class="con">
-                            <h6>Букет из 25 кенийских роз 40 см</h6>
-                            <div class="card-prices">
-
-                                <span class="new">5000</span>
-                            </div>
-                            <div class="card-magazine-buttons">
-                                <a class="waves-effect  buy btn-flat">В корзину</a>
-                                <a class="waves-effect  buy btn-flat">Купить в 1 клик</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <h5>Пожалуйста,авторизуйтесь</h5>
+            <div class="row form">
+                <div class="input-field col s3">
+                    <a class="waves-effect waves-light btn-flat">
+                        <i class="material-icons">account_circle</i>
+                    </a>
+                    <input class="my-input" id="username" type="text" required placeholder="ЛОГИН">
+                </div>
+                <div class="input-field col s3">
+                    <a class="waves-effect waves-light btn-flat">
+                        <i class="material-icons">vpn_key</i>
+                    </a>
+                    <input class="my-input" id="password" type="password" required placeholder="ПАРОЛЬ">
+                </div>
+                <form action="#" class="col s3">
+                    <p>
+                        <input type="checkbox" id="test5" />
+                        <label for="test5">Запомнить меня</label>
+                    </p>
+                    <a class="btn-large waves-effect buy">Войти</a>
+                </form>
+                <div class="input-field col s3 auth">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Зарегестрироваться</a>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="page-footer">
@@ -384,7 +353,7 @@
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
     <script type="text/javascript" src="slick/slick.js"></script>
     <script type="text/javascript" src="vue.js"></script>
-    <script type="text/javascript" src="category/index.js"></script>
+    <script type="text/javascript" src="auth/index.js"></script>
 </body>
 
 </html>
