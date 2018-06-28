@@ -3,6 +3,8 @@
 </template>
 <script>
 export default {
- 
+  metaInfo: {
+    title: "Главная" // set a title
+  }
 };
 </script>

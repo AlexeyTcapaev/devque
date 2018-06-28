@@ -17,4 +17,9 @@ class Product extends Model
         ];
     }
     protected $fillable = ['name', 'parent', 'description', 'slug'];
+
+    public function category()
+    {
+        return $this->hasOne(Category::class);
+    }
 }

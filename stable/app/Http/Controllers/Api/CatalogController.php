@@ -15,7 +15,7 @@ class CatalogController extends Controller
      */
     public function index()
     {
-        $catalog = Catalog::whereNull('parent')->get();
+        $catalog = Catalog::whereNull('catalog_id')->get();
         foreach ($catalog as $category) {
             $category->childrens = $this->GetChildrens($category->id);
         }
@@ -29,12 +29,12 @@ class CatalogController extends Controller
     public function getSubcategory($slug)
     {
         $subcat = Catalog::where('slug', $slug)->get()->first();
-        $subcat->parentobj = Catalog::where('id', $subcat->parent)->get()->first();
+        $subcat->parentobj = Catalog::where('id', $subcat->catalog_id)->get()->first();
         return $subcat;
     }
     public function GetChildrens($id)
     {
-        return Catalog::where('parent', $id)->get();
+        return Catalog::where('catalog_id', $id)->get();
     }
     public function update(Request $request, $id)
     {

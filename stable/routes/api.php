@@ -31,5 +31,5 @@ Route::group([
         'CatalogController',
         ['except' => ['create', 'edit']]
     );
-    Route::get('/catalog/sub/{subcatslug}', 'CatalogController@getSubcategory');
+    Route::get('/catalog/sub/{subcatslug}', 'CatalogController@getCategory');
 });

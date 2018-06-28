@@ -16,7 +16,7 @@ class CreateCatalogsTable extends Migration
         Schema::create('catalogs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
-            $table->integer('parent')->nullable();
+            $table->integer('catalog_id')->nullable();
             $table->string('description')->nullable();
             $table->string('slug');
             $table->timestamps();

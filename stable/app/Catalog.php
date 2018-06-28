@@ -16,5 +16,14 @@ class Catalog extends Model
             ]
         ];
     }
-    protected $fillable = ['name', 'parent', 'description', 'slug'];
+    protected $fillable = ['name', 'catalog_id', 'description', 'slug'];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+    public function Subcategories()
+    {
+        return $this->hasMany(Catalog::class);
+    }
 }
