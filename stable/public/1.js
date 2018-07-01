@@ -1,12 +1,12 @@
 webpackJsonp([1],{
 
-/***/ 118:
+/***/ 120:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(119);
+var content = __webpack_require__(121);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -27,7 +27,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 119:
+/***/ 121:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(49)(false);
@@ -35,14 +35,14 @@ exports = module.exports = __webpack_require__(49)(false);
 
 
 // module
-exports.push([module.i, "\n.breadcrumbs[data-v-142d72b7] {\r\n  width: 100%;\r\n  background-color: #ffaf60;\n}\n.container[data-v-142d72b7] {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  min-height: 64px;\n}\n.breadcrumb[data-v-142d72b7] {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  font-size: 18px;\r\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-142d72b7]:not:last-child:before {\r\n  content: \"\\E5CC\";\r\n  color: rgba(255, 255, 255, 0.7);\r\n  vertical-align: top;\r\n  display: inline-block;\r\n  font-family: \"Material Icons\";\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-size: 25px;\r\n  margin: 0 10px 0 8px;\r\n  -webkit-font-smoothing: antialiased;\n}\n.breadcrumb[data-v-142d72b7]:last-child {\r\n  color: #fff;\n}\r\n", ""]);
+exports.push([module.i, "\n.breadcrumbs[data-v-142d72b7] {\n  width: 100%;\n  background-color: #ffaf60;\n}\n.container[data-v-142d72b7] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 64px;\n}\n.breadcrumb[data-v-142d72b7] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-142d72b7]:not:last-child:before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n.breadcrumb[data-v-142d72b7]:last-child {\n  color: #fff;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 120:
+/***/ 122:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98,54 +98,61 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 121:
+/***/ 123:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "breadcrumbs" }, [
-      _c(
-        "div",
-        { staticClass: "container" },
-        [
-          _c("router-link", { staticClass: "breadcrumb", attrs: { to: "/" } }, [
-            _vm._v("Главная")
-          ]),
-          _vm._v(" "),
+  return _vm.subcategory != null
+    ? _c("div", [
+        _c("div", { staticClass: "breadcrumbs" }, [
           _c(
-            "router-link",
-            {
-              staticClass: "breadcrumb",
-              attrs: {
-                to: {
-                  name: "category",
-                  params: { slug: _vm.subcategory.parentobj.slug }
-                }
-              }
-            },
-            [_vm._v(_vm._s(_vm.subcategory.parentobj.name))]
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            {
-              staticClass: "breadcrumb",
-              attrs: {
-                to: { name: "category", params: { slug: _vm.subcategory.slug } }
-              }
-            },
-            [_vm._v(_vm._s(_vm.subcategory.name))]
+            "div",
+            { staticClass: "container" },
+            [
+              _c(
+                "router-link",
+                { staticClass: "breadcrumb", attrs: { to: "/" } },
+                [_vm._v("Главная")]
+              ),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                {
+                  staticClass: "breadcrumb",
+                  attrs: {
+                    to: {
+                      name: "category",
+                      params: { slug: _vm.subcategory.parentobj.slug }
+                    }
+                  }
+                },
+                [_vm._v(_vm._s(_vm.subcategory.parentobj.name))]
+              ),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                {
+                  staticClass: "breadcrumb",
+                  attrs: {
+                    to: {
+                      name: "category",
+                      params: { slug: _vm.subcategory.slug }
+                    }
+                  }
+                },
+                [_vm._v(_vm._s(_vm.subcategory.name))]
+              )
+            ],
+            1
           )
-        ],
-        1
-      )
-    ]),
-    _vm._v(" "),
-    _c("h1", [_vm._v(_vm._s(_vm.subcategory.name))])
-  ])
+        ]),
+        _vm._v(" "),
+        _c("h1", [_vm._v(_vm._s(_vm.subcategory.name))])
+      ])
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -165,13 +172,13 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(118)
+  __webpack_require__(120)
 }
 var normalizeComponent = __webpack_require__(60)
 /* script */
-var __vue_script__ = __webpack_require__(120)
+var __vue_script__ = __webpack_require__(122)
 /* template */
-var __vue_template__ = __webpack_require__(121)
+var __vue_template__ = __webpack_require__(123)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */

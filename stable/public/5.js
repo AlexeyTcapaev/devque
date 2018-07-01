@@ -460,7 +460,7 @@ exports = module.exports = __webpack_require__(49)(false);
 
 
 // module
-exports.push([module.i, "\n.collapsible-header[data-v-78e5ca92] {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: justify;\r\n      -ms-flex-pack: justify;\r\n          justify-content: space-between;\n}\n.collapsible-header a[data-v-78e5ca92] {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  margin: 0 15px 0 0;\n}\n.collapsible-header div[data-v-78e5ca92] {\r\n  min-width: 25%;\n}\n.expansion-panel[data-v-78e5ca92] {\r\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),\r\n    0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\r\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),\r\n    0 3px 1px -2px rgba(0, 0, 0, 0.2);\r\n  border-top: 1px solid #ddd;\r\n  border-right: 1px solid #ddd;\r\n  border-left: 1px solid #ddd;\r\n  margin: 0.5rem 0 1rem 0;\n}\n.collapsible-header[data-v-78e5ca92] {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  cursor: pointer;\r\n  -webkit-tap-highlight-color: transparent;\r\n  line-height: 1.5;\r\n  padding: 1rem;\r\n  background-color: #fff;\r\n  border-bottom: 1px solid #ddd;\n}\n.expansion-panel__header[data-v-78e5ca92] {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  cursor: pointer;\r\n  -webkit-tap-highlight-color: transparent;\r\n  line-height: 1.5;\r\n  padding: 1rem;\r\n  background-color: #fff;\r\n  border-bottom: 1px solid #ddd;\n}\n.collapsible-body[data-v-78e5ca92] {\r\n  display: block !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.collapsible-header[data-v-78e5ca92] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.collapsible-header a[data-v-78e5ca92] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin: 0 15px 0 0;\n}\n.collapsible-header div[data-v-78e5ca92] {\n  min-width: 25%;\n}\n.expansion-panel[data-v-78e5ca92] {\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),\n    0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),\n    0 3px 1px -2px rgba(0, 0, 0, 0.2);\n  border-top: 1px solid #ddd;\n  border-right: 1px solid #ddd;\n  border-left: 1px solid #ddd;\n  margin: 0.5rem 0 1rem 0;\n}\n.collapsible-header[data-v-78e5ca92] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  cursor: pointer;\n  -webkit-tap-highlight-color: transparent;\n  line-height: 1.5;\n  padding: 1rem;\n  background-color: #fff;\n  border-bottom: 1px solid #ddd;\n}\n.expansion-panel__header[data-v-78e5ca92] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  cursor: pointer;\n  -webkit-tap-highlight-color: transparent;\n  line-height: 1.5;\n  padding: 1rem;\n  background-color: #fff;\n  border-bottom: 1px solid #ddd;\n}\n.collapsible-body[data-v-78e5ca92] {\n  display: block !important;\n}\n", ""]);
 
 // exports
 
@@ -547,9 +547,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       init.Categories = resp.data;
     });
   },
-  mounted: function mounted() {
-    $(".collapsible").collapsible();
-  },
 
   methods: {
     DeleteCategory: function DeleteCategory(id, index) {
@@ -588,7 +585,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     NewSubCategorySend: function NewSubCategorySend(parent) {
       if (this.NewSubCategory.name !== "") {
-        this.NewSubCategory.parent = parent.id;
+        this.NewSubCategory.catalog_id = parent.id;
         var init = this;
         axios.post("/api/catalog", init.NewSubCategory).then(function (resp) {
           parent.childrens.push(resp.data);

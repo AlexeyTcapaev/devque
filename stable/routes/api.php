@@ -32,4 +32,9 @@ Route::group([
         ['except' => ['create', 'edit']]
     );
     Route::get('/catalog/sub/{subcatslug}', 'CatalogController@getCategory');
+    Route::resource(
+        'product',
+        'ProductController',
+        ['except' => ['create', 'edit']]
+    );
 });

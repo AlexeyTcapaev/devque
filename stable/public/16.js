@@ -1,6 +1,6 @@
 webpackJsonp([16],{
 
-/***/ 108:
+/***/ 110:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -59,15 +59,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 96:
+/***/ 98:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(60)
 /* script */
-var __vue_script__ = __webpack_require__(97)
+var __vue_script__ = __webpack_require__(99)
 /* template */
-var __vue_template__ = __webpack_require__(108)
+var __vue_template__ = __webpack_require__(110)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -107,13 +107,11 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 97:
+/***/ 99:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 //
 //
 //
@@ -133,12 +131,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 var navlink = function navlink() {
-  return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 98));
+  return __webpack_require__.e/* import() */(12).then(__webpack_require__.bind(null, 100));
 };
 var mobilenavlink = function mobilenavlink() {
-  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 103));
+  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 105));
 };
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -154,9 +151,6 @@ var mobilenavlink = function mobilenavlink() {
     axios.get("/api/catalog").then(function (resp) {
       init.Categories = resp.data;
     });
-  },
-  mounted: function mounted() {
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".button-collapse").sideNav();
   }
 });
 

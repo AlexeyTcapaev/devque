@@ -460,7 +460,7 @@ exports = module.exports = __webpack_require__(49)(false);
 
 
 // module
-exports.push([module.i, "\n.products[data-v-286151bb] {\r\n  width: 100%;\n}\n.expansion-panel[data-v-286151bb] {\r\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),\r\n    0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\r\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),\r\n    0 3px 1px -2px rgba(0, 0, 0, 0.2);\r\n  border-top: 1px solid #ddd;\r\n  border-right: 1px solid #ddd;\r\n  border-left: 1px solid #ddd;\r\n  margin: 0.5rem 0 1rem 0;\n}\n.expansion-panel__header[data-v-286151bb] {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  cursor: pointer;\r\n  -webkit-tap-highlight-color: transparent;\r\n  line-height: 1.5;\r\n  padding: 1rem;\r\n  background-color: #fff;\r\n  border-bottom: 1px solid #ddd;\n}\n.collapsible-body[data-v-286151bb] {\r\n  display: block !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.products[data-v-286151bb] {\n  width: 100%;\n}\n.expansion-panel[data-v-286151bb] {\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),\n    0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),\n    0 3px 1px -2px rgba(0, 0, 0, 0.2);\n  border-top: 1px solid #ddd;\n  border-right: 1px solid #ddd;\n  border-left: 1px solid #ddd;\n  margin: 0.5rem 0 1rem 0;\n}\n.expansion-panel__header[data-v-286151bb] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  cursor: pointer;\n  -webkit-tap-highlight-color: transparent;\n  line-height: 1.5;\n  padding: 1rem;\n  background-color: #fff;\n  border-bottom: 1px solid #ddd;\n}\n.collapsible-body[data-v-286151bb] {\n  display: block !important;\n}\n", ""]);
 
 // exports
 
@@ -553,7 +553,7 @@ var render = function() {
                 "div",
                 { staticClass: "collapsible-body" },
                 [
-                  _c("ProductCard", { attrs: { catid: category.id } }),
+                  _c("ProductCard", { attrs: { cat: category } }),
                   _vm._v(" "),
                   category.childrens.length != 0
                     ? _c(

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Catalog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Product;
 
 class CatalogController extends Controller
 {
@@ -17,7 +18,8 @@ class CatalogController extends Controller
     {
         $catalog = Catalog::whereNull('catalog_id')->get();
         foreach ($catalog as $category) {
-            $category->childrens = $this->GetChildrens($category->id);
+            $category->childrens = $category->Subcategories;
+            $category->products = $category->Products;
         }
         return $catalog;
     }
@@ -26,7 +28,7 @@ class CatalogController extends Controller
         //return Catalog::findOrFail($id);
         return Catalog::where('slug', $slug)->get();
     }
-    public function getSubcategory($slug)
+    public function getCategory($slug)
     {
         $subcat = Catalog::where('slug', $slug)->get()->first();
         $subcat->parentobj = Catalog::where('id', $subcat->catalog_id)->get()->first();

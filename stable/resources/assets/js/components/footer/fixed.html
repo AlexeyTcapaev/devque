@@ -1,36 +1,12 @@
-<main>
+<div>
+    <div class="loading" v-if="loading">
+        Загрузка...
+    </div>
     <div class="breadcrumbs">
         <div class="container">
             <router-link class="breadcrumb" to="/">Главная</router-link>
-            <router-link class="breadcrumb" :to="{name:'login'}">Авторизация</router-link>
+            <router-link class="breadcrumb" :to="{name:'category',params:{slug:category.slug}}">{{category.name}}</router-link>
         </div>
     </div>
-    <div class="container">
-        <h5>Пожалуйста,авторизуйтесь</h5>
-        <div class="row form">
-            <div class="input-field col s3">
-                <a class="waves-effect waves-light btn-flat">
-                    <i class="material-icons">account_circle</i>
-                </a>
-                <input class="my-input" id="username" type="text" required placeholder="ЛОГИН">
-            </div>
-            <div class="input-field col s3">
-                <a class="waves-effect waves-light btn-flat">
-                    <i class="material-icons">vpn_key</i>
-                </a>
-                <input class="my-input" id="password" type="password" required placeholder="ПАРОЛЬ">
-            </div>
-            <form class="col s3" action="#">
-                <p>
-                    <input id="test5" type="checkbox">
-                    <label for="test5">Запомнить меня</label>
-                </p>
-                <a class="btn-large waves-effect buy">Войти</a>
-            </form>
-            <div class="input-field col s3 auth">
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Зарегестрироваться</a>
-            </div>
-        </div>
-    </div>
-</main>
+    <h1>{{category.name}}</h1>
+</div>

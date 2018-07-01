@@ -4,7 +4,7 @@
       <v-expansion-panel-content v-for="category in Categories" :key="category.id" hide-actions inset>
         <div slot="header" class="collapsible-header">{{category.name}}</div>
         <div class="collapsible-body">
-                   <ProductCard :catid="category.id"></ProductCard>
+                   <ProductCard :cat="category"></ProductCard>
                    <v-expansion-panel expand focusable v-if="category.childrens.length != 0">
                     <v-expansion-panel-content v-for="subcategory in category.childrens" :key="subcategory.id" hide-actions inset>
                       <div slot="header" class="collapsible-header">{{subcategory.name}}</div>

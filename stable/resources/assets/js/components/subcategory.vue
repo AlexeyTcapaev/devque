@@ -1,5 +1,5 @@
 <template>
-<div>
+<div v-if="subcategory != null">
   <div class="breadcrumbs">
     <div class="container">
       <router-link class="breadcrumb" to="/">Главная</router-link>

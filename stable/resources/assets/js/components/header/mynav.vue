@@ -18,7 +18,6 @@
 <script>
 const navlink = () => import("./navlink.vue");
 const mobilenavlink = () => import("./mobilenavlink.vue");
-import $ from "jquery";
 export default {
   data: () => ({
     Categories: []
@@ -32,9 +31,6 @@ export default {
     axios.get("/api/catalog").then(function(resp) {
       init.Categories = resp.data;
     });
-  },
-  mounted() {
-    $(".button-collapse").sideNav();
   }
 };
 </script>

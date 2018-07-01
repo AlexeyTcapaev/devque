@@ -16,9 +16,10 @@ class CreateProductTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('category');
+            $table->integer('catalog_id')->nullable();;
             $table->string('description')->nullable();
             $table->string('slug');
+            $table->string('image')->nullable();
             $table->string('name')->unique();
             $table->decimal('currentprice', 9, 2);
             $table->decimal('oldprice', 9, 2);

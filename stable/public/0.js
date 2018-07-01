@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 109:
+/***/ 111:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -63,7 +63,7 @@ var staticRenderFns = [
       "a",
       { staticClass: "phone", attrs: { href: "tel:88122344455" } },
       [
-        _vm._v("8(812) 234-44-55\r\n                "),
+        _vm._v("8(812) 234-44-55\n                "),
         _c("span", [_vm._v("Работаем с 8:00 до 23:00")])
       ]
     )
@@ -73,9 +73,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("span", [
-      _vm._v("ДОСТАВКА\r\n                    "),
+      _vm._v("ДОСТАВКА\n                    "),
       _c("i", { staticClass: "material-icons" }, [_vm._v("remove")]),
-      _vm._v("ОПЛАТА\r\n                    "),
+      _vm._v("ОПЛАТА\n                    "),
       _c("i", { staticClass: "material-icons" }, [_vm._v("remove")]),
       _vm._v("КОНТАКТЫ")
     ])
@@ -102,15 +102,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 110:
+/***/ 112:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(60)
 /* script */
-var __vue_script__ = __webpack_require__(111)
+var __vue_script__ = __webpack_require__(113)
 /* template */
-var __vue_template__ = __webpack_require__(112)
+var __vue_template__ = __webpack_require__(114)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -150,7 +150,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 111:
+/***/ 113:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -217,7 +217,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 112:
+/***/ 114:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -242,9 +242,7 @@ var staticRenderFns = [
             _c("p", [_vm._v("Оплата наличными курьеру после 30% предоплаты")]),
             _vm._v(" "),
             _c("p", [
-              _vm._v(
-                "Выезд менеджера для приема оплаты\r\n                    "
-              ),
+              _vm._v("Выезд менеджера для приема оплаты\n                    "),
               _c("br"),
               _vm._v("(необходимо согласовать с оператором)")
             ])
@@ -296,7 +294,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "footer-copyright" }, [
         _c("div", { staticClass: "container" }, [
-          _vm._v("\r\n            © 2014 Copyright Text\r\n            "),
+          _vm._v("\n            © 2014 Copyright Text\n            "),
           _c(
             "a",
             {
@@ -321,7 +319,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 113:
+/***/ 115:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -333,7 +331,18 @@ var render = function() {
     [
       _c("vheader"),
       _vm._v(" "),
-      _c("main", [_c("router-view")], 1),
+      _c(
+        "main",
+        [
+          _c(
+            "transition",
+            { attrs: { name: "page", mode: "out-in" } },
+            [_c("router-view")],
+            1
+          )
+        ],
+        1
+      ),
       _vm._v(" "),
       _c("vfooter"),
       _vm._v(" "),
@@ -358,17 +367,21 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(88)
+}
 var normalizeComponent = __webpack_require__(60)
 /* script */
-var __vue_script__ = __webpack_require__(88)
+var __vue_script__ = __webpack_require__(90)
 /* template */
-var __vue_template__ = __webpack_require__(113)
+var __vue_template__ = __webpack_require__(115)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-08cc93eb"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -776,83 +789,126 @@ module.exports = function listToStyles (parentId, list) {
 /***/ }),
 
 /***/ 88:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_vheader_vue__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_vheader_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__header_vheader_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_vfooter_vue__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_vfooter_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__footer_vfooter_vue__);
-var _mounted$components$m;
+// style-loader: Adds some css to the DOM by adding a <style> tag
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (_mounted$components$m = {
-  mounted: function mounted() {
-    console.log("App mounted");
-  },
-
-  components: {
-    vfooter: __WEBPACK_IMPORTED_MODULE_1__footer_vfooter_vue___default.a,
-    vheader: __WEBPACK_IMPORTED_MODULE_0__header_vheader_vue___default.a
-  }
-}, _defineProperty(_mounted$components$m, "mounted", function mounted() {
-  //  [App.vue specific] When App.vue is finish loading finish the progress bar
-  this.$Progress.finish();
-}), _defineProperty(_mounted$components$m, "created", function created() {
-  var _this = this;
-
-  //  [App.vue specific] When App.vue is first loaded start the progress bar
-  this.$Progress.start();
-  //  hook the progress bar to start before we move router-view
-  this.$router.beforeEach(function (to, from, next) {
-    //  does the page we want to go to have a meta.progress object
-    if (to.meta.progress !== undefined) {
-      var meta = to.meta.progress;
-      // parse meta tags
-      _this.$Progress.parseMeta(meta);
-    }
-    //  start the progress bar
-    _this.$Progress.start();
-    //  continue to next page
-    next();
-  });
-  //  hook the progress bar to finish after we've finished moving router-view
-  this.$router.afterEach(function (to, from) {
-    //  finish the progress bar
-    _this.$Progress.finish();
-  });
-}), _mounted$components$m);
+// load the styles
+var content = __webpack_require__(89);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(61)("fff89ed6", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08cc93eb\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./magazine.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08cc93eb\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./magazine.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ }),
 
 /***/ 89:
 /***/ (function(module, exports, __webpack_require__) {
 
+exports = module.exports = __webpack_require__(49)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.page-enter-active[data-v-08cc93eb],\n.page-leave-active[data-v-08cc93eb] {\n  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;\n  transition: opacity 0.2s, -webkit-transform 0.2s;\n  transition: opacity 0.2s, transform 0.2s;\n  transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s;\n}\n.page-enter[data-v-08cc93eb],\n.page-leave-to[data-v-08cc93eb] {\n  opacity: 0;\n  -webkit-transform: translateX(-30%);\n          transform: translateX(-30%);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 90:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_vheader_vue__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_vheader_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__header_vheader_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_vfooter_vue__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_vfooter_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__footer_vfooter_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      loading: true
+    };
+  },
+  components: {
+    vfooter: __WEBPACK_IMPORTED_MODULE_1__footer_vfooter_vue___default.a,
+    vheader: __WEBPACK_IMPORTED_MODULE_0__header_vheader_vue___default.a
+  },
+  mounted: function mounted() {
+    //  [App.vue specific] When App.vue is finish loading finish the progress bar
+    this.$Progress.finish();
+  },
+  created: function created() {
+    var _this = this;
+
+    //  [App.vue specific] When App.vue is first loaded start the progress bar
+    this.$Progress.start();
+    //  hook the progress bar to start before we move router-view
+    this.$router.beforeEach(function (to, from, next) {
+      //  does the page we want to go to have a meta.progress object
+      if (to.meta.progress !== undefined) {
+        var meta = to.meta.progress;
+        // parse meta tags
+        _this.$Progress.parseMeta(meta);
+      }
+      //  start the progress bar
+      _this.$Progress.start();
+      //  continue to next page
+      next();
+    });
+    //  hook the progress bar to finish after we've finished moving router-view
+    this.$router.afterEach(function (to, from) {
+      //  finish the progress bar
+      _this.$Progress.finish();
+    });
+  }
+});
+
+/***/ }),
+
+/***/ 91:
+/***/ (function(module, exports, __webpack_require__) {
+
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(90)
+  __webpack_require__(92)
 }
 var normalizeComponent = __webpack_require__(60)
 /* script */
-var __vue_script__ = __webpack_require__(92)
+var __vue_script__ = __webpack_require__(94)
 /* template */
-var __vue_template__ = __webpack_require__(109)
+var __vue_template__ = __webpack_require__(111)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -892,13 +948,13 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 90:
+/***/ 92:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(91);
+var content = __webpack_require__(93);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -919,7 +975,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 91:
+/***/ 93:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(49)(false);
@@ -927,22 +983,18 @@ exports = module.exports = __webpack_require__(49)(false);
 
 
 // module
-exports.push([module.i, "\n.btn-flat[data-v-478ce54b]:focus {\r\n  background-color: rgba(0, 0, 0, 0);\n}\n.router-link-exact-active[data-v-478ce54b] {\r\n  background-color: #ffaf60 !important;\r\n  color: #fff !important;\n}\na.logo[data-v-478ce54b] {\r\n  color: black !important;\r\n  background-color: #fff !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.btn-flat[data-v-478ce54b]:focus {\n  background-color: rgba(0, 0, 0, 0);\n}\n.router-link-exact-active[data-v-478ce54b] {\n  background-color: #ffaf60 !important;\n  color: #fff !important;\n}\na.logo[data-v-478ce54b] {\n  color: black !important;\n  background-color: #fff !important;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 92:
+/***/ 94:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_materialize_css__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_materialize_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_materialize_css__);
 //
 //
 //
@@ -969,13 +1021,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 var search = function search() {
-  return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 93));
+  return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 95));
 };
 var mynav = function mynav() {
-  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 96));
+  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 98));
 };
-
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     search: search,

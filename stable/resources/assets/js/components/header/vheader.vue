@@ -25,8 +25,6 @@
 <script>
 const search = () => import("./search.vue");
 const mynav = () => import("./mynav.vue");
-import $ from "jquery";
-import M from "materialize-css";
 export default {
   components: {
     search,

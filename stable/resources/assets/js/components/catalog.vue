@@ -73,9 +73,6 @@ export default {
       init.Categories = resp.data;
     });
   },
-  mounted() {
-    $(".collapsible").collapsible();
-  },
   methods: {
     DeleteCategory(id, index) {
       const init = this;
@@ -125,7 +122,7 @@ export default {
     },
     NewSubCategorySend(parent) {
       if (this.NewSubCategory.name !== "") {
-        this.NewSubCategory.parent = parent.id;
+        this.NewSubCategory.catalog_id = parent.id;
         const init = this;
         axios
           .post("/api/catalog", init.NewSubCategory)

@@ -25,7 +25,7 @@
                 <a class="waves-effect waves-light btn-flat">
                     <i class="material-icons">vpn_key</i>
                 </a>
-                <input class="my-input" id="password" type="password" required placeholder="ПОВТОРИТЕ ПАРОЛЬ">
+                <input class="my-input" id="confrimpassword" type="password" required placeholder="ПОВТОРИТЕ ПАРОЛЬ">
             </div>
             <form class="col s3 trig" action="#">              
                 <a class="btn-large waves-effect buy">Зарегестрироваться</a>

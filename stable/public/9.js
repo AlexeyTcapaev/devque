@@ -174,6 +174,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   metaInfo: {
     titleTemplate: "%s | La Flowers", // title is now "My Example App - Yay!"
     meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }]
+  },
+  data: function data() {
+    return {
+      transitionName: "slide-left"
+    };
   }
 });
 
@@ -186,7 +191,12 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("router-view")], 1)
+  return _c(
+    "transition",
+    { attrs: { name: "fade", mode: "out-in" } },
+    [_c("router-view", { staticClass: "child-view" })],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

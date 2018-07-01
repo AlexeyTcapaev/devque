@@ -59,10 +59,14 @@ import Router from 'vue-router'
 import Vuetify from 'vuetify';
 Vue.use(Vuetify)
 Vue.use(Router)
+const auth = {
+    loggedIn: function () {
+        return true;
+    }
+}
 const routes = [{
     name: "admin",
     path: "/admin",
-
     component: admin,
     children: [{
             path: "catalog",
@@ -74,7 +78,10 @@ const routes = [{
             name: "products",
             component: products,
         }
-    ]
+    ],
+    meta: {
+        requiresAuth: true
+    },
 }, {
     path: "/",
     component: magazine,
@@ -113,7 +120,24 @@ export const router = new VueRouter({
     routes,
     mode: "history"
 });
-
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+        // этот путь требует авторизации, проверяем залогинен ли
+        // пользователь, и если нет, перенаправляем на страницу логина
+        if (!auth.loggedIn()) {
+            next({
+                path: '/login',
+                /*query: {
+                    redirect: to.fullPath
+                }*/
+            })
+        } else {
+            next()
+        }
+    } else {
+        next() // всегда так или иначе нужно вызвать next()!
+    }
+})
 
 const app = new Vue({
     el: '#app',

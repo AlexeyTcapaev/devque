@@ -1,20 +1,22 @@
 <template>
-    <div>
-        <vheader></vheader>
-        <main>
-            <router-view></router-view>
-        </main>
-        <vfooter></vfooter>
-        <vue-progress-bar></vue-progress-bar>
-    </div>
+<div>
+    <vheader></vheader>
+    <main>
+        <transition name="page"  mode="out-in">
+          <router-view></router-view>
+        </transition>
+    </main>
+    <vfooter></vfooter>
+    <vue-progress-bar></vue-progress-bar>
+</div>
 </template>
 <script>
 import vheader from "./header/vheader.vue";
 import vfooter from "./footer/vfooter.vue";
 export default {
-  mounted() {
-    console.log("App mounted");
-  },
+  data: () => ({
+    loading: true
+  }),
   components: {
     vfooter,
     vheader
@@ -47,3 +49,14 @@ export default {
   }
 };
 </script>
+<style scoped>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s, transform 0.2s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+  transform: translateX(-30%);
+}
+</style>
