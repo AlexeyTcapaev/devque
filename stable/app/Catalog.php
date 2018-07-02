@@ -22,7 +22,7 @@ class Catalog extends Model
     {
         return $this->hasMany(Product::class);
     }
-    public function Subcategories()
+    public function childrens()
     {
         return $this->hasMany(Catalog::class);
     }

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Catalog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Product;
 
 class CatalogController extends Controller
 {
@@ -18,8 +17,11 @@ class CatalogController extends Controller
     {
         $catalog = Catalog::whereNull('catalog_id')->get();
         foreach ($catalog as $category) {
-            $category->childrens = $category->Subcategories;
-            $category->products = $category->Products;
+            $category->childrens;
+            $category->Products;
+            foreach ($category->childrens as $children) {
+                $children->Products;
+            }
         }
         return $catalog;
     }

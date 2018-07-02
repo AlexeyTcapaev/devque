@@ -41,11 +41,17 @@
                   ></v-text-field>
             </div>
             <div class="card-action">
-               <v-btn :disabled="!valid"
+               <v-btn v-if="prod === undefined" :disabled="!valid"
                   class="btntest"
                   @click="submit"
                   flat large >
                   Сохранить
+                </v-btn>
+                 <v-btn v-else :disabled="!valid"
+                  class="btntest"
+                  @click="update"
+                  flat large >
+                  Обновить
                 </v-btn>
             </div>
         </div>
@@ -54,7 +60,7 @@
 </template>
 <script>
 export default {
-  props: ["cat"],
+  props: ["cat", "prod"],
   data: () => ({
     item: {
       image: "/img/plus.svg"
@@ -70,6 +76,12 @@ export default {
     isActive: true,
     valid: false
   }),
+  mounted() {
+    if (this.prod !== undefined) {
+      this.item = this.prod;
+      this.item.image = "/uploads/" + this.item.image;
+    }
+  },
   methods: {
     onFileChange(e) {
       this.item.fileOnserver = this.$refs.file.files[0];
@@ -100,6 +112,7 @@ export default {
         product.append("oldprice", this.item.oldprice);
         product.append("currentprice", this.item.currentprice);
         product.append("catalog_id", this.cat.id);
+        product.append("id", this.item.id);
         const init = this;
         axios
           .post("/api/product", product)
@@ -113,6 +126,16 @@ export default {
             console.log(resp);
           });
       }
+    },
+    update() {
+      axios
+        .patch("/api/product/" + this.item.id, this.item)
+        .then(function(resp) {
+          category = resp.data;
+        })
+        .catch(function(resp) {
+          console.log(resp);
+        });
     }
   }
 };
@@ -149,7 +172,7 @@ form {
   align-items: center;
   justify-content: center;
   position: relative;
-  max-width: 50% !important;
+  max-width: 48% !important;
 }
 .card-image {
   width: 50%;
@@ -166,5 +189,8 @@ form {
 }
 .card-image:hover {
   background-color: rgb(238, 238, 238);
+}
+.card {
+  margin: 10px;
 }
 </style>
