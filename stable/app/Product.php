@@ -21,7 +21,7 @@ class Product extends Model
 
     public function category()
     {
-        return $this->hasOne(Category::class);
+        return $this->hasOne(Catalog::class);
     }
     public function uploadImage($image)
     {
@@ -43,9 +43,6 @@ class Product extends Model
     public static function add($fields)
     {
         $product = Product::create($fields->all());
-        /*$product = new static;
-        $product->fill((array)$fields);
-        $product->save();*/
         return $product;
     }
 }

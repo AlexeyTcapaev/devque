@@ -1,14 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use App\Http\Controllers\Controller;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
-use App\Product;
 
-class ProductController extends Controller
+class SearchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +13,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -38,9 +34,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Product::add($request);
-        $product->uploadImage($request->file('image'));
-        return $product;
+        //
     }
 
     /**
@@ -49,9 +43,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($searchstr)
     {
-        //
+        return Product::where('name', $searchstr)->get();
     }
 
     /**
@@ -74,12 +68,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $product = Product::findOrFail($id);
-        $product->update($request->all());
-        if ($request->hasFile('image')) {
-            $product->uploadImage($request->file('image'));
-        }
-        return $product;
+        //
     }
 
     /**
@@ -90,8 +79,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $product = Product::findOrFail($id);
-        $product->remove();
-        return '';
+        //
     }
 }

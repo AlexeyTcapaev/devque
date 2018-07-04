@@ -18,7 +18,7 @@ class Catalog extends Model
     }
     protected $fillable = ['name', 'catalog_id', 'description', 'slug'];
 
-    public function Products()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }

@@ -6,11 +6,17 @@
       <router-link class="breadcrumb"  :to="{name:'category',params:{slug:subcategory.parentobj.slug}}">{{subcategory.parentobj.name}}</router-link>  
       <router-link class="breadcrumb"  :to="{name:'category',params:{slug:subcategory.slug}}">{{subcategory.name}}</router-link>             
     </div>
-  </div> 
-<h1>{{subcategory.name}}</h1>
+  </div>
+<div class="container">
+    <h2>{{subcategory.name}}</h2>
+    <ul class="sales-list">
+        <li v-for="product in subcategory.products" :key="product.id"><showable-card  :prod="product"></showable-card></li>
+    </ul>
+</div>
 </div>
 </template>
 <script>
+const ShowableCard = () => import("./ShowableCard.vue");
 export default {
   metaInfo: function() {
     return {
@@ -25,6 +31,9 @@ export default {
       }
     }
   }),
+  components: {
+    ShowableCard
+  },
   methods: {
     getSubcategory() {
       const init = this;
@@ -45,7 +54,8 @@ export default {
   },
   watch: {
     $route: "getSubcategory"
-  }
+  },
+  mounted() {}
 };
 </script>
 <style scoped>
@@ -53,7 +63,7 @@ export default {
   width: 100%;
   background-color: #ffaf60;
 }
-.container {
+.breadcrumbs .container {
   display: flex;
   align-items: center;
   min-height: 64px;
@@ -78,5 +88,18 @@ export default {
 }
 .breadcrumb:last-child {
   color: #fff;
+}
+.container {
+  display: block;
+}
+.container h2 {
+  text-align: center;
+}
+.sales-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 45px;
+  width: 100%;
+  justify-items: center;
 }
 </style>

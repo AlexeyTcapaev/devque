@@ -37,4 +37,5 @@ Route::group([
         'ProductController',
         ['except' => ['create', 'edit']]
     );
+
 });

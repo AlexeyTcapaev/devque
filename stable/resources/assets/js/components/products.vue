@@ -5,16 +5,16 @@
         <div slot="header" class="collapsible-header">{{category.name}}</div>
         <div class="collapsible-body">
                    <div class="product-list">
-                    <ProductCard :cat="category"></ProductCard>
-                    <ProductCard :cat="category" :prod="product" v-for="product in category.products" :key="product.id"></ProductCard>
+                    <ProductCard :index="null" :cat="category"></ProductCard>
+                    <ProductCard :index="index" :cat="category" :prod="product" v-for="(product,index) in category.products" :key="product.id"></ProductCard>
                    </div>
                    <v-expansion-panel expand focusable v-if="category.childrens.length != 0">
                     <v-expansion-panel-content v-for="subcategory in category.childrens" :key="subcategory.id" hide-actions inset>
                       <div slot="header" class="collapsible-header">{{subcategory.name}}</div>
                       <div class="collapsible-body">
                         <div class="product-list">
-                          <ProductCard :cat="subcategory"></ProductCard>
-                          <ProductCard :cat="subcategory" :prod="product" v-for="product in subcategory.products" :key="product.id"></ProductCard>
+                          <ProductCard :index="null" :cat="subcategory"></ProductCard>
+                          <ProductCard :index="index" :cat="subcategory" :prod="product" v-for="product in subcategory.products" :key="product.id"></ProductCard>
                         </div>
                       </div>
                     </v-expansion-panel-content>

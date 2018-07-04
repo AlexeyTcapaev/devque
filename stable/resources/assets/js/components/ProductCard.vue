@@ -2,7 +2,7 @@
 <div class="card horizontal">
     <v-form ref="form" v-model="valid" lazy-validation>
         <div class="card-image">
-            <input type="file" multiple @change="onFileChange($event)" accept="image/*" class="file" ref="file">
+            <input type="file" multiple @change="onFileChange" accept="image/*" class="file" ref="file">
             <img :src="item.image" :class="{ padding: isActive }">
         </div>
         <div class="card-stacked">
@@ -47,11 +47,17 @@
                   flat large >
                   Сохранить
                 </v-btn>
-                 <v-btn v-else :disabled="!valid"
+                 <v-btn v-if="prod" :disabled="!valid"
                   class="btntest"
                   @click="update"
                   flat large >
                   Обновить
+                </v-btn>
+                 <v-btn v-if="prod" :disabled="!valid"
+                  class="btntest"
+                  @click="destroy"
+                  flat large >
+                  Удалить
                 </v-btn>
             </div>
         </div>
@@ -60,7 +66,7 @@
 </template>
 <script>
 export default {
-  props: ["cat", "prod"],
+  props: ["cat", "prod", "index"],
   data: () => ({
     item: {
       image: "/img/plus.svg"
@@ -83,9 +89,20 @@ export default {
     }
   },
   methods: {
+    destroy() {
+      const init = this;
+      axios
+        .delete("/api/product/" + this.item.id)
+        .then(function(resp) {
+          console.log(resp);
+          init.cat.products.splice(init.index, 1);
+        })
+        .catch(function(resp) {
+          console.log(resp);
+        });
+    },
     onFileChange(e) {
       this.item.fileOnserver = this.$refs.file.files[0];
-      console.log(this.item.fileOnserver);
       var files = e.target.files || e.dataTransfer.files;
       if (!files.length) return;
       this.createImage(this.item, files[0]);
@@ -118,9 +135,9 @@ export default {
           .post("/api/product", product)
           .then(function(resp) {
             console.log(resp);
-            //this.$emit("AddProduct", resp);
-            init.cat.products.push(resp);
+            init.cat.products.push(resp.data);
             init.$refs.form.reset();
+            init.item.image = "/img/plus.svg";
           })
           .catch(function(resp) {
             console.log(resp);
@@ -128,14 +145,28 @@ export default {
       }
     },
     update() {
-      axios
-        .patch("/api/product/" + this.item.id, this.item)
-        .then(function(resp) {
-          category = resp.data;
-        })
-        .catch(function(resp) {
-          console.log(resp);
-        });
+      if (this.$refs.form.validate()) {
+        let product = new FormData();
+        product.append("_method", "PATCH");
+        product.append("image", this.$refs.file.files[0]);
+        product.append("name", this.item.name);
+        product.append("description", this.item.description);
+        product.append("oldprice", this.item.oldprice);
+        product.append("currentprice", this.item.currentprice);
+        product.append("catalog_id", this.cat.id);
+        product.append("id", this.item.id);
+        const init = this;
+        console.log(product.getAll("name"));
+        axios
+          .post("/api/product/" + this.item.id, product)
+          .then(function(resp) {
+            init.item = resp.data;
+            init.item.image = "/uploads/" + resp.data.image;
+          })
+          .catch(function(resp) {
+            console.log(resp);
+          });
+      }
     }
   }
 };
