@@ -26,6 +26,11 @@ Route::group([
     'namespace' => 'Api',
     'as' => 'api.'
 ], function () {
+    Route::post('/login', 'UserController@login');
+    Route::post('/register', 'UserController@register');
+    Route::group(['middleware' => 'auth:api'], function () {
+        Route::post('/user/details', 'UserController@details');
+    });
     Route::resource(
         'catalog',
         'CatalogController',
@@ -37,5 +42,9 @@ Route::group([
         'ProductController',
         ['except' => ['create', 'edit']]
     );
-
+    Route::resource(
+        'search',
+        'SearchController',
+        ['except' => ['create', 'edit']]
+    );
 });

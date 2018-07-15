@@ -13,20 +13,20 @@
                 <a class="waves-effect waves-light btn-flat">
                     <i class="material-icons">account_circle</i>
                 </a>
-                <input class="my-input" id="username" type="text" required placeholder="ЛОГИН">
+                <input class="my-input" id="username" type="text" required placeholder="ЛОГИН" v-model="login">
             </div>
             <div class="input-field col s3">
                 <a class="waves-effect waves-light btn-flat">
                     <i class="material-icons">vpn_key</i>
                 </a>
-                <input class="my-input" id="password" type="password" required placeholder="ПАРОЛЬ">
+                <input class="my-input" id="password" type="password" required placeholder="ПАРОЛЬ" v-model="password">
             </div>
             <form class="col s3" action="#">
                 <p>
                     <input id="test5" type="checkbox">
                     <label for="test5">Запомнить меня</label>
                 </p>
-                <a class="btn-large waves-effect buy">Войти</a>
+                <a class="btn-large waves-effect buy" @click="loging">Войти</a>
             </form>
             <div class="input-field col s3 auth">
                 <a href="#">Забыли пароль?</a>
@@ -37,9 +37,46 @@
 </main>
 </template>
 <script>
+import cookies from "js-cookie";
 export default {
   metaInfo: {
     title: "Вход" // set a title
+  },
+  data: () => ({
+    login: "",
+    password: ""
+  }),
+
+  methods: {
+    loging: function() {
+      const init = this;
+      axios
+        .post("/api/login", {
+          email: this.login,
+          password: this.password
+        })
+        .then(function(resp) {
+          cookies.set("token", resp.data.success.token);
+          init.$store.state.user.token = resp.data.success.token;
+          axios
+            .post(
+              "/api/user/details",
+              {},
+              {
+                headers: {
+                  Accept: "application/json",
+                  Authorization: "Bearer " + init.$store.state.user.token
+                }
+              }
+            )
+            .then(function(resp) {
+              cookies.set("name", resp.data.success.name);
+              cookies.set("id", resp.data.success.id);
+              init.$store.state.user.name = resp.data.success.name;
+            });
+          init.$router.push("/");
+        });
+    }
   }
 };
 </script>

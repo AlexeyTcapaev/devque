@@ -1,3 +1,4 @@
+require('./bootstrap');
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import Vue from 'vue'
@@ -24,7 +25,7 @@ Vue.use(VueProgressBar, options)
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+
 
 
 /**
@@ -53,6 +54,11 @@ const subcategory = () =>
     import ('./components/subcategory.vue');
 const registration = () =>
     import ('./components/Registration.vue');
+const search = () =>
+    import ('./components/search.vue');
+const cart = () =>
+    import ('./components/cart.vue');
+
 import Meta from 'vue-meta'
 Vue.use(Meta)
 import Router from 'vue-router'
@@ -94,6 +100,11 @@ const routes = [{
             component: index,
         },
         {
+            name: "search",
+            path: "search/:str",
+            component: search,
+        },
+        {
             name: "login",
             path: "/login",
             component: login,
@@ -105,15 +116,22 @@ const routes = [{
 
         },
         {
-            name: "category",
-            path: ":slug",
-            component: category,
+            name: "cart",
+            path: "/cart",
+            component: cart,
         },
         {
             name: "subcategory",
             path: ":pslug/:slug",
             component: subcategory,
         },
+        {
+            name: "category",
+            path: ":slug",
+            component: category,
+        },
+
+
     ]
 }]
 export const router = new VueRouter({
@@ -138,9 +156,10 @@ router.beforeEach((to, from, next) => {
         next() // всегда так или иначе нужно вызвать next()!
     }
 })
-
+import store from './store/index'
 const app = new Vue({
     el: '#app',
     router,
+    store,
     render: h => h(App)
 });

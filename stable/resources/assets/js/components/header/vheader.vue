@@ -12,11 +12,11 @@
                     <i class="material-icons">remove</i>КОНТАКТЫ</span>
             </div>
             <div class="magazine-buttons">
-                <router-link class="btn-flat" to="/login" ><i class="material-icons">account_box</i></router-link>
-                <a class="btn-flat cart">
+                <router-link class="btn-flat" to="/login" ><i class="material-icons" :class="{user:islogging}">account_box</i>{{$store.state.user.name}}</router-link>
+                <router-link to="/cart" class="btn-flat cart" @click="test">
                     <i class="material-icons">shopping_cart</i>
-                    <span>1</span>
-                </a>
+                    <span>{{cartCount}}</span>
+                </router-link>
             </div>
         </div>
         <mynav/>
@@ -25,14 +25,34 @@
 <script>
 const search = () => import("./search.vue");
 const mynav = () => import("./mynav.vue");
+import { mapGetters } from "vuex";
 export default {
   components: {
     search,
     mynav
+  },
+  methods: {
+    test() {}
+  },
+  computed: {
+    ...mapGetters(["cartCount"]),
+    islogging() {
+      if (this.$store.state.user.name === undefined) return false;
+      else return true;
+    }
   }
 };
 </script>
 <style scoped>
+.magazine-buttons a {
+  width: inherit !important;
+  margin: 0 10px 0 10px;
+  padding: 15px;
+  height: 47px;
+}
+.user {
+  margin: 0 5px 0 0;
+}
 .btn-flat:focus {
   background-color: rgba(0, 0, 0, 0);
 }

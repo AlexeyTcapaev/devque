@@ -10,7 +10,7 @@
             <span class="new">{{prod.currentprice}}</span>
         </div>
         <div class="card-magazine-buttons">
-            <a class="waves-effect  buy btn-flat" @click="OnCart">В корзину</a>
+            <a class="waves-effect  buy btn-flat" @click="AddProduct(prod)">В корзину</a>
             <a class="waves-effect  buy btn-flat" @click="Buy">Купить в 1 клик</a>
 
         </div>
@@ -18,10 +18,11 @@
 </div>
 </template>
 <script>
+import { mapActions } from "vuex";
 export default {
   props: ["prod"],
   methods: {
-    OnCart() {},
+    ...mapActions(["AddProduct"]),
     Buy() {}
   },
   data: () => ({})
@@ -30,6 +31,7 @@ export default {
 <style scoped>
 .custom-card {
   max-width: 370px;
+  min-width: 335px;
   padding: 15px;
   transition: 0.1s linear;
   box-sizing: border-box;
@@ -69,6 +71,7 @@ export default {
 }
 .card-magazine-buttons a {
   color: #ffffff;
+  padding: 0 1rem;
 }
 .buy {
   background-color: #ffaf60;

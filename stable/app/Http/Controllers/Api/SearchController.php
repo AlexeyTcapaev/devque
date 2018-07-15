@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Product;
 
 class SearchController extends Controller
 {
@@ -45,7 +47,7 @@ class SearchController extends Controller
      */
     public function show($searchstr)
     {
-        return Product::where('name', $searchstr)->get();
+        return Product::where('name', 'LIKE', "%$searchstr%")->get();
     }
 
     /**

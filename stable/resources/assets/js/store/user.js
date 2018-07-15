@@ -1,31 +1,9 @@
-class User {
-    constructor(id) {
-        this.id = id;
-    }
-}
-
+import cookies from "js-cookie";
 export default {
 
     state: {
-        user: null
+        token: cookies.get("token"),
+        name: cookies.get("name"),
+        id: cookies.get("id")
     },
-    mutations: {
-        SetUser(state, payload) {
-            state.user = payload;
-        }
-    },
-    actions: {
-        RegisterUser({
-            commit
-        }, payload) {
-            //connect to db
-            commit('SetUser', new User(1))
-        }
-    },
-    getters: {
-        user(state) {
-            return state.user;
-        }
-    }
-
 }

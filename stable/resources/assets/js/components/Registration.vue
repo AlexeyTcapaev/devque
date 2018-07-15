@@ -9,26 +9,32 @@
     <div class="container">
         <h5>Регистрация</h5>
         <div class="row form">
-            <div class="input-field col s3">
+           <div class="input-field col s3">
                 <a class="waves-effect waves-light btn-flat">
                     <i class="material-icons">account_circle</i>
                 </a>
-                <input class="my-input" id="username" type="text" required placeholder="ЛОГИН">
+                <input class="my-input" id="username" type="text" required placeholder="ЛОГИН" v-model="name">
+            </div>
+            <div class="input-field col s3">
+                <a class="waves-effect waves-light btn-flat">
+                    <i class="material-icons">email</i>
+                </a>
+                <input class="my-input" id="username" type="text" required placeholder="E-mail" v-model="email">
             </div>
             <div class="input-field col s3">
                 <a class="waves-effect waves-light btn-flat">
                     <i class="material-icons">vpn_key</i>
                 </a>
-                <input class="my-input" id="password" type="password" required placeholder="ПАРОЛЬ">
+                <input class="my-input" id="password" type="password" required placeholder="ПАРОЛЬ" v-model="password">
             </div>
              <div class="input-field col s3">
                 <a class="waves-effect waves-light btn-flat">
                     <i class="material-icons">vpn_key</i>
                 </a>
-                <input class="my-input" id="confrimpassword" type="password" required placeholder="ПОВТОРИТЕ ПАРОЛЬ">
+                <input class="my-input" id="confrimpassword" type="password" required placeholder="ПОВТОРИТЕ ПАРОЛЬ" v-model="cpassword">
             </div>
             <form class="col s3 trig" action="#">              
-                <a class="btn-large waves-effect buy">Зарегестрироваться</a>
+                <a :class="{ disabled: !valid }" class="btn-large waves-effect buy" @click="Login">Зарегестрироваться</a>
             </form>
             <div class="input-field col s3 auth">
                  <router-link :to="{ name:'login'}">Войти</router-link>
@@ -38,9 +44,45 @@
 </main>
 </template>
 <script>
+import cookies from "js-cookie";
 export default {
   metaInfo: {
     title: "Регистрация" // set a title
+  },
+  data: () => ({
+    name: "",
+    email: "",
+    password: "",
+    cpassword: ""
+  }),
+  computed: {
+    valid() {
+      if (
+        this.password.length > 6 &&
+        this.password === this.cpassword &&
+        this.email.indexOf("@") > -1 &&
+        this.name.length > 1
+      ) {
+        return true;
+      } else return false;
+    }
+  },
+  methods: {
+    Login: function() {
+      const init = this;
+      axios
+        .post("/api/register", {
+          email: this.email,
+          password: this.password,
+          cpassword: this.cpassword,
+          name: this.name
+        })
+        .then(function(resp) {
+          console.log(resp);
+          cookies.set("user", resp.data.success.name);
+          cookies.set("token", resp.data.success.token);
+        });
+    }
   }
 };
 </script>

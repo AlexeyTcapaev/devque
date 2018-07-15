@@ -1,8 +1,8 @@
 <template>
 <form>
     <div class="input-field">
-        <input id="search" type="search" required>
-        <a class="waves-effect waves-light btn-flat">
+        <input id="search" type="search" required v-model="searchStr" placeholder="Начать поиск">
+        <a class="waves-effect waves-light btn-flat" @click="search">
             <i class="material-icons">search</i>
         </a>
     </div>
@@ -10,9 +10,19 @@
 </template>
 <script>
 export default {
-    mounted(){
-       
+  mounted() {
+    this.searchStr = this.$route.params.str;
+  },
+  data: () => {
+    return {
+      searchStr: ""
+    };
+  },
+  methods: {
+    search: function() {
+      this.$router.push({ name: "search", params: { str: this.searchStr } });
     }
-}
+  }
+};
 </script>
 

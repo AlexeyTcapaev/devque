@@ -25,9 +25,8 @@ class CatalogController extends Controller
     }
     public function getCategory($slug)
     {
-        $subcat = Catalog::where('slug', $slug)->get()->first();
+        $subcat = Catalog::where('slug', $slug)->with('products')->get()->first();
         $subcat->parentobj = Catalog::where('id', $subcat->catalog_id)->get()->first();
-        $subcat->Products;
         return $subcat;
     }
     public function GetChildrens($id)
