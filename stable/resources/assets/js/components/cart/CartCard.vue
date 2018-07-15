@@ -21,7 +21,8 @@
             <a @click="incrace"><i class="material-icons">chevron_right</i></a>
         </div>
         <div class="info">
-            
+            <span>Сумма: {{product.currentprice*product.count}}</span>
+            <span>Цена за 1шт. {{product.currentprice}}</span>
         </div>
     </div>
     <a class="close" @click="DeleteProduct(number)"><i class="material-icons">close</i></a>
