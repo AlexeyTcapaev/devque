@@ -30,13 +30,14 @@
             :prepend-icon="item.model ? item.icon : item['icon-alt']"
             append-icon=""
           >
-            <v-list-tile slot="activator">
+            <v-list-tile slot="activator" :to="item.to" >
               <v-list-tile-content>
                 <v-list-tile-title>
-                  {{ item.text }}
+                  {{ item.text }}1
                 </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
+
             <v-list-tile
               v-for="(child, i) in item.children"
               :key="i"
@@ -53,13 +54,13 @@
             </v-list-tile>
           </v-list-group>
 
-          <v-list-tile v-else :key="item.text" @click="">
+          <v-list-tile v-else :key="item.text" :to="item.to" active-class="primary--text exact-target-link">
             <v-list-tile-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
               <v-list-tile-title>
-                <router-link :to="item.to"> {{ item.text }}</router-link>           
+                {{ item.text }}        
               </v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
@@ -113,3 +114,8 @@ export default {
   }
 };
 </script>
+<style>
+.exact-target-link {
+  border-left: 3px solid #1976d2 !important;
+}
+</style>

@@ -11,8 +11,8 @@
 </div>
 </template>
 <script>
-import vheader from "./header/vheader.vue";
-import vfooter from "./footer/vfooter.vue";
+const vheader = () => import("./header/vheader.vue");
+const vfooter = () => import("./footer/vfooter.vue");
 export default {
   data: () => ({
     loading: true

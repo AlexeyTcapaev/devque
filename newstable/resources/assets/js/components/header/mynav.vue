@@ -34,3 +34,33 @@ export default {
   }
 };
 </script>
+</<style scoped>
+.hide-on-med-and-down {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 0 0;
+    padding-left: 0;
+    list-style-type: none!important;
+}
+.hide-on-med-and-down li a:hover {
+    color: white;
+    background-color: black;
+}
+.hide-on-med-and-down li a {
+    display: flex;
+    color: black;
+    transition: 0.2s linear;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+}
+@media only screen and (max-width: 992px) {
+  .hide-on-med-and-down {
+    display: none !important;
+  }
+}
+</style>

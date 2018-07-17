@@ -1,15 +1,49 @@
 <template>
-  <v-expansion-panel focusable>
-    <v-expansion-panel-content
-      v-for="(item,i) in 5"
-      :key="i"
-    >
-      <div slot="header">Item</div>
-      <v-card>
-        <v-card-text class="grey lighten-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-card-text>
-      </v-card>
-    </v-expansion-panel-content>
-  </v-expansion-panel>
+<v-layout>
+    <v-expansion-panel expand focusable class="collapsible">
+       <v-expansion-panel-content hide-actions inset>
+        <div slot="header" class="collapsible-header">
+          <div>
+            <a @click="NewCategorySend"><i class="material-icons">add</i>Добавить категорию</a>            
+            <v-text-field label="Название" outline v-model="NewCategory.name">
+            </v-text-field>
+            </div>
+        </div>
+      </v-expansion-panel-content>
+      <v-expansion-panel-content v-for="(category,index) in Categories" :key="category.id" hide-actions inset>
+        <div slot="header" class="collapsible-header">
+          <div>
+            <v-text-field label="Название" outline v-model="category.name" @change="UpdateCategory(category)">
+            </v-text-field>
+            <span>Подкатегорий: {{category.childrens.length}}</span>
+          </div>
+          <a @click="DeleteCategory(category.id,index)"><i class="material-icons">close</i></a>
+        </div>
+        <div class="collapsible-body">
+          <v-expansion-panel expand focusable class="collapsible">
+            <v-expansion-panel-content hide-actions inset>
+              <div slot="header" class="collapsible-header sub">
+                 <div>
+                    <a @click="NewSubCategorySend(category)"><i class="material-icons">add</i>Добавить подкатегорию</a> 
+                    <v-text-field label="Название" outline v-model="NewSubCategory.name" >
+                    </v-text-field>
+                  </div>
+              </div>
+            </v-expansion-panel-content>
+             <v-expansion-panel-content hide-actions inset v-for="(children,index) in category.childrens" :key="children.id">
+                <div slot="header" class="collapsible-header sub">
+                  <div>
+                    <v-text-field label="Название" outline v-model="children.name" @change="UpdateCategory(children)">
+                    </v-text-field>               
+                  </div>
+                  <a @click="DeleteSubCategory(category,children.id,index)"><i class="material-icons">close</i></a>
+                </div>
+             </v-expansion-panel-content>
+          </v-expansion-panel>
+        </div>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+</v-layout>
 </template>
 <script>
 export default {
@@ -101,3 +135,68 @@ export default {
   }
 };
 </script>
+<style >
+.sub {
+  margin: 0 0 0 20px;
+}
+.application
+  .theme--light.v-expansion-panel--focusable
+  .v-expansion-panel__container:focus,
+.theme--light
+  .v-expansion-panel--focusable
+  .v-expansion-panel__container:focus {
+  background-color: #fff;
+}
+.v-expansion-panel__header {
+  height: inherit !important;
+}
+.collapsible-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.collapsible-header a {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.collapsible-header div {
+  min-width: 25%;
+}
+.expansion-panel {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  margin: 0.5rem 0 1rem 0;
+}
+.collapsible-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  padding: 1rem;
+  background-color: #fff;
+}
+.expansion-panel__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.collapsible-body {
+  display: block !important;
+}
+</style>

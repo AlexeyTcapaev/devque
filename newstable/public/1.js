@@ -1,22 +1,22 @@
 webpackJsonp([1],{
 
-/***/ 116:
+/***/ 148:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(117);
+var content = __webpack_require__(149);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(74)("2a5546d1", content, false, {});
+var update = __webpack_require__(74)("12f84ed0", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-142d72b7\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./subcategory.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-142d72b7\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./subcategory.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-04b707bf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./search.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-04b707bf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./search.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -27,7 +27,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 117:
+/***/ 149:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(14)(false);
@@ -35,19 +35,18 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.breadcrumbs[data-v-142d72b7] {\n  width: 100%;\n  background-color: #ffaf60;\n}\n.breadcrumbs .container[data-v-142d72b7] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 64px;\n}\n.breadcrumb[data-v-142d72b7] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-142d72b7]:not:last-child:before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n.breadcrumb[data-v-142d72b7]:last-child {\n  color: #fff;\n}\n.container[data-v-142d72b7] {\n  display: block;\n}\n.container h2[data-v-142d72b7] {\n  text-align: center;\n}\n.sales-list[data-v-142d72b7] {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  grid-gap: 45px;\n  width: 100%;\n  justify-items: center;\n}\n", ""]);
+exports.push([module.i, "\n.breadcrumbs[data-v-04b707bf] {\n  width: 100%;\n  background-color: #ffaf60;\n}\n.breadcrumbs .container[data-v-04b707bf] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 64px;\n}\n.breadcrumb[data-v-04b707bf] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-04b707bf]:not:last-child:before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n.breadcrumb[data-v-04b707bf]:last-child {\n  color: #fff;\n}\n.container[data-v-04b707bf] {\n  display: block;\n}\n.container h2[data-v-04b707bf] {\n  text-align: center;\n}\n.sales-list[data-v-04b707bf] {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  grid-gap: 45px;\n  width: 100%;\n  justify-items: center;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 118:
+/***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
 //
 //
 //
@@ -71,16 +70,13 @@ var ShowableCard = function ShowableCard() {
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: function metaInfo() {
     return {
-      title: this.subcategory.name + " " + this.subcategory.parentobj.name
+      title: "Поис по " + this.$route.params.str
     };
   },
   data: function data() {
     return {
       subcategory: {
-        name: "",
-        parentobj: {
-          name: ""
-        }
+        name: ""
       }
     };
   },
@@ -88,29 +84,30 @@ var ShowableCard = function ShowableCard() {
     ShowableCard: ShowableCard
   },
   methods: {
-    getSubcategory: function getSubcategory() {
+    GetSearch: function GetSearch() {
       var init = this;
-      axios.get("/api/catalog/sub/" + init.$route.params.slug).then(function (resp) {
-        init.subcategory = resp.data;
+      axios.get("/api/search/" + init.$route.params.str).then(function (resp) {
+        init.subcategory.name = init.$route.params.str;
+        init.subcategory.products = resp.data;
       });
     }
   },
   beforeCreate: function beforeCreate() {
     var init = this;
-    axios.get("/api/catalog/sub/" + init.$route.params.slug).then(function (resp) {
-      init.subcategory = resp.data;
+    axios.get("/api/search/" + init.$route.params.str).then(function (resp) {
+      init.subcategory.name = init.$route.params.str;
+      init.subcategory.products = resp.data;
     });
   },
 
   watch: {
-    $route: "getSubcategory"
-  },
-  mounted: function mounted() {}
+    $route: "GetSearch"
+  }
 });
 
 /***/ }),
 
-/***/ 123:
+/***/ 151:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -130,40 +127,18 @@ var render = function() {
                 [_vm._v("Главная")]
               ),
               _vm._v(" "),
-              _c(
-                "router-link",
-                {
-                  staticClass: "breadcrumb",
-                  attrs: {
-                    to: {
-                      name: "category",
-                      params: { slug: _vm.subcategory.parentobj.slug }
-                    }
-                  }
-                },
-                [_vm._v(_vm._s(_vm.subcategory.parentobj.name))]
-              ),
-              _vm._v(" "),
-              _c(
-                "router-link",
-                {
-                  staticClass: "breadcrumb",
-                  attrs: {
-                    to: {
-                      name: "category",
-                      params: { slug: _vm.subcategory.slug }
-                    }
-                  }
-                },
-                [_vm._v(_vm._s(_vm.subcategory.name))]
-              )
+              _c("a", { staticClass: "breadcrumb" }, [_vm._v("Поиск")])
             ],
             1
           )
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "container" }, [
-          _c("h2", [_vm._v(_vm._s(_vm.subcategory.name))]),
+          _c("h2", [
+            _vm._v(
+              'Результаты поиска по "' + _vm._s(_vm.subcategory.name) + '"'
+            )
+          ]),
           _vm._v(" "),
           _c(
             "ul",
@@ -187,31 +162,31 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-142d72b7", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-04b707bf", module.exports)
   }
 }
 
 /***/ }),
 
-/***/ 69:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(116)
+  __webpack_require__(148)
 }
 var normalizeComponent = __webpack_require__(73)
 /* script */
-var __vue_script__ = __webpack_require__(118)
+var __vue_script__ = __webpack_require__(150)
 /* template */
-var __vue_template__ = __webpack_require__(123)
+var __vue_template__ = __webpack_require__(151)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-142d72b7"
+var __vue_scopeId__ = "data-v-04b707bf"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -222,7 +197,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\subcategory.vue"
+Component.options.__file = "resources\\assets\\js\\components\\search.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -231,9 +206,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-142d72b7", Component.options)
+    hotAPI.createRecord("data-v-04b707bf", Component.options)
   } else {
-    hotAPI.reload("data-v-142d72b7", Component.options)
+    hotAPI.reload("data-v-04b707bf", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
