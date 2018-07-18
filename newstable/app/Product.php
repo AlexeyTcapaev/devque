@@ -17,7 +17,7 @@ class Product extends Model
             ]
         ];
     }
-    protected $fillable = ['name', 'parent', 'description', 'slug', 'currentprice', 'oldprice', 'catalog_id'];
+    protected $fillable = ['options', 'name', 'parent', 'description', 'slug', 'currentprice', 'oldprice', 'catalog_id'];
 
     public function category()
     {
@@ -29,15 +29,15 @@ class Product extends Model
             return;
         }
         if ($this->image != null)
-            Storage::delete('uploads/' . $this->image);
+            Storage::delete('public/uploads/' . $this->image);
         $filename = str_random(10) . '.' . $image->extension();
-        $image->storeAs('uploads', $filename);
+        $image->storeAs('public/uploads', $filename);
         $this->image = $filename;
         $this->save();
     }
     public function remove()
     {
-        Storage::delete('uploads/' . $this->image);
+        Storage::delete('public/uploads/' . $this->image);
         $this->delete();
     }
     public static function add($fields)

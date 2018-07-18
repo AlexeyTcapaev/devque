@@ -1,76 +1,37 @@
 <template>
-<div class="card horizontal">
-    <v-form ref="form" v-model="valid" lazy-validation>
-        <div class="card-image">
-            <input type="file" multiple @change="onFileChange" accept="image/*" class="file" ref="file">
-            <img :src="item.image" :class="{ padding: isActive }">
-        </div>
-        <div class="card-stacked">
-            <div class="card-content">
-                 <v-text-field
-                    id="name"
-                    name="input-1"
-                    label="Наименование"
-                    v-model="item.name"
-                    :rules="nameRules"
-                    required
-                  ></v-text-field>
-                  <v-text-field
-                    id="desc"
-                    name="input-2"
-                    label="Описание"
-                     v-model="item.description"
-                  ></v-text-field>
-                  <v-text-field
-                    id="oldprice"
-                    name="input-3"
-                    label="Старая цена"
-                    prefix=" руб."
-                    type="number"
-                    v-model="item.oldprice"
-                  ></v-text-field>
-                  <v-text-field
-                    id="currentprice"
-                    name="input-4"
-                    prefix=" руб."
-                    label="Текущая цена"
-                    type="number"
-                    v-model="item.currentprice"
-                    :rules="priceRules"
-                    required              
-                  ></v-text-field>
-            </div>
-            <div class="card-action">
-               <v-btn v-if="prod === undefined" :disabled="!valid"
-                  class="btntest"
-                  @click="submit"
-                  flat large >
-                  Сохранить
-                </v-btn>
-                 <v-btn v-if="prod" :disabled="!valid"
-                  class="btntest"
-                  @click="update"
-                  flat large >
-                  Обновить
-                </v-btn>
-                 <v-btn v-if="prod" :disabled="!valid"
-                  class="btntest"
-                  @click="destroy"
-                  flat large >
-                  Удалить
-                </v-btn>
-            </div>
-        </div>
-    </v-form>
-</div>             
+<div class="card">
+  <v-form ref="form" v-model="valid" lazy-validation>
+    <div class="card-image">
+      <input type="file" multiple @change="onFileChange" accept="image/*" class="file" ref="file">
+      <img :src="item.image" v-if="item.image">
+    </div>
+    <div class="card-content"> 
+      <v-text-field label="Наименование" outline v-model="item.name" :rules="nameRules"></v-text-field>
+      <v-text-field label="Описание" outline v-model="item.description"></v-text-field>
+      <v-text-field  suffix="₽" label="Старая цена" outline v-model="item.oldprice"></v-text-field>
+      <v-text-field  suffix="₽" label="Текущая цена" outline v-model="item.currentprice"></v-text-field>
+      <v-text-field  suffix="см" label="Добавить длину" outline append-icon="add" @click:append="AddParam" v-model="option"></v-text-field>
+      <ul class="params">
+        <li v-for="(option, index) in item.options" :key="index">
+          <v-chip close @input="deleteParams(index)" >{{option}}</v-chip>
+        </li>
+      </ul>
+      <v-btn :disabled="!valid" @click="submit" flat>Создать</v-btn>
+      <v-btn v-if="prod" :disabled="!valid" @click="update" flat>Обновить</v-btn>
+      <v-btn v-if="prod" :disabled="!valid" @click="destroy" flat >Удалить</v-btn>
+    </div>
+  </v-form>
+</div>       
 </template>
 <script>
 export default {
   props: ["cat", "prod", "index"],
   data: () => ({
     item: {
-      image: "/img/plus.svg"
+      image: "/storage/img/plus.svg",
+      options: []
     },
+    option: "",
     nameRules: [
       v => !!v || "Name is required",
       v => (v && v.length <= 50) || "> 10"
@@ -84,11 +45,18 @@ export default {
   }),
   mounted() {
     if (this.prod !== undefined) {
+      this.prod.options = JSON.parse(this.prod.options);
       this.item = this.prod;
-      this.item.image = "/uploads/" + this.item.image;
+      this.item.image = "/storage/uploads/" + this.item.image;
     }
   },
   methods: {
+    AddParam() {
+      this.item.options.push(this.option);
+    },
+    deleteParams(index) {
+      this.item.options.splice(index, 1);
+    },
     destroy() {
       const init = this;
       axios
@@ -130,14 +98,16 @@ export default {
         product.append("currentprice", this.item.currentprice);
         product.append("catalog_id", this.cat.id);
         product.append("id", this.item.id);
+        product.append("options", JSON.stringify(this.item.options));
         const init = this;
         axios
           .post("/api/product", product)
           .then(function(resp) {
             console.log(resp);
+            resp.data.options = JSON.parse(resp.data.options);
             init.cat.products.push(resp.data);
             init.$refs.form.reset();
-            init.item.image = "/img/plus.svg";
+            init.item.image = "/storage/img/plus.svg";
           })
           .catch(function(resp) {
             console.log(resp);
@@ -155,13 +125,15 @@ export default {
         product.append("currentprice", this.item.currentprice);
         product.append("catalog_id", this.cat.id);
         product.append("id", this.item.id);
+        product.append("options", JSON.stringify(this.item.options));
         const init = this;
         console.log(product.getAll("name"));
         axios
           .post("/api/product/" + this.item.id, product)
           .then(function(resp) {
+            resp.data.options = JSON.parse(resp.data.options);
             init.item = resp.data;
-            init.item.image = "/uploads/" + resp.data.image;
+            init.item.image = "/storage/uploads/" + resp.data.image;
           })
           .catch(function(resp) {
             console.log(resp);
@@ -171,14 +143,33 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style >
+.params li {
+  padding: 5px 0;
+}
+.card {
+  display: block;
+  width: 500px;
+  border-radius: 2px;
+  min-width: 0;
+  position: relative;
+  text-decoration: none;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+ul {
+  padding: 0;
+}
 .padding {
   padding: 10%;
 }
 form {
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
+  padding: 10px;
 }
 .btntest {
   background: linear-gradient(45deg, #00aeff 50%, #3369e6 100%);
@@ -188,6 +179,10 @@ form {
 }
 .card-action a {
   cursor: pointer;
+}
+button {
+  width: 100%;
+  margin: 0 !important;
 }
 .file {
   position: absolute;
@@ -207,19 +202,26 @@ form {
 }
 .card-image {
   width: 50%;
+  padding: 10px;
   height: 100%;
   transition: 0.2s linear;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .card-image img {
   object-fit: cover;
-  max-width: 24vw;
-  max-height: 455px;
+  max-width: 100%;
 }
-.card-image:hover {
-  background-color: rgb(238, 238, 238);
+.params li span {
+  width: 100%;
+}
+.v-chip {
+  margin: 0;
+}
+.v-chip .v-chip__content {
+  width: 100% !important;
 }
 .card {
   margin: 10px;

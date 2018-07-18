@@ -26023,22 +26023,22 @@ var App = function App() {
     return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, 61));
 };
 var index = function index() {
-    return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 62));
+    return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 62));
 };
 var login = function login() {
     return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 63));
 };
 var admin = function admin() {
-    return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 64));
+    return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 64));
 };
 var catalog = function catalog() {
-    return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 65));
+    return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 65));
 };
 var products = function products() {
     return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 66));
 };
 var Magazine = function Magazine() {
-    return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 67));
+    return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 67));
 };
 var category = function category() {
     return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 68));
@@ -26047,13 +26047,13 @@ var subcategory = function subcategory() {
     return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 69));
 };
 var registration = function registration() {
-    return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 70));
+    return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 70));
 };
 var search = function search() {
     return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 71));
 };
 var cart = function cart() {
-    return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 72));
+    return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 72));
 };
 
 var routes = [{

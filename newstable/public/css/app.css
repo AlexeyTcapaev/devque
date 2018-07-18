@@ -14316,6 +14316,7 @@ table.v-table tfoot tr td {
 * {
   text-decoration: none !important;
   outline: none !important;
+  list-style-type: none !important;
 }
 
 .application {
