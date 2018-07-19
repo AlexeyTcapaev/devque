@@ -1,0 +1,17 @@
+{
+  "default": {
+    "title": "TopDigital",
+    "description": "TopDigital Project",
+    "keywords": "TopDigital"
+  },
+  "/": {
+    "title": "Добро пожаловать",
+    "description": "TopDigital Project",
+    "keywords": "TopDigital"
+  },
+  "/admin": {
+    "title": "Панель администрирования",
+    "description": "",
+    "keywords": ""
+  }
+}
