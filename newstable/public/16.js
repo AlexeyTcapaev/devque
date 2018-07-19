@@ -87,7 +87,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.hide-on-med-and-down[data-v-1d4230bf] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    margin: 20px 0 0 0;\n    padding-left: 0;\n    list-style-type: none!important;\n}\n.hide-on-med-and-down li a[data-v-1d4230bf]:hover {\n    color: white;\n    background-color: black;\n}\n.hide-on-med-and-down li a[data-v-1d4230bf] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    color: black;\n    -webkit-transition: 0.2s linear;\n    transition: 0.2s linear;\n    font-weight: bold;\n    text-transform: uppercase;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    white-space: nowrap;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n@media only screen and (max-width: 992px) {\n.hide-on-med-and-down[data-v-1d4230bf] {\n    display: none !important;\n}\n}\n", ""]);
+exports.push([module.i, "\n.container[data-v-1d4230bf] {\n  padding: 0;\n}\n.hide-on-med-and-down[data-v-1d4230bf] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin: 20px 0 0 0;\n  padding-left: 0;\n  list-style-type: none !important;\n}\n.hide-on-med-and-down li a[data-v-1d4230bf]:hover {\n  color: white;\n  background-color: black;\n}\n.hide-on-med-and-down li a[data-v-1d4230bf] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  color: black;\n  -webkit-transition: 0.2s linear;\n  transition: 0.2s linear;\n  font-weight: bold;\n  text-transform: uppercase;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  white-space: nowrap;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n@media only screen and (max-width: 992px) {\n.hide-on-med-and-down[data-v-1d4230bf] {\n    display: none !important;\n}\n}\n@media only screen and (min-width: 993px) {\n.sidenav-trigger[data-v-1d4230bf] {\n    display: none;\n}\n}\n@media only screen and (max-width: 1569px) {\n.sidenav-trigger[data-v-1d4230bf] {\n    display: block !important;\n}\n.hide-on-med-and-down[data-v-1d4230bf] {\n    display: none;\n}\n}\n", ""]);
 
 // exports
 
@@ -126,7 +126,8 @@ var mobilenavlink = function mobilenavlink() {
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      Categories: []
+      Categories: [],
+      drawer: false
     };
   },
   components: {
@@ -150,47 +151,71 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container nav-cont" }, [
-    _c("nav", [
-      _c("div", { staticClass: "nav-wrapper" }, [
-        _vm._m(0),
-        _vm._v(" "),
+  return _c(
+    "div",
+    { staticClass: "container nav-cont" },
+    [
+      _c("nav", [
         _c(
-          "ul",
-          { staticClass: "hide-on-med-and-down" },
-          _vm._l(_vm.Categories, function(category) {
-            return _c("navlink", {
-              key: category.id,
-              attrs: { category: category }
-            })
-          })
+          "div",
+          { staticClass: "nav-wrapper" },
+          [
+            _c(
+              "v-toolbar-title",
+              {
+                staticClass: "ml-0 pl-3 sidenav-trigger",
+                staticStyle: { width: "330px" },
+                attrs: { clipped: _vm.$vuetify.breakpoint.lgAndUp }
+              },
+              [
+                _c("v-toolbar-side-icon", {
+                  on: {
+                    click: function($event) {
+                      $event.stopPropagation()
+                      _vm.drawer = !_vm.drawer
+                    }
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "ul",
+              { staticClass: "hide-on-med-and-down" },
+              _vm._l(_vm.Categories, function(category) {
+                return _c("navlink", {
+                  key: category.id,
+                  attrs: { category: category }
+                })
+              })
+            )
+          ],
+          1
         )
-      ])
-    ]),
-    _vm._v(" "),
-    _c(
-      "ul",
-      { staticClass: "side-nav", attrs: { id: "mobile-demo" } },
-      [_c("mobilenavlink")],
-      1
-    )
-  ])
+      ]),
+      _vm._v(" "),
+      _c("v-navigation-drawer", {
+        attrs: {
+          "mobile-break-point": "1569",
+          fixed: "",
+          app: "",
+          absolute: "",
+          floating: ""
+        },
+        model: {
+          value: _vm.drawer,
+          callback: function($$v) {
+            _vm.drawer = $$v
+          },
+          expression: "drawer"
+        }
+      })
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "sidenav-trigger button-collapse",
-        attrs: { href: "#", "data-activates": "mobile-demo" }
-      },
-      [_c("i", { staticClass: "material-icons" }, [_vm._v("menu")])]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

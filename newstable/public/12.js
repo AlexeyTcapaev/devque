@@ -69,6 +69,28 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -94,7 +116,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "custom-card" }, [
     _c("div", { staticClass: "img" }, [
-      _c("img", { attrs: { src: "/uploads/" + _vm.prod.image } })
+      _c("img", { attrs: { src: "/storage/uploads/" + _vm.prod.image } })
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "con" }, [
@@ -106,26 +128,169 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "card-magazine-buttons" }, [
-        _c(
-          "a",
-          {
-            staticClass: "waves-effect  buy btn-flat",
-            on: {
-              click: function($event) {
-                _vm.AddProduct(_vm.prod)
+      _c(
+        "div",
+        { staticClass: "card-magazine-buttons" },
+        [
+          _c(
+            "v-dialog",
+            {
+              attrs: { "max-width": "290" },
+              model: {
+                value: _vm.dialog,
+                callback: function($$v) {
+                  _vm.dialog = $$v
+                },
+                expression: "dialog"
               }
-            }
-          },
-          [_vm._v("В корзину")]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          { staticClass: "waves-effect  buy btn-flat", on: { click: _vm.Buy } },
-          [_vm._v("Купить в 1 клик")]
-        )
-      ])
+            },
+            [
+              _c(
+                "v-btn",
+                {
+                  staticClass: "buy btn-flat",
+                  attrs: { slot: "activator" },
+                  on: {
+                    click: function($event) {
+                      _vm.AddProduct(_vm.prod)
+                    }
+                  },
+                  slot: "activator"
+                },
+                [_vm._v("В корзину")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card",
+                [
+                  _c("v-card-title", { staticClass: "headline" }, [
+                    _vm._v("Use Google's location service?")
+                  ]),
+                  _vm._v(" "),
+                  _c("v-card-text", [
+                    _vm._v(
+                      "Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    [
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { color: "green darken-1", flat: "" },
+                          nativeOn: {
+                            click: function($event) {
+                              _vm.dialog = false
+                            }
+                          }
+                        },
+                        [_vm._v("Disagree")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { color: "green darken-1", flat: "" },
+                          nativeOn: {
+                            click: function($event) {
+                              _vm.dialog = false
+                            }
+                          }
+                        },
+                        [_vm._v("Agree")]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-dialog",
+            {
+              attrs: { "max-width": "290" },
+              model: {
+                value: _vm.dialog,
+                callback: function($$v) {
+                  _vm.dialog = $$v
+                },
+                expression: "dialog"
+              }
+            },
+            [
+              _c(
+                "v-btn",
+                {
+                  staticClass: "buy btn-flat",
+                  attrs: { slot: "activator" },
+                  slot: "activator"
+                },
+                [_vm._v("Купить в 1 клик")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card",
+                [
+                  _c("v-card-title", { staticClass: "headline" }, [
+                    _vm._v("Use Google's location service?")
+                  ]),
+                  _vm._v(" "),
+                  _c("v-card-text", [
+                    _vm._v(
+                      "Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    [
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { color: "green darken-1", flat: "" },
+                          nativeOn: {
+                            click: function($event) {
+                              _vm.dialog = false
+                            }
+                          }
+                        },
+                        [_vm._v("Disagree")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { color: "green darken-1", flat: "" },
+                          nativeOn: {
+                            click: function($event) {
+                              _vm.dialog = false
+                            }
+                          }
+                        },
+                        [_vm._v("Agree")]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
     ])
   ])
 }

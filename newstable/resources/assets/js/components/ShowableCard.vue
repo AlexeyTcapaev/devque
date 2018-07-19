@@ -1,7 +1,7 @@
 <template>
 <div class="custom-card">
     <div class="img">
-        <img :src="'/uploads/'+prod.image">
+        <img :src="'/storage/uploads/'+prod.image">
     </div>
     <div class="con">
         <h6>{{prod.name}}</h6>
@@ -10,8 +10,30 @@
             <span class="new">{{prod.currentprice}}</span>
         </div>
         <div class="card-magazine-buttons">
-            <a class="waves-effect  buy btn-flat" @click="AddProduct(prod)">В корзину</a>
-            <a class="waves-effect  buy btn-flat" @click="Buy">Купить в 1 клик</a>
+             <v-dialog v-model="dialog" max-width="290">
+              <v-btn slot="activator" class="buy btn-flat" @click="AddProduct(prod)">В корзину</v-btn>
+              <v-card>
+                <v-card-title class="headline">Use Google's location service?</v-card-title>
+                <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="green darken-1" flat @click.native="dialog = false">Disagree</v-btn>
+                  <v-btn color="green darken-1" flat @click.native="dialog = false">Agree</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+             <v-dialog v-model="dialog" max-width="290">
+              <v-btn slot="activator" class="buy btn-flat">Купить в 1 клик</v-btn>
+              <v-card>
+                <v-card-title class="headline">Use Google's location service?</v-card-title>
+                <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="green darken-1" flat @click.native="dialog = false">Disagree</v-btn>
+                  <v-btn color="green darken-1" flat @click.native="dialog = false">Agree</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
 
         </div>
     </div>

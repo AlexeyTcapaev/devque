@@ -1,12 +1,12 @@
 <template>
 <div>
     <vheader></vheader>
-<!--    <main>
+    <main>
         <transition name="page"  mode="out-in">
           <router-view></router-view>
         </transition>
     </main>
-    <vfooter></vfooter>-->
+    <vfooter></vfooter>
     <vue-progress-bar></vue-progress-bar>
 </div>
 </template>
@@ -49,7 +49,10 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style>
+.v-content {
+  padding: 0 !important;
+}
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.2s, transform 0.2s;
@@ -58,5 +61,21 @@ export default {
 .page-leave-to {
   opacity: 0;
   transform: translateX(-30%);
+}
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 70%;
+  }
 }
 </style>

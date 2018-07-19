@@ -175,8 +175,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: {
-    titleTemplate: "%s | La Flowers",
-    meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }]
+    titleTemplate: "%s | La Flowers"
   },
   data: function data() {
     return {

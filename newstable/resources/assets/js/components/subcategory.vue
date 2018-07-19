@@ -58,12 +58,15 @@ export default {
   mounted() {}
 };
 </script>
-<style scoped>
+<style>
 .breadcrumbs {
   width: 100%;
   background-color: #ffaf60;
 }
-.breadcrumbs .container {
+.container {
+  padding: 0;
+}
+.bread {
   display: flex;
   align-items: center;
   min-height: 64px;
@@ -89,6 +92,29 @@ export default {
 .breadcrumb:last-child {
   color: #fff;
 }
+.breadcrumbs .container {
+  display: flex !important;
+  align-items: center !important;
+  height: 64px !important;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.breadcrumb:not(:first-child):before {
+  content: "\E5CC";
+  color: rgba(255, 255, 255, 0.7);
+  vertical-align: top;
+  display: inline-block;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  margin: 0 10px 0 8px;
+  -webkit-font-smoothing: antialiased;
+}
 .container {
   display: block;
 }
@@ -101,5 +127,9 @@ export default {
   grid-gap: 45px;
   width: 100%;
   justify-items: center;
+}
+.buy {
+  background-color: #ffaf60 !important;
+  box-shadow: none !important;
 }
 </style>

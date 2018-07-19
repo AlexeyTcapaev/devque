@@ -87,7 +87,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\na[data-v-5915a565] {\n  background-color: #fff;\n  color: black !important;\n}\na i[data-v-5915a565] {\n  -webkit-transition: 0.2s linear;\n  transition: 0.2s linear;\n}\na[data-v-5915a565]:hover {\n  background-color: black !important;\n  color: #fff !important;\n}\n.list__tile__title a[data-v-5915a565]:hover {\n  color: white;\n  background-color: #ffaf60 !important;\n}\ndiv.menu[data-v-5915a565] {\n  width: 100%;\n  position: relative;\n}\ndiv.list[data-v-5915a565] {\n  position: absolute;\n  width: 100%;\n  grid-template-columns: 1fr 1fr 1fr;\n  display: grid;\n}\n.menu__activator--active a i[data-v-5915a565] {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.menu__content[data-v-5915a565],\n.menuable__content__active[data-v-5915a565] {\n  position: absolute !important;\n}\n", ""]);
+exports.push([module.i, "\n.v-list__tile__title[data-v-5915a565] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  color: black;\n  -webkit-transition: 0.2s linear;\n  transition: 0.2s linear;\n  font-weight: bold;\n  text-transform: uppercase;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  white-space: nowrap;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  line-height: 32px;\n  padding: 14px 16px;\n  font-size: 16px;\n}\n.sublink[data-v-5915a565] {\n  -webkit-transition: 0.2s linear;\n  transition: 0.2s linear;\n  height: 64px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.sublink[data-v-5915a565]:hover {\n  background-color: #ffaf60 !important;\n}\n.sublink:hover .v-list__tile__title[data-v-5915a565] {\n  color: #fff !important;\n}\n.v-menu__content[data-v-5915a565] {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.v-list[data-v-5915a565] {\n  padding: 0;\n  grid-template-columns: 1fr 1fr 1fr;\n  display: grid;\n  height: auto !important;\n  width: auto !important;\n}\na.subcat[data-v-5915a565]:hover {\n  color: white !important;\n  background-color: #ffaf60 !important;\n}\na.subcat[data-v-5915a565] {\n  color: black !important;\n}\n.v-menu__activator--active a[data-v-5915a565] {\n  background-color: black !important;\n  color: #fff !important;\n}\n.v-menu__activatora i[data-v-5915a565] {\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n}\n.v-menu__activator--active a i[data-v-5915a565] {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\na[data-v-5915a565] {\n  background-color: #fff;\n  color: black !important;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-transition: 0.2s linear;\n  transition: 0.2s linear;\n  font-weight: bold;\n  padding: 0 15px;\n  font-size: 1rem;\n  line-height: 64px;\n  cursor: pointer;\n  text-transform: uppercase;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  white-space: nowrap;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\na i[data-v-5915a565] {\n  -webkit-transition: 0.2s linear;\n  transition: 0.2s linear;\n}\na[data-v-5915a565]:hover {\n  background-color: black !important;\n  color: #fff !important;\n}\n.list__tile__title a[data-v-5915a565]:hover {\n  color: white;\n  background-color: #ffaf60 !important;\n}\ndiv.menu[data-v-5915a565] {\n  width: 100%;\n  position: relative;\n}\ndiv.list[data-v-5915a565] {\n  position: absolute;\n  width: 100%;\n  grid-template-columns: 1fr 1fr 1fr;\n  display: grid;\n}\n.menu__activator--active a i[data-v-5915a565] {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.menu__content[data-v-5915a565],\n.menuable__content__active[data-v-5915a565] {\n  position: absolute !important;\n}\n", ""]);
 
 // exports
 
@@ -99,6 +99,11 @@ exports.push([module.i, "\na[data-v-5915a565] {\n  background-color: #fff;\n  co
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -153,7 +158,7 @@ var render = function() {
         [
           _c(
             "v-menu",
-            { attrs: { "open-on-hover": true, "content-class": "menu" } },
+            { attrs: { "offset-y": "", "open-on-hover": "" } },
             [
               _c(
                 "router-link",
@@ -177,33 +182,23 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "v-list",
-                _vm._l(_vm.category.childrens, function(child) {
+                _vm._l(_vm.category.childrens, function(children) {
                   return _c(
                     "v-list-tile",
-                    { key: child.id },
-                    [
-                      _c(
-                        "v-list-tile-title",
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              attrs: {
-                                to: {
-                                  name: "subcategory",
-                                  params: {
-                                    pslug: _vm.category.slug,
-                                    slug: child.slug
-                                  }
-                                }
-                              }
-                            },
-                            [_vm._v(_vm._s(child.name))]
-                          )
-                        ],
-                        1
-                      )
-                    ],
+                    {
+                      key: children.id,
+                      staticClass: "sublink",
+                      attrs: {
+                        to: {
+                          name: "subcategory",
+                          params: {
+                            pslug: _vm.category.slug,
+                            slug: children.slug
+                          }
+                        }
+                      }
+                    },
+                    [_c("v-list-tile-title", [_vm._v(_vm._s(children.name))])],
                     1
                   )
                 })

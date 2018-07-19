@@ -169,7 +169,10 @@ var render = function() {
   return _c("div", { staticClass: "mycard" }, [
     _c("div", { staticClass: "img" }, [
       _c("img", {
-        attrs: { src: "/uploads/" + _vm.product.image, alt: _vm.product.name }
+        attrs: {
+          src: "/storage/uploads/" + _vm.product.image,
+          alt: _vm.product.name
+        }
       })
     ]),
     _vm._v(" "),

@@ -1,47 +1,5 @@
 webpackJsonp([9],{
 
-/***/ 102:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(103);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(74)("f0719fa0", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1297e80b\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Magazine.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1297e80b\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Magazine.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ 103:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(14)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.page-enter-active[data-v-1297e80b],\n.page-leave-active[data-v-1297e80b] {\n  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;\n  transition: opacity 0.2s, -webkit-transform 0.2s;\n  transition: opacity 0.2s, transform 0.2s;\n  transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s;\n}\n.page-enter[data-v-1297e80b],\n.page-leave-to[data-v-1297e80b] {\n  opacity: 0;\n  -webkit-transform: translateX(-30%);\n          transform: translateX(-30%);\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -108,14 +66,79 @@ var vfooter = function vfooter() {
 
 /***/ }),
 
-/***/ 133:
+/***/ 226:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(227);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(74)("000ccfb9", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1297e80b\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Magazine.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1297e80b\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Magazine.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 227:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(14)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.v-content {\n  padding: 0 !important;\n}\n.page-enter-active,\n.page-leave-active {\n  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;\n  transition: opacity 0.2s, -webkit-transform 0.2s;\n  transition: opacity 0.2s, transform 0.2s;\n  transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s;\n}\n.page-enter,\n.page-leave-to {\n  opacity: 0;\n  -webkit-transform: translateX(-30%);\n          transform: translateX(-30%);\n}\n.container {\n  margin: 0 auto;\n  max-width: 1280px;\n  width: 90%;\n}\n@media only screen and (min-width: 601px) {\n.container {\n    width: 85%;\n}\n}\n@media only screen and (min-width: 993px) {\n.container {\n    width: 70%;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 228:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("vheader"), _vm._v(" "), _c("vue-progress-bar")], 1)
+  return _c(
+    "div",
+    [
+      _c("vheader"),
+      _vm._v(" "),
+      _c(
+        "main",
+        [
+          _c(
+            "transition",
+            { attrs: { name: "page", mode: "out-in" } },
+            [_c("router-view")],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("vfooter"),
+      _vm._v(" "),
+      _c("vue-progress-bar")
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -135,19 +158,19 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(102)
+  __webpack_require__(226)
 }
 var normalizeComponent = __webpack_require__(73)
 /* script */
 var __vue_script__ = __webpack_require__(104)
 /* template */
-var __vue_template__ = __webpack_require__(133)
+var __vue_template__ = __webpack_require__(228)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-1297e80b"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(

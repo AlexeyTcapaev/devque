@@ -1,6 +1,6 @@
 <template>
 <div class="mycard">
-    <div class="img"><img :src="'/uploads/'+product.image" :alt="product.name"></div>
+    <div class="img"><img :src="'/storage/uploads/'+product.image" :alt="product.name"></div>
     <div class="content">
         <h5>{{product.name}}</h5>
         <p v-if="product.description != 'null' && product.description != 'undefined'">

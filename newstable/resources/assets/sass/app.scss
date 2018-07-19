@@ -17,6 +17,10 @@
   display: flex !important;
 }
 
+.sublink a:hover {
+  background: transparent !important;
+}
+
 * {
   text-decoration: none !important;
   outline: none !important;

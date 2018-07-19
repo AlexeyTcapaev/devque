@@ -1,3 +1,4 @@
+import cookies from "js-cookie";
 import store from ".";
 export default {
 
@@ -51,20 +52,19 @@ export default {
     },
     actions: {
         AddProduct(state, product) {
-            store.commit('AddProduct', product)
+            state.commit('AddProduct', product)
         },
         DeleteProduct(state, index) {
-            store.commit('DeleteProduct', index)
+            state.commit('DeleteProduct', index)
         },
         IncCount(state, index) {
-            store.commit('IncCount', index)
+            state.commit('IncCount', index)
         },
         DecCount(state, index) {
-            store.commit('DecCount', index)
+            state.commit('DecCount', index)
         },
         ChangeCount(state, obj) {
-            store.commit('ChangeCount', obj)
+            state.commit('ChangeCount', obj)
         }
-    },
-    strict: process.env.NODE_ENV !== "production"
+    }
 }

@@ -35,7 +35,15 @@ export default {
     test() {}
   },
   computed: {
-    ...mapGetters(["cartCount"])
+    ...mapGetters(["cartCount"]),
+    islogging() {
+      if (
+        this.$store.state.user.name === undefined ||
+        this.$store.state.user.name === ""
+      )
+        return false;
+      else return true;
+    }
   }
 };
 </script>
@@ -44,7 +52,7 @@ export default {
   padding: 40px 0 0 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
+
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -93,6 +101,7 @@ a.logo {
   padding: 15px !important;
   height: 47px !important;
 }
+
 .magazine-buttons a.btn-flat {
   color: #ffaf60;
   border-radius: 0;

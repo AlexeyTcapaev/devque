@@ -571,7 +571,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -713,7 +712,7 @@ var render = function() {
                             _vm._l(item.children, function(child, i) {
                               return _c(
                                 "v-list-tile",
-                                { key: i, on: { click: function($event) {} } },
+                                { key: i },
                                 [
                                   child.icon
                                     ? _c(

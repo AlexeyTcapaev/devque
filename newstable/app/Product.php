@@ -17,7 +17,7 @@ class Product extends Model
             ]
         ];
     }
-    protected $fillable = ['options', 'name', 'parent', 'description', 'slug', 'currentprice', 'oldprice', 'catalog_id'];
+    protected $fillable = ['name', 'parent', 'description', 'slug', 'currentprice', 'oldprice', 'catalog_id', 'options'];
 
     public function category()
     {
