@@ -1,0 +1,60 @@
+<div class="custom-card">
+    <div class="img">
+        <img :src="'/storage/uploads/'+prod.image">
+    </div>
+    <div class="con">
+        <h6>{{prod.name}}</h6>
+        <div class="card-prices">
+
+            <span class="new">{{prod.currentprice}} ₽</span>
+        </div>
+        <div class="card-magazine-buttons">
+            <v-dialog v-model="dialogForCart" max-width="290">
+                <v-btn slot="activator" class="buy btn-flat">В корзину</v-btn>
+                <v-card>
+                    <div class="modal-wrapper">
+                        <div class="modal-img">
+                            <img :src="'/storage/uploads/'+prod.image">
+                        </div>
+                        <div class="modal-content">
+                            <div class="properties">
+                                <h4>{{prod.name}}</h4>
+                                <div class="row">
+                                    <p>Цена за штуку
+                                        <span>Без упаковки</span>
+                                    </p>
+                                    <h6>100 Р/шт.</h6>
+                                </div>
+                            </div>
+                            <v-spacer></v-spacer>
+                            <div class="modal-footer">
+                                <div class="row">
+                                    <p>Итоговая цена:
+                                        <span> С упаковкой, лентой и дополнениями</span>
+                                    </p>
+                                    <h6>1000 руб.</h6>
+                                </div>
+                                <v-btn class="buy btn-flat" @click.native="dialogForCart = false" @click="AddProduct(prod)">Добавить</v-btn>
+
+                            </div>
+                        </div>
+                    </div>
+                </v-card>
+            </v-dialog>
+            <v-dialog v-model="dialogForBuy" max-width="290">
+                <v-btn slot="activator" class="buy btn-flat">Купить в 1 клик</v-btn>
+                <v-card>
+                    <v-card-title class="headline">Use Google's location service?</v-card-title>
+                    <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when
+                        no apps are running.</v-card-text>
+                    <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn color="green darken-1" flat @click.native="dialog = false">Disagree</v-btn>
+                        <v-btn color="green darken-1" flat @click.native="dialog = false">Agree</v-btn>
+                    </v-card-actions>
+                </v-card>
+            </v-dialog>
+
+        </div>
+    </div>
+</div>

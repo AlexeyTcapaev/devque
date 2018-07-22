@@ -19,7 +19,6 @@ class CreateProductTable extends Migration
             $table->integer('catalog_id')->nullable();
             $table->string('description')->nullable();
             $table->string('slug');
-            $table->string('options')->nullable();
             $table->string('image')->nullable();
             $table->string('name')->unique();
             $table->decimal('currentprice', 9, 2);

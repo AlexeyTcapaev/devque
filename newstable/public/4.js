@@ -1,16 +1,16 @@
 webpackJsonp([4],{
 
-/***/ 134:
+/***/ 138:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(135);
+var content = __webpack_require__(139);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(74)("54a8ecb9", content, false, {});
+var update = __webpack_require__(76)("54a8ecb9", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -27,7 +27,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 135:
+/***/ 139:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(14)(false);
@@ -35,18 +35,21 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.breadcrumbs[data-v-0444e055] {\n  width: 100%;\n  background-color: #ffaf60;\n}\n.container[data-v-0444e055] {\n  padding: 0;\n}\n.bread[data-v-0444e055] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 64px;\n}\n.breadcrumb[data-v-0444e055] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-0444e055]:not:last-child:before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n.breadcrumb[data-v-0444e055]:last-child {\n  color: #fff;\n}\n.breadcrumbs .container[data-v-0444e055] {\n  display: -webkit-box !important;\n  display: -ms-flexbox !important;\n  display: flex !important;\n  -webkit-box-align: center !important;\n      -ms-flex-align: center !important;\n          align-items: center !important;\n  height: 64px !important;\n}\n.breadcrumb[data-v-0444e055] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-0444e055]:not(:first-child):before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n", ""]);
+exports.push([module.i, "\nh2[data-v-0444e055] {\n  font-size: 3.56rem;\n  line-height: 110%;\n  margin: 1.78rem 0 1.424rem 0;\n  text-align: center;\n}\nh6[data-v-0444e055] {\n  font-size: 1rem;\n  line-height: 110%;\n  margin: 0.5rem 0 0.4rem 0;\n}\n.breadcrumbs[data-v-0444e055] {\n  width: 100%;\n  background-color: #ffaf60;\n}\n.container[data-v-0444e055] {\n  padding: 0;\n}\n.bread[data-v-0444e055] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 64px;\n}\n.breadcrumb[data-v-0444e055] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-0444e055]:not:last-child:before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n.breadcrumb[data-v-0444e055]:last-child {\n  color: #fff;\n}\n.breadcrumbs .container[data-v-0444e055] {\n  display: -webkit-box !important;\n  display: -ms-flexbox !important;\n  display: flex !important;\n  -webkit-box-align: center !important;\n      -ms-flex-align: center !important;\n          align-items: center !important;\n  height: 64px !important;\n}\n.breadcrumb[data-v-0444e055] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-0444e055]:not(:first-child):before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 136:
+/***/ 140:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(5);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 //
 //
 //
@@ -58,76 +61,76 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: function metaInfo() {
     return {
-      title: this.category.name
+      title: this.category ? this.category.name : ""
     };
   },
-  data: function data() {
-    return {
-      category: {
-        name: ""
-      }
-    };
-  },
-  methods: {
-    getCategory: function getCategory() {
-      var init = this;
-      axios.get("/api/catalog/" + init.$route.params.slug).then(function (resp) {
-        init.category = resp.data[0];
-      });
+  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["c" /* mapGetters */])({
+    cat: "Category"
+  }), {
+    category: function category() {
+      return this.cat(this.$route.params.slug);
     }
-  },
-  beforeCreate: function beforeCreate() {
-    var init = this;
-    axios.get("/api/catalog/" + init.$route.params.slug).then(function (resp) {
-      init.category = resp.data[0];
-    });
-  },
-
-  watch: {
-    $route: "getCategory"
-  }
+  })
 });
 
 /***/ }),
 
-/***/ 137:
+/***/ 141:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "breadcrumbs" }, [
-      _c(
-        "div",
-        { staticClass: "container" },
-        [
-          _c("router-link", { staticClass: "breadcrumb", attrs: { to: "/" } }, [
-            _vm._v("Главная")
-          ]),
+  return _vm.category
+    ? _c("div", [
+        _c("div", { staticClass: "breadcrumbs" }, [
+          _c(
+            "div",
+            { staticClass: "container" },
+            [
+              _c(
+                "router-link",
+                { staticClass: "breadcrumb", attrs: { to: "/" } },
+                [_vm._v("Главная")]
+              ),
+              _vm._v(" "),
+              _c("a", { staticClass: "breadcrumb" }, [
+                _vm._v(_vm._s(_vm.category.name))
+              ])
+            ],
+            1
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "container" }, [
+          _c("h2", [_vm._v(_vm._s(_vm.category.name))]),
           _vm._v(" "),
           _c(
-            "router-link",
-            {
-              staticClass: "breadcrumb",
-              attrs: {
-                to: { name: "category", params: { slug: _vm.category.slug } }
-              }
-            },
-            [_vm._v(_vm._s(_vm.category.name))]
+            "ul",
+            { staticClass: "sales-list" },
+            _vm._l(_vm.category.products, function(product) {
+              return _c(
+                "li",
+                { key: product.id },
+                [_c("showable-card", { attrs: { prod: product } })],
+                1
+              )
+            })
           )
-        ],
-        1
-      )
-    ]),
-    _vm._v(" "),
-    _c("h1", [_vm._v(_vm._s(_vm.category.name))])
-  ])
+        ])
+      ])
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -141,19 +144,19 @@ if (false) {
 
 /***/ }),
 
-/***/ 68:
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(134)
+  __webpack_require__(138)
 }
-var normalizeComponent = __webpack_require__(73)
+var normalizeComponent = __webpack_require__(75)
 /* script */
-var __vue_script__ = __webpack_require__(136)
+var __vue_script__ = __webpack_require__(140)
 /* template */
-var __vue_template__ = __webpack_require__(137)
+var __vue_template__ = __webpack_require__(141)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -193,7 +196,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 73:
+/***/ 75:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -303,7 +306,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 74:
+/***/ 76:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -322,7 +325,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(75)
+var listToStyles = __webpack_require__(77)
 
 /*
 type StyleObject = {
@@ -532,7 +535,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 75:
+/***/ 77:
 /***/ (function(module, exports) {
 
 /**

@@ -2,7 +2,7 @@
 <div class="container nav-cont">
             <nav>
                 <div class="nav-wrapper">
-                    <v-toolbar-title style="width: 330px" class="ml-0 pl-3 sidenav-trigger"  :clipped="$vuetify.breakpoint.lgAndUp">
+                    <v-toolbar-title style="width: 330px" class="ml-0 pl-3 sidenav-trigger" >
                             <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
                         </v-toolbar-title>
                     <ul class="hide-on-med-and-down">
@@ -10,32 +10,36 @@
                     </ul>
                 </div>
             </nav>
-            <v-navigation-drawer mobile-break-point="1569" fixed app absolute v-model="drawer" floating>
+            <v-navigation-drawer mobile-break-point="1569" fixed app absolute v-model="drawer" floating disable-resize-watcher>
 
             </v-navigation-drawer>
         </div>
 </template>
 <script>
+import { mapActions } from "vuex";
+import { mapGetters } from "vuex";
 const navlink = () => import("./navlink.vue");
 const mobilenavlink = () => import("./mobilenavlink.vue");
 export default {
   data: () => ({
-    Categories: [],
     drawer: false
   }),
   components: {
     navlink,
     mobilenavlink
   },
-  beforeCreate() {
-    const init = this;
-    axios.get("/api/catalog").then(function(resp) {
-      init.Categories = resp.data;
-    });
+  computed: {
+    ...mapGetters({
+      Categories: "Catalog"
+    })
   }
 };
 </script>
 <style scoped>
+.application .theme--light.v-icon,
+.theme--light .v-icon {
+  color: rgba(0, 0, 0, 0.54) !important;
+}
 .container {
   padding: 0;
 }

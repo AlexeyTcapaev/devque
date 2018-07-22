@@ -18,7 +18,7 @@ export default {
         SetUser(state, inputuser) {
             state.commit('SetUser', inputuser)
         },
-        SetToken(state, inputuser) {
+        SetToken(state, inputtoken) {
             state.commit('SetToken', inputtoken)
         },
     }

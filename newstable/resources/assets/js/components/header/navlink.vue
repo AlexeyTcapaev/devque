@@ -1,5 +1,5 @@
 <template>
-<li v-if="category.childrens.length === 0">
+<li v-if="category.childrens.length == 0">
     <router-link :to="{name:'category',params:{slug:category.slug}}">{{category.name}}</router-link>
 </li>
 <li v-else>
@@ -46,6 +46,7 @@ export default {
   height: 64px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .sublink:hover {
   background-color: #ffaf60 !important;

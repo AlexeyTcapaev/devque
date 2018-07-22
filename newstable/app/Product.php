@@ -17,11 +17,15 @@ class Product extends Model
             ]
         ];
     }
-    protected $fillable = ['name', 'parent', 'description', 'slug', 'currentprice', 'oldprice', 'catalog_id', 'options'];
+    protected $fillable = ['name', 'parent', 'description', 'slug', 'currentprice', 'oldprice', 'catalog_id', 'options_id'];
 
     public function category()
     {
         return $this->hasOne(Catalog::class);
+    }
+    public function options()
+    {
+        return $this->hasMany(Options::class);
     }
     public function uploadImage($image)
     {

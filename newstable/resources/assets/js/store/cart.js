@@ -19,7 +19,7 @@ export default {
     },
     mutations: {
         AddProduct(state, product) {
-            if (state.products.find(function (item) {
+            /*if (state.products.find(function (item) {
                     if (item.id === product.id)
                         return true
                     else return false
@@ -27,8 +27,9 @@ export default {
                 product.count++;
             } else {
                 product.count = 1
-                state.products.push(product)
-            }
+               
+            }*/
+            state.products.push()
             state.count++;
         },
         DeleteProduct(state, index) {

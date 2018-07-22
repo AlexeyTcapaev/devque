@@ -8,6 +8,7 @@
 </v-app>
 </template>
 <script>
+import { mapActions } from "vuex";
 export default {
   metaInfo: {
     titleTemplate: "%s | La Flowers"
@@ -16,6 +17,12 @@ export default {
     return {
       transitionName: "slide-left"
     };
+  },
+  methods: {
+    ...mapActions(["SetCatalog"])
+  },
+  beforeMount() {
+    this.SetCatalog();
   }
 };
 </script>

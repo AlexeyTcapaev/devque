@@ -15,7 +15,7 @@ class CatalogController extends Controller
      */
     public function index()
     {
-        $catalog = Catalog::whereNull('catalog_id')->with('childrens.products', 'products')->get();
+        $catalog = Catalog::whereNull('catalog_id')->with('childrens.products.options', 'products.options')->get();
         return $catalog;
     }
     public function show($slug)
@@ -25,7 +25,7 @@ class CatalogController extends Controller
     }
     public function getCategory($slug)
     {
-        $subcat = Catalog::where('slug', $slug)->with('products')->get()->first();
+        $subcat = Catalog::where('slug', $slug)->with('products.options')->get()->first();
         $subcat->parentobj = Catalog::where('id', $subcat->catalog_id)->get()->first();
         return $subcat;
     }
