@@ -66,7 +66,7 @@
                                     <h6 v-if="prod.count > 0 && targetoption.price > 0 ">{{(Number(prod.currentprice) + Number(targetoption.price))*prod.count}} руб.</h6>
                                     <h6 v-else>{{prod.currentprice}} руб.</h6>
                                 </div>
-                                <v-btn class="buy btn-flat" @click.native="dialogForCart = false" @click="ToCart">Добавить</v-btn>
+                                <v-btn :disabled="check" class="buy btn-flat" @click.native="dialogForCart = false" @click="ToCart">Добавить</v-btn>
 
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                      <v-text-field class="phone" label="Телефон" single-line outline v-model="phone" mask="(###) ### ## ##"></v-text-field>
                     <v-card-actions>
                         <v-spacer></v-spacer>
-                        <v-btn class="buy btn-flat" flat @click.native="dialogForBuy = false">Отмена</v-btn>
+                        <v-btn  class="buy btn-flat" flat @click.native="dialogForBuy = false">Отмена</v-btn>
                         <v-btn class="buy btn-flat" flat @click.native="dialogForBuy = false" @click="SendPhone">Подтвердить</v-btn>
                     </v-card-actions>
                 </v-card>
@@ -95,10 +95,11 @@ import { mapActions } from "vuex";
 export default {
   props: ["prod"],
   methods: {
-    ...mapActions(["AddProduct"]),
+    ...mapActions({ AddProduct: "cart/AddProduct" }),
     ToCart() {
-      let temp = 1234;
-      this.AddProduct(temp);
+      this.prod.targetoption = this.targetoption;
+      let a = { ...this.prod };
+      this.AddProduct(a);
     },
     Buy() {},
     SendPhone() {}
@@ -108,10 +109,18 @@ export default {
     dialogForCart: false,
     targetoption: "",
     phone: ""
-  })
+  }),
+  computed: {
+    check() {
+      if (this.prod.count) return false;
+      else return true;
+    }
+  }
 };
 </script>
 <style>
+.modal-img img {
+}
 .row img {
   width: 30%;
   object-fit: contain;

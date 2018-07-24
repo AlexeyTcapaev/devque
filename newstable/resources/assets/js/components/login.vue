@@ -8,7 +8,7 @@
     </div>
     <div class="container">
         <h5>Пожалуйста,авторизуйтесь</h5>
-        <div class="row form">
+        <div class="form">
             <div class="input-field col s3">
                 <v-btn depressed disabled small class="btn-flat"><i class="material-icons">account_circle</i></v-btn>
                 <input class="my-input" id="username" type="text" required placeholder="ПОЧТА" v-model="login">
@@ -29,7 +29,8 @@
 </main>
 </template>
 <script>
-import { mapActions } from "vuex";
+import { createNamespacedHelpers } from "vuex";
+const { mapGetters, mapActions } = createNamespacedHelpers("user/");
 export default {
   metaInfo: {
     title: "Вход" // set a title

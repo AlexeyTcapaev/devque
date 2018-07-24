@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      cat: "Subcategory"
+      cat: "catalog/Subcategory"
     }),
     subcategory() {
       return this.cat(this.$route.params);

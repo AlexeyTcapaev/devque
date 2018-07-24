@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      cat: "Category"
+      cat: "catalog/Category"
     }),
     category() {
       return this.cat(this.$route.params.slug);

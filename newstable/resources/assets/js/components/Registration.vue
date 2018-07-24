@@ -8,7 +8,7 @@
     </div>
     <div class="container">
         <h5>Регистрация</h5>
-        <div class="row form">
+        <div class="form">
            <div class="input-field col s3">
                 <v-btn depressed small disabled class="btn-flat "><i class="material-icons">account_circle</i></v-btn>
                 <input class="my-input" id="username" type="text" required placeholder="ЛОГИН" v-model="name">

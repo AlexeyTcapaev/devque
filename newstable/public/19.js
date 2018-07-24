@@ -1,18 +1,18 @@
 webpackJsonp([19],{
 
-/***/ 161:
+/***/ 157:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(162)
+  __webpack_require__(158)
 }
-var normalizeComponent = __webpack_require__(75)
+var normalizeComponent = __webpack_require__(71)
 /* script */
-var __vue_script__ = __webpack_require__(164)
+var __vue_script__ = __webpack_require__(160)
 /* template */
-var __vue_template__ = __webpack_require__(165)
+var __vue_template__ = __webpack_require__(161)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -52,17 +52,17 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 162:
+/***/ 158:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(163);
+var content = __webpack_require__(159);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(76)("cf8a6606", content, false, {});
+var update = __webpack_require__(72)("cf8a6606", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -79,27 +79,27 @@ if(false) {
 
 /***/ }),
 
-/***/ 163:
+/***/ 159:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)(false);
+exports = module.exports = __webpack_require__(13)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n.actions i.material-icons[data-v-0c6407e5] {\r\n  font-size: 65px;\r\n  color: #ffaf60;\r\n  cursor: pointer;\n}\n.actions[data-v-0c6407e5] {\r\n  margin: 30px 0;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -ms-flex-wrap: nowrap;\r\n      flex-wrap: nowrap;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\n}\na.close[data-v-0c6407e5] {\r\n  cursor: pointer;\r\n  position: absolute;\r\n  top: 15px;\r\n  right: 15px;\r\n  color: #ffaf60;\n}\n.content[data-v-0c6407e5] {\r\n  width: 70%;\n}\n.mycard[data-v-0c6407e5] {\r\n  position: relative;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -ms-flex-wrap: nowrap;\r\n      flex-wrap: nowrap;\r\n  width: 100%;\r\n  height: 250px;\r\n  padding: 10px;\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  border: 2px solid #ffaf60;\r\n  margin: 10px 0;\n}\n.img[data-v-0c6407e5] {\r\n  width: 226px;\r\n  min-width: 226px;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\n}\n.img img[data-v-0c6407e5] {\r\n  height: 100%;\r\n  -o-object-fit: contain;\r\n     object-fit: contain;\n}\n.mycard .content[data-v-0c6407e5] {\r\n  padding: 15px;\n}\r\n", ""]);
+exports.push([module.i, "\n.actions i.material-icons[data-v-0c6407e5] {\n  font-size: 65px;\n  color: #ffaf60;\n  cursor: pointer;\n}\n.actions[data-v-0c6407e5] {\n  margin: 30px 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\na.close[data-v-0c6407e5] {\n  cursor: pointer;\n  position: absolute;\n  top: 15px;\n  right: 15px;\n  color: #ffaf60;\n}\n.content[data-v-0c6407e5] {\n  width: 70%;\n}\n.mycard[data-v-0c6407e5] {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  width: 100%;\n  height: 250px;\n  padding: 10px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border: 2px solid #ffaf60;\n  margin: 10px 0;\n}\n.img[data-v-0c6407e5] {\n  width: 226px;\n  min-width: 226px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.img img[data-v-0c6407e5] {\n  height: 100%;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.mycard .content[data-v-0c6407e5] {\n  padding: 15px;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 164:
+/***/ 160:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(4);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 //
@@ -135,9 +135,13 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 
 
+var _createNamespacedHelp = Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["a" /* createNamespacedHelpers */])('cart/'),
+    mapGetters = _createNamespacedHelp.mapGetters,
+    mapActions = _createNamespacedHelp.mapActions;
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["number"],
-  methods: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["b" /* mapActions */])(["DeleteProduct", "IncCount", "DecCount", "ChangeCount"]), {
+  methods: _extends({}, mapActions(["DeleteProduct", "IncCount", "DecCount", "ChangeCount"]), {
     Change: function Change() {
       this.ChangeCount({ number: this.number, count: +this.product.count });
     },
@@ -150,7 +154,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       this.IncCount();
     }
   }),
-  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["c" /* mapGetters */])(["Product"]), {
+  computed: _extends({}, mapGetters(["Product"]), {
     product: function product() {
       return this.Product(this.number);
     }
@@ -159,7 +163,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 /***/ }),
 
-/***/ 165:
+/***/ 161:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -183,9 +187,7 @@ var render = function() {
       _vm.product.description != "undefined"
         ? _c("p", [
             _vm._v(
-              "\r\n            " +
-                _vm._s(_vm.product.description) +
-                "\r\n        "
+              "\n            " + _vm._s(_vm.product.description) + "\n        "
             )
           ])
         : _vm._e()

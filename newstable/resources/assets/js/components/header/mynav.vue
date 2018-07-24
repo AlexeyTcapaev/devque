@@ -30,7 +30,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      Categories: "Catalog"
+      Categories: "catalog/Catalog"
     })
   }
 };

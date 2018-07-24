@@ -14,7 +14,7 @@
                   <div class="collapsible-body">
                     <div class="product-list">
                       <ProductCard :index="null" :cat="subcategory"></ProductCard>
-                      <ProductCard :index="index" :cat="subcategory" :prod="product" v-for="product in subcategory.products" :key="product.id"></ProductCard>
+                      <ProductCard :index="index" :cat="subcategory" :prod="product" v-for="(product,index) in subcategory.products" :key="product.id"></ProductCard>
                     </div>
                   </div>
               </v-expansion-panel-content>

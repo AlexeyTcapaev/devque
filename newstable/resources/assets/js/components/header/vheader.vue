@@ -35,7 +35,7 @@ export default {
     test() {}
   },
   computed: {
-    ...mapGetters(["cartCount"]),
+    ...mapGetters({cartCount:"cart/cartCount"}),
     islogging() {
       if (
         this.$store.state.user.name === undefined ||

@@ -9,7 +9,7 @@
 <div class="container cart">
   <h1>Корзина</h1>
   <ul class="cart-list">
-    <li v-for="(product,index) in Products" :key="product.id">
+    <li v-for="(product,index) in Products" :key="index">
         <mycart :number="index"></mycart>
     </li>
   </ul> 
@@ -27,7 +27,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["Products"])
+    ...mapGetters({ Products: "cart/Products" })
   },
   components: {
     mycart

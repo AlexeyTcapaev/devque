@@ -9,6 +9,8 @@
 </template>
 <script>
 import { mapActions } from "vuex";
+import { mapGetters } from "vuex";
+import { mapState } from "vuex";
 export default {
   metaInfo: {
     titleTemplate: "%s | La Flowers"
@@ -19,7 +21,14 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["SetCatalog"])
+    ...mapActions({
+      SetCatalog: "catalog/SetCatalog"
+    })
+  },
+  computed: {
+    ...mapState({
+      Card: "cart"
+    })
   },
   beforeMount() {
     this.SetCatalog();

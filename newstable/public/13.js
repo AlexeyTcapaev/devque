@@ -1,18 +1,18 @@
 webpackJsonp([13],{
 
-/***/ 107:
+/***/ 103:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(108)
+  __webpack_require__(104)
 }
-var normalizeComponent = __webpack_require__(75)
+var normalizeComponent = __webpack_require__(71)
 /* script */
-var __vue_script__ = __webpack_require__(110)
+var __vue_script__ = __webpack_require__(106)
 /* template */
-var __vue_template__ = __webpack_require__(131)
+var __vue_template__ = __webpack_require__(127)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -52,17 +52,17 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 108:
+/***/ 104:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(109);
+var content = __webpack_require__(105);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(76)("2c86b80a", content, false, {});
+var update = __webpack_require__(72)("2c86b80a", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -79,10 +79,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 109:
+/***/ 105:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)(false);
+exports = module.exports = __webpack_require__(13)(false);
 // imports
 
 
@@ -94,12 +94,12 @@ exports.push([module.i, "\n.head[data-v-478ce54b] {\n  padding: 40px 0 0 0;\n  d
 
 /***/ }),
 
-/***/ 110:
+/***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(4);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 //
@@ -132,17 +132,17 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 
 var search = function search() {
-  return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 111));
+  return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, 107));
 };
 var mynav = function mynav() {
-  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 116));
+  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 112));
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: { search: search, mynav: mynav },
   methods: {
     test: function test() {}
   },
-  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["c" /* mapGetters */])(["cartCount"]), {
+  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["d" /* mapGetters */])({ cartCount: "cart/cartCount" }), {
     islogging: function islogging() {
       if (this.$store.state.user.name === undefined || this.$store.state.user.name === "") return false;else return true;
     }
@@ -151,7 +151,7 @@ var mynav = function mynav() {
 
 /***/ }),
 
-/***/ 131:
+/***/ 127:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {

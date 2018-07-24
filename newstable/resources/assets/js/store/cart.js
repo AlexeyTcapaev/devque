@@ -1,8 +1,6 @@
-import cookies from "js-cookie";
-import store from ".";
 export default {
-
-    state: {
+    namespaced: true,
+    state: JSON.parse(localStorage.getItem('cart')) || {
         products: [],
         count: 0
     },
@@ -19,17 +17,17 @@ export default {
     },
     mutations: {
         AddProduct(state, product) {
-            /*if (state.products.find(function (item) {
+            if (state.products.find(function (item) {
                     if (item.id === product.id)
-                        return true
+                        if (item.targetoption.id === product.targetoption.id)
+                            return true
                     else return false
                 })) {
                 product.count++;
             } else {
                 product.count = 1
-               
-            }*/
-            state.products.push()
+                state.products.push(product)
+            }
             state.count++;
         },
         DeleteProduct(state, index) {
@@ -67,5 +65,6 @@ export default {
         ChangeCount(state, obj) {
             state.commit('ChangeCount', obj)
         }
-    }
+    },
+
 }

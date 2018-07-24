@@ -1,6 +1,7 @@
+import * as Cookie from 'js-cookie'
 export default {
-
-    state: {
+    namespaced: true,
+    state: Cookie.getJSON('user') || {
         token: '',
         name: '',
         id: ''
@@ -11,15 +12,17 @@ export default {
             state.id = inputuser.id
         },
         SetToken(state, inputtoken) {
-            state.token = inputuser.token
+            state.token = inputtoken
         }
     },
     actions: {
         SetUser(state, inputuser) {
+
             state.commit('SetUser', inputuser)
+
         },
         SetToken(state, inputtoken) {
             state.commit('SetToken', inputtoken)
         },
-    }
+    },
 }

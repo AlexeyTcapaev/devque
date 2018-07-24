@@ -1,9 +1,7 @@
-import store from ".";
 export default {
+  namespaced: true,
   state: {
-    catalog: [{
-      childrens: [{}]
-    }]
+    catalog: []
   },
   getters: {
     Catalog(state) {
@@ -14,18 +12,24 @@ export default {
         if (category.slug === slug) return category;
       });
     },
-    Subcategory: (state, getters) => obj => {
-      return getters.Category(obj.pslug).childrens.filter(child => {
-        if (child.slug === obj.slug) {
-          child.parentobj = getters.Category(obj.pslug);
-          return child;
-        }
-      })[0];
+    Subcategory: state => obj => {
+
+      let FindCat
+      state.catalog.forEach(category => {
+        if (category.slug === obj.pslug)
+          category.childrens.forEach(child => {
+            if (child.slug === obj.slug) {
+              FindCat = child
+              FindCat.parentobj = category
+            }
+
+          })
+      });
+      return FindCat
     }
   },
   mutations: {
     SetCatalog(state, data) {
-      //console.log(data)
       state.catalog = data
     }
   },
