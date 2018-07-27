@@ -44,12 +44,18 @@
                                  </div>
                                   <div class="row">
                                      <v-select
+<<<<<<< HEAD
                                         :items="packs"
                                         v-model="selectpack"
+=======
+                                        :items="prod.options"
+                                        v-model="targetoption"
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                                         item-value="item"
                                         return-object
                                         label="Выберите упаковку"
                                         outline
+<<<<<<< HEAD
                                         item-text="name"
                                       >
                                         <template slot="selection" slot-scope="data">
@@ -68,6 +74,13 @@
                                   </div>
                                   <div class="row" v-if="selectpack.image">
                                     <img :src="'/storage/uploads/'+selectpack.image">
+=======
+                                        item-text="option"
+                                      ></v-select>
+                                  </div>
+                                  <div class="row">
+                                    <img src="/storage/img/box.png">
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                                   </div>                         
                             </div>
                             <v-spacer></v-spacer>
@@ -76,8 +89,13 @@
                                     <p>Итоговая цена:
                                         <span> С упаковкой, лентой и дополнениями</span>
                                     </p>
+<<<<<<< HEAD
                                     <h6 v-if="prod.count">{{(Number(prod.currentprice) + Number(targetoption.price))*prod.count + Number(selectpack.price)}} руб.</h6>
                                     <h6 v-else>{{(Number(prod.currentprice) + Number(targetoption.price)) + Number(selectpack.price)}} руб.</h6>
+=======
+                                    <h6 v-if="prod.count > 0 && targetoption.price > 0 ">{{(Number(prod.currentprice) + Number(targetoption.price))*prod.count}} руб.</h6>
+                                    <h6 v-else>{{prod.currentprice}} руб.</h6>
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                                 </div>
                                 <v-btn :disabled="check" class="buy btn-flat" @click.native="dialogForCart = false" @click="ToCart">Добавить</v-btn>
 
@@ -88,7 +106,11 @@
             </v-dialog>
             <v-dialog v-model="dialogForBuy" max-width="290">
                 <v-btn slot="activator" class="buy btn-flat">Купить в 1 клик</v-btn>
+<<<<<<< HEAD
                 <v-card class="tophone">
+=======
+                <v-card>
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                     <v-card-title class="headline">Оставьте свой телефон и мы обязательно свяжемся с вами</v-card-title>
                      <v-text-field class="phone" label="Телефон" single-line outline v-model="phone" mask="(###) ### ## ##"></v-text-field>
                     <v-card-actions>
@@ -112,8 +134,12 @@ export default {
     ...mapActions({ AddProduct: "cart/AddProduct" }),
     ToCart() {
       this.prod.targetoption = this.targetoption;
+<<<<<<< HEAD
       this.prod.selectpack = this.selectpack;
       let a = {...this.prod}
+=======
+      let a = { ...this.prod };
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
       this.AddProduct(a);
     },
     Buy() {},
@@ -122,6 +148,7 @@ export default {
   data: () => ({
     dialogForBuy: false,
     dialogForCart: false,
+<<<<<<< HEAD
     targetoption: {
       price: 0
     },
@@ -132,6 +159,12 @@ export default {
   }),
   computed: {
     ...mapGetters({ packs: "packs/packs" }),
+=======
+    targetoption: "",
+    phone: ""
+  }),
+  computed: {
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
     check() {
       if (this.prod.count) return false;
       else return true;
@@ -140,6 +173,7 @@ export default {
 };
 </script>
 <style>
+<<<<<<< HEAD
 .con h6{
   font-size: 1.7rem;
 }
@@ -150,6 +184,9 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: contain;
+=======
+.modal-img img {
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 }
 .row img {
   width: 30%;
@@ -215,9 +252,12 @@ div.close a {
 .input-field {
   margin: 0 0 0 15px;
 }
+<<<<<<< HEAD
 .v-input{
   width: 100%!important;
 }
+=======
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 .custom-card {
   max-width: 370px;
   min-width: 335px;

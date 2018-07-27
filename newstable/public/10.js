@@ -1,5 +1,6 @@
 webpackJsonp([10],{
 
+<<<<<<< HEAD
 /***/ 101:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -165,6 +166,17 @@ var normalizeComponent = __webpack_require__(72)
 var __vue_script__ = __webpack_require__(103)
 /* template */
 var __vue_template__ = __webpack_require__(134)
+=======
+/***/ 60:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(71)
+/* script */
+var __vue_script__ = __webpack_require__(77)
+/* template */
+var __vue_template__ = __webpack_require__(78)
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -204,7 +216,11 @@ module.exports = Component.exports
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 72:
+=======
+/***/ 71:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -314,8 +330,13 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
+=======
+/***/ 77:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 
 /*
   MIT License http://www.opensource.org/licenses/mit-license.php
@@ -364,9 +385,14 @@ var noop = function () {}
 var options = null
 var ssrIdKey = 'data-vue-ssr-id'
 
+<<<<<<< HEAD
 // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
 // tags it will allow on a page
 var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
+=======
+/***/ 78:
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 
 module.exports = function (parentId, list, _isProduction, _options) {
   isProduction = _isProduction

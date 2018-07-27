@@ -1,11 +1,16 @@
 webpackJsonp([15],{
 
+<<<<<<< HEAD
 /***/ 117:
+=======
+/***/ 116:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
+<<<<<<< HEAD
   __webpack_require__(118)
 }
 var normalizeComponent = __webpack_require__(72)
@@ -13,6 +18,15 @@ var normalizeComponent = __webpack_require__(72)
 var __vue_script__ = __webpack_require__(120)
 /* template */
 var __vue_template__ = __webpack_require__(121)
+=======
+  __webpack_require__(117)
+}
+var normalizeComponent = __webpack_require__(71)
+/* script */
+var __vue_script__ = __webpack_require__(119)
+/* template */
+var __vue_template__ = __webpack_require__(120)
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -52,17 +66,29 @@ module.exports = Component.exports
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 118:
+=======
+/***/ 117:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
+<<<<<<< HEAD
 var content = __webpack_require__(119);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(73)("e3dd67a2", content, false, {});
+=======
+var content = __webpack_require__(118);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(72)("e3dd67a2", content, false, {});
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -79,10 +105,14 @@ if(false) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 119:
+=======
+/***/ 118:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)(false);
+exports = module.exports = __webpack_require__(13)(false);
 // imports
 
 
@@ -94,7 +124,11 @@ exports.push([module.i, "\n.v-list__tile__title[data-v-5915a565] {\n  display: -
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 120:
+=======
+/***/ 119:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -130,7 +164,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 121:
+=======
+/***/ 120:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {

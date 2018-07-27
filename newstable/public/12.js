@@ -10,7 +10,11 @@ var content = __webpack_require__(143);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
+<<<<<<< HEAD
 var update = __webpack_require__(73)("7ab5d71d", content, false, {});
+=======
+var update = __webpack_require__(72)("7ab5d71d", content, false, {});
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -30,12 +34,16 @@ if(false) {
 /***/ 143:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)(false);
+exports = module.exports = __webpack_require__(13)(false);
 // imports
 
 
 // module
+<<<<<<< HEAD
 exports.push([module.i, "\n.con h6{\n  font-size: 1.7rem;\n}\n.tophone .v-input{\n  width: inherit!important;\n}\n.modal-img img {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.row img {\n  width: 30%;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.phone {\n  margin: 20px !important;\n  width: 300px;\n}\ndiv.close {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  padding: 10px;\n}\ndiv.close a {\n  color: #ffaf60;\n}\n.properties h4 {\n  text-align: center;\n}\n.properties {\n  width: 100%;\n}\n.row h6 {\n  font-weight: bold;\n  color: #ffaf60;\n  font-size: 2.5rem;\n}\n.row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 10px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  width: 100%;\n}\n.modal-footer .row p {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.modal-content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  width: 100%;\n  padding: 15px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.modal-footer {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n}\n.primary--text {\n  color: #ffaf60 !important;\n}\n.v-text-field--outline .v-input__slot {\n  border-radius: 0 !important;\n}\n.v-btn__content {\n  color: #ffffff !important;\n}\n.input-field {\n  margin: 0 0 0 15px;\n}\n.v-input{\n  width: 100%!important;\n}\n.custom-card {\n  max-width: 370px;\n  min-width: 335px;\n  padding: 15px;\n  -webkit-transition: 0.1s linear;\n  transition: 0.1s linear;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border: 2px solid transparent;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.modal-wrapper {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 100%;\n}\n.modal-img {\n  overflow: hidden;\n  width: 50%;\n  min-width: 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\nh4 {\n  font-size: 2.28rem;\n  line-height: 110%;\n  margin: 1.14rem 0 0.912rem 0;\n}\n.v-dialog {\n  max-width: 60% !important;\n  width: initial !important;\n}\n.custom-card .img img {\n  max-width: 100%;\n  max-height: 300px;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.properties p {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin: 0;\n}\n.properties .row h6 {\n  font-weight: bold;\n  color: #ffaf60;\n  font-size: 2.5rem;\n}\n.custom-card .con {\n  width: 100%;\n}\n.custom-card .con h6 {\n  text-align: center;\n  font-weight: bold;\n}\n.card-prices {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.card-prices span.new {\n  color: #ffaf60;\n}\n.card-prices span {\n  font-size: 2rem;\n  font-weight: bold;\n  margin: 0 20px 0 20px;\n}\n.card-magazine-buttons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.card-magazine-buttons a {\n  color: #ffffff;\n  padding: 0 1rem;\n}\n.buy {\n  background-color: #ffaf60;\n  border-radius: 0;\n  color: #ffffff;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-transition: 0.2s linear;\n  transition: 0.2s linear;\n}\n.custom-card:hover {\n  border: 2px solid #ffaf60;\n}\n.flower-preset {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.properties p {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin: 0;\n}\n.v-text-field__details {\n  display: none;\n}\n", ""]);
+=======
+exports.push([module.i, "\n.modal-img img {\n}\n.row img {\n  width: 30%;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.phone {\n  margin: 20px !important;\n  width: 300px;\n}\ndiv.close {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  padding: 10px;\n}\ndiv.close a {\n  color: #ffaf60;\n}\n.properties h4 {\n  text-align: center;\n}\n.properties {\n  width: 100%;\n}\n.row h6 {\n  font-weight: bold;\n  color: #ffaf60;\n  font-size: 2.5rem;\n}\n.row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 10px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  width: 100%;\n}\n.modal-footer .row p {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.modal-content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  width: 100%;\n  padding: 15px;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.modal-footer {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n}\n.primary--text {\n  color: #ffaf60 !important;\n}\n.v-text-field--outline .v-input__slot {\n  border-radius: 0 !important;\n}\n.v-btn__content {\n  color: #ffffff !important;\n}\n.input-field {\n  margin: 0 0 0 15px;\n}\n.custom-card {\n  max-width: 370px;\n  min-width: 335px;\n  padding: 15px;\n  -webkit-transition: 0.1s linear;\n  transition: 0.1s linear;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border: 2px solid transparent;\n  -webkit-transition: 0.3s;\n  transition: 0.3s;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.modal-wrapper {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 100%;\n}\n.modal-img {\n  overflow: hidden;\n  width: 50%;\n  min-width: 50%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\nh4 {\n  font-size: 2.28rem;\n  line-height: 110%;\n  margin: 1.14rem 0 0.912rem 0;\n}\n.v-dialog {\n  max-width: 60% !important;\n  width: initial !important;\n}\n.custom-card .img img {\n  max-width: 100%;\n  max-height: 300px;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.properties p {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin: 0;\n}\n.properties .row h6 {\n  font-weight: bold;\n  color: #ffaf60;\n  font-size: 2.5rem;\n}\n.custom-card .con {\n  width: 100%;\n}\n.custom-card .con h6 {\n  text-align: center;\n  font-weight: bold;\n}\n.card-prices {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.card-prices span.new {\n  color: #ffaf60;\n}\n.card-prices span {\n  font-size: 2rem;\n  font-weight: bold;\n  margin: 0 20px 0 20px;\n}\n.card-magazine-buttons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.card-magazine-buttons a {\n  color: #ffffff;\n  padding: 0 1rem;\n}\n.buy {\n  background-color: #ffaf60;\n  border-radius: 0;\n  color: #ffffff;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-transition: 0.2s linear;\n  transition: 0.2s linear;\n}\n.custom-card:hover {\n  border: 2px solid #ffaf60;\n}\n.flower-preset {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.properties p {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin: 0;\n}\n.v-text-field__details {\n  display: none;\n}\n", ""]);
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 
 // exports
 
@@ -142,6 +150,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
@@ -156,6 +165,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 
+=======
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -163,7 +174,10 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
   methods: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["c" /* mapActions */])({ AddProduct: "cart/AddProduct" }), {
     ToCart: function ToCart() {
       this.prod.targetoption = this.targetoption;
+<<<<<<< HEAD
       this.prod.selectpack = this.selectpack;
+=======
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
       var a = _extends({}, this.prod);
       this.AddProduct(a);
     },
@@ -174,6 +188,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     return {
       dialogForBuy: false,
       dialogForCart: false,
+<<<<<<< HEAD
       targetoption: {
         price: 0
       },
@@ -188,6 +203,17 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       if (this.prod.count) return false;else return true;
     }
   })
+=======
+      targetoption: "",
+      phone: ""
+    };
+  },
+  computed: {
+    check: function check() {
+      if (this.prod.count) return false;else return true;
+    }
+  }
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 });
 
 /***/ }),
@@ -341,11 +367,16 @@ var render = function() {
                           [
                             _c("v-select", {
                               attrs: {
+<<<<<<< HEAD
                                 items: _vm.packs,
+=======
+                                items: _vm.prod.options,
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                                 "item-value": "item",
                                 "return-object": "",
                                 label: "Выберите упаковку",
                                 outline: "",
+<<<<<<< HEAD
                                 "item-text": "name"
                               },
                               scopedSlots: _vm._u([
@@ -406,12 +437,23 @@ var render = function() {
                                   _vm.selectpack = $$v
                                 },
                                 expression: "selectpack"
+=======
+                                "item-text": "option"
+                              },
+                              model: {
+                                value: _vm.targetoption,
+                                callback: function($$v) {
+                                  _vm.targetoption = $$v
+                                },
+                                expression: "targetoption"
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                               }
                             })
                           ],
                           1
                         ),
                         _vm._v(" "),
+<<<<<<< HEAD
                         _vm.selectpack.image
                           ? _c("div", { staticClass: "row" }, [
                               _c("img", {
@@ -422,6 +464,11 @@ var render = function() {
                               })
                             ])
                           : _vm._e()
+=======
+                        _c("div", { staticClass: "row" }, [
+                          _c("img", { attrs: { src: "/storage/img/box.png" } })
+                        ])
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                       ]),
                       _vm._v(" "),
                       _c("v-spacer"),
@@ -440,24 +487,36 @@ var render = function() {
                               ])
                             ]),
                             _vm._v(" "),
+<<<<<<< HEAD
                             _vm.prod.count
+=======
+                            _vm.prod.count > 0 && _vm.targetoption.price > 0
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                               ? _c("h6", [
                                   _vm._v(
                                     _vm._s(
                                       (Number(_vm.prod.currentprice) +
                                         Number(_vm.targetoption.price)) *
+<<<<<<< HEAD
                                         _vm.prod.count +
                                         Number(_vm.selectpack.price)
+=======
+                                        _vm.prod.count
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                                     ) + " руб."
                                   )
                                 ])
                               : _c("h6", [
                                   _vm._v(
+<<<<<<< HEAD
                                     _vm._s(
                                       Number(_vm.prod.currentprice) +
                                         Number(_vm.targetoption.price) +
                                         Number(_vm.selectpack.price)
                                     ) + " руб."
+=======
+                                    _vm._s(_vm.prod.currentprice) + " руб."
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                                   )
                                 ])
                           ]),
@@ -513,7 +572,10 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "v-card",
+<<<<<<< HEAD
                 { staticClass: "tophone" },
+=======
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
                 [
                   _c("v-card-title", { staticClass: "headline" }, [
                     _vm._v(
@@ -598,7 +660,11 @@ if (false) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 75:
+=======
+/***/ 74:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -606,7 +672,11 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(142)
 }
+<<<<<<< HEAD
 var normalizeComponent = __webpack_require__(72)
+=======
+var normalizeComponent = __webpack_require__(71)
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /* script */
 var __vue_script__ = __webpack_require__(144)
 /* template */

@@ -1,11 +1,18 @@
 <template>
 <div class="mycard">
+<<<<<<< HEAD
     <div class="cimg">
         <img :src="'/storage/uploads/'+product.image" :alt="product.name">
     </div>
     <div class="content cl">
         <h1>{{product.name}}</h1>
         <h5 v-if="product.description != 'null' && product.description != 'undefined'">
+=======
+    <div class="img"><img :src="'/storage/uploads/'+product.image" :alt="product.name"></div>
+    <div class="content">
+        <h5>{{product.name}}</h5>
+        <p v-if="product.description != 'null' && product.description != 'undefined'">
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
             {{product.description}}
         </h5>
     </div>
@@ -55,8 +62,13 @@
 </div>
 </template>
 <script>
+<<<<<<< HEAD
 import { createNamespacedHelpers } from "vuex";
 import { mapGetters, mapActions } from "vuex";
+=======
+import { createNamespacedHelpers } from 'vuex';
+const { mapGetters, mapActions } = createNamespacedHelpers('cart/');
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 export default {
   props: ["number"],
   methods: {

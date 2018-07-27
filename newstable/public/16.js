@@ -1,11 +1,16 @@
 webpackJsonp([16],{
 
+<<<<<<< HEAD
 /***/ 113:
+=======
+/***/ 112:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
+<<<<<<< HEAD
   __webpack_require__(114)
 }
 var normalizeComponent = __webpack_require__(72)
@@ -13,6 +18,15 @@ var normalizeComponent = __webpack_require__(72)
 var __vue_script__ = __webpack_require__(116)
 /* template */
 var __vue_template__ = __webpack_require__(127)
+=======
+  __webpack_require__(113)
+}
+var normalizeComponent = __webpack_require__(71)
+/* script */
+var __vue_script__ = __webpack_require__(115)
+/* template */
+var __vue_template__ = __webpack_require__(126)
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -52,17 +66,29 @@ module.exports = Component.exports
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 114:
+=======
+/***/ 113:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
+<<<<<<< HEAD
 var content = __webpack_require__(115);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var update = __webpack_require__(73)("2610688c", content, false, {});
+=======
+var content = __webpack_require__(114);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(72)("2610688c", content, false, {});
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -79,10 +105,14 @@ if(false) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 115:
+=======
+/***/ 114:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)(false);
+exports = module.exports = __webpack_require__(13)(false);
 // imports
 
 
@@ -94,7 +124,11 @@ exports.push([module.i, "\n.application .theme--light.v-icon[data-v-1d4230bf],\n
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 116:
+=======
+/***/ 115:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -123,10 +157,17 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 
 var navlink = function navlink() {
+<<<<<<< HEAD
   return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 117));
 };
 var mobilenavlink = function mobilenavlink() {
   return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 122));
+=======
+  return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 116));
+};
+var mobilenavlink = function mobilenavlink() {
+  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 121));
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -145,7 +186,11 @@ var mobilenavlink = function mobilenavlink() {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 127:
+=======
+/***/ 126:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {

@@ -1,6 +1,151 @@
 webpackJsonp([6],{
 
+<<<<<<< HEAD
 /***/ 64:
+=======
+/***/ 154:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(155);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(72)("02aacb92", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-52e71612\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./cart.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-52e71612\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./cart.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 155:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(13)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.cart-list[data-v-52e71612] {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.mycart[data-v-52e71612] {\n  width: 100%;\n  max-height: 250px;\n  max-width: 100% !important;\n  margin: 15px 0;\n}\n.cart[data-v-52e71612] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: start !important;\n      -ms-flex-align: start !important;\n          align-items: flex-start !important;\n}\n.breadcrumbs[data-v-52e71612] {\n  width: 100%;\n  background-color: #ffaf60;\n}\n.container[data-v-52e71612] {\n  padding: 0;\n}\n.bread[data-v-52e71612] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 64px;\n}\n.breadcrumb[data-v-52e71612] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-52e71612]:not:last-child:before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n.breadcrumb[data-v-52e71612]:last-child {\n  color: #fff;\n}\n.breadcrumbs .container[data-v-52e71612] {\n  display: -webkit-box !important;\n  display: -ms-flexbox !important;\n  display: flex !important;\n  -webkit-box-align: center !important;\n      -ms-flex-align: center !important;\n          align-items: center !important;\n  height: 64px !important;\n}\n.breadcrumb[data-v-52e71612] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-52e71612]:not(:first-child):before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 156:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(4);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+var mycart = function mycart() {
+  return __webpack_require__.e/* import() */(19).then(__webpack_require__.bind(null, 157));
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  metaInfo: function metaInfo() {
+    return {
+      title: "Корзина"
+    };
+  },
+  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["d" /* mapGetters */])({ Products: "cart/Products" })),
+  components: {
+    mycart: mycart
+  }
+});
+
+/***/ }),
+
+/***/ 162:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "breadcrumbs" }, [
+      _c(
+        "div",
+        { staticClass: "container" },
+        [
+          _c("router-link", { staticClass: "breadcrumb", attrs: { to: "/" } }, [
+            _vm._v("Главная")
+          ]),
+          _vm._v(" "),
+          _c("a", { staticClass: "breadcrumb" }, [_vm._v("Корзина")])
+        ],
+        1
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container cart" }, [
+      _c("h1", [_vm._v("Корзина")]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        { staticClass: "cart-list" },
+        _vm._l(_vm.Products, function(product, index) {
+          return _c(
+            "li",
+            { key: index },
+            [_c("mycart", { attrs: { number: index } })],
+            1
+          )
+        })
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-52e71612", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 70:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -8,7 +153,11 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(88)
 }
+<<<<<<< HEAD
 var normalizeComponent = __webpack_require__(72)
+=======
+var normalizeComponent = __webpack_require__(71)
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /* script */
 var __vue_script__ = __webpack_require__(90)
 /* template */
@@ -52,7 +201,11 @@ module.exports = Component.exports
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 72:
+=======
+/***/ 71:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -162,7 +315,11 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 73:
+=======
+/***/ 72:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -181,7 +338,11 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
+<<<<<<< HEAD
 var listToStyles = __webpack_require__(74)
+=======
+var listToStyles = __webpack_require__(73)
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 
 /*
 type StyleObject = {
@@ -391,7 +552,11 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 74:
+=======
+/***/ 73:
+>>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /***/ (function(module, exports) {
 
 /**
