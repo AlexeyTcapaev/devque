@@ -43,8 +43,18 @@ Route::group([
         ['except' => ['create', 'edit']]
     );
     Route::resource(
+        'packs',
+        'PackingController',
+        ['except' => ['create', 'edit']]
+    );
+    Route::resource(
         'search',
         'SearchController',
+        ['except' => ['create', 'edit']]
+    );
+    Route::resource(
+        'carousel',
+        'CarouselController',
         ['except' => ['create', 'edit']]
     );
 });

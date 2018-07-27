@@ -10,10 +10,10 @@
       <v-text-field label="Описание" outline v-model="item.description"></v-text-field>
       <v-text-field  suffix="₽" label="Старая цена" outline v-model="item.oldprice"></v-text-field>
       <v-text-field  suffix="₽" label="Текущая цена" outline v-model="item.currentprice"></v-text-field>
-      <v-text-field  suffix="см" label="Добавить длину" outline append-icon="add" @click:append="AddParam" v-model="option"></v-text-field>
+      <v-text-field  suffix="см" label="Добавить длину" outline append-icon="add" @click:append="AddParam" v-model="name"></v-text-field>
       <ul class="params">
-        <li v-for="(option, index) in item.options" :key="index">
-          <v-chip close @input="deleteParams(index)" >{{option}}</v-chip>
+        <li v-for="(opt, index) in item.options" :key="index">
+          <v-chip close @input="deleteParams(index,$event)"><h3>{{opt.option}} см. </h3><v-text-field label="Цена" outline v-model="opt.price" suffix="₽"></v-text-field></v-chip>
         </li>
       </ul>
       <v-btn :disabled="!valid" @click="submit" flat>Создать</v-btn>
@@ -31,7 +31,7 @@ export default {
       image: "/storage/img/plus.svg",
       options: []
     },
-    option: "",
+    name: "",
     nameRules: [
       v => !!v || "Name is required",
       v => (v && v.length <= 50) || "> 10"
@@ -45,17 +45,22 @@ export default {
   }),
   mounted() {
     if (this.prod !== undefined) {
-      this.prod.options = JSON.parse(this.prod.options);
+      this.prod.options = this.prod.options;
       this.item = this.prod;
-      this.item.image = "/storage/uploads/" + this.item.image;
+      if (this.item.image !== null)
+        this.item.image = "/storage/uploads/" + this.item.image;
+      else this.item.image = "/storage/img/plus.svg";
     }
   },
   methods: {
     AddParam() {
-      this.item.options.push(this.option);
+      let a = {
+        option: this.name
+      };
+      this.item.options.push(a);
     },
-    deleteParams(index) {
-      this.item.options.splice(index, 1);
+    deleteParams(index, event) {
+      if (event === false) this.item.options.splice(index, 1);
     },
     destroy() {
       const init = this;
@@ -104,7 +109,7 @@ export default {
           .post("/api/product", product)
           .then(function(resp) {
             console.log(resp);
-            resp.data.options = JSON.parse(resp.data.options);
+            resp.data.options = resp.data.options;
             init.cat.products.push(resp.data);
             init.$refs.form.reset();
             init.item.image = "/storage/img/plus.svg";
@@ -144,6 +149,15 @@ export default {
 };
 </script>
 <style >
+.v-chip__content h3 {
+  margin: 0 10px 0 0;
+}
+.v-chip .v-text-field__details {
+  display: none !important;
+}
+.v-chip {
+  height: 115px;
+}
 .params li {
   padding: 5px 0;
 }

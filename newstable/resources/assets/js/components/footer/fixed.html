@@ -1,0 +1,56 @@
+<div class="mycard">
+    <div class="cimg">
+        <img :src="'/storage/uploads/'+product.image" :alt="product.name">
+    </div>
+    <div class="content cl">
+        <h1>{{product.name}}</h1>
+        <h5 v-if="product.description != 'null' && product.description != 'undefined'">
+            {{product.description}}
+        </h5>
+    </div>
+    <div class="options cl">
+        <v-select :items="product.options" v-model="product.targetoption" item-value="item" return-object label="Выбранная длина"
+            outline item-text="option"></v-select>
+        <v-select :items="product.options" v-model="product.targetoption" item-value="item" return-object label="Выбранная упаковка"
+            outline item-text="option"></v-select>
+        <v-select :items="packs" v-model="selectpack" item-value="item" return-object label="Выберите упаковку" outline item-text="name">
+            <template slot="selection" slot-scope="data">
+                {{ data.item.name }} - {{ data.item.price }} ₽
+            </template>
+            <template slot="item" slot-scope="data">
+                <v-list-tile-avatar>
+                    <img v-bind:src="'/storage/uploads/'+data.item.image" />
+                </v-list-tile-avatar>
+                <v-list-tile-content>
+                    <v-list-tile-title v-html="data.item.name"></v-list-tile-title>
+                    <v-list-tile-sub-title v-html="data.item.price+ ' ₽'"></v-list-tile-sub-title>
+                </v-list-tile-content>
+            </template>
+        </v-select>
+
+        <img src="/storage/uploads/download.jpg">
+    </div>
+    <div class="card-body cl">
+        <div class="actions">
+            <a @click="decrace" v-if="product.count > 1">
+                <i class="material-icons">chevron_left</i>
+            </a>
+            <v-text-field name="count" label="Количество" v-model="product.count" width="64px" @change="Change" type="number"></v-text-field>
+            <a @click="incrace">
+                <i class="material-icons">chevron_right</i>
+            </a>
+        </div>
+
+        <div class="card-info">
+            <span>Сумма:
+                <p>{{product.currentprice*product.count}}</p>
+            </span>
+            <span>Цена за 1шт. :
+                <p>{{product.currentprice}}</p>
+            </span>
+        </div>
+    </div>
+    <a class="close" @click="DeleteProduct(number)">
+        <i class="material-icons">close</i>
+    </a>
+</div>

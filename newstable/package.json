@@ -24,6 +24,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "js-cookie": "^2.2.0",
         "material-icons": "^0.2.3",
         "npm": "^6.2.0",
         "roboto-fontface": "^0.9.0",

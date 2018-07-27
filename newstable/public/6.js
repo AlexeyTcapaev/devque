@@ -1,165 +1,24 @@
 webpackJsonp([6],{
 
-/***/ 154:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(155);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(74)("02aacb92", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-52e71612\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./cart.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-52e71612\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./cart.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ 155:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(14)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.cart-list[data-v-52e71612] {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n}\n.mycart[data-v-52e71612] {\n  width: 100%;\n  max-height: 250px;\n  max-width: 100% !important;\n  margin: 15px 0;\n}\n.cart[data-v-52e71612] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: start !important;\n      -ms-flex-align: start !important;\n          align-items: flex-start !important;\n}\n.breadcrumbs[data-v-52e71612] {\n  width: 100%;\n  background-color: #ffaf60;\n}\n.container[data-v-52e71612] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 64px;\n}\n.breadcrumb[data-v-52e71612] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-52e71612]:not:last-child:before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n.breadcrumb[data-v-52e71612]:last-child {\n  color: #fff;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 156:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(4);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-var mycart = function mycart() {
-  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 157));
-};
-/* harmony default export */ __webpack_exports__["default"] = ({
-  metaInfo: function metaInfo() {
-    return {
-      title: "Корзина"
-    };
-  },
-  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["c" /* mapGetters */])(["Products"])),
-  components: {
-    mycart: mycart
-  }
-});
-
-/***/ }),
-
-/***/ 162:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "breadcrumbs" }, [
-      _c(
-        "div",
-        { staticClass: "container" },
-        [
-          _c("router-link", { staticClass: "breadcrumb", attrs: { to: "/" } }, [
-            _vm._v("Главная")
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "breadcrumb" }, [_vm._v("Корзина")])
-        ],
-        1
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "container cart" }, [
-      _c("h1", [_vm._v("Корзина")]),
-      _vm._v(" "),
-      _c(
-        "ul",
-        { staticClass: "cart-list" },
-        _vm._l(_vm.Products, function(product, index) {
-          return _c(
-            "li",
-            { key: product.id },
-            [_c("mycart", { attrs: { number: index } })],
-            1
-          )
-        })
-      )
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-52e71612", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 72:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(154)
+  __webpack_require__(88)
 }
-var normalizeComponent = __webpack_require__(73)
+var normalizeComponent = __webpack_require__(72)
 /* script */
-var __vue_script__ = __webpack_require__(156)
+var __vue_script__ = __webpack_require__(90)
 /* template */
-var __vue_template__ = __webpack_require__(162)
+var __vue_template__ = __webpack_require__(91)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-52e71612"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -170,7 +29,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\cart.vue"
+Component.options.__file = "resources\\assets\\js\\components\\catalog.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -179,9 +38,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-52e71612", Component.options)
+    hotAPI.createRecord("data-v-78e5ca92", Component.options)
   } else {
-    hotAPI.reload("data-v-52e71612", Component.options)
+    hotAPI.reload("data-v-78e5ca92", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -193,7 +52,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 73:
+/***/ 72:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -303,7 +162,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 74:
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -322,7 +181,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(75)
+var listToStyles = __webpack_require__(74)
 
 /*
 type StyleObject = {
@@ -532,7 +391,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 75:
+/***/ 74:
 /***/ (function(module, exports) {
 
 /**
@@ -563,6 +422,453 @@ module.exports = function listToStyles (parentId, list) {
   return styles
 }
 
+
+/***/ }),
+
+/***/ 88:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(89);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(73)("6ffcda5f", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-78e5ca92\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./catalog.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-78e5ca92\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./catalog.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 89:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(14)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.sub {\n  margin: 0 0 0 20px;\n}\n.application\n  .theme--light.v-expansion-panel--focusable\n  .v-expansion-panel__container:focus,\n.theme--light\n  .v-expansion-panel--focusable\n  .v-expansion-panel__container:focus {\n  background-color: #fff;\n}\n.v-expansion-panel__header {\n  height: inherit !important;\n}\n.collapsible-header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.collapsible-header a {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin: 15px 0;\n}\n.collapsible-header div {\n  min-width: 25%;\n}\n.expansion-panel {\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),\n    0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),\n    0 3px 1px -2px rgba(0, 0, 0, 0.2);\n  border-top: 1px solid #ddd;\n  border-right: 1px solid #ddd;\n  border-left: 1px solid #ddd;\n  margin: 0.5rem 0 1rem 0;\n}\n.collapsible-header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  cursor: pointer;\n  -webkit-tap-highlight-color: transparent;\n  line-height: 1.5;\n  padding: 1rem;\n  background-color: #fff;\n}\n.expansion-panel__header {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  cursor: pointer;\n  -webkit-tap-highlight-color: transparent;\n  line-height: 1.5;\n  padding: 1rem;\n  background-color: #fff;\n  border-bottom: 1px solid #ddd;\n}\n.collapsible-body {\n  display: block !important;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 90:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  metaInfo: {
+    title: "Вход" // set a title
+  },
+  data: function data() {
+    return {
+      NewCategory: {
+        name: ""
+      },
+      NewSubCategory: {
+        name: "",
+        parent: null
+      },
+      Categories: [{
+        childrens: []
+      }]
+    };
+  },
+  beforeCreate: function beforeCreate() {
+    var init = this;
+    axios.get("/api/catalog").then(function (resp) {
+      init.Categories = resp.data;
+    });
+  },
+
+  methods: {
+    DeleteCategory: function DeleteCategory(id, index) {
+      var init = this;
+      axios.delete("/api/catalog/" + id).then(function (resp) {
+        init.Categories.splice(index, 1);
+      }).catch(function (resp) {
+        console.log(resp);
+      });
+    },
+    DeleteSubCategory: function DeleteSubCategory(category, id, index) {
+      var init = this;
+      axios.delete("/api/catalog/" + id).then(function (resp) {
+        category.childrens.splice(index, 1);
+      }).catch(function (resp) {
+        console.log(resp);
+      });
+    },
+    NewCategorySend: function NewCategorySend() {
+      if (this.NewCategory.name !== "") {
+        var init = this;
+        axios.post("/api/catalog", init.NewCategory).then(function (resp) {
+          init.Categories.push(resp.data);
+          init.NewCategory.name = "";
+        }).catch(function (resp) {
+          console.log(resp);
+        });
+      }
+    },
+    UpdateCategory: function UpdateCategory(category) {
+      axios.patch("/api/catalog/" + category.id, category).then(function (resp) {
+        category = resp.data;
+      }).catch(function (resp) {
+        console.log(resp);
+      });
+    },
+    NewSubCategorySend: function NewSubCategorySend(parent) {
+      if (this.NewSubCategory.name !== "") {
+        this.NewSubCategory.catalog_id = parent.id;
+        var init = this;
+        axios.post("/api/catalog", init.NewSubCategory).then(function (resp) {
+          parent.childrens.push(resp.data);
+          init.NewSubCategory.name = "";
+        }).catch(function (resp) {
+          console.log(resp);
+        });
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ 91:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-layout",
+    [
+      _c(
+        "v-expansion-panel",
+        { staticClass: "collapsible", attrs: { expand: "", focusable: "" } },
+        [
+          _c(
+            "v-expansion-panel-content",
+            { attrs: { "hide-actions": "", inset: "" } },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "collapsible-header",
+                  attrs: { slot: "header" },
+                  slot: "header"
+                },
+                [
+                  _c(
+                    "div",
+                    [
+                      _c("a", { on: { click: _vm.NewCategorySend } }, [
+                        _c("i", { staticClass: "material-icons" }, [
+                          _vm._v("add")
+                        ]),
+                        _vm._v("Добавить категорию")
+                      ]),
+                      _vm._v(" "),
+                      _c("v-text-field", {
+                        attrs: { label: "Название", outline: "" },
+                        model: {
+                          value: _vm.NewCategory.name,
+                          callback: function($$v) {
+                            _vm.$set(_vm.NewCategory, "name", $$v)
+                          },
+                          expression: "NewCategory.name"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _vm._l(_vm.Categories, function(category, index) {
+            return _c(
+              "v-expansion-panel-content",
+              { key: category.id, attrs: { "hide-actions": "", inset: "" } },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapsible-header",
+                    attrs: { slot: "header" },
+                    slot: "header"
+                  },
+                  [
+                    _c(
+                      "div",
+                      [
+                        _c("v-text-field", {
+                          attrs: { label: "Название", outline: "" },
+                          on: {
+                            change: function($event) {
+                              _vm.UpdateCategory(category)
+                            }
+                          },
+                          model: {
+                            value: category.name,
+                            callback: function($$v) {
+                              _vm.$set(category, "name", $$v)
+                            },
+                            expression: "category.name"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("span", [
+                          _vm._v(
+                            "Подкатегорий: " + _vm._s(category.childrens.length)
+                          )
+                        ])
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        on: {
+                          click: function($event) {
+                            _vm.DeleteCategory(category.id, index)
+                          }
+                        }
+                      },
+                      [
+                        _c("i", { staticClass: "material-icons" }, [
+                          _vm._v("close")
+                        ])
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "collapsible-body" },
+                  [
+                    _c(
+                      "v-expansion-panel",
+                      {
+                        staticClass: "collapsible",
+                        attrs: { expand: "", focusable: "" }
+                      },
+                      [
+                        _c(
+                          "v-expansion-panel-content",
+                          { attrs: { "hide-actions": "", inset: "" } },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "collapsible-header sub",
+                                attrs: { slot: "header" },
+                                slot: "header"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        on: {
+                                          click: function($event) {
+                                            _vm.NewSubCategorySend(category)
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "i",
+                                          { staticClass: "material-icons" },
+                                          [_vm._v("add")]
+                                        ),
+                                        _vm._v("Добавить подкатегорию")
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("v-text-field", {
+                                      attrs: { label: "Название", outline: "" },
+                                      model: {
+                                        value: _vm.NewSubCategory.name,
+                                        callback: function($$v) {
+                                          _vm.$set(
+                                            _vm.NewSubCategory,
+                                            "name",
+                                            $$v
+                                          )
+                                        },
+                                        expression: "NewSubCategory.name"
+                                      }
+                                    })
+                                  ],
+                                  1
+                                )
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm._l(category.childrens, function(children, index) {
+                          return _c(
+                            "v-expansion-panel-content",
+                            {
+                              key: children.id,
+                              attrs: { "hide-actions": "", inset: "" }
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "collapsible-header sub",
+                                  attrs: { slot: "header" },
+                                  slot: "header"
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          label: "Название",
+                                          outline: ""
+                                        },
+                                        on: {
+                                          change: function($event) {
+                                            _vm.UpdateCategory(children)
+                                          }
+                                        },
+                                        model: {
+                                          value: children.name,
+                                          callback: function($$v) {
+                                            _vm.$set(children, "name", $$v)
+                                          },
+                                          expression: "children.name"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      on: {
+                                        click: function($event) {
+                                          _vm.DeleteSubCategory(
+                                            category,
+                                            children.id,
+                                            index
+                                          )
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "i",
+                                        { staticClass: "material-icons" },
+                                        [_vm._v("close")]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ],
+                  1
+                )
+              ]
+            )
+          })
+        ],
+        2
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-78e5ca92", module.exports)
+  }
+}
 
 /***/ })
 

@@ -41,7 +41,6 @@
             <v-list-tile
               v-for="(child, i) in item.children"
               :key="i"
-              @click=""
             >
               <v-list-tile-action v-if="child.icon">
                 <v-icon>{{ child.icon }}</v-icon>
@@ -106,7 +105,10 @@ export default {
     items: [
       { icon: "web", text: "На сайт", to: "/" },
       { icon: "view_list", text: "Каталог", to: "/admin/catalog" },
-      { icon: "shopping_basket", text: "Товары", to: "/admin/products" }
+      { icon: "shopping_basket", text: "Товары", to: "/admin/products" },
+      { icon: "shopping_basket", text: "Упаковки", to: "/admin/packs" },
+      { icon: "web", text: "Карусель", to: "/admin/carouseladmin" },
+       { icon: "book", text: "Категория на главной", to: "/admin/indexsetting" }
     ]
   }),
   props: {

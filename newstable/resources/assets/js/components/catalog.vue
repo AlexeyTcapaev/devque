@@ -100,7 +100,7 @@ export default {
           .post("/api/catalog", init.NewCategory)
           .then(function(resp) {
             init.Categories.push(resp.data);
-            this.NewCategory.name = "";
+            init.NewCategory.name = "";
           })
           .catch(function(resp) {
             console.log(resp);
@@ -125,7 +125,7 @@ export default {
           .post("/api/catalog", init.NewSubCategory)
           .then(function(resp) {
             parent.childrens.push(resp.data);
-            this.NewSubCategory.name = "";
+            init.NewSubCategory.name = "";
           })
           .catch(function(resp) {
             console.log(resp);

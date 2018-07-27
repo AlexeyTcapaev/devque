@@ -24,9 +24,6 @@ export default {
 };
 </script>
 <style scoped>
-.search-bar form {
-  margin: 3px;
-}
 .input-field {
   display: flex;
   align-items: center;

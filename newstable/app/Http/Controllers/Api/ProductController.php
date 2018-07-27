@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use App\Product;
+use App\Options;
+
 
 class ProductController extends Controller
 {
@@ -17,7 +19,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::all();
+        return $products;
     }
 
     /**
@@ -39,10 +42,11 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $product = Product::add($request);
+        $options = Options::add(json_decode($request->options), $product->id);
         $product->uploadImage($request->file('image'));
+        $product->options = $options;
         return $product;
     }
-
     /**
      * Display the specified resource.
      *
@@ -79,6 +83,8 @@ class ProductController extends Controller
         if ($request->hasFile('image')) {
             $product->uploadImage($request->file('image'));
         }
+        $options = Options::findAndUpdate(json_decode($request->options), $product->id);
+        $product->options = $options;
         return $product;
     }
 

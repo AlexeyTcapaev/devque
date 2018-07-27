@@ -1,7 +1,6 @@
-import store from ".";
 export default {
-
-    state: {
+    namespaced: true,
+    state: JSON.parse(localStorage.getItem('cart')) || {
         products: [],
         count: 0
     },
@@ -18,17 +17,19 @@ export default {
     },
     mutations: {
         AddProduct(state, product) {
+            console.log(product)
             if (state.products.find(function (item) {
                     if (item.id === product.id)
-                        return true
+                        if (item.targetoption.id === product.targetoption.id)
+                            return true
                     else return false
                 })) {
-                product.count++;
+                item.count = Number(item.count) + Number(product.count);
+                state.count = Number(state.count) + Number(product.count);
             } else {
-                product.count = 1
                 state.products.push(product)
+                state.count = Number(state.count) + Number(product.count)
             }
-            state.count++;
         },
         DeleteProduct(state, index) {
             state.count -= state.products[index].count
@@ -40,31 +41,30 @@ export default {
         DecCount(state) {
             state.count--
         },
-        ChangeCount(state) {
-            let k = 0;
-            state.products.forEach(function (item, i, arr) {
-                k += Number(item.count)
-            });
-            state.count = k
-
+        ChangeCount(state, obj) {
+            state.products.forEach(prod => {
+                if (prod.id === obj.product.id) {
+                    prod = obj.product
+                }
+            })
         }
     },
     actions: {
         AddProduct(state, product) {
-            store.commit('AddProduct', product)
+            state.commit('AddProduct', product)
         },
         DeleteProduct(state, index) {
-            store.commit('DeleteProduct', index)
+            state.commit('DeleteProduct', index)
         },
         IncCount(state, index) {
-            store.commit('IncCount', index)
+            state.commit('IncCount', index)
         },
         DecCount(state, index) {
-            store.commit('DecCount', index)
+            state.commit('DecCount', index)
         },
         ChangeCount(state, obj) {
-            store.commit('ChangeCount', obj)
+            state.commit('ChangeCount', obj)
         }
     },
-    strict: process.env.NODE_ENV !== "production"
+
 }

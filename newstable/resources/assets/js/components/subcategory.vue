@@ -1,5 +1,5 @@
 <template>
-<div v-if="subcategory != null">
+<div v-if="subcategory">
   <div class="breadcrumbs">
     <div class="container">
       <router-link class="breadcrumb" to="/">Главная</router-link>
@@ -16,54 +16,48 @@
 </div>
 </template>
 <script>
+import { mapGetters } from "vuex";
 const ShowableCard = () => import("./ShowableCard.vue");
 export default {
   metaInfo: function() {
     return {
-      title: this.subcategory.name + " " + this.subcategory.parentobj.name
+      title: this.subcategory
+        ? this.subcategory.name + " " + this.subcategory.parentobj.name
+        : ""
     };
   },
-  data: () => ({
-    subcategory: {
-      name: "",
-      parentobj: {
-        name: ""
-      }
-    }
-  }),
   components: {
     ShowableCard
   },
-  methods: {
-    getSubcategory() {
-      const init = this;
-      axios
-        .get("/api/catalog/sub/" + init.$route.params.slug)
-        .then(function(resp) {
-          init.subcategory = resp.data;
-        });
+  computed: {
+    ...mapGetters({
+      cat: "catalog/Subcategory"
+    }),
+    subcategory() {
+      return this.cat(this.$route.params);
     }
-  },
-  beforeCreate() {
-    const init = this;
-    axios
-      .get("/api/catalog/sub/" + init.$route.params.slug)
-      .then(function(resp) {
-        init.subcategory = resp.data;
-      });
-  },
-  watch: {
-    $route: "getSubcategory"
-  },
-  mounted() {}
+  }
 };
 </script>
-<style scoped>
+<style>
+h2 {
+  font-size: 3.56rem;
+  line-height: 110%;
+  margin: 1.78rem 0 1.424rem 0;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 110%;
+  margin: 0.5rem 0 0.4rem 0;
+}
 .breadcrumbs {
   width: 100%;
   background-color: #ffaf60;
 }
-.breadcrumbs .container {
+.container {
+  padding: 0;
+}
+.bread {
   display: flex;
   align-items: center;
   min-height: 64px;
@@ -89,6 +83,29 @@ export default {
 .breadcrumb:last-child {
   color: #fff;
 }
+.breadcrumbs .container {
+  display: flex !important;
+  align-items: center !important;
+  height: 64px !important;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.breadcrumb:not(:first-child):before {
+  content: "\E5CC";
+  color: rgba(255, 255, 255, 0.7);
+  vertical-align: top;
+  display: inline-block;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  margin: 0 10px 0 8px;
+  -webkit-font-smoothing: antialiased;
+}
 .container {
   display: block;
 }
@@ -101,5 +118,9 @@ export default {
   grid-gap: 45px;
   width: 100%;
   justify-items: center;
+}
+.buy {
+  background-color: #ffaf60 !important;
+  box-shadow: none !important;
 }
 </style>

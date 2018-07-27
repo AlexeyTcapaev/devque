@@ -8,18 +8,29 @@
 </v-app>
 </template>
 <script>
+import { mapActions } from "vuex";
+import { mapGetters } from "vuex";
+import { mapState } from "vuex";
 export default {
   metaInfo: {
-    titleTemplate: "%s | La Flowers",
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" }
-    ]
+    titleTemplate: "%s | La Flowers"
   },
   data() {
     return {
       transitionName: "slide-left"
     };
+  },
+  methods: {
+    ...mapActions({
+      SetCatalog: "catalog/SetCatalog",
+      SetPacks:'packs/SetPacks'
+    })
+  },
+  computed: {
+  },
+  beforeMount() {
+    this.SetCatalog();
+    this.SetPacks();
   }
 };
 </script>

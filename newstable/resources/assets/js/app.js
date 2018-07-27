@@ -50,6 +50,12 @@ const search = () =>
     import ('./components/search.vue');
 const cart = () =>
     import ('./components/cart.vue');
+const packs = () =>
+    import ('./components/packs.vue');
+const carouseladmin = () =>
+    import ('./components/carouseladmin.vue');
+const indexsetting = () =>
+    import ('./components/indexsetting.vue');
 
 const routes = [{
     name: "admin",
@@ -64,7 +70,23 @@ const routes = [{
             path: "products",
             name: "products",
             component: products,
+        },
+        {
+            path: "packs",
+            name: "packs",
+            component: packs,
+        },
+        {
+            path: "carouseladmin",
+            name: "carouseladmin",
+            component: carouseladmin,
+        },
+        {
+            path: "indexsetting",
+            name: "indexsetting",
+            component: indexsetting,
         }
+
     ],
     meta: {
         requiresAuth: true

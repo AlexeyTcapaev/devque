@@ -1,18 +1,18 @@
 webpackJsonp([16],{
 
-/***/ 114:
+/***/ 113:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(115)
+  __webpack_require__(114)
 }
-var normalizeComponent = __webpack_require__(73)
+var normalizeComponent = __webpack_require__(72)
 /* script */
-var __vue_script__ = __webpack_require__(117)
+var __vue_script__ = __webpack_require__(116)
 /* template */
-var __vue_template__ = __webpack_require__(128)
+var __vue_template__ = __webpack_require__(127)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -52,17 +52,17 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 115:
+/***/ 114:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(116);
+var content = __webpack_require__(115);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(74)("2610688c", content, false, {});
+var update = __webpack_require__(73)("2610688c", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -79,7 +79,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 116:
+/***/ 115:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(14)(false);
@@ -87,18 +87,21 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.hide-on-med-and-down[data-v-1d4230bf] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    margin: 20px 0 0 0;\n    padding-left: 0;\n    list-style-type: none!important;\n}\n.hide-on-med-and-down li a[data-v-1d4230bf]:hover {\n    color: white;\n    background-color: black;\n}\n.hide-on-med-and-down li a[data-v-1d4230bf] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    color: black;\n    -webkit-transition: 0.2s linear;\n    transition: 0.2s linear;\n    font-weight: bold;\n    text-transform: uppercase;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    white-space: nowrap;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n@media only screen and (max-width: 992px) {\n.hide-on-med-and-down[data-v-1d4230bf] {\n    display: none !important;\n}\n}\n", ""]);
+exports.push([module.i, "\n.application .theme--light.v-icon[data-v-1d4230bf],\n.theme--light .v-icon[data-v-1d4230bf] {\n  color: rgba(0, 0, 0, 0.54) !important;\n}\n.container[data-v-1d4230bf] {\n  padding: 0;\n}\n.hide-on-med-and-down[data-v-1d4230bf] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin: 20px 0 0 0;\n  padding-left: 0;\n  list-style-type: none !important;\n}\n.hide-on-med-and-down li a[data-v-1d4230bf]:hover {\n  color: white;\n  background-color: black;\n}\n.hide-on-med-and-down li a[data-v-1d4230bf] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  color: black;\n  -webkit-transition: 0.2s linear;\n  transition: 0.2s linear;\n  font-weight: bold;\n  text-transform: uppercase;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  white-space: nowrap;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n@media only screen and (max-width: 992px) {\n.hide-on-med-and-down[data-v-1d4230bf] {\n    display: none !important;\n}\n}\n@media only screen and (min-width: 993px) {\n.sidenav-trigger[data-v-1d4230bf] {\n    display: none;\n}\n}\n@media only screen and (max-width: 1569px) {\n.sidenav-trigger[data-v-1d4230bf] {\n    display: block !important;\n}\n.hide-on-med-and-down[data-v-1d4230bf] {\n    display: none;\n}\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 117:
+/***/ 116:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(4);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 //
 //
 //
@@ -117,80 +120,103 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
 var navlink = function navlink() {
-  return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 118));
+  return __webpack_require__.e/* import() */(15).then(__webpack_require__.bind(null, 117));
 };
 var mobilenavlink = function mobilenavlink() {
-  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 123));
+  return __webpack_require__.e/* import() */(17).then(__webpack_require__.bind(null, 122));
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      Categories: []
+      drawer: false
     };
   },
   components: {
     navlink: navlink,
     mobilenavlink: mobilenavlink
   },
-  beforeCreate: function beforeCreate() {
-    var init = this;
-    axios.get("/api/catalog").then(function (resp) {
-      init.Categories = resp.data;
-    });
-  }
+  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["d" /* mapGetters */])({
+    Categories: "catalog/Catalog"
+  }))
 });
 
 /***/ }),
 
-/***/ 128:
+/***/ 127:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container nav-cont" }, [
-    _c("nav", [
-      _c("div", { staticClass: "nav-wrapper" }, [
-        _vm._m(0),
-        _vm._v(" "),
+  return _c(
+    "div",
+    { staticClass: "container nav-cont" },
+    [
+      _c("nav", [
         _c(
-          "ul",
-          { staticClass: "hide-on-med-and-down" },
-          _vm._l(_vm.Categories, function(category) {
-            return _c("navlink", {
-              key: category.id,
-              attrs: { category: category }
-            })
-          })
+          "div",
+          { staticClass: "nav-wrapper" },
+          [
+            _c(
+              "v-toolbar-title",
+              {
+                staticClass: "ml-0 pl-3 sidenav-trigger",
+                staticStyle: { width: "330px" }
+              },
+              [
+                _c("v-toolbar-side-icon", {
+                  on: {
+                    click: function($event) {
+                      $event.stopPropagation()
+                      _vm.drawer = !_vm.drawer
+                    }
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "ul",
+              { staticClass: "hide-on-med-and-down" },
+              _vm._l(_vm.Categories, function(category) {
+                return _c("navlink", {
+                  key: category.id,
+                  attrs: { category: category }
+                })
+              })
+            )
+          ],
+          1
         )
-      ])
-    ]),
-    _vm._v(" "),
-    _c(
-      "ul",
-      { staticClass: "side-nav", attrs: { id: "mobile-demo" } },
-      [_c("mobilenavlink")],
-      1
-    )
-  ])
+      ]),
+      _vm._v(" "),
+      _c("v-navigation-drawer", {
+        attrs: {
+          "mobile-break-point": "1569",
+          fixed: "",
+          app: "",
+          absolute: "",
+          floating: "",
+          "disable-resize-watcher": ""
+        },
+        model: {
+          value: _vm.drawer,
+          callback: function($$v) {
+            _vm.drawer = $$v
+          },
+          expression: "drawer"
+        }
+      })
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "sidenav-trigger button-collapse",
-        attrs: { href: "#", "data-activates": "mobile-demo" }
-      },
-      [_c("i", { staticClass: "material-icons" }, [_vm._v("menu")])]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

@@ -13,8 +13,10 @@ class CreateCarouselTable extends Migration
      */
     public function up()
     {
-        Schema::create('carousel', function (Blueprint $table) {
+        Schema::create('carousels', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('image')->nullable();
+            $table->string('products_id');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateCarouselTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carousel');
+        Schema::dropIfExists('carousels');
     }
 }
