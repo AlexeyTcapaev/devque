@@ -36,6 +36,8 @@
 </main>
 </template>
 <script>
+import { createNamespacedHelpers } from "vuex";
+const { mapGetters, mapActions } = createNamespacedHelpers("user/");
 export default {
   metaInfo: {
     title: "Регистрация" // set a title
@@ -59,6 +61,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(["SetUser", "SetToken"]),
     Login: function() {
       const init = this;
       axios
@@ -69,8 +72,10 @@ export default {
           name: this.name
         })
         .then(function(resp) {
-          init.$store.state.user.name = resp.data.success.name;
-          init.$store.state.user.token = resp.data.success.token;
+          init.SetUser({
+            name: resp.data.success.name,
+            id: resp.data.success.id
+          });
           init.$router.push("/");
         });
     }

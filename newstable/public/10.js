@@ -1,115 +1,6 @@
 webpackJsonp([10],{
 
-<<<<<<< HEAD
-/***/ 101:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(102);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(73)("000ccfb9", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1297e80b\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Magazine.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1297e80b\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Magazine.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ 102:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(14)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.v-content {\n  padding: 0 !important;\n}\n.page-enter-active,\n.page-leave-active {\n  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;\n  transition: opacity 0.2s, -webkit-transform 0.2s;\n  transition: opacity 0.2s, transform 0.2s;\n  transition: opacity 0.2s, transform 0.2s, -webkit-transform 0.2s;\n}\n.page-enter,\n.page-leave-to {\n  opacity: 0;\n  -webkit-transform: translateX(-30%);\n          transform: translateX(-30%);\n}\n.container {\n  margin: 0 auto;\n  max-width: 1280px;\n  width: 90%;\n}\n@media only screen and (min-width: 601px) {\n.container {\n    width: 85%;\n}\n}\n@media only screen and (min-width: 993px) {\n.container {\n    width: 70%;\n}\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 103:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-var vheader = function vheader() {
-  return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, 104));
-};
-var vfooter = function vfooter() {
-  return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, 129));
-};
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      loading: true
-    };
-  },
-  components: {
-    vfooter: vfooter,
-    vheader: vheader
-  },
-  mounted: function mounted() {
-    //  [App.vue specific] When App.vue is finish loading finish the progress bar
-    this.$Progress.finish();
-  },
-  created: function created() {
-    var _this = this;
-
-    //  [App.vue specific] When App.vue is first loaded start the progress bar
-    this.$Progress.start();
-    //  hook the progress bar to start before we move router-view
-    this.$router.beforeEach(function (to, from, next) {
-      //  does the page we want to go to have a meta.progress object
-      if (to.meta.progress !== undefined) {
-        var meta = to.meta.progress;
-        // parse meta tags
-        _this.$Progress.parseMeta(meta);
-      }
-      //  start the progress bar
-      _this.$Progress.start();
-      //  continue to next page
-      next();
-    });
-    //  hook the progress bar to finish after we've finished moving router-view
-    this.$router.afterEach(function (to, from) {
-      //  finish the progress bar
-      _this.$Progress.finish();
-    });
-  }
-});
-
-/***/ }),
-
-/***/ 134:
+/***/ 100:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -117,26 +8,266 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "v-app",
     [
-      _c("vheader"),
-      _vm._v(" "),
       _c(
-        "main",
+        "v-navigation-drawer",
+        {
+          attrs: {
+            clipped: _vm.$vuetify.breakpoint.lgAndUp,
+            fixed: "",
+            app: ""
+          },
+          model: {
+            value: _vm.drawer,
+            callback: function($$v) {
+              _vm.drawer = $$v
+            },
+            expression: "drawer"
+          }
+        },
         [
           _c(
-            "transition",
-            { attrs: { name: "page", mode: "out-in" } },
-            [_c("router-view")],
-            1
+            "v-list",
+            { attrs: { dense: "" } },
+            [
+              _vm._l(_vm.items, function(item) {
+                return [
+                  item.heading
+                    ? _c(
+                        "v-layout",
+                        {
+                          key: item.heading,
+                          attrs: { row: "", "align-center": "" }
+                        },
+                        [
+                          _c(
+                            "v-flex",
+                            { attrs: { xs6: "" } },
+                            [
+                              item.heading
+                                ? _c("v-subheader", [
+                                    _vm._v(
+                                      "\n              " +
+                                        _vm._s(item.heading) +
+                                        "\n            "
+                                    )
+                                  ])
+                                : _vm._e()
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            {
+                              staticClass: "text-xs-center",
+                              attrs: { xs6: "" }
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "body-2 black--text",
+                                  attrs: { href: "#!" }
+                                },
+                                [_vm._v("EDIT")]
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    : item.children
+                      ? _c(
+                          "v-list-group",
+                          {
+                            key: item.text,
+                            attrs: {
+                              "prepend-icon": item.model
+                                ? item.icon
+                                : item["icon-alt"],
+                              "append-icon": ""
+                            },
+                            model: {
+                              value: item.model,
+                              callback: function($$v) {
+                                _vm.$set(item, "model", $$v)
+                              },
+                              expression: "item.model"
+                            }
+                          },
+                          [
+                            _c(
+                              "v-list-tile",
+                              {
+                                attrs: { slot: "activator", to: item.to },
+                                slot: "activator"
+                              },
+                              [
+                                _c(
+                                  "v-list-tile-content",
+                                  [
+                                    _c("v-list-tile-title", [
+                                      _vm._v(
+                                        "\n                " +
+                                          _vm._s(item.text) +
+                                          "1\n              "
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _vm._l(item.children, function(child, i) {
+                              return _c(
+                                "v-list-tile",
+                                { key: i },
+                                [
+                                  child.icon
+                                    ? _c(
+                                        "v-list-tile-action",
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v(_vm._s(child.icon))
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    : _vm._e(),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-list-tile-content",
+                                    [
+                                      _c("v-list-tile-title", [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(child.text) +
+                                            "\n              "
+                                        )
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            })
+                          ],
+                          2
+                        )
+                      : _c(
+                          "v-list-tile",
+                          {
+                            key: item.text,
+                            attrs: {
+                              to: item.to,
+                              "active-class": "primary--text exact-target-link"
+                            }
+                          },
+                          [
+                            _c(
+                              "v-list-tile-action",
+                              [_c("v-icon", [_vm._v(_vm._s(item.icon))])],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "v-list-tile-content",
+                              [
+                                _c("v-list-tile-title", [
+                                  _vm._v(
+                                    "\n              " +
+                                      _vm._s(item.text) +
+                                      "        \n            "
+                                  )
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                ]
+              })
+            ],
+            2
           )
         ],
         1
       ),
       _vm._v(" "),
-      _c("vfooter"),
+      _c(
+        "v-toolbar",
+        {
+          attrs: {
+            "clipped-left": _vm.$vuetify.breakpoint.lgAndUp,
+            color: "blue darken-3",
+            dark: "",
+            app: "",
+            fixed: ""
+          }
+        },
+        [
+          _c(
+            "v-toolbar-title",
+            { staticClass: "ml-0 pl-3", staticStyle: { width: "330px" } },
+            [
+              _c("v-toolbar-side-icon", {
+                on: {
+                  click: function($event) {
+                    $event.stopPropagation()
+                    _vm.drawer = !_vm.drawer
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "hidden-sm-and-down" }, [
+                _vm._v("Панель администратора")
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-text-field", {
+            staticClass: "hidden-sm-and-down",
+            attrs: {
+              flat: "",
+              "solo-inverted": "",
+              "hide-details": "",
+              "prepend-inner-icon": "search",
+              label: "Search"
+            }
+          }),
+          _vm._v(" "),
+          _c("v-spacer")
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("vue-progress-bar")
+      _c(
+        "v-container",
+        { attrs: { fluid: "", "fill-height": "" } },
+        [
+          _c(
+            "v-layout",
+            { attrs: { "justify-center": "", "align-start": "" } },
+            [
+              _c(
+                "transition",
+                { attrs: { name: "fade", mode: "out-in" } },
+                [_c("router-view")],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
     ],
     1
   )
@@ -147,36 +278,25 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-1297e80b", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-1b84f1f0", module.exports)
   }
 }
 
 /***/ }),
 
-/***/ 66:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(101)
+  __webpack_require__(97)
 }
-var normalizeComponent = __webpack_require__(72)
+var normalizeComponent = __webpack_require__(76)
 /* script */
-var __vue_script__ = __webpack_require__(103)
+var __vue_script__ = __webpack_require__(99)
 /* template */
-var __vue_template__ = __webpack_require__(134)
-=======
-/***/ 60:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(71)
-/* script */
-var __vue_script__ = __webpack_require__(77)
-/* template */
-var __vue_template__ = __webpack_require__(78)
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+var __vue_template__ = __webpack_require__(100)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -193,7 +313,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\Magazine.vue"
+Component.options.__file = "resources\\assets\\js\\components\\admin.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -202,9 +322,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1297e80b", Component.options)
+    hotAPI.createRecord("data-v-1b84f1f0", Component.options)
   } else {
-    hotAPI.reload("data-v-1297e80b", Component.options)
+    hotAPI.reload("data-v-1b84f1f0", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -216,11 +336,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 72:
-=======
-/***/ 71:
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+/***/ 76:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -330,13 +446,8 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 73:
-/***/ (function(module, exports, __webpack_require__) {
-=======
 /***/ 77:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+/***/ (function(module, exports, __webpack_require__) {
 
 /*
   MIT License http://www.opensource.org/licenses/mit-license.php
@@ -354,7 +465,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(74)
+var listToStyles = __webpack_require__(78)
 
 /*
 type StyleObject = {
@@ -385,14 +496,9 @@ var noop = function () {}
 var options = null
 var ssrIdKey = 'data-vue-ssr-id'
 
-<<<<<<< HEAD
 // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
 // tags it will allow on a page
 var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
-=======
-/***/ 78:
-/***/ (function(module, exports, __webpack_require__) {
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 
 module.exports = function (parentId, list, _isProduction, _options) {
   isProduction = _isProduction
@@ -569,7 +675,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 74:
+/***/ 78:
 /***/ (function(module, exports) {
 
 /**
@@ -600,6 +706,170 @@ module.exports = function listToStyles (parentId, list) {
   return styles
 }
 
+
+/***/ }),
+
+/***/ 97:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(98);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(77)("a7b16c0e", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1b84f1f0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./admin.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1b84f1f0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./admin.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 98:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(14)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.exact-target-link {\n  border-left: 3px solid #1976d2 !important;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 99:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(4);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      dialog: false,
+      drawer: null,
+      items: [{ icon: "web", text: "На сайт", to: "/" }, { icon: "view_list", text: "Каталог", to: "/admin/catalog" }, { icon: "shopping_basket", text: "Товары", to: "/admin/products" }, { icon: "shopping_basket", text: "Упаковки", to: "/admin/packs" }, { icon: "web", text: "Карусель", to: "/admin/carouseladmin" }, { icon: "book", text: "Категория на главной", to: "/admin/indexsetting" }]
+    };
+  },
+  props: {
+    source: String
+  }
+});
 
 /***/ })
 

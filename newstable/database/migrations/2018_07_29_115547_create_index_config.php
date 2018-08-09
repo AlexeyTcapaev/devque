@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePackingTable extends Migration
+class CreateIndexConfig extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreatePackingTable extends Migration
      */
     public function up()
     {
-        Schema::create('packs', function (Blueprint $table) {
+        Schema::create('indexconfig', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('image')->nullable();
-            $table->decimal('price', 9, 2);
+            $table->integer('catalog_id')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreatePackingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('packs');
+        Schema::dropIfExists('indexconfig');
     }
 }

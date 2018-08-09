@@ -57,4 +57,14 @@ Route::group([
         'CarouselController',
         ['except' => ['create', 'edit']]
     );
+    Route::resource(
+        'indexconfig',
+        'IndexConfigController',
+        ['except' => ['create', 'edit']]
+    );
+    Route::resource(
+        'instcarousel',
+        'InstCarouselController',
+        ['except' => ['create', 'edit']]
+    );
 });

@@ -1,38 +1,88 @@
 webpackJsonp([14],{
 
-<<<<<<< HEAD
-/***/ 108:
-=======
-/***/ 107:
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+/***/ 177:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+
+var PackCard = function PackCard() {
+  return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, 178));
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    PackCard: PackCard
+  },
+  data: function data() {
+    return {
+      Packs: []
+    };
+  },
+  beforeCreate: function beforeCreate() {
+    var init = this;
+    axios.get("/api/packs").then(function (resp) {
+      init.Packs = resp.data;
+    });
+  }
+});
+
+/***/ }),
+
+/***/ 183:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-layout",
+    [
+      _c("pack-card", { attrs: { index: null, packs: _vm.Packs } }),
+      _vm._v(" "),
+      _vm._l(_vm.Packs, function(pack, index) {
+        return _c("pack-card", {
+          key: index,
+          attrs: { index: index, pack: pack, packs: _vm.Packs }
+        })
+      })
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5d4e57b3", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-<<<<<<< HEAD
-  __webpack_require__(109)
-}
-var normalizeComponent = __webpack_require__(72)
+var normalizeComponent = __webpack_require__(76)
 /* script */
-var __vue_script__ = __webpack_require__(111)
+var __vue_script__ = __webpack_require__(177)
 /* template */
-var __vue_template__ = __webpack_require__(112)
-=======
-  __webpack_require__(108)
-}
-var normalizeComponent = __webpack_require__(71)
-/* script */
-var __vue_script__ = __webpack_require__(110)
-/* template */
-var __vue_template__ = __webpack_require__(111)
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+var __vue_template__ = __webpack_require__(183)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = injectStyle
+var __vue_styles__ = null
 /* scopeId */
-var __vue_scopeId__ = "data-v-6239d6e0"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -43,7 +93,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\header\\search.vue"
+Component.options.__file = "resources\\assets\\js\\components\\packs.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -52,9 +102,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6239d6e0", Component.options)
+    hotAPI.createRecord("data-v-5d4e57b3", Component.options)
   } else {
-    hotAPI.reload("data-v-6239d6e0", Component.options)
+    hotAPI.reload("data-v-5d4e57b3", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -66,166 +116,113 @@ module.exports = Component.exports
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 109:
-=======
-/***/ 108:
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 76:
+/***/ (function(module, exports) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
+/* globals __VUE_SSR_CONTEXT__ */
 
-// load the styles
-<<<<<<< HEAD
-var content = __webpack_require__(110);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(73)("4f022519", content, false, {});
-=======
-var content = __webpack_require__(109);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(72)("4f022519", content, false, {});
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6239d6e0\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./search.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6239d6e0\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./search.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+// IMPORTANT: Do NOT use ES2015 features in this file.
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
 
-/***/ }),
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
 
-<<<<<<< HEAD
-/***/ 110:
-=======
-/***/ 109:
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
-/***/ (function(module, exports, __webpack_require__) {
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
 
-exports = module.exports = __webpack_require__(13)(false);
-// imports
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
 
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+    options._compiled = true
+  }
 
-// module
-exports.push([module.i, "\n.input-field[data-v-6239d6e0] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#search[data-v-6239d6e0] {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  border: 1px solid #ffaf60 !important;\n  margin: 0;\n  padding: 0 0 0 10px;\n  height: 47px;\n  min-width: 250px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\nform .input-field .btn-flat[data-v-6239d6e0] {\n  background-color: #ffaf60 !important;\n  color: white;\n  border-radius: 0;\n  padding: 0;\n  margin: 0;\n  min-width: 47px;\n  min-height: 47px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.search-bar form .input-field a.btn-flat i[data-v-6239d6e0] {\n  color: white;\n}\n", ""]);
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
 
-// exports
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
 
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
 
-/***/ }),
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
 
-<<<<<<< HEAD
-/***/ 111:
-=======
-/***/ 110:
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    this.searchStr = this.$route.params.str;
-  },
-
-  data: function data() {
-    return {
-      searchStr: ""
-    };
-  },
-  methods: {
-    search: function search() {
-      this.$router.push({ name: "search", params: { str: this.searchStr } });
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
     }
   }
-});
 
-/***/ }),
-
-<<<<<<< HEAD
-/***/ 112:
-=======
-/***/ 111:
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("form", [
-    _c(
-      "div",
-      { staticClass: "input-field" },
-      [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.searchStr,
-              expression: "searchStr"
-            }
-          ],
-          attrs: {
-            id: "search",
-            type: "search",
-            required: "",
-            placeholder: "Начать поиск"
-          },
-          domProps: { value: _vm.searchStr },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.searchStr = $event.target.value
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "v-btn",
-          {
-            staticClass: " btn-flat",
-            attrs: { depressed: "", small: "" },
-            on: { click: _vm.search }
-          },
-          [_c("i", { staticClass: "material-icons" }, [_vm._v("search")])]
-        )
-      ],
-      1
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-6239d6e0", module.exports)
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
   }
 }
+
 
 /***/ })
 

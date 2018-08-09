@@ -1,78 +1,22 @@
 webpackJsonp([1],{
 
-/***/ 259:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(260)
-}
-var normalizeComponent = __webpack_require__(72)
-/* script */
-var __vue_script__ = __webpack_require__(262)
-/* template */
-var __vue_template__ = __webpack_require__(263)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-35b57ba3"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\mycarousel.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-35b57ba3", Component.options)
-  } else {
-    hotAPI.reload("data-v-35b57ba3", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 260:
+/***/ 164:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(261);
+var content = __webpack_require__(165);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-<<<<<<< HEAD
-var update = __webpack_require__(73)("a8c6ffdc", content, false, {});
-=======
-var update = __webpack_require__(72)("12f84ed0", content, false, {});
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+var update = __webpack_require__(77)("12f84ed0", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-35b57ba3\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./mycarousel.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-35b57ba3\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./mycarousel.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-04b707bf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./search.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-04b707bf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./search.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -83,22 +27,22 @@ if(false) {
 
 /***/ }),
 
-/***/ 261:
+/***/ 165:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)(false);
+exports = module.exports = __webpack_require__(14)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.breadcrumbs[data-v-04b707bf] {\n  width: 100%;\n  background-color: #ffaf60;\n}\n.breadcrumbs .container[data-v-04b707bf] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 64px;\n}\n.breadcrumb[data-v-04b707bf] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb[data-v-04b707bf]:not:last-child:before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n.breadcrumb[data-v-04b707bf]:last-child {\n  color: #fff;\n}\n.container[data-v-04b707bf] {\n  display: block;\n}\n.container h2[data-v-04b707bf] {\n  text-align: center;\n}\n.sales-list[data-v-04b707bf] {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  grid-gap: 45px;\n  width: 100%;\n  justify-items: center;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 262:
+/***/ 166:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -110,47 +54,107 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-<<<<<<< HEAD
-=======
 var ShowableCard = function ShowableCard() {
-  return __webpack_require__.e/* import() */(12/* duplicate */).then(__webpack_require__.bind(null, 74));
+  return __webpack_require__.e/* import() */(15/* duplicate */).then(__webpack_require__.bind(null, 79));
 };
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 /* harmony default export */ __webpack_exports__["default"] = ({
+  metaInfo: function metaInfo() {
+    return {
+      title: "Поис по " + this.$route.params.str
+    };
+  },
   data: function data() {
     return {
-      slides: []
+      subcategory: {
+        name: ""
+      }
     };
+  },
+  components: {
+    ShowableCard: ShowableCard
+  },
+  methods: {
+    GetSearch: function GetSearch() {
+      var init = this;
+      axios.get("/api/search/" + init.$route.params.str).then(function (resp) {
+        init.subcategory.name = init.$route.params.str;
+        init.subcategory.products = resp.data;
+      });
+    }
   },
   beforeCreate: function beforeCreate() {
     var init = this;
-    axios.get("/api/carousel").then(function (resp) {
-      init.slides = resp.data;
+    axios.get("/api/search/" + init.$route.params.str).then(function (resp) {
+      init.subcategory.name = init.$route.params.str;
+      init.subcategory.products = resp.data;
     });
+  },
+
+  watch: {
+    $route: "GetSearch"
   }
 });
 
 /***/ }),
 
-/***/ 263:
+/***/ 167:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "v-carousel",
-    { attrs: { cycle: "", lazy: "", "hide-delimiters": "" } },
-    _vm._l(_vm.slides, function(item, i) {
-      return _c(
-        "v-carousel-item",
-        { key: i, attrs: { src: "/storage/uploads/" + item.image } },
-        [_c("p", [_vm._v(_vm._s(item.name))])]
-      )
-    })
-  )
+  return _vm.subcategory != null
+    ? _c("div", [
+        _c("div", { staticClass: "breadcrumbs" }, [
+          _c(
+            "div",
+            { staticClass: "container" },
+            [
+              _c(
+                "router-link",
+                { staticClass: "breadcrumb", attrs: { to: "/" } },
+                [_vm._v("Главная")]
+              ),
+              _vm._v(" "),
+              _c("a", { staticClass: "breadcrumb" }, [_vm._v("Поиск")])
+            ],
+            1
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "container" }, [
+          _c("h2", [
+            _vm._v(
+              'Результаты поиска по "' + _vm._s(_vm.subcategory.name) + '"'
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            { staticClass: "sales-list" },
+            _vm._l(_vm.subcategory.products, function(product) {
+              return _c(
+                "li",
+                { key: product.id },
+                [_c("showable-card", { attrs: { prod: product } })],
+                1
+              )
+            })
+          )
+        ])
+      ])
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -158,28 +162,25 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-35b57ba3", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-04b707bf", module.exports)
   }
 }
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 73:
-=======
-/***/ 69:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(150)
+  __webpack_require__(164)
 }
-var normalizeComponent = __webpack_require__(71)
+var normalizeComponent = __webpack_require__(76)
 /* script */
-var __vue_script__ = __webpack_require__(152)
+var __vue_script__ = __webpack_require__(166)
 /* template */
-var __vue_template__ = __webpack_require__(153)
+var __vue_template__ = __webpack_require__(167)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -219,7 +220,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 71:
+/***/ 76:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -329,8 +330,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 72:
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -349,11 +349,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-<<<<<<< HEAD
-var listToStyles = __webpack_require__(74)
-=======
-var listToStyles = __webpack_require__(73)
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+var listToStyles = __webpack_require__(78)
 
 /*
 type StyleObject = {
@@ -563,11 +559,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 74:
-=======
-/***/ 73:
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+/***/ 78:
 /***/ (function(module, exports) {
 
 /**

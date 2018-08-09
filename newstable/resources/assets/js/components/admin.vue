@@ -98,6 +98,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   data: () => ({
     dialog: false,
@@ -108,7 +109,7 @@ export default {
       { icon: "shopping_basket", text: "Товары", to: "/admin/products" },
       { icon: "shopping_basket", text: "Упаковки", to: "/admin/packs" },
       { icon: "web", text: "Карусель", to: "/admin/carouseladmin" },
-       { icon: "book", text: "Категория на главной", to: "/admin/indexsetting" }
+      { icon: "book", text: "Категория на главной", to: "/admin/indexsetting" }
     ]
   }),
   props: {

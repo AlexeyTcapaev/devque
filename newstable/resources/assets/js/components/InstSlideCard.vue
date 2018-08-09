@@ -1,44 +1,32 @@
 <template>
-    <div class="card">
-        <v-form ref="form" v-model="valid" lazy-validation>
-            <div class="card-image">
-                <input type="file" multiple @change="onFileChange" accept="image/*" class="file" ref="file">
-                <img :src="item.image" v-if="item.image">
-            </div>
-            <div class="card-content">
-                <v-select :items="products" v-model="targetproduct" item-value="item" return-object label="Выберите продукт" outline item-text="name"
-                    suffix="см"></v-select>
-                <v-btn :disabled="!valid" @click="submit" flat>Создать</v-btn>
-                <v-btn v-if="slide" :disabled="!valid" @click="update" flat>Обновить</v-btn>
-                <v-btn v-if="slide" :disabled="!valid" @click="destroy" flat>Удалить</v-btn>
-            </div>
-        </v-form>
-    </div>  
+<div class="card">
+  <v-form ref="form">
+    <div class="card-image">
+      <input type="file" multiple @change="onFileChange" accept="image/*" class="file" ref="file">
+      <img :src="item.image" v-if="item.image">
+    </div>
+    <div class="card-content"> 
+      <v-text-field label="Ссылка" outline v-model="item.link" ></v-text-field>
+      <v-text-field suffix="@" label="Название" outline v-model="item.title" ></v-text-field>  
+      <v-btn  @click="submit" flat>Создать</v-btn>
+      <v-btn v-if="slide"  @click="update" flat>Обновить</v-btn>
+      <v-btn v-if="slide"  @click="destroy" flat >Удалить</v-btn>
+    </div>
+  </v-form>
+</div>   
 </template>
 <script>
 export default {
-  props: ["carousel", "products", "index", "slide"],
+  props: ["slide", "slides", "index"],
   data: () => ({
     item: {
       image: "/storage/img/plus.svg"
     },
-    nameRules: [
-      v => !!v || "Name is required",
-      v => (v && v.length <= 50) || "> 10"
-    ],
-    priceRules: [
-      v => !!v || "Price is required",
-      v => (v && v.length > 1) || "> 1"
-    ],
-    isActive: true,
-    valid: false,
-    targetproduct: ""
+    isActive: true
   }),
   mounted() {
-    console.log(this.slide);
     if (this.slide !== undefined) {
       this.item = this.slide;
-      this.targetproduct = this.slide.product;
       if (this.item.image !== null)
         this.item.image = "/storage/uploads/" + this.item.image;
       else this.item.image = "/storage/img/plus.svg";
@@ -48,10 +36,10 @@ export default {
     destroy() {
       const init = this;
       axios
-        .delete("/api/carousel/" + this.item.id)
+        .delete("/api/instcarousel/" + this.item.id)
         .then(function(resp) {
           console.log(resp);
-          init.carousel.splice(init.index, 1);
+          init.slides.splice(init.index, 1);
         })
         .catch(function(resp) {
           console.log(resp);
@@ -80,14 +68,15 @@ export default {
       if (this.$refs.form.validate()) {
         let product = new FormData();
         product.append("image", this.$refs.file.files[0]);
-        product.append("product_id", this.targetproduct.id);
+        product.append("link", this.item.link);
+        product.append("title", this.item.title);
         product.append("id", this.item.id);
         const init = this;
         axios
-          .post("/api/carousel", product)
+          .post("/api/instcarousel", product)
           .then(function(resp) {
             console.log(resp);
-            init.carousel.push(resp.data);
+            init.slides.push(resp.data);
             init.$refs.form.reset();
             init.item.image = "/storage/img/plus.svg";
           })
@@ -101,12 +90,12 @@ export default {
         let product = new FormData();
         product.append("_method", "PATCH");
         product.append("image", this.$refs.file.files[0]);
-        product.append("product_id", this.targetproduct.id);
+        product.append("link", this.item.link);
+        product.append("title", this.item.title);
         product.append("id", this.item.id);
         const init = this;
-        console.log(product.getAll("name"));
         axios
-          .post("/api/carousel/" + this.item.id, product)
+          .post("/api/instcarousel/" + this.item.id, product)
           .then(function(resp) {
             init.item = resp.data;
             init.item.image = "/storage/uploads/" + resp.data.image;
@@ -134,7 +123,7 @@ export default {
 }
 .card {
   display: block;
-  width: 490px;
+  width: 500px;
   border-radius: 2px;
   min-width: 0;
   position: relative;

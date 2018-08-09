@@ -19,12 +19,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
         $products = Product::all();
         return $products;
-=======
-
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
     }
 
     /**

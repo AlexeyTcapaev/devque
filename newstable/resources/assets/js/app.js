@@ -58,85 +58,109 @@ const indexsetting = () =>
     import ('./components/indexsetting.vue');
 
 const routes = [{
-    name: "admin",
-    path: "/admin",
-    component: admin,
-    children: [{
-            path: "catalog",
-            name: "catalog",
-            component: catalog,
-        },
-        {
-            path: "products",
-            name: "products",
-            component: products,
-        },
-        {
-            path: "packs",
-            name: "packs",
-            component: packs,
-        },
-        {
-            path: "carouseladmin",
-            name: "carouseladmin",
-            component: carouseladmin,
-        },
-        {
-            path: "indexsetting",
-            name: "indexsetting",
-            component: indexsetting,
+        name: "admin",
+        path: "/admin",
+        component: admin,
+        children: [{
+                path: "catalog",
+                name: "catalog",
+                component: catalog,
+            },
+            {
+                path: "products",
+                name: "products",
+                component: products,
+            },
+            {
+                path: "packs",
+                name: "packs",
+                component: packs,
+            },
+            {
+                path: "carouseladmin",
+                name: "carouseladmin",
+                component: carouseladmin,
+            },
+            {
+                path: "indexsetting",
+                name: "indexsetting",
+                component: indexsetting,
+            }
+        ],
+        beforeEnter: (to, from, next) => {
+            axios
+                .post(
+                    "/api/user/details", {}, {
+                        headers: {
+                            Accept: "application/json",
+                            Authorization: "Bearer " + store.state.user.token
+                        }
+                    }
+                )
+                .then(function (resp) {
+                    if (resp.data.success.admin === 1)
+                        next();
+                    else {
+                        next({
+                            path: "/"
+                        });
+                    }
+                }).catch(function (error) {
+                    next({
+                        path: "/"
+                    });
+                });
+
         }
-
-    ],
-    meta: {
-        requiresAuth: true
     },
-}, {
-    path: "/",
-    component: Magazine,
-    meta: {
-        linkText: "Главная"
-    },
-    children: [{
-            name: "magazine",
-            path: "/",
-            component: index,
-        },
-        {
-            name: "search",
-            path: "search/:str",
-            component: search,
-        },
-        {
-            name: "login",
-            path: "/login",
-            component: login,
-        },
-        {
-            name: "registration",
-            path: "/registrate",
-            component: registration,
 
+    {
+        path: "/",
+        component: Magazine,
+        meta: {
+            linkText: "Главная"
         },
-        {
-            name: "cart",
-            path: "/cart",
-            component: cart,
-        },
-        {
-            name: "subcategory",
-            path: ":pslug/:slug",
-            component: subcategory,
-        },
-        {
-            name: "category",
-            path: ":slug",
-            component: category,
-        },
+        children: [{
+                name: "magazine",
+                path: "/",
+                component: index,
+            },
+            {
+                name: "search",
+                path: "search/:str",
+                component: search,
+            },
+            {
+                name: "login",
+                path: "/login",
+                component: login,
+            },
+            {
+                name: "registration",
+                path: "/registrate",
+                component: registration,
+
+            },
+            {
+                name: "cart",
+                path: "/cart",
+                component: cart,
+            },
+            {
+                name: "subcategory",
+                path: ":pslug/:slug",
+                component: subcategory,
+            },
+            {
+                name: "category",
+                path: ":slug",
+                component: category,
+            },
 
 
-    ]
-}]
+        ]
+    }
+]
 export const router = new VueRouter({
     routes,
     mode: "history"

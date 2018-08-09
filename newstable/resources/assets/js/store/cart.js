@@ -17,7 +17,6 @@ export default {
     },
     mutations: {
         AddProduct(state, product) {
-            console.log(product)
             if (state.products.find(function (item) {
                     if (item.id === product.id)
                         if (item.targetoption.id === product.targetoption.id)
@@ -30,16 +29,20 @@ export default {
                 state.products.push(product)
                 state.count = Number(state.count) + Number(product.count)
             }
+            localStorage.setItem("cart", JSON.stringify(state));
         },
         DeleteProduct(state, index) {
             state.count -= state.products[index].count
             state.products.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(state));
         },
         IncCount(state) {
-            state.count++
+            state.count++;
+            localStorage.setItem("cart", JSON.stringify(state));
         },
         DecCount(state) {
-            state.count--
+            state.count--;
+            localStorage.setItem("cart", JSON.stringify(state));
         },
         ChangeCount(state, obj) {
             state.products.forEach(prod => {
@@ -47,6 +50,7 @@ export default {
                     prod = obj.product
                 }
             })
+            localStorage.setItem("cart", JSON.stringify(state));
         }
     },
     actions: {
@@ -66,5 +70,4 @@ export default {
             state.commit('ChangeCount', obj)
         }
     },
-
 }

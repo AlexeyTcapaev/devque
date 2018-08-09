@@ -28,6 +28,7 @@
         "material-icons": "^0.2.3",
         "npm": "^6.2.0",
         "roboto-fontface": "^0.9.0",
+        "vue-carousel-3d": "^0.1.23",
         "vue-meta": "^1.5.2",
         "vue-progressbar": "^0.7.5",
         "vue-router": "^3.0.1",

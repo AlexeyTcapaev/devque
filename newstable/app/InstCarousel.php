@@ -3,16 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 
-class Carousel extends Model
+class InstCarousel extends Model
 {
-    protected $fillable = ['product_id'];
+    protected $table = 'instcarousel';
+    protected $fillable = ['link','title'];
 
-    public function product()
-    {
-        return $this->hasOne(Product::class, 'id','product_id');
-    }
     public function uploadImage($image)
     {
         if ($image == null) {
@@ -25,14 +21,14 @@ class Carousel extends Model
         $this->image = $filename;
         $this->save();
     }
-    public static function add($fields)
-    {
-        $Carousel = Carousel::create($fields->all());
-        return $Carousel;
-    }
     public function remove()
     {
         Storage::delete('public/uploads/' . $this->image);
         $this->delete();
+    }
+    public static function add($fields)
+    {
+        $product = InstCarousel::create($fields->all());
+        return $product;
     }
 }

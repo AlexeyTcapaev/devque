@@ -80,6 +80,9 @@ footer .container h2 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 3.56rem;
+  line-height: 110%;
+  margin: 1.78rem 0 1.424rem 0;
   text-transform: uppercase;
 }
 footer .container h2::before,

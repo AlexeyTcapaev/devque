@@ -12,7 +12,7 @@ class CarouselController extends Controller
 {
     public function index()
     {
-        $carousel = Carousel::all();
+        $carousel = Carousel::with('product')->get();
         return $carousel;
     }
     public function store(Request $request)
@@ -37,5 +37,5 @@ class CarouselController extends Controller
 
         return $carousel;
     }
-    
+
 }

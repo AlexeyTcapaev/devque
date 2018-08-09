@@ -1,202 +1,22 @@
 webpackJsonp([0],{
 
-/***/ 236:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(238)
-}
-var normalizeComponent = __webpack_require__(72)
-/* script */
-var __vue_script__ = __webpack_require__(240)
-/* template */
-var __vue_template__ = __webpack_require__(237)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\PackCard.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-316636c0", Component.options)
-  } else {
-    hotAPI.reload("data-v-316636c0", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 237:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "card" },
-    [
-      _c(
-        "v-form",
-        {
-          ref: "form",
-          attrs: { "lazy-validation": "" },
-          model: {
-            value: _vm.valid,
-            callback: function($$v) {
-              _vm.valid = $$v
-            },
-            expression: "valid"
-          }
-        },
-        [
-          _c("div", { staticClass: "card-image" }, [
-            _c("input", {
-              ref: "file",
-              staticClass: "file",
-              attrs: { type: "file", multiple: "", accept: "image/*" },
-              on: { change: _vm.onFileChange }
-            }),
-            _vm._v(" "),
-            _vm.item.image
-              ? _c("img", { attrs: { src: _vm.item.image } })
-              : _vm._e()
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "card-content" },
-            [
-              _c("v-text-field", {
-                attrs: {
-                  label: "Наименование",
-                  outline: "",
-                  rules: _vm.nameRules
-                },
-                model: {
-                  value: _vm.item.name,
-                  callback: function($$v) {
-                    _vm.$set(_vm.item, "name", $$v)
-                  },
-                  expression: "item.name"
-                }
-              }),
-              _vm._v(" "),
-              _c("v-text-field", {
-                attrs: { suffix: "₽", label: "Цена", outline: "" },
-                model: {
-                  value: _vm.item.price,
-                  callback: function($$v) {
-                    _vm.$set(_vm.item, "price", $$v)
-                  },
-                  expression: "item.price"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "v-btn",
-                {
-                  attrs: { disabled: !_vm.valid, flat: "" },
-                  on: { click: _vm.submit }
-                },
-                [_vm._v("Создать")]
-              ),
-              _vm._v(" "),
-              _vm.pack
-                ? _c(
-                    "v-btn",
-                    {
-                      attrs: { disabled: !_vm.valid, flat: "" },
-                      on: { click: _vm.update }
-                    },
-                    [_vm._v("Обновить")]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.pack
-                ? _c(
-                    "v-btn",
-                    {
-                      attrs: { disabled: !_vm.valid, flat: "" },
-                      on: { click: _vm.destroy }
-                    },
-                    [_vm._v("Удалить")]
-                  )
-                : _vm._e()
-            ],
-            1
-          )
-        ]
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-316636c0", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 238:
+/***/ 152:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(239);
+var content = __webpack_require__(153);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-<<<<<<< HEAD
-var update = __webpack_require__(73)("125cab6d", content, false, {});
-=======
-var update = __webpack_require__(72)("d53d4e08", content, false, {});
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+var update = __webpack_require__(77)("d53d4e08", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-<<<<<<< HEAD
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-316636c0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PackCard.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-316636c0\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./PackCard.vue");
-=======
    module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-142d72b7\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./subcategory.vue", function() {
      var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-142d72b7\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./subcategory.vue");
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -207,26 +27,22 @@ if(false) {
 
 /***/ }),
 
-/***/ 239:
+/***/ 153:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)(false);
+exports = module.exports = __webpack_require__(14)(false);
 // imports
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, "\n.v-chip__content h3 {\r\n  margin: 0 10px 0 0;\n}\n.v-chip .v-text-field__details {\r\n  display: none !important;\n}\n.v-chip {\r\n  height: 115px;\n}\n.params li {\r\n  padding: 5px 0;\n}\n.card {\r\n  display: block;\r\n  width: 500px;\r\n  border-radius: 2px;\r\n  min-width: 0;\r\n  position: relative;\r\n  text-decoration: none;\r\n  -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),\r\n    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);\r\n          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),\r\n    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);\n}\nul {\r\n  padding: 0;\n}\n.padding {\r\n  padding: 10%;\n}\nform {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n  width: 100%;\r\n  padding: 10px;\n}\n.btntest {\r\n  background: linear-gradient(45deg, #00aeff 50%, #3369e6 100%);\n}\n.btntest:disabled {\r\n  background: rgba(238, 238, 238, 0);\n}\n.card-action a {\r\n  cursor: pointer;\n}\nbutton {\r\n  width: 100%;\r\n  margin: 0 !important;\n}\n.file {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  left: 0;\r\n  cursor: pointer;\r\n  z-index: 4;\r\n  opacity: 0;\n}\n.horizontal {\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n  position: relative;\r\n  max-width: 48% !important;\n}\n.card-image {\r\n  width: 50%;\r\n  padding: 10px;\r\n  height: 100%;\r\n  -webkit-transition: 0.2s linear;\r\n  transition: 0.2s linear;\r\n  position: relative;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\n}\n.card-image img {\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  max-width: 100%;\n}\n.params li span {\r\n  width: 100%;\n}\n.v-chip {\r\n  margin: 0;\n}\n.v-chip .v-chip__content {\r\n  width: 100% !important;\n}\n.card {\r\n  margin: 10px;\n}\r\n", ""]);
-=======
 exports.push([module.i, "\nh2 {\n  font-size: 3.56rem;\n  line-height: 110%;\n  margin: 1.78rem 0 1.424rem 0;\n}\nh6 {\n  font-size: 1rem;\n  line-height: 110%;\n  margin: 0.5rem 0 0.4rem 0;\n}\n.breadcrumbs {\n  width: 100%;\n  background-color: #ffaf60;\n}\n.container {\n  padding: 0;\n}\n.bread {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 64px;\n}\n.breadcrumb {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb:not:last-child:before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n.breadcrumb:last-child {\n  color: #fff;\n}\n.breadcrumbs .container {\n  display: -webkit-box !important;\n  display: -ms-flexbox !important;\n  display: flex !important;\n  -webkit-box-align: center !important;\n      -ms-flex-align: center !important;\n          align-items: center !important;\n  height: 64px !important;\n}\n.breadcrumb {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  font-size: 18px;\n  color: rgba(255, 255, 255, 0.7);\n}\n.breadcrumb:not(:first-child):before {\n  content: \"\\E5CC\";\n  color: rgba(255, 255, 255, 0.7);\n  vertical-align: top;\n  display: inline-block;\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 25px;\n  margin: 0 10px 0 8px;\n  -webkit-font-smoothing: antialiased;\n}\n.container {\n  display: block;\n}\n.container h2 {\n  text-align: center;\n}\n.sales-list {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  grid-gap: 45px;\n  width: 100%;\n  justify-items: center;\n}\n.buy {\n  background-color: #ffaf60 !important;\n  -webkit-box-shadow: none !important;\n          box-shadow: none !important;\n}\n", ""]);
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
 
 // exports
 
 
 /***/ }),
 
-/***/ 240:
+/***/ 154:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -252,93 +68,19 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 
-<<<<<<< HEAD
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["pack", "packs", "index"],
-  data: function data() {
-    return {
-      item: {
-        image: "/storage/img/plus.svg"
-      },
-      nameRules: [function (v) {
-        return !!v || "Name is required";
-      }, function (v) {
-        return v && v.length <= 50 || "> 10";
-      }],
-      priceRules: [function (v) {
-        return !!v || "Price is required";
-      }, function (v) {
-        return v && v.length > 1 || "> 1";
-      }],
-      isActive: true,
-      valid: false
-=======
 
 var ShowableCard = function ShowableCard() {
-  return __webpack_require__.e/* import() */(12/* duplicate */).then(__webpack_require__.bind(null, 74));
+  return __webpack_require__.e/* import() */(15/* duplicate */).then(__webpack_require__.bind(null, 79));
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   metaInfo: function metaInfo() {
     return {
       title: this.subcategory ? this.subcategory.name + " " + this.subcategory.parentobj.name : ""
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
     };
   },
-  mounted: function mounted() {
-    if (this.pack !== undefined) {
-      this.item = this.pack;
-      if (this.item.image !== null) this.item.image = "/storage/uploads/" + this.item.image;else this.item.image = "/storage/img/plus.svg";
-    }
+  components: {
+    ShowableCard: ShowableCard
   },
-<<<<<<< HEAD
-
-  methods: {
-    destroy: function destroy() {
-      var init = this;
-      axios.delete("/api/packs/" + this.item.id).then(function (resp) {
-        console.log(resp);
-        init.packs.splice(init.index, 1);
-      }).catch(function (resp) {
-        console.log(resp);
-      });
-    },
-    onFileChange: function onFileChange(e) {
-      this.item.fileOnserver = this.$refs.file.files[0];
-      var files = e.target.files || e.dataTransfer.files;
-      if (!files.length) return;
-      this.createImage(this.item, files[0]);
-      this.isActive = false;
-    },
-    createImage: function createImage(item, file) {
-      var image = new Image();
-      var reader = new FileReader();
-
-      reader.onload = function (e) {
-        item.image = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    },
-
-    removeImage: function removeImage(item) {
-      item.image = false;
-    },
-    submit: function submit() {
-      if (this.$refs.form.validate()) {
-        var product = new FormData();
-        product.append("image", this.$refs.file.files[0]);
-        product.append("name", this.item.name);
-        product.append("price", this.item.price);
-        product.append("id", this.item.id);
-        var init = this;
-        axios.post("/api/packs", product).then(function (resp) {
-          console.log(resp);
-          init.packs.push(resp.data);
-          init.$refs.form.reset();
-          init.item.image = "/storage/img/plus.svg";
-        }).catch(function (resp) {
-          console.log(resp);
-        });
-=======
   computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["d" /* mapGetters */])({
     cat: "catalog/Subcategory"
   }), {
@@ -350,7 +92,7 @@ var ShowableCard = function ShowableCard() {
 
 /***/ }),
 
-/***/ 145:
+/***/ 159:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -433,19 +175,19 @@ if (false) {
 
 /***/ }),
 
-/***/ 67:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(138)
+  __webpack_require__(152)
 }
-var normalizeComponent = __webpack_require__(71)
+var normalizeComponent = __webpack_require__(76)
 /* script */
-var __vue_script__ = __webpack_require__(140)
+var __vue_script__ = __webpack_require__(154)
 /* template */
-var __vue_template__ = __webpack_require__(145)
+var __vue_template__ = __webpack_require__(159)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -485,7 +227,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 71:
+/***/ 76:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -549,37 +291,53 @@ module.exports = function normalizeComponent (
       // inject component styles
       if (injectStyles) {
         injectStyles.call(this, context)
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
       }
-    },
-    update: function update() {
-      if (this.$refs.form.validate()) {
-        var product = new FormData();
-        product.append("_method", "PATCH");
-        product.append("image", this.$refs.file.files[0]);
-        product.append("name", this.item.name);
-        product.append("price", this.item.price);
-        product.append("id", this.item.id);
-        var init = this;
-        console.log(product.getAll("name"));
-        axios.post("/api/packs/" + this.item.id, product).then(function (resp) {
-          init.item = resp.data;
-          init.item.image = "/storage/uploads/" + resp.data.image;
-        }).catch(function (resp) {
-          console.log(resp);
-        });
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
       }
     }
   }
-});
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 73:
-=======
-/***/ 72:
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -598,11 +356,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-<<<<<<< HEAD
-var listToStyles = __webpack_require__(74)
-=======
-var listToStyles = __webpack_require__(73)
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+var listToStyles = __webpack_require__(78)
 
 /*
 type StyleObject = {
@@ -812,11 +566,7 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 74:
-=======
-/***/ 73:
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
+/***/ 78:
 /***/ (function(module, exports) {
 
 /**

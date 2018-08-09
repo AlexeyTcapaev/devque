@@ -22,29 +22,20 @@ export default {
   },
   methods: {
     ...mapActions({
-<<<<<<< HEAD
       SetCatalog: "catalog/SetCatalog",
-      SetPacks:'packs/SetPacks'
+      SetPacks: "packs/SetPacks"
     })
   },
-  computed: {
-  },
+  computed: {},
   beforeMount() {
     this.SetCatalog();
     this.SetPacks();
-=======
-      SetCatalog: "catalog/SetCatalog"
-    })
-  },
-  computed: {
-    ...mapState({
-      Card: "cart"
-    })
-  },
-  beforeMount() {
-    this.SetCatalog();
->>>>>>> e8dc8d8e05cb1f3c19e54cc9f035b29c4e5c5efd
   }
 };
 </script>
 
+<style>
+i {
+  user-select: none !important;
+}
+</style>
