@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>ITGeekz</title>
+        <link rel="stylesheet" href="css/theme.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <!--[if lt IE 9]>
+            <script src="libs/old_browsers/ob_support.min.js"></script>
+        <![endif]-->
+        <!-- favicons for all devices -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
+        <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5"/>
+        <meta name="theme-color" content="#ffffff"/>
+        <!-- favicons for all devices -->
+    </head>
+    <body>
+    <div id="header">
+        <div class="container-fluid">
+            <a id="logo" class="light-version" href="index.html">
+                <span>ITGeekz.ru</span>
+            </a>
+            <ul class="nav navbar-nav">
+                <li><a href="projects.html">Проекты</a></li>
+                <li><a href="feed.html">Лента</a></li>
+                <li><a href="job.html">Работа</a></li>
+                <li><a href="users.html">Пользователи</a></li>
+                <li><a href="types.html">Типы работ</a></li>
+                <li><a href="stat.html">Статистика</a></li>
+                <li class="active"><a href="settings.html">Настройки</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="normalheader">
+                <div class="hpanel">
+                    <div class="panel-body">
+                        <h2 class="font-light m-b-xs">Настройки</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="settings">
+                    <form class="hpanel form hpanel--form js-form-repeater">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="">Время жизни комментариев в днях</label>
+                                        <input type="text" class="form-control" value="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="">Время жизни файлов в днях</label>
+                                        <input type="text" class="form-control" value="" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label for=""><a href="#">Удалить все файлы в проекте</a></label>
+                                        <select class="form-control" multiple="">
+                                            <option value="">Аудит</option>
+                                            <option value="">Менеджмент</option>
+                                            <option value="">Маркетинг</option>
+                                            <option value="">Дизайн верстка</option>
+                                            <option value="">Консалтинг</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label for=""><a href="#">Удалить все комментарии в проекте</a></label>
+                                        <select class="form-control" multiple="">
+                                            <option value="">Аудит</option>
+                                            <option value="">Менеджмент</option>
+                                            <option value="">Маркетинг</option>
+                                            <option value="">Дизайн верстка</option>
+                                            <option value="">Консалтинг</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="">Количество правок для задач по копирайтингу</label>
+                                        <input type="text" class="form-control js-touch-spin-horizontal" value="15" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <label for="">Черный список IP</label>
+                                    <div class="form-repeater" data-repeater-list="ip-black">
+                                        <div class="form-group js-repeater-item" data-repeater-item>
+                                            <div class="input-group">
+                                                <input name="banned-ip[]" class="form-control" type="text" placeholder="" value="128.0.0.1">
+                                                <span class="input-group-btn">
+                                                    <button data-repeater-delete type="button" class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                                </span>
+                                            </div>
+                                        </div><!-- /.js-repeater-item -->
+                                        <div class="form-group js-repeater-item" data-repeater-item>
+                                            <div class="input-group">
+                                                <input name="banned-ip[]" class="form-control" type="text" placeholder="" value="128.0.0.2">
+                                                <span class="input-group-btn">
+                                                    <button data-repeater-delete type="button" class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                                </span>
+                                            </div>
+                                        </div><!-- /.js-repeater-item -->
+                                        <div class="form-group js-repeater-item" data-repeater-item>
+                                            <div class="input-group">
+                                                <input name="banned-ip[]" class="form-control" type="text" placeholder="" value="128.0.0.3">
+                                                <span class="input-group-btn">
+                                                    <button data-repeater-delete type="button" class="btn btn-danger"><i class="fa fa-times"></i></button>
+                                                </span>
+                                            </div>
+                                        </div><!-- /.js-repeater-item -->
+                                    </div>
+                                    <div class="repeater-actions text-right">
+                                        <button data-repeater-create type="button" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Добавить</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="btn btn-default" for="ipfile">
+                                            <i class="fa fa-upload"></i> Зарузить черный список IP
+                                            <input class="hide" name="ipfile" id="ipfile" type="file">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer text-right">
+                            <button type="submit" class="btn btn-success">Сохранить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2">
+                        <div class="footer__copy">
+                            <a href="index.html" class="footer__logo">
+                                <img src="http://placehold.it/50x50" alt="">
+                            </a>
+                            &copy; 2017. itgeekz.ru
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-7">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="projects.html">Проекты</a></li>
+                            <li><a href="feed.html">Лента</a></li>
+                            <li><a href="job.html">Работа</a></li>
+                            <li><a href="users.html">Пользователи</a></li>
+                            <li><a href="types.html">Типы работ</a></li>
+                            <li><a href="stat.html">Статистика</a></li>
+                            <li><a href="settings.html">Настройки</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-3 text-right">
+                        <small>Lorem ipsum dolor sit amet, vis aliquid senserit interpretaris</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script defer src="js/theme-base.js"></script>
+    <script defer src="js/theme-run.js"></script>
+
+    </body>
+</html>

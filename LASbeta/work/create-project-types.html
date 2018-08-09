@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>ITGeekz</title>
+        <link rel="stylesheet" href="css/theme.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <!--[if lt IE 9]>
+            <script src="libs/old_browsers/ob_support.min.js"></script>
+        <![endif]-->
+        <!-- favicons for all devices -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
+        <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5"/>
+        <meta name="theme-color" content="#ffffff"/>
+        <!-- favicons for all devices -->
+    </head>
+    <body>
+    <div id="header">
+        <div class="container-fluid">
+            <a id="logo" class="light-version" href="index.html">
+                <span>ITGeekz.ru</span>
+            </a>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="projects.html">Проекты</a></li>
+                <li><a href="feed.html">Лента</a></li>
+                <li><a href="job.html">Работа</a></li>
+                <li><a href="users.html">Пользователи</a></li>
+                <li><a href="types.html">Типы работ</a></li>
+                <li><a href="stat.html">Статистика</a></li>
+                <li><a href="settings.html">Настройки</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <div class="normalheader normalheader--auto">
+                        <div class="hpanel">
+                            <div class="panel-body">
+                                <ul class="nav nav--sidebar">
+                                    <li><a class="active" href="dashboard.html">Dashboard</a></li>
+                                    <li><a href="job-progress.html">Задачи в работе</a></li>
+                                    <li><a href="job-done.html">Завершеннные задачи</a></li>
+                                    <li><a href="job-finance.html">Финансы проекта</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-9">
+                    <div class="normalheader">
+                        <div class="hpanel">
+                            <div class="panel-body">
+                                <h2 class="font-light m-b-xs">Добавление типа работ в проект</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <form action="create-project-user.html" class="hpanel form-create">
+                            <div class="panel-body">
+                                <div class="form-item form-clone">
+                                    <h4>Тип работ <span>1</span></h4>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="" class="btn-block control-label">Выберите тип работы</label>
+                                                <select name="" id="" class="form-control js-select2">
+                                                    <option default value=""></option>
+                                                    <option value="">Тип работы 1</option>
+                                                    <option value="">Тип работы 2</option>
+                                                    <option value="">Тип работы 3</option>
+                                                    <option value="">Тип работы 4</option>
+                                                    <option value="">Тип работы 5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-3">
+                                            <div class="form-group">
+                                                <label for="" class="btn-block control-label">Цена за задачу</label>
+                                                <input type="text" class="form-control" value="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-9">
+                                            <div class="form-group">
+                                                <label for="" class="btn-block control-label">Считать за</label>
+                                                <div class="form-inline-group">
+                                                    <div class="radio radio-success radio-inline">
+                                                        <input type="radio" name="radiopayrange[]" id="radiopayrange1" value="option1">
+                                                        <label for="radiopayrange1">Месяц</label>
+                                                    </div>
+                                                    <div class="radio radio-success radio-inline">
+                                                        <input type="radio" name="radiopayrange[]" id="radiopayrange2" value="option2" checked>
+                                                        <label for="radiopayrange2">Все время жизни проекта</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-3">
+                                            <div class="form-group">
+                                                <label for="" class="btn-block control-label">Доступное колличество задач</label>
+                                                <input type="text" class="form-control js-touch-spin-vertical" value="1" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="" class="btn-block control-label">Выберите стоимость задачи</label>
+                                                <select name="" id="" class="form-control js-select2">
+                                                    <option value="">За символы</option>
+                                                    <option value="">По часам</option>
+                                                    <option value="">По фиксированной стоимости</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="" class="btn-block control-label">Лимит на сумму</label>
+                                                <select name="" id="" class="form-control js-select2">
+                                                    <option value="1">В месяц</option>
+                                                    <option value="2">Всего</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /. form-clone -->
+                                <div class="form-group create-actions">
+                                    <a href="#" class="btn btn-info btn-sm"><i class="fa fa-plus"></i> Новый тип работ</a>
+                                </div>
+                                <div class="form-group form-total">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-3">
+                                            <label for="" class="btn-block control-label">Общая стоимость</label>
+                                            <input type="text" class="form-control" value="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="create-actions text-right">
+                                    <div role="group">
+                                        <button type="submit" class="btn btn-success">Сохранить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form><!-- /.hpanel -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2">
+                        <div class="footer__copy">
+                            <a href="index.html" class="footer__logo">
+                                <img src="http://placehold.it/50x50" alt="">
+                            </a>
+                            &copy; 2017. itgeekz.ru
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-7">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="projects.html">Проекты</a></li>
+                            <li><a href="feed.html">Лента</a></li>
+                            <li><a href="job.html">Работа</a></li>
+                            <li><a href="users.html">Пользователи</a></li>
+                            <li><a href="types.html">Типы работ</a></li>
+                            <li><a href="stat.html">Статистика</a></li>
+                            <li><a href="settings.html">Настройки</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-3 text-right">
+                        <small>Lorem ipsum dolor sit amet, vis aliquid senserit interpretaris</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script defer src="js/theme-base.js"></script>
+    <script defer src="js/theme-run.js"></script>
+
+    </body>
+</html>

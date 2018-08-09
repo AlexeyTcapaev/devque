@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>ITGeekz</title>
+        <link rel="stylesheet" href="css/theme.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <!--[if lt IE 9]>
+            <script src="libs/old_browsers/ob_support.min.js"></script>
+        <![endif]-->
+        <!-- favicons for all devices -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
+        <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5"/>
+        <meta name="theme-color" content="#ffffff"/>
+        <!-- favicons for all devices -->
+    </head>
+    <body>
+    <div id="header">
+        <div class="container-fluid">
+            <a id="logo" class="light-version" href="index.html">
+                <span>ITGeekz.ru</span>
+            </a>
+            <ul class="nav navbar-nav">
+                <li><a href="projects.html">Проекты</a></li>
+                <li><a href="feed.html">Лента</a></li>
+                <li class="active"><a href="job.html">Работа</a></li>
+                <li><a href="users.html">Пользователи</a></li>
+                <li><a href="types.html">Типы работ</a></li>
+                <li><a href="stat.html">Статистика</a></li>
+                <li><a href="settings.html">Настройки</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container-fluid">
+            <div class="normalheader">
+                <div class="hpanel">
+                    <div class="panel-body">
+                        <div class="panel-actions pull-right">
+                            <span class="toggle">
+                                <a href="job-calendar.html" class="btn btn-link text-muted"><span class="toggle-item"><i class="fa fa-calendar"></i></span></a>
+                                <a href="job.html" class="btn btn-link text-success"><span class="toggle-item"><i class="fa fa-bars"></i></span></a>
+                            </span>
+                        </div>
+                        <h2 class="font-light m-b-xs">Работа для копирайтера</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="items">
+                    <div class="feed">
+                        <div class="hpanel">
+                            <div class="panel-body">
+                                <div class="m-b-md"><h4>Фильтр</h4></div>
+                                <form class="form" action="" class="filter">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-4 col-md-3">
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Дата</label>
+                                                <div class="input-daterange input-group js-date-input">
+                                                    <input type="text" class="form-control" name="start"/>
+                                                    <span class="input-group-addon">По</span>
+                                                    <input type="text" class="form-control" name="end"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-3">
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Исполнитель</label>
+                                                <select data-placeholder="Выберите исполнителя" class="form-control btn-block js-select2">
+                                                    <option value="Blue">Архипов</option>
+                                                    <option value="Red">Смелов</option>
+                                                    <option value="Green">Анастесио</option>
+                                                    <option value="Maroon">Мучачо</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-3">
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Поставщик</label>
+                                                <select class="form-control btn-block js-select2">
+                                                    <option value="Blue">Архипов</option>
+                                                    <option value="Red">Смелов</option>
+                                                    <option value="Green">Анастесио</option>
+                                                    <option value="Maroon">Мучачо</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-3">
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Проверяющий</label>
+                                                <select class="form-control btn-block js-select2">
+                                                    <option value="Blue">Архипов</option>
+                                                    <option value="Red">Смелов</option>
+                                                    <option value="Green">Анастесио</option>
+                                                    <option value="Maroon">Мучачо</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-4 col-md-2">
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Тип работы</label>
+                                                <select class="form-control btn-block js-select2">
+                                                    <option value="Blue">Аудит</option>
+                                                    <option value="Red">Бизнес</option>
+                                                    <option value="Green">Логика</option>
+                                                    <option value="Maroon">Статьи</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-2">
+                                            <div class="form-group">
+                                                <label for="" class="control-label">Статус</label>
+                                                <select class="form-control btn-block js-select2">
+                                                    <option value="Red">Бизнес</option>
+                                                    <option value="Green">Логика</option>
+                                                    <option value="Maroon">Статьи</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-2">
+                                            <div class="form-group">
+                                                <label for="" class="control-label">По проекту</label>
+                                                <select class="form-control btn-block js-select2">
+                                                    <option></option>
+                                                    <option value="Red">Проект 1</option>
+                                                    <option value="Green">Проект 2</option>
+                                                    <option value="Maroon">Проект 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-3">
+                                            <div class="form-group">
+                                                <label for="" class="control-label">По финансам</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">От</span>
+                                                    <input type="text" class="form-control" name="start"/>
+                                                    <span class="input-group-addon">До</span>
+                                                    <input type="text" class="form-control" name="end"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-4 col-md-3">
+                                            <div class="form-group">
+                                                <label for="" class="control-label">По операционным задолженностям</label>
+                                                <select class="form-control btn-block js-select2">
+                                                    <option></option>
+                                                    <option value="Red">Проект 1</option>
+                                                    <option value="Green">Проект 2</option>
+                                                    <option value="Maroon">Проект 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="feed">
+                            <div class="hpanel">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <th></th>
+                                                    <th><span class="text-muted">Название проекта</span></th>
+                                                    <th><span class="text-muted">ID</span></th>
+                                                    <th><span class="text-muted">Название задачи</span></th>
+                                                    <th><span class="text-muted">Постановщик</span></th>
+                                                    <th><span class="text-muted">Исполнитель</span></th>
+                                                    <th><span class="text-muted">Проверяющий</span></th>
+                                                    <th><span class="text-muted">Тип работы</span></th>
+                                                    <th><span class="text-muted">Статус</span></th>
+                                                    <th><span class="text-muted">Стоимость</span></th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox m-n">
+                                                            <input id="checkbox2" type="checkbox">
+                                                            <label for="checkbox2">&nbsp;</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>Новый проект</td>
+                                                    <td>Д 123456</td>
+                                                    <td>Удалить все файлы</td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Аудит</a></td>
+                                                    <td><span class="text-warning">В работе</span></td>
+                                                    <td class="issue-info"><strong>15 500</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox m-n">
+                                                            <input id="checkbox3" type="checkbox">
+                                                            <label for="checkbox3">&nbsp;</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>Новый проект</td>
+                                                    <td>Д 123456</td>
+                                                    <td>Удалить все файлы</td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Аудит</a></td>
+                                                    <td><span class="text-warning">В работе</span></td>
+                                                    <td class="issue-info"><strong>15 500</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox m-n">
+                                                            <input id="checkbox4" type="checkbox">
+                                                            <label for="checkbox4">&nbsp;</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>Новый проект</td>
+                                                    <td>Д 123456</td>
+                                                    <td>Удалить все файлы</td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Аудит</a></td>
+                                                    <td><span class="text-warning">В работе</span></td>
+                                                    <td class="issue-info"><strong>15 500</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox m-n">
+                                                            <input id="checkbox5" type="checkbox">
+                                                            <label for="checkbox5">&nbsp;</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>Новый проект</td>
+                                                    <td>Д 123456</td>
+                                                    <td>Удалить все файлы</td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Аудит</a></td>
+                                                    <td><span class="text-warning">В работе</span></td>
+                                                    <td class="issue-info"><strong>15 500</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox m-n">
+                                                            <input id="checkbox6" type="checkbox">
+                                                            <label for="checkbox6">&nbsp;</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>Новый проект</td>
+                                                    <td>Д 123456</td>
+                                                    <td>Удалить все файлы</td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Архипов В. А.</a></td>
+                                                    <td><a href="#">Аудит</a></td>
+                                                    <td><span class="text-warning">В работе</span></td>
+                                                    <td class="issue-info"><strong>15 500</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-actions text-center">
+                                        <a href="#" class="btn btn-warning"><i class="fa fa-download"></i> Загрузить ТЗ</a>
+                                        <a href="#" class="btn btn-success"><i class="fa fa-upload"></i> Выгрузить ТЗ</a>
+                                        <a href="#" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Отправить на модерацию</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2">
+                        <div class="footer__copy">
+                            <a href="index.html" class="footer__logo">
+                                <img src="http://placehold.it/50x50" alt="">
+                            </a>
+                            &copy; 2017. itgeekz.ru
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-7">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="projects.html">Проекты</a></li>
+                            <li><a href="feed.html">Лента</a></li>
+                            <li><a href="job.html">Работа</a></li>
+                            <li><a href="users.html">Пользователи</a></li>
+                            <li><a href="types.html">Типы работ</a></li>
+                            <li><a href="stat.html">Статистика</a></li>
+                            <li><a href="settings.html">Настройки</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-3 text-right">
+                        <small>Lorem ipsum dolor sit amet, vis aliquid senserit interpretaris</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script defer src="js/theme-base.js"></script>
+    <script defer src="js/theme-run.js"></script>
+
+    </body>
+</html>

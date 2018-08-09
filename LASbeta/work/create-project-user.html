@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>ITGeekz</title>
+        <link rel="stylesheet" href="css/theme.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <!--[if lt IE 9]>
+            <script src="libs/old_browsers/ob_support.min.js"></script>
+        <![endif]-->
+        <!-- favicons for all devices -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
+        <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5"/>
+        <meta name="theme-color" content="#ffffff"/>
+        <!-- favicons for all devices -->
+    </head>
+    <body>
+    <div id="header">
+        <div class="container-fluid">
+            <a id="logo" class="light-version" href="index.html">
+                <span>ITGeekz.ru</span>
+            </a>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="projects.html">Проекты</a></li>
+                <li><a href="feed.html">Лента</a></li>
+                <li><a href="job.html">Работа</a></li>
+                <li><a href="users.html">Пользователи</a></li>
+                <li><a href="types.html">Типы работ</a></li>
+                <li><a href="stat.html">Статистика</a></li>
+                <li><a href="settings.html">Настройки</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="normalheader">
+                <div class="hpanel">
+                    <div class="panel-body">
+                        <h2 class="font-light m-b-xs">Добавить участников в проект</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <form action="dashboard.html" class="hpanel form-create">
+                    <div class="panel-body">
+                        <div class="form-item form-clone">
+                            <h4>Участник <span>1</span></h4>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="btn-block control-label">Выберите участника</label>
+                                        <select name="" id="" class="form-control js-select2">
+                                            <option default value=""></option>
+                                            <option value="">Иванов Андрей (Копирайтер)</option>
+                                            <option value="">Иванов Андрей (Копирайтер)</option>
+                                            <option value="">Иванов Андрей (Копирайтер)</option>
+                                            <option value="">Иванов Андрей (Копирайтер)</option>
+                                            <option value="">Иванов Андрей (Копирайтер)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="btn-block control-label">&nbsp;</label>
+                                        <div class="form-inline-group">
+                                            <div class="checkbox checkbox-success checkbox-inline">
+                                                <input type="checkbox" name="checkboxpay[]" id="checkboxpay1" value="option1">
+                                                <label for="checkboxpay1">По часам</label>
+                                            </div>
+                                            <div class="checkbox checkbox-success checkbox-inline">
+                                                <input type="checkbox" name="checkboxpay[]" id="checkboxpay2" value="option2" checked>
+                                                <label for="checkboxpay2">За обьем работы</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <label for="" class="btn-block control-label">Привилегии</label>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-1[]" id="u_acc-1" value="">
+                                            <label for="u_acc-1">Может создавать задачи</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-2[]" id="u_acc-2" value="">
+                                            <label for="u_acc-2">Может добавлять в проект участников</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-3[]" id="u_acc-3" value="">
+                                            <label for="u_acc-3">Может добавлять в проект тип работ</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-4[]" id="u_acc-4" value="">
+                                            <label for="u_acc-4">Может видеть контакты</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-5[]" id="u_acc-5" value="" checked="">
+                                            <label for="u_acc-5">Может видеть финансы</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="form-toggle p-l p-r">
+                                <div class="row row--finance">
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-group">
+                                            <div class="checkbox checkbox-success">
+                                                <input type="checkbox" name="u_acc_f-1[]" id="u_acc_f-1" value="">
+                                                <label for="u_acc_f-1">Расходы по проекту в месяц</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-group">
+                                            <div class="checkbox checkbox-success">
+                                                <input type="checkbox" name="u_acc_f-2[]" id="u_acc_f-2" value="">
+                                                <label for="u_acc_f-2">Баланс</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row--finance">
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-group">
+                                            <div class="checkbox checkbox-success">
+                                                <input type="checkbox" name="u_acc_f-3" id="u_acc_f-3" value="">
+                                                <label for="u_acc_f-3">Задолжности по типам работ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-group">
+                                            <div class="checkbox checkbox-success">
+                                                <input type="checkbox" name="u_acc_f-4" id="u_acc_f-4" value="">
+                                                <label for="u_acc_f-4">Остаток по типам работ за месяц</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-6" id="u_acc-6" value="">
+                                            <label for="u_acc-6">Может писать комментарии</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-7" id="u_acc-7" value="">
+                                            <label for="u_acc-7">Может пополнять баланс по проекту</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-8" id="u_acc-8" value="">
+                                            <label for="u_acc-8">Может менять статус проекта</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                        </div><!-- /. form-clone -->
+                        <div class="form-item form-clone">
+                            <h4>Участник <span>2</span></h4>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="btn-block control-label">Выберите участника</label>
+                                        <select name="" id="" class="form-control js-select2">
+                                            <option default value=""></option>
+                                            <option value="">Иванов Андрей (Копирайтер)</option>
+                                            <option value="">Иванов Андрей (Копирайтер)</option>
+                                            <option value="">Иванов Андрей (Копирайтер)</option>
+                                            <option value="">Иванов Андрей (Копирайтер)</option>
+                                            <option value="">Иванов Андрей (Копирайтер)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="btn-block control-label">&nbsp;</label>
+                                        <div class="form-inline-group">
+                                            <div class="checkbox checkbox-success checkbox-inline">
+                                                <input type="checkbox" name="checkboxpay-2[]" id="checkboxpay1-2" value="option1">
+                                                <label for="checkboxpay1-2">По часам</label>
+                                            </div>
+                                            <div class="checkbox checkbox-success checkbox-inline">
+                                                <input type="checkbox" name="checkboxpay-2[]" id="checkboxpay2-2" value="option2" checked>
+                                                <label for="checkboxpay2-2">За обьем работы</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <label for="" class="btn-block control-label">Привилегии</label>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-1-2[]" id="u_acc-2" value="">
+                                            <label for="u_acc-2">Может создавать задачи</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-2[]" id="u_acc-2" value="">
+                                            <label for="u_acc-2">Может добавлять в проект участников</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-3-2[]" id="u_acc-3-2" value="">
+                                            <label for="u_acc-3-2">Может добавлять в проект тип работ</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-4-2[]" id="u_acc-4-2" value="">
+                                            <label for="u_acc-4-2">Может видеть контакты</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-5-2[]" id="u_acc-5-2" value="">
+                                            <label for="u_acc-5-2">Может видеть финансы</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="form-toggle p-l p-r">
+                                <div class="row row--finance">
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-group">
+                                            <div class="checkbox checkbox-success">
+                                                <input type="checkbox" name="u_acc_f-1-2[]" id="u_acc_f-1-2" value="">
+                                                <label for="u_acc_f-1-2">Расходы по проекту в месяц</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-group">
+                                            <div class="checkbox checkbox-success">
+                                                <input type="checkbox" name="u_acc_f-2-2[]" id="u_acc_f-2-2" value="">
+                                                <label for="u_acc_f-2-2">Баланс</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row--finance">
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-group">
+                                            <div class="checkbox checkbox-success">
+                                                <input type="checkbox" name="u_acc_f-3-2" id="u_acc_f-3-2" value="">
+                                                <label for="u_acc_f-3-2">Задолжности по типам работ</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="form-group">
+                                            <div class="checkbox checkbox-success">
+                                                <input type="checkbox" name="u_acc_f-4-2" id="u_acc_f-4-2" value="">
+                                                <label for="u_acc_f-4-2">Остаток по типам работ за месяц</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-6-2" id="u_acc-6-2" value="">
+                                            <label for="u_acc-6-2">Может писать комментарии</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-7-2" id="u_acc-7-2" value="">
+                                            <label for="u_acc-7-2">Может пополнять баланс по проекту</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="u_acc-8-2" id="u_acc-8-2" value="">
+                                            <label for="u_acc-8">Может менять статус проекта</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.row -->
+                        </div><!-- /. form-clone -->
+                        <div class="form-group create-actions">
+                            <a href="#" class="btn btn-info btn-sm"><i class="fa fa-plus"></i> Добавить участника</a>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="create-actions text-right">
+                            <div role="group">
+                                <button type="submit" class="btn btn-success">Добавить участников в проект</button>
+                            </div>
+                        </div>
+                    </div>
+                </form><!-- /.hpanel -->
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-2">
+                        <div class="footer__copy">
+                            <a href="index.html" class="footer__logo">
+                                <img src="http://placehold.it/50x50" alt="">
+                            </a>
+                            &copy; 2017. itgeekz.ru
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-7">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="projects.html">Проекты</a></li>
+                            <li><a href="feed.html">Лента</a></li>
+                            <li><a href="job.html">Работа</a></li>
+                            <li><a href="users.html">Пользователи</a></li>
+                            <li><a href="types.html">Типы работ</a></li>
+                            <li><a href="stat.html">Статистика</a></li>
+                            <li><a href="settings.html">Настройки</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-3 text-right">
+                        <small>Lorem ipsum dolor sit amet, vis aliquid senserit interpretaris</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script defer src="js/theme-base.js"></script>
+    <script defer src="js/theme-run.js"></script>
+
+    </body>
+</html>

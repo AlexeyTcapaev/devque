@@ -1,0 +1,219 @@
+*{
+    outline: none;
+}
+.nav {
+    background: linear-gradient(45deg, #00AEFF 50%, #3369E6 100%) !important;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+}
+div.active{
+    padding: 15px;
+}
+.nav+.wrapper {
+    margin: 0 0 0 300px;
+    width: calc(100vw - 300px);
+}
+
+.profile-card {
+    margin: 64px 0 0 0;
+}
+
+aside.hide+.wrapper {
+    margin: 0 0 0 100px;
+    width: calc(100vw - 100px);
+}
+
+.profile {
+    position: absolute;
+    top: -64px;
+    left: 50px;
+    width: 128px;
+}
+
+.tabs {
+    background: linear-gradient(45deg, #3369E6 50%, #00AEFF 100%) !important;
+}
+
+.tabs .indicator {
+    background-color: #f80b37;
+    max-width: 100%;
+}
+.tabs .tab a{
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    color: #ffffff;
+}
+.tabs .tab a.active {
+    background-color: transparent;
+    color: #f80b37;
+   
+}
+
+.tabs.tab a:focus,
+.tabs .tab a:focus.active {
+    
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #f80b37;
+    outline: none;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #f80b37;
+}
+
+.tabs .tab a:hover .nav-text::after,
+.tabs .tab a.active .nav-text::after {
+    color: #f80b37;
+}
+
+.wrapper {
+    transition: 0.2s linear;
+}
+
+.padding {
+    padding: 15px;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.brand-logo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+    color: #ffffff;
+}
+
+.logo-wrapper {
+    margin-top: 0;
+}
+
+.brand-logo img {
+    width: 48px;
+    height: 48px;
+}
+
+.brand-logo span {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.collapse-nav {
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+aside.nav {
+    transition: 0.2s linear;
+}
+
+.aside-list-item {
+    display: flex;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.5;
+    padding: 1rem;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.aside-list-item i {
+    margin: 0 15px 0 15px;
+}
+
+.nav-text::after {
+    font-family: 'Material Icons';
+    content: "keyboard_arrow_right";
+    color: #ffffff;
+    font-size: 18px;
+    position: absolute;
+    right: 16px;
+    text-transform: none;
+}
+
+.tabs-nav .indicator {
+    display: none;
+}
+
+main {
+    display: flex;
+}
+
+.hide {
+    display: block !important;
+}
+
+aside.hide {
+    width: 100px;
+}
+
+aside.hide .brand-logo span {
+    font-size: 0;
+}
+
+aside.hide .tabs-nav .tab a span {
+    font-size: 0;
+    display: contents;
+}
+
+.tabs-nav {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: initial;
+}
+
+.tabs-nav .tab a:focus,
+.tabs-nav .tab a:focus.active {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #f80b37;
+    outline: none;
+}
+
+.tabs-nav .tab {
+    display: inherit;
+    text-align: inherit;
+    text-transform: inherit;
+    line-height: initial;
+    height: initial;
+}
+
+.tabs-nav .tab a:hover,
+.tabs-nav .tab a.active {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #f80b37;
+    border-left: 2px solid #f80b37;
+}
+
+.tabs-nav .tab a:hover .nav-text::after,
+.tabs-nav .tab a.active .nav-text::after {
+    color: #f80b37;
+}
+
+.tabs-nav .tab a {
+    border-left: 2px solid transparent;
+    margin: 10px 0 10px 0;
+    display: flex;
+    width: 90%;
+    height: 100%;
+    border-bottom-right-radius: 27px;
+    border-top-right-radius: 27px;
+    padding: 10px;
+    align-items: center;
+    font-size: initial;
+    box-sizing: border-box;
+    color: #ffffff;
+    -webkit-transition: color .28s ease, background-color .28s ease;
+    transition: color .28s ease, background-color .28s ease;
+}
+
+.tabs-nav .tab a span {
+    text-transform: uppercase;
+}
